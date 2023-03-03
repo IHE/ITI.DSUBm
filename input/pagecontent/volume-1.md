@@ -1,61 +1,69 @@
 
-# 1:XX Profile name
+# 1:XX DSUBm
+
+IHE provides more profile for mobile use (e.g. SVCM, MHD, MHDS, NPFS), defining a lot of mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
+
+For documents, IHE provides an excellent tools to search and retrieve them through RESTful capabilities (MHD), but doesn’t address the subscription from a mobile device although it’s possible through non mobile application (DSUB).
+
 
 **TODO: Provide an end-user friendly overview of what the profile does for them. Keep it brief (a paragraph or two, up to a page). If extensive detail is needed, it should be included in Section XX.4- Use Cases.**
 
-**TODO: Explicitly state whether this is a Workflow, Transport, or Content Module (or combination) profile. See the IHE Technical Frameworks General Introduction for definitions of these profile types. The IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/). **
+**TODO: Explicitly state whether this is a Workflow, Transport, or Content Module (or combination) profile. See the IHE Technical Frameworks General Introduction for definitions of these profile types. The IHE Technical Frameworks [General Introduction](https://profiles.ihe.net/GeneralIntro/).**
 
-## 1:X.1 ToDo Actors, Transactions, and Content Modules
+## 1:XX.1 DSUBm Actors, Transactions, and Content Modules
 
 <a name="actors-and-transactions"> </a>
 
+This section defines the actors and transactions in this implementation guide.
+
 * Actors
 
-  - [Client](#client)
+  - [Mobile Notification Broker](#broker)
 
-  - [Server](#server)
+  - [Mobile Notification Subscriber](#subscriber)
+
+  - [Mobile Notification Publisher](#publisher)
+
+  - [Mobile Notification Recipient](#recipient)  
+
+  - [Mobile Subscription Consumer](#consumer)
 
 * Transactions
 
-  - [do domain-Y](domain-YY.html)
+  - [Mobile Subscription [ITI-Y1]](ITI-Y1.html)
 
-Actors and transactions are used to achieve this use-case...
+  - [Mobile Publishing [ITI-Y2]](ITI-Y2.html)
 
-<div>
-{%include usecase1-processflow.svg%}
-</div>
-<br clear="all">
+  - [Mobile Notify [ITI-Y3]](ITI-Y3.html)
 
-**Figure: Use Case 1 Process Flow**
+  - [Mobile Subscription Search [ITI-Y4]](ITI-Y4.html)
 
-This section defines the actors and transactions in this implementation guide.
 
-Figure below shows the actors directly
-involved in the ToDo 
-Profile and the relevant transactions between them.
+
+
+Figure 1.XX.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
 
 <div>
 {%include ActorsAndTransactions.svg%}
 </div>
 <br clear="all">
 
-**Figure: ToDo Actor Diagram**
+**Figure 1.XX.1-1: DSUBm Actor Diagram**
 
-Table XX.1-1: Profile Acronym Profile - Actors and Transactions
+Table 1.XX.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled “R”) and may support the optional transactions (labeled “O”).
 
-|         |               |                        |                 |                                   |
+**Table 1.XX.1-1: DSUBm Profile - Actors and Transactions**
+
 |---------|---------------|------------------------|-----------------|-----------------------------------|
-| Actors  | Transactions  | Initiator or Responder | Optionality     | Reference                         |
-| Actor A | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-|         | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-| Actor F | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-|         | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-| Actor D | Transaction 1 |                        | R               | Domain Acronym TF-2: 3.Y1 |
-| Actor E | Transaction 2 |                        | R               | Domain Acronym TF-2: 3.Y2 |
-|         | Transaction 3 |                        | O ( See Note 1) | Domain Acronym TF-2: 3.Y3 |
-|         | Transaction 4 |                        | O ( See Note 1) | Domain Acronym TF-2: 3.Y4 |
-| Actor B | Transaction 3 |                        | R               | Domain Acronym TF-2: 3.Y3 |
-|         | Transaction 4 |                        | O ( See Note 2) | Domain Acronym TF-2: 3.Y4 |
+| **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**     | **Reference**                         |
+| Mobile Notification Broker     | Mobile Subscription [ITI-Y1]             | Responder    | R     | ITI TF-2: 3.Y1 |
+|                                | Mobile Publishing [ITI-Y2]               | Responder    | R     | ITI TF-2: 3.Y2 |
+|                                | Mobile Notify [ITI-Y3]                   | Initiator    | R     | ITI TF-2: 3.Y3 |
+|                                | Mobile Subscription Search [ITI-Y4]      | Responder    | O     | ITI TF-2: 3.Y4 |
+| Mobile Notification Subscriber | Mobile Subscription [ITI-Y1]             | Initiator    | R     | ITI TF-2: 3.Y1 |
+| Mobile Notification Publisher  | Mobile Publishing [ITI-Y2]               | Initiator    | R     | ITI TF-2: 3.Y2 |
+| Mobile Notification Recipient  | Mobile Notify [ITI-Y3]                   | Responder    | R     | ITI TF-2: 3.Y3 |
+| Mobile Subscription Consumer   | Mobile Subscription Search [ITI-Y4]      | Initiator    | R     | ITI TF-2: 3.Y4 |
 {: .grid}
 
 Note 1: *For example, a note could specify that at least one of the
@@ -66,35 +74,79 @@ implemented for Actor E. *
 Note 2: *For example, could specify that Transaction Y4 is required
 if Actor B supports XYZ Option, see Section XX.3.X.*
 
-### XX.1.1 Actors
+### 1.XX.1.1 Actors
 The actors in this profile are described in more detail in the sections below.
 
-#### XX.1.1.1 Client
+#### 1.XX.1.1.1 Mobile Notification Broker
 
-<a name="client"> </a>
+<a name="broker"> </a>
 
-The Client queries for blah meeting certain criteria and may retrieve selected blah.
+The Mobile Notification Broker is the receiver of the Mobile Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription creteria, this actor sends notifications to interested subscribers. This actor may optionally receive Mobile Publishing transactions representing the stream of events against which the existing subscriptions are matched.
 
-FHIR Capability Statement for [Client]{CapabilityStatement-IHE.ToDo.client.html}
+FHIR Capability Statement for [broker]{CapabilityStatement-IHE.ToDo.client.html}
 
-#### XX.1.1.2 Server
+#### 1.XX.1.1.2 Mobile Notification Subscriber
 
-<a name="server"> </a>
+<a name="subscriber"> </a>
 
-The Sever processes query request from the Client actor.
+The Mobile Notification Subscriber initiates and terminates subscriptions on behalf of a Mobile Notification Recipient.
 
-FHIR Capability Statement for [Server](CapabilityStatement-IHE.ToDo.server.html)
+FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
 
-### Transaction Descriptions
+#### 1.XX.1.1.3 Mobile Notification Publisher
+
+<a name="publisher"> </a>
+
+The Mobile Notification Publisher sends a Mobile Publishing transaction to the Mobile Notification Broker when an event occurs for which a subscription may exist. This profile does not specify how the Mobile Notification Publisher becomes aware of those events.
+
+FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.html)
+
+#### 1.XX.1.1.4 Mobile Notification Recipient
+
+<a name="recipient"> </a>
+
+The Mobile Notification Recipient receives the notification about an event, when the subscription filters specified for this Document Mobile Notification Recipient are satisfied.
+
+FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.html)
+
+#### 1.XX.1.1.5 Mobile Subscription Consumer
+
+<a name="consumer"> </a>
+
+The Mobile Subscription Consumer sends a Mobile Subscription Search transaction to the Mobile Notification Broker for existing subscription research.
+
+FHIR Capability Statement for [consumer](CapabilityStatement-IHE.ToDo.server.html)
+
+
+### 1.XX.1.2 Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
 
-#### ToDo do transaction
+#### 1.XX.1.2.1 Mobile Subscription [ITI-Y1]
 
-This transaction is used to **do things**
+This transaction is used for a subscription requesting, by using a particular set of filters, or for a subscription deleting. 
 
 For more details see the detailed [transaction description](domain-YY.html)
 
-## XX.2 ToDo Actor Options
+#### 1.XX.1.2.2 Mobile Publishing [ITI-Y2]
+
+This transaction delivers information from the Mobile Notification Publisher to the Mobile Notification Broker about an event which may have a subscription.
+
+For more details see the detailed [transaction description](domain-YY.html)
+
+#### 1.XX.1.2.3 Mobile Notify [ITI-Y3]
+
+This transaction is used for sending notification to a Mobile Notification recipient.
+
+For more details see the detailed [transaction description](domain-YY.html)
+
+#### 1.XX.1.2.4 Mobile Subscription Search [ITI-Y4]
+
+This transaction is used for existing subscription research.
+
+For more details see the detailed [transaction description](domain-YY.html)
+
+
+## 1.XX.2 ToDo Actor Options
 
 <a name="actor-options"> </a>
 
@@ -112,7 +164,7 @@ between options when applicable are specified in notes.
 
 **TODO: describe this option and the Volume 1 requirements for this option
 
-## XX.3 ToDo Required Actor Groupings
+## 1.XX.3 ToDo Required Actor Groupings
 
 <a name="required-groupings"> </a>
 
@@ -369,7 +421,7 @@ Guidance on using the “Grouping Condition” column:
 </table>
 
 
-## XX.4 ToDo Overview
+## 1.XX.4 ToDo Overview
 
 <a name="overview"> </a>
 
@@ -459,7 +511,7 @@ Very briefly (typically one sentence) describe the state of the
 clinical scenario after this content module has been created including
 examples of potential next steps.
 
-## XX.5 ToDo Security Considerations
+## 1.XX.5 ToDo Security Considerations
 
 <a name="security-considerations"> </a>
 
@@ -548,7 +600,7 @@ This section also include specific considerations regarding Digital Signatures, 
 
 Where audit logging is specified, a StructureDefinition profile(s) should be included, and Examples of those logs might be included.
 
-## XX.6 ToDo Cross-Profile Considerations
+## 1.XX.6 ToDo Cross-Profile Considerations
 
 <a name="other-grouping"> </a>
 
