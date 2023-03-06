@@ -1,12 +1,13 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-participant "Client" as Client
-participant "Server" as Server
-activate "Client"
-"Client" -> "Server" : 1. Go Query [domain-YY]
-activate "Server"
-"Server" --> "Client" : 2. Go Response [domain-YY]
-deactivate "Client"
-deactivate "Server"
+participant "Mobile Notification\nPublisher" as publisher
+participant "Mobile Notification\nSubscriber" as subscriber
+participant "Mobile Notification\nBroker" as broker
+participant "Mobile Notification\nRecipient" as recipient
+
+"subscriber" -> "broker" : Mobile Subscription [ITI-Y1]
+activate broker
+"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
+"broker" -> "recipient" : Mobile Notify [ITI-Y3]
 @enduml

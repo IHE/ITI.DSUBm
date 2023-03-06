@@ -81,9 +81,9 @@ The actors in this profile are described in more detail in the sections below.
 
 <a name="broker"> </a>
 
-The Mobile Notification Broker is the receiver of the Mobile Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription creteria, this actor sends notifications to interested subscribers. This actor may optionally receive Mobile Publishing transactions representing the stream of events against which the existing subscriptions are matched.
+The Mobile Notification Broker is the receiver of the Mobile Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Mobile Publishing transactions representing the stream of events against which the existing subscriptions are matched.
 
-FHIR Capability Statement for [broker]{CapabilityStatement-IHE.ToDo.client.html}
+FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 #### 1.XX.1.1.2 Mobile Notification Subscriber
 
@@ -444,18 +444,19 @@ different.
 
 ### XX.4.2 Use Cases
 
-#### XX.4.2.1 Use Case \#1: simple name
+#### XX.4.2.1 Use Case \#1: Document Subscription for Mobile Device
 
-One or two sentence simple description of this particular use
-case.
+The availability of a document for a Patient is notified in a mobile device.
 
 Note that Section XX.4.2.1 repeats in its entirety for additional use
 cases (replicate as Section XX.4.2.2, XX.4.2.3, etc.).
 
 ##### XX.4.2.1.1 simple name Use Case Description
 
-Describe the key use cases addressed by the profile. Limit to a
-maximum of one page of text or consider an appendix.
+Mr Smith is hospitalized at the Goodcare General Hospital because he feels sick. During his admission he is assisted by Dr. Roose who prescribes some blood tests to decide which medicine is suitable for the patient.
+In order to be notified when the lab report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
+In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
+
 
 ##### XX.4.2.1.2 simple name Process Flow
 
