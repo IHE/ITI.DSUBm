@@ -123,7 +123,7 @@ The transactions in this profile are summarized in the sections below.
 
 #### 1.XX.1.2.1 Mobile Subscription [ITI-Y1]
 
-This transaction is used for a subscription requesting, by using a particular set of filters, or for a subscription deleting. 
+This transaction is used for a subscription requesting, by using a particular set of filters, or for a subscription deleting.. 
 
 For more details see the detailed [transaction description](domain-YY.html)
 
