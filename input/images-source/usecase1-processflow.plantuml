@@ -1,13 +1,52 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-participant "Mobile Notification\nPublisher" as publisher
+
+participant "Document Source" as source
 participant "Mobile Notification\nSubscriber" as subscriber
-participant "Mobile Notification\nBroker" as broker
 participant "Mobile Notification\nRecipient" as recipient
+participant "Mobile Notification\nBroker" as broker
+participant "Mobile Notification\nPublisher" as publisher
+participant "Document Recipient" as recipientDoc
+participant "Document Source" as source2
+participant "Mobile Notification\nSubscriber" as subscriber2
+participant "Mobile Notification\nRecipient" as recipient2
+
+note over source, recipient: Hospital EHR
+note over source2: Laboratory System
+note over subscriber2, recipient2: Nurse Tablet
+"subscriber" -> "broker" : Mobile Subscription [ITI-Y1]
+activate broker
+deactivate broker
+"subscriber2" -> "broker" : Mobile Subscription [ITI-Y1]
+activate broker
+deactivate broker
+
+"source2" -> "recipientDoc" : Provide Document Bundle [ITI-65]
+recipientDoc --> "publisher": Inner interaction
+"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
+activate broker
+"broker" -> "recipient" : Mobile Notify [ITI-Y3]
+activate recipient
+deactivate recipient
+deactivate broker
+
+"source" -> "recipientDoc" : Provide Document Bundle [ITI-65]
+recipientDoc --> "publisher": Inner interaction
+"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
+activate broker
+"broker" -> "recipient2" : Mobile Notify [ITI-Y3]
+activate recipient2
+deactivate recipient2
+deactivate broker
 
 "subscriber" -> "broker" : Mobile Subscription [ITI-Y1]
 activate broker
-"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
-"broker" -> "recipient" : Mobile Notify [ITI-Y3]
+deactivate broker
+"subscriber2" -> "broker" : Mobile Subscription Search [ITI-Y4]
+activate broker
+deactivate broker
+"subscriber2" -> "broker" : Mobile Subscription [ITI-Y1]
+activate broker
+deactivate broker
 @enduml

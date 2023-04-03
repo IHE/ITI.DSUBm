@@ -4,7 +4,7 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.dsubm
 canonical: https://profiles.ihe.net/ITI/DSUBm
-version: 0.0.1-current
+version: 0.0.0-current
 name: IHE_ITI_DSUBm
 title: "IHE ITI DSUBm"
 description: put the short description of the profile here. it should explain what problem is being solved

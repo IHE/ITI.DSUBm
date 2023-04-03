@@ -3,9 +3,8 @@ agent "Mobile Notification Publisher" as Publisher
 agent "Mobile Notification Broker" as Broker
 agent "Mobile Notification Subscriber" as Subscriber
 agent "Mobile Notification Recipient" as Recipient
-agent "Mobile Subscription Consumer" as Consumer
 Publisher --> Broker : "Mobile Publishing [ITI-Y2]"
 Subscriber --> Broker : "Mobile Subscription [ITI-Y1]"
-Consumer --> Broker : "Mobile Subscription Search [ITI-Y4]"
+Subscriber --> Broker : "Mobile Subscription Search [ITI-Y4]"
 Broker --> Recipient : "Mobile Notify [ITI-Y3]"
 @enduml

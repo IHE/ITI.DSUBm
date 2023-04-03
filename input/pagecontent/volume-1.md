@@ -26,8 +26,6 @@ This section defines the actors and transactions in this implementation guide.
 
   - [Mobile Notification Recipient](#recipient)  
 
-  - [Mobile Subscription Consumer](#consumer)
-
 * Transactions
 
   - [Mobile Subscription [ITI-Y1]](ITI-Y1.html)
@@ -55,15 +53,15 @@ Table 1.XX.1-1 lists the transactions for each actor directly involved in the DS
 **Table 1.XX.1-1: DSUBm Profile - Actors and Transactions**
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
-| **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**     | **Reference**                         |
+| **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
 | Mobile Notification Broker     | Mobile Subscription [ITI-Y1]             | Responder    | R     | ITI TF-2: 3.Y1 |
 |                                | Mobile Publishing [ITI-Y2]               | Responder    | R     | ITI TF-2: 3.Y2 |
 |                                | Mobile Notify [ITI-Y3]                   | Initiator    | R     | ITI TF-2: 3.Y3 |
 |                                | Mobile Subscription Search [ITI-Y4]      | Responder    | O     | ITI TF-2: 3.Y4 |
 | Mobile Notification Subscriber | Mobile Subscription [ITI-Y1]             | Initiator    | R     | ITI TF-2: 3.Y1 |
+|                                | Mobile Subscription Search [ITI-Y4]      | Initiator    | O     | ITI TF-2: 3.Y4 |
 | Mobile Notification Publisher  | Mobile Publishing [ITI-Y2]               | Initiator    | R     | ITI TF-2: 3.Y2 |
 | Mobile Notification Recipient  | Mobile Notify [ITI-Y3]                   | Responder    | R     | ITI TF-2: 3.Y3 |
-| Mobile Subscription Consumer   | Mobile Subscription Search [ITI-Y4]      | Initiator    | R     | ITI TF-2: 3.Y4 |
 {: .grid}
 
 Note 1: *For example, a note could specify that at least one of the
@@ -89,7 +87,7 @@ FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 <a name="subscriber"> </a>
 
-The Mobile Notification Subscriber initiates and terminates subscriptions on behalf of a Mobile Notification Recipient.
+The Mobile Notification Subscriber initiates and terminates subscriptions on behalf of a Mobile Notification Recipient. It also can send a Mobile Subscription Search transaction to the Mobile Notification Broker for existing subscription research.
 
 FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
 
@@ -108,14 +106,6 @@ FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.ht
 The Mobile Notification Recipient receives the notification about an event, when the subscription filters specified for this Document Mobile Notification Recipient are satisfied.
 
 FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.html)
-
-#### 1.XX.1.1.5 Mobile Subscription Consumer
-
-<a name="consumer"> </a>
-
-The Mobile Subscription Consumer sends a Mobile Subscription Search transaction to the Mobile Notification Broker for existing subscription research.
-
-FHIR Capability Statement for [consumer](CapabilityStatement-IHE.ToDo.server.html)
 
 
 ### 1.XX.1.2 Transaction Descriptions
@@ -444,62 +434,38 @@ different.
 
 ### XX.4.2 Use Cases
 
-#### XX.4.2.1 Use Case \#1: Document Subscription for Mobile Device
+#### XX.4.2.1 Use Case \#1: Document Subscription for Mobile Device in MHDS Enviroment
 
 The availability of a document for a Patient is notified in a mobile device.
 
 Note that Section XX.4.2.1 repeats in its entirety for additional use
 cases (replicate as Section XX.4.2.2, XX.4.2.3, etc.).
 
-##### XX.4.2.1.1 simple name Use Case Description
+##### XX.4.2.1.1 Document Subscription for Mobile Device in MHDS Enviroment Use Case Description
 
-Mr Smith is hospitalized at the Goodcare General Hospital because he feels sick. During his admission he is assisted by Dr. Roose who prescribes some blood tests to decide which medicine is suitable for the patient.
-In order to be notified when the lab report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
+Mr Smith, a cardiopathic patient, is hospitalized at the Goodcare General Hospital. During his admission he is assisted by Dr. Roose who prescribes some blood tests to decide which medicine is suitable for the patient.
+
+In order to be notified when the laboratory report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
+Nurse Davis who is taking care of Mr Smith also uses her tablet to subscribe for ePrescriptions of the drugs that must be administered to the patient.
+
 In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
+Once the ePrescription has been created a notification is also created and nurse Davis’s tablet receives the notification and once she has downloaded the ePrescription can give to Mr Smith the right drug.
+
+At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for teh laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
 
 
-##### XX.4.2.1.2 simple name Process Flow
-
-Diagram and describe the process flow(s) covered by this profile in
-order to satisfy the use cases. Demonstrate how the profile transactions
-are combined/sequenced. To provide context and demonstrate how the
-profile interacts with other profiles, feel free to include transactions
-and events that are “external” to this profile (using appropriate
-notation.)
-
-The set of process flows will typically be exemplary, not exhaustive
-(i.e., it will address all the use cases, but will not show all possible
-combinations of actors, or all possible sequencing of transactions).
-
-If there are detailed behavioral rules that apply to a specific process
-flow or multiple process flows, an appendix may be added as needed.
-
-The roles at the top of the swimlane diagram should correspond to
-actor names, include the profile acronym:actor name if referencing an
-actor from a different profile.
-
-Modify the following “Swimlane Diagram”.
+##### XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Enviroment Process Flow
 
 <div>
 {%include usecase1-processflow.svg%}
 </div>
 <br clear="all">
 
-Figure XX.4.2.2-1: Basic Process Flow in Profile Acronym Profile
-
-If process flow “swimlane” diagrams require additional explanation
-to clarify conditional flows, or flow variations need to be described
-where alternate systems may be playing different actor roles, document
-those conditional flows here.
-
-Delete the material below if this is a workflow or transport
-profile. Delete the material above if this profile is a content module
-only profile.
+Figure XX.4.2.1-1: Document Subscription for Mobile Device in MHDS Enviroment in Profile Acronym Profile
 
 **Pre-conditions**:
 
-Very briefly (typically one sentence) describe the conditions or
-timing when this content module would be used.
+The assumption is that systems share the information in a MHDS Enviroment.
 
 **Main Flow**:
 
