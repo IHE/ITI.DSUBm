@@ -2,51 +2,84 @@
 skinparam svgDimensionStyle false
 hide footbox
 
-participant "Document Source" as source
-participant "Mobile Notification\nSubscriber" as subscriber
-participant "Mobile Notification\nRecipient" as recipient
-participant "Mobile Notification\nBroker" as broker
-participant "Mobile Notification\nPublisher" as publisher
-participant "Document Recipient" as recipientDoc
-participant "Document Source" as source2
-participant "Mobile Notification\nSubscriber" as subscriber2
-participant "Mobile Notification\nRecipient" as recipient2
 
-note over source, recipient: Hospital EHR
-note over source2: Laboratory System
-note over subscriber2, recipient2: Nurse Tablet
-"subscriber" -> "broker" : Mobile Subscription [ITI-Y1]
-activate broker
-deactivate broker
-"subscriber2" -> "broker" : Mobile Subscription [ITI-Y1]
-activate broker
-deactivate broker
+participant HospitalEHR [
+    =Hospital EHR
+    ----
+    [Document Source]
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+    
+] 
 
-"source2" -> "recipientDoc" : Provide Document Bundle [ITI-65]
-recipientDoc --> "publisher": Inner interaction
-"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
-activate broker
-"broker" -> "recipient" : Mobile Notify [ITI-Y3]
-activate recipient
-deactivate recipient
-deactivate broker
+participant MHDsDocumentRegistry [
+    =Central Infrastructure
+    ----
+    [MHDs Document Registry]
+    [Mobile Notification Publisher]
+    [Mobile Notification Broker]
+    ] 
 
-"source" -> "recipientDoc" : Provide Document Bundle [ITI-65]
-recipientDoc --> "publisher": Inner interaction
-"publisher" -> "broker" : Mobile Publishing [ITI-Y2]
-activate broker
-"broker" -> "recipient2" : Mobile Notify [ITI-Y3]
-activate recipient2
-deactivate recipient2
-deactivate broker
 
-"subscriber" -> "broker" : Mobile Subscription [ITI-Y1]
-activate broker
-deactivate broker
-"subscriber2" -> "broker" : Mobile Subscription Search [ITI-Y4]
-activate broker
-deactivate broker
-"subscriber2" -> "broker" : Mobile Subscription [ITI-Y1]
-activate broker
-deactivate broker
+
+participant LaboratorySystem [
+    =Laboratory System
+    ----
+    [Document Source]
+] 
+
+participant NurseTablet [
+    =Nurse Tablet
+    ----
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+    
+] 
+
+HospitalEHR --> NurseTablet:  Clinical information exchange
+NurseTablet -> MHDsDocumentRegistry:   Mobile Subscription [ITI-Y1]
+activate MHDsDocumentRegistry
+deactivate MHDsDocumentRegistry
+HospitalEHR --> LaboratorySystem:  Laboratory Order Request
+
+HospitalEHR -> MHDsDocumentRegistry:  Mobile Subscription [ITI-Y1]
+activate MHDsDocumentRegistry
+deactivate MHDsDocumentRegistry
+
+
+
+
+LaboratorySystem -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
+activate MHDsDocumentRegistry
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
+MHDsDocumentRegistry -> HospitalEHR : Mobile Notify [ITI-Y3]
+activate HospitalEHR
+deactivate MHDsDocumentRegistry
+deactivate HospitalEHR
+
+
+
+HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
+activate MHDsDocumentRegistry
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
+MHDsDocumentRegistry -> NurseTablet : Mobile Notify [ITI-Y3]
+activate NurseTablet
+NurseTablet -> NurseTablet: procede with drug administration
+deactivate NurseTablet
+deactivate MHDsDocumentRegistry
+
+group Unsubscribe
+  HospitalEHR ->MHDsDocumentRegistry: Mobile Subscription [ITI-Y1]
+  activate MHDsDocumentRegistry
+  deactivate MHDsDocumentRegistry
+  
+  NurseTablet ->MHDsDocumentRegistry: Mobile Subscription Search [ITI-Y4]
+  activate MHDsDocumentRegistry
+  deactivate MHDsDocumentRegistry
+  
+  NurseTablet ->MHDsDocumentRegistry : Mobile Subscription [ITI-Y1]
+  activate MHDsDocumentRegistry
+  deactivate MHDsDocumentRegistry
+end
+
 @enduml

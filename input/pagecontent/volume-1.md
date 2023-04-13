@@ -478,6 +478,50 @@ Very briefly (typically one sentence) describe the state of the
 clinical scenario after this content module has been created including
 examples of potential next steps.
 
+#### XX.4.2.2 Use Case \#2: Document Subscription for Mobile Device in XDS on FHIR Enviroment
+
+The availability of a document for a Patient is notified in a mobile device.
+
+Note that Section XX.4.2.1 repeats in its entirety for additional use
+cases (replicate as Section XX.4.2.2, XX.4.2.3, etc.).
+
+##### XX.4.2.2.1 Document Subscription for Mobile Device in XDS on FHIR Enviroment Use Case Description
+
+Mr Smith, a cardiopathic patient, is hospitalized at the Goodcare General Hospital. During his admission he is assisted by Dr. Roose who prescribes some blood tests to decide which medicine is suitable for the patient.
+
+In order to be notified when the laboratory report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
+Nurse Davis who is taking care of Mr Smith also uses her tablet to subscribe for ePrescriptions of the drugs that must be administered to the patient.
+
+In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
+Once the ePrescription has been created a notification is also created and nurse Davis’s tablet receives the notification and once she has downloaded the ePrescription can give to Mr Smith the right drug.
+
+At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
+
+
+##### XX.4.2.2.2 Document Subscription for Mobile Device in XDS on FHIR Enviroment Process Flow
+
+<div>
+{%include usecase2-processflow.svg%}
+</div>
+<br clear="all">
+
+Figure XX.4.2.2-1: Document Subscription for Mobile Device in XDS on FHIR Enviroment in Profile Acronym Profile
+
+**Pre-conditions**:
+
+The assumption is that systems share the information in a XDS on FHIR Enviroment.
+
+**Main Flow**:
+
+Typically in an enumerated list, describe the clinical workflow
+when, where, and how this content module would be used.
+
+**Post-conditions:**
+
+Very briefly (typically one sentence) describe the state of the
+clinical scenario after this content module has been created including
+examples of potential next steps.
+
 ## 1.XX.5 ToDo Security Considerations
 
 <a name="security-considerations"> </a>
@@ -590,5 +634,7 @@ other profile acronym - other profile name
 A other profile actor name in other profile name might
 be grouped with a this profile actor name to describe
 benefit/what is accomplished by grouping.
+
+
 
 

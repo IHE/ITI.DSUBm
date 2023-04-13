@@ -1,0 +1,57 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+
+participant Repository [
+    ="Integrated Document\nSource/Repository"
+    ----
+    [XSD Document Source]
+    [XSD Document Repository]  
+] 
+
+participant Central [
+    =Central Infrastructure
+    ----
+    [XSD Document Registry]
+    [Mobile Notification Publisher]
+    [Mobile Notification Recipient]
+    [Mobile Notification Broker]
+    
+] 
+
+participant XDSonFHIR [
+    =XDS FHIR Interface
+    ----
+    [XSD Document Consumer]
+    [MHD Document Responder]
+] 
+
+participant NurseTablet [
+    =Mobile Device
+    ----
+    [Mobile Document Consumer]
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+] 
+
+NurseTablet -> Central: Mobile Subscription [ITI-Y1]
+activate Central
+deactivate Central
+
+Repository -> Central: Register Document Set-b [ITI-42]
+activate Central
+Central -> Central :  Mobile Publishing [ITI-Y2]
+Central -> NurseTablet: Mobile Notify [ITI-Y3]
+deactivate Central
+activate NurseTablet
+NurseTablet -> XDSonFHIR: Retrieve Document [ITI-68]
+activate XDSonFHIR
+XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
+activate Repository
+deactivate XDSonFHIR
+deactivate Repository
+NurseTablet -> NurseTablet: procede with clinical action
+deactivate NurseTablet
+
+
+@enduml
