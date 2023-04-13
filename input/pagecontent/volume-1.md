@@ -451,7 +451,7 @@ Nurse Davis who is taking care of Mr Smith also uses her tablet to subscribe for
 In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
 Once the ePrescription has been created a notification is also created and nurse Davis’s tablet receives the notification and once she has downloaded the ePrescription can give to Mr Smith the right drug.
 
-At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for teh laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
+At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
 
 
 ##### XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Enviroment Process Flow
