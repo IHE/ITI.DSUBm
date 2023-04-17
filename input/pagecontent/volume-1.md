@@ -454,6 +454,7 @@ Once the ePrescription has been created a notification is also created and nurse
 At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
 
 
+
 ##### XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Enviroment Process Flow
 
 <div>
