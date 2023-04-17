@@ -3,16 +3,16 @@ skinparam svgDimensionStyle false
 hide footbox
 
 participant Repository [
-    ="Integrated Document\nSource/Repository"
+    ="Integrated Document Source Repository"
     ----
-    [XSD Document Source]
-    [XSD Document Repository]  
+    [XDS Document Source]
+    [XDS Document Repository]  
 ] 
 
 participant Central [
     =Central Infrastructure
     ----
-    [XSD Document Registry]
+    [XDS Document Registry]
     [Mobile Notification Publisher]
     [Mobile Notification Recipient]
     [Mobile Notification Broker]
@@ -22,7 +22,7 @@ participant Central [
 participant XDSonFHIR [
     =XDS FHIR Interface
     ----
-    [XSD Document Consumer]
+    [XDS Document Consumer]
     [MHD Document Responder]
 ] 
 

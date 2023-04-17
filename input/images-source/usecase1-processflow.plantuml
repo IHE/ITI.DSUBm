@@ -54,19 +54,23 @@ activate MHDsDocumentRegistry
 MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
 MHDsDocumentRegistry -> HospitalEHR : Mobile Notify [ITI-Y3]
 activate HospitalEHR
+
+HospitalEHR -> MHDsDocumentRegistry:  Retrieve Document [ITI-68]
 deactivate MHDsDocumentRegistry
+HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 deactivate HospitalEHR
 
-
-
-HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 activate MHDsDocumentRegistry
 MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
 MHDsDocumentRegistry -> NurseTablet : Mobile Notify [ITI-Y3]
+deactivate MHDsDocumentRegistry
 activate NurseTablet
+NurseTablet -> MHDsDocumentRegistry: Retrieve Document [ITI-68]
+activate MHDsDocumentRegistry
+deactivate MHDsDocumentRegistry
 NurseTablet -> NurseTablet: procede with drug administration
 deactivate NurseTablet
-deactivate MHDsDocumentRegistry
+
 
 group Unsubscribe
   HospitalEHR ->MHDsDocumentRegistry: Mobile Subscription [ITI-Y1]
