@@ -1,0 +1,61 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+title "Subscription with DSUBm on DSUB on FHIR infrastructure from Mobile Device" 
+participant Repository [
+    =Integrated Document Source Repository
+    ----
+    [XDS Document Source]
+    [XDS Document Repository]  
+] 
+
+participant Central [
+    =Central Infrastructure
+    ----
+    [XDS Document Registry]
+    [Document Metadata Publisher]
+    [Document Metadata Broker]
+    
+] 
+
+participant DSUBonFHIR [
+    =DSUB FHIR Interface
+    ----
+    [Document Metadata Subscriber]
+    [Document Metadata Notification Recipient]
+    [Mobile Notification Broker]
+    ] 
+
+participant MobDevice [
+    =Mobile Device
+    ----
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+] 
+
+MobDevice -> DSUBonFHIR: Mobile Subscription [ITI-Y1]
+activate DSUBonFHIR
+DSUBonFHIR -> Central: Document Metadata Subscribe [ITI-52]
+activate Central
+deactivate Central
+deactivate DSUBonFHIR
+
+Repository -> Central: Register Document Set-b [ITI-42]
+activate Central
+Central -> Central:  Document Metadata Publish [ITI-54]
+Central -> DSUBonFHIR: Document Metadata Notify [ITI-53]
+deactivate Central
+
+activate DSUBonFHIR
+DSUBonFHIR -> MobDevice: Mobile Notify [ITI-Y3]
+deactivate DSUBonFHIR
+activate MobDevice
+MobDevice -> Repository: Retrieve Document Set [ITI-43]
+activate Repository
+deactivate Repository
+MobDevice -> MobDevice: accept the appointment
+MobDevice -> DSUBonFHIR: Mobile Subscription [ITI-Y1]
+deactivate MobDevice
+
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" 
+
+participant Repository [
+    ="Integrated Document Source Repository"
+    ----
+    [XDS Document Source]
+    [XDS Document Repository]  
+] 
+
+participant Central [
+    =Central Infrastructure
+    ----
+    [XDS Document Registry]
+    [Mobile Notification Publisher]
+    [Mobile Notification Recipient]
+    [Mobile Notification Broker]
+    
+] 
+
+participant XDSonFHIR [
+    =XDS FHIR Interface
+    ----
+    [XDS Document Consumer]
+    [MHD Document Responder]
+] 
+
+participant MobileDevice [
+    =Mobile Device
+    ----
+    [Mobile Document Consumer]
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+] 
+
+MobileDevice -> Central: Mobile Subscription [ITI-Y1]
+activate Central
+deactivate Central
+
+Repository -> Central: Register Document Set-b [ITI-42]
+activate Central
+Central -> Central :  Mobile Publishing [ITI-Y2]
+Central -> MobileDevice: Mobile Notify [ITI-Y3]
+deactivate Central
+activate MobileDevice
+MobileDevice -> XDSonFHIR: Retrieve Document [ITI-68]
+activate XDSonFHIR
+XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
+activate Repository
+deactivate XDSonFHIR
+deactivate Repository
+MobileDevice -> MobileDevice: prepare the ePrescription\nto be used in the local pharmacy
+deactivate MobileDevice
+
+
+@enduml

@@ -2,7 +2,7 @@
 skinparam svgDimensionStyle false
 hide footbox
 
-
+title "Subscription with DSUBm on MHDs infrastructure: Laboratory Results and ePrescription"
 participant HospitalEHR [
     =Hospital EHR
     ----
@@ -21,7 +21,6 @@ participant MHDsDocumentRegistry [
     ] 
 
 
-
 participant LaboratorySystem [
     =Laboratory System
     ----
@@ -36,7 +35,6 @@ participant NurseTablet [
     
 ] 
 
-HospitalEHR --> NurseTablet:  Clinical information exchange
 NurseTablet -> MHDsDocumentRegistry:   Mobile Subscription [ITI-Y1]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
@@ -77,13 +75,6 @@ group Unsubscribe
   activate MHDsDocumentRegistry
   deactivate MHDsDocumentRegistry
   
-  NurseTablet ->MHDsDocumentRegistry: Mobile Subscription Search [ITI-Y4]
-  activate MHDsDocumentRegistry
-  deactivate MHDsDocumentRegistry
-  
-  NurseTablet ->MHDsDocumentRegistry : Mobile Subscription [ITI-Y1]
-  activate MHDsDocumentRegistry
-  deactivate MHDsDocumentRegistry
 end
 
 @enduml
