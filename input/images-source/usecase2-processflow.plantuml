@@ -6,7 +6,7 @@ title "Folder Subscription with DSUBm on MHDs infrastructure"
 participant DHR [
     = Diabetological Healthcare Record
     ----
-    [Document Consumer]
+    [MHD Document Consumer]
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
 ] 
@@ -16,13 +16,13 @@ participant DHR [
 participant Central [
     =Electronic Healthcare Record
     ----
-    [MHD Document Registry]
+    [MHDs Document Registry]
     [Mobile Notification Publisher]
     [Mobile Notification Broker]
 ] 
 
 participant ER [
-    ="Emergency Room"
+    =Emergency Room
     ----
     [MHD Document Source]
 ] 
@@ -37,7 +37,7 @@ deactivate DHR
 
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Mobile Publishing [ITI-Y2]
+Central -> Central: Mobile Publish [ITI-Y2]
 Central -> DHR: Mobile Notify [ITI-Y3]
 deactivate Central
 activate DHR
@@ -51,7 +51,7 @@ DHR -> DHR: Second visit (therapy B)
 
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Mobile Publishing [ITI-Y2]
+Central -> Central: Mobile Publish [ITI-Y2]
 Central -> DHR: Mobile Notify [ITI-Y3]
 deactivate Central
 activate DHR

@@ -4,7 +4,7 @@ hide footbox
 title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" 
 
 participant Repository [
-    ="Integrated Document Source Repository"
+    =Integrated Document Source Repository
     ----
     [XDS Document Source]
     [XDS Document Repository]  
@@ -15,9 +15,7 @@ participant Central [
     ----
     [XDS Document Registry]
     [Mobile Notification Publisher]
-    [Mobile Notification Recipient]
     [Mobile Notification Broker]
-    
 ] 
 
 participant XDSonFHIR [
@@ -30,7 +28,7 @@ participant XDSonFHIR [
 participant MobileDevice [
     =Mobile Device
     ----
-    [Mobile Document Consumer]
+    [MHD Document Consumer]
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
 ] 
@@ -41,7 +39,7 @@ deactivate Central
 
 Repository -> Central: Register Document Set-b [ITI-42]
 activate Central
-Central -> Central :  Mobile Publishing [ITI-Y2]
+Central -> Central :  Mobile Publish [ITI-Y2]
 Central -> MobileDevice: Mobile Notify [ITI-Y3]
 deactivate Central
 activate MobileDevice

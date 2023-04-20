@@ -1,0 +1,46 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam componentStyle rectangle
+
+hide footbox
+title "DSUBm grouped with DSUB: DSUB on FHIR" 
+
+card "XDS Document Source" as Source
+card "XDS Document Repository" as Repo
+
+card  Central [
+  <b>Central Infrastructure
+  ----
+  XDS Docment Registry
+  ....
+  Document Metadata Publisher
+]
+
+card "Document Metadata Broker" as Broker 
+
+card  DSUBFHIR [
+  <b>DSUB/FHIR interface
+  ----
+Document Metadata Subscriber
+....
+Document Metadata Notification Recipient
+....
+Mobile Notification Broker
+]
+
+card "Mobile Notification Subscriber" as Subsciber 
+card "Mobile Notification Recipient" as Recipient 
+
+Subsciber -u-> DSUBFHIR: ITI-Y1
+DSUBFHIR -d-> Broker: ITI-52
+
+Source -u-> Repo: ITI-41
+Repo -r-> Central: ITI-42
+Central -d-> Broker: ITI-54
+
+Broker-r->DSUBFHIR: ITI-53
+DSUBFHIR -d-> Recipient: ITI-Y3
+
+
+
+@enduml

@@ -1,6 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
+title "Subscription with DSUBm abstract process flow" 
 
 participant Repository [
     =Integrated Document Source Repository

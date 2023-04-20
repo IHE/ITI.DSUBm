@@ -1,0 +1,46 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam componentStyle rectangle
+
+hide footbox
+title "DSUBm grouped with DSUB: Notification Manager" 
+
+card "XDS Document Source" as Source
+card "XDS Document Repository" as Repo
+
+card  Central [
+  <b>Central Infrastructure
+  ----
+  XDS Docment Registry
+  ....
+  Document Metadata Publisher
+]
+
+card Broker [
+  <b>Notificanion Manager
+  ----
+  Document Metadata Broker
+  ....
+  Mobile Notification Broker
+]
+
+card "Document Notification Subscriber" as DSUB_Subsciber 
+card "Document Notification Recipient" as DSUB_Recipient 
+
+card "Mobile Notification Subscriber" as DSUBm_Subsciber 
+card "Mobile Notification Recipient" as DSUBm_Recipient 
+
+DSUBm_Subsciber -u-> Broker: ITI-Y1
+
+Source -u-> Repo: ITI-41
+Repo -r-> Central: ITI-42
+Central -d-> Broker: ITI-54
+
+
+DSUB_Subsciber -l->Broker: ITI-52
+Broker-r-> DSUB_Recipient: ITI-53
+Broker -d-> DSUBm_Recipient: ITI-Y3
+
+
+
+@enduml

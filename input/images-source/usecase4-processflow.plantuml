@@ -15,7 +15,8 @@ participant Central [
     [XDS Document Registry]
     [Document Metadata Publisher]
     [Document Metadata Broker]
-    
+    [XDS Document Consumer]
+    [MHD Document Responder]
 ] 
 
 participant DSUBonFHIR [
@@ -31,6 +32,7 @@ participant MobDevice [
     ----
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
+    [MHD Document Consumer]
 ] 
 
 MobDevice -> DSUBonFHIR: Mobile Subscription [ITI-Y1]
@@ -50,11 +52,13 @@ activate DSUBonFHIR
 DSUBonFHIR -> MobDevice: Mobile Notify [ITI-Y3]
 deactivate DSUBonFHIR
 activate MobDevice
-MobDevice -> Repository: Retrieve Document Set [ITI-43]
+MobDevice -> Central: Retrieve Document [ITI-68]
+activate Central
+Central -> Repository: Retrieve Document Set [ITI-43]
 activate Repository
 deactivate Repository
-MobDevice -> MobDevice: accept the appointment
-MobDevice -> DSUBonFHIR: Mobile Subscription [ITI-Y1]
+deactivate Central
+MobDevice -> MobDevice: review the appointment data
 deactivate MobDevice
 
 

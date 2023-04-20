@@ -5,7 +5,7 @@ title "Subscription with DSUBm on DSUB infrastructure from Mobile Device"
 
 
 participant Repository [
-    ="Integrated Document Source Repository"
+    =Integrated Document Source Repository
     ----
     [XDS Document Source]
     [XDS Document Repository]  
@@ -16,11 +16,12 @@ participant Central [
     ----
     [XDS Document Registry]
     [Document Metadata Publisher]
-    
+    [XDS Document Consumer]
+    [MHD Document Responder]
 ] 
 
 participant Broker [
-    =Notification Broker
+    =Notification Manager
     ----
     [Document Metadata Broker]
     [Mobile Notification Broker]
@@ -28,10 +29,11 @@ participant Broker [
 
 
 participant MobDevice [
-    =Mobile Device
+    =Mobile Alert System 
     ----
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
+    [MHD Document Consumer]
 ] 
 
 MobDevice -> Broker: Mobile Subscription [ITI-Y1]
@@ -47,9 +49,12 @@ Broker  -> MobDevice: Mobile Notify [ITI-Y3]
 deactivate Broker
 
 activate MobDevice
-MobDevice -> Repository: Retrieve Document Set [ITI-43]
+MobDevice -> Central: Retrieve Document [ITI-68]
+activate Central
+Central -> Repository: Retrieve Document Set [ITI-43]
 activate Repository
 deactivate Repository
+deactivate Central
 MobDevice -> MobDevice: initiate quarantine protocol
 deactivate MobDevice
 
