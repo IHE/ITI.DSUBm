@@ -1,57 +1,70 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
+title "Folder Subscription with DSUBm on MHDs infrastructure" 
 
-participant Repository [
-    ="Integrated Document Source Repository"
+participant DHR [
+    = Diabetological Healthcare Record
     ----
-    [XDS Document Source]
-    [XDS Document Repository]  
-] 
-
-participant Central [
-    =Central Infrastructure
-    ----
-    [XDS Document Registry]
-    [Mobile Notification Publisher]
-    [Mobile Notification Recipient]
-    [Mobile Notification Broker]
-    
-] 
-
-participant XDSonFHIR [
-    =XDS FHIR Interface
-    ----
-    [XDS Document Consumer]
-    [MHD Document Responder]
-] 
-
-participant NurseTablet [
-    =Mobile Device
-    ----
-    [Mobile Document Consumer]
+    [MHD Document Consumer]
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
 ] 
 
-NurseTablet -> Central: Mobile Subscription [ITI-Y1]
-activate Central
-deactivate Central
 
-Repository -> Central: Register Document Set-b [ITI-42]
-activate Central
-Central -> Central :  Mobile Publishing [ITI-Y2]
-Central -> NurseTablet: Mobile Notify [ITI-Y3]
-deactivate Central
-activate NurseTablet
-NurseTablet -> XDSonFHIR: Retrieve Document [ITI-68]
-activate XDSonFHIR
-XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
-activate Repository
-deactivate XDSonFHIR
-deactivate Repository
-NurseTablet -> NurseTablet: procede with clinical action
-deactivate NurseTablet
 
+participant Central [
+    =Electronic Healthcare Record
+    ----
+    [MHDs Document Registry]
+    [Mobile Notification Publisher]
+    [Mobile Notification Broker]
+] 
+
+participant ER [
+    =Emergency Room
+    ----
+    [MHD Document Source]
+] 
+
+
+
+
+DHR -> DHR: Firt visit (therapy A)
+activate DHR
+DHR -> Central:  Mobile Subscription [ITI-Y1]
+deactivate DHR
+
+ER->Central:  Provide Document Bundle [ITI-65]
+activate Central 
+Central -> Central: Mobile Publish [ITI-Y2]
+Central -> DHR: Mobile Notify [ITI-Y3]
+deactivate Central
+activate DHR
+
+DHR -> ER: Retrieve Document [ITI-68]
+activate ER
+deactivate ER
+deactivate DHR 
+
+DHR -> DHR: Second visit (therapy B)
+
+ER->Central:  Provide Document Bundle [ITI-65]
+activate Central 
+Central -> Central: Mobile Publish [ITI-Y2]
+Central -> DHR: Mobile Notify [ITI-Y3]
+deactivate Central
+activate DHR
+
+DHR -> ER: Retrieve Document [ITI-68]
+activate ER
+deactivate ER
+deactivate DHR 
+
+DHR -> DHR: Third visit. (Unsubscribe)
+activate DHR
+DHR -> Central: Mobile Subscription Search [ITI-Y4]
+DHR -> Central: Mobile Subscription [ITI-Y1]	
+deactivate DHR
 
 @enduml

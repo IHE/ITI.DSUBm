@@ -1,0 +1,54 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+title "Subscription with DSUBm abstract process flow" 
+
+participant Repository [
+    =Integrated Document Source Repository
+    ----
+    [XDS Document Source]
+    [XDS Document Repository]  
+] 
+
+participant Central [
+    =Central Infrastructure
+    ----
+    [XDS Document Registry]
+    [Document Metadata Publisher]
+    [Document Metadata Broker]
+    
+] 
+
+participant Broker [
+    =Broker
+    ----
+    [Document Metadata Broker]
+    [Mobile Notification Broker]
+    ] 
+
+participant MobDevice [
+    =Mobile Device
+    ----
+    [Mobile Notification Subscriber]
+    [Mobile Notification Recipient]
+] 
+
+MobDevice -> Broker: Mobile Subscription [ITI-Y1]
+activate Broker
+Broker -> Central: Document Metadata Subscribe [ITI-52]
+activate Central
+deactivate Central
+deactivate Broker
+
+Repository -> Central: Register Document Set-b [ITI-42]
+activate Central
+
+Central -> Broker: Document Metadata Publish [ITI-54]
+deactivate Central
+activate Broker
+Broker -> Broker: Mobile Publishing [ITI-Y2]
+Broker -> MobDevice: Mobile Notify [ITI-Y3]
+deactivate Broker
+
+
+@enduml

@@ -2,14 +2,14 @@
 skinparam svgDimensionStyle false
 hide footbox
 
-
+title "Subscription with DSUBm on MHDs infrastructure: Laboratory Results and ePrescription"
 participant HospitalEHR [
     =Hospital EHR
     ----
-    [Document Source]
+    [MHD Document Source]
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
-    
+    [MHD Document Consumer]
 ] 
 
 participant MHDsDocumentRegistry [
@@ -21,11 +21,11 @@ participant MHDsDocumentRegistry [
     ] 
 
 
-
 participant LaboratorySystem [
     =Laboratory System
     ----
-    [Document Source]
+    [MHD Document Source]
+    
 ] 
 
 participant NurseTablet [
@@ -33,10 +33,9 @@ participant NurseTablet [
     ----
     [Mobile Notification Subscriber]
     [Mobile Notification Recipient]
-    
+    [MHD Document Consumer]
 ] 
 
-HospitalEHR --> NurseTablet:  Clinical information exchange
 NurseTablet -> MHDsDocumentRegistry:   Mobile Subscription [ITI-Y1]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
@@ -51,7 +50,7 @@ deactivate MHDsDocumentRegistry
 
 LaboratorySystem -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishi [ITI-Y2]
 MHDsDocumentRegistry -> HospitalEHR : Mobile Notify [ITI-Y3]
 activate HospitalEHR
 
@@ -61,7 +60,7 @@ HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 deactivate HospitalEHR
 
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publishing [ITI-Y2]
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Mobile Publish [ITI-Y2]
 MHDsDocumentRegistry -> NurseTablet : Mobile Notify [ITI-Y3]
 deactivate MHDsDocumentRegistry
 activate NurseTablet
@@ -77,13 +76,6 @@ group Unsubscribe
   activate MHDsDocumentRegistry
   deactivate MHDsDocumentRegistry
   
-  NurseTablet ->MHDsDocumentRegistry: Mobile Subscription Search [ITI-Y4]
-  activate MHDsDocumentRegistry
-  deactivate MHDsDocumentRegistry
-  
-  NurseTablet ->MHDsDocumentRegistry : Mobile Subscription [ITI-Y1]
-  activate MHDsDocumentRegistry
-  deactivate MHDsDocumentRegistry
 end
 
 @enduml
