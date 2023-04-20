@@ -20,7 +20,7 @@ participant Central [
 ] 
 
 participant DSUBonFHIR [
-    =DSUB FHIR Interface
+    =DSUB/FHIR Interface
     ----
     [Document Metadata Subscriber]
     [Document Metadata Notification Recipient]

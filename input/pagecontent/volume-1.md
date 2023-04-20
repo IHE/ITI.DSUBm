@@ -66,7 +66,7 @@ Table 1.XX.1-1 lists the transactions for each actor directly involved in the DS
 *Note 2: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Subscriber a supports Subscription Search Option, see Section XX.2.1 Subscription Search.*
 
 ### 1:XX.1.1 Actors
-The actors in this profile are described in more detail in the sections below.
+The actors in this profile are described in more detail in the following sections.
 
 #### 1:XX.1.1.1 Mobile Notification Broker
 
@@ -234,15 +234,9 @@ actor (Column 2)
 <a name="overview"> </a>
 
 This section shows how the transactions/content modules of the profile are combined to address the use cases.
-The MHD Profile enables sharing of patient documents to, or from, mobile or constrained devices. Other IHE profiles, chiefly Cross-Enterprise Document Sharing (XDS), describe sharing of patient document in less constrained environments, and many of the concepts from those profiles are applicable to the MHD environment. For more information on IHE Document Sharing, see Health Information Exchange: Enabling Document Sharing Using IHE Profiles White Paper.
+The MHD Profile enables sharing of patient documents to, or from, mobile or constrained devices. Other IHE profiles, chiefly Cross-Enterprise Document Sharing (XDS), describe sharing of patient document in less constrained environments, and many of the concepts from those profiles are applicable to the MHD environment. For more informations on IHE Document Sharing, see Health Information Exchange: Enabling Document Sharing Using IHE Profiles White Paper.
 
 ### 1:XX.4.1 Concepts
-
-If needed, this section provides an overview of the concepts that provide necessary background for understanding the profile. If not
-needed, state “Not applicable.” For an example of why/how this section may be needed, please see ITI Cross Enterprise Workflow (XDW).
-
-It may be useful in this section but is not necessary, to provide a short list of the use cases described below and explain why they are
-different.
 
 The subscription mechanism is very flexible and can be adapted to many use case depending on the type of subscription/notification used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription type such as patient dependent subscription, patient independent subscription, Folder subscription and other types. 
@@ -568,7 +562,7 @@ The second DSUB grouping creates a Notification Manager by integrating the Docum
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
 
 #### 1:XX.6.3.1 (DSUB on FHIR) 
-* Document Metadata Subscriber and the Document Metadata notification Recipient  will most likely be grouped with a Mobile Notification Broker creating the DSUB/FHIR interface.  
+* Document Metadata Subscriber and the Document Metadata Notification Recipient  will most likely be grouped with a Mobile Notification Broker creating the DSUB/FHIR interface.  
 
 <div>
 {%include model_DSUBonFHIR.svg%}
