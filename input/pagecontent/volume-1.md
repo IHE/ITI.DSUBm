@@ -3,7 +3,7 @@
 
 IHE provides multiple profiles for mobile use (e.g. SVCM, MHD, MHDS, NPFS), defining a lot of mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
 
-For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities (MHD) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application (DSUB).
+For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities (MHD) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
 This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be coupled with different nonmobile profiles (eg. XDS.b, DSUB ).
 
@@ -197,7 +197,6 @@ actor (Column 2)
     </td>
 </tr>
 
-
 <tr class="odd">
 <td>Mobile Notification Publisher</td>
 <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
@@ -240,7 +239,7 @@ This section shows how the transactions/content modules of the profile are combi
 The DSUBm profile enables mobile subscription for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription types, such as patient-dependent subscription, patient independent subscription, Folder subscription and other types. 
-The use cases cover both a fully mobile environment (MHDs) and an environment in which the main infrastructure is XDS.  
+The use cases cover both a fully mobile environment (MHDS) and an environment in which the main infrastructure is XDS.  
 In these use cases are presented also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:XX.4.2 Use Cases
@@ -255,14 +254,14 @@ Mr. Smith, a cardiopathic patient, is hospitalized in the cardiology ward at the
 The medicine will be administrated by Nurse Davis only after Dr. Roose's ePrescription.
 
 In order to be notified when the laboratory report is ready, the software of Dr. Roose submits a subscription for all the laboratory reports that will be produced for Mr. Smith during his hospitalization.
-Meanwhile nurse Davis, that works in the cardiology ward, is waiting to receive the notification of the ePrescription on her tablet, to know what medication has to be given to her patients in her cardiology ward. 
+Meanwhile Nurse Davis, that works in the cardiology ward, is waiting to receive the notification of the ePrescription on her tablet, to know what medication has to be given to her patients in her cardiology ward. 
 
 When the laboratory has produced the report for Mr. Smith, Dr. Roose is promptly notified and, once downloaded and examined the report, he can make an ePrescription for the correct medicine that is needed to be given to the patient.
 Once the ePrescription has been created a notification is sent to Nurse Davis’s tablet. Now after downloading the ePrescription the nurse can give Mr. Smith the drug that Dr. Roose prescribed.
 
 At the end of Mr. Smith's hospitalization, the software of Dr. Roose automatically unsubscribes for the laboratory documents. 
 
-##### XX.4.2.1.2 Document Subscription for mobile applications in MHDS Environment Process Flow
+##### 1:XX.4.2.1.2 Document Subscription for mobile applications in MHDS Environment Process Flow
 
 <div>
 {%include usecase1-processflow.svg%}
@@ -277,9 +276,9 @@ The assumption is that systems share the information in an MHDS Environment. In 
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Mobile Subscription ITI-Y1, patient independent subscription).  
-2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Mobile Subscription ITI-Y1, indicating the patient and the intendedrecipient).
-3. When the Laboratory System has completed the analysis the results are sent to the Central Infrastructure. (Provide Document Bundle ITI-65).
+1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Mobile Subscription [ITI-Y1], patient independent subscription).  
+2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Mobile Subscription [ITI-Y1], indicating the patient and the intendedrecipient).
+3. When the Laboratory System has completed the analysis the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
 4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-Y2] Mobile Publish)Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-Y3] Mobile Notify)
 6. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient (Retrieve Document [ITI-68]).
 7. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen drug. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65]).
@@ -295,17 +294,11 @@ The update of a collection of documents (Folder), using a patient national Elect
 ##### 1:XX.4.2.2.1 Document Subscription for mobile application in MHDS Environment using Folder Subscription Use Case Description
 
 Dr. Rooney is taking charge of Ms. Williams, a chronic diabetic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 years. 
-
 During the first visit, Dr. Rooney uses the mobile DHR application to subscribe to the National Electronic Healthcare Record (EHR) in order to be notified of any updates regarding Ms. Williams's clinical data. After the visit, the patient is sent home with the standard therapy.
-
 Between the first and second visit, the patient is not feeling well and is required an admission to the emergency room where some blood tests are performed and the acute symptoms are taken care of. 
-
 When the blood test are published on the EHR a notification is sent to the mobile DHR used by Dr. Rooney and the new update are retrieved.
- 
-During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
-
+ During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
 A few days after the second visit Ms. Williams is forced again into the emergency room. Other tests are performed and the medical report is updated in the EHR a new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
-
 During the third visit, Ms. Williams decides that a different medic will take charge of her therapy. Therefore Dr. Rooney closes the position for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
 
 
@@ -429,9 +422,9 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. After the first login, the mobile app performs an automatic subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (ITI-Y1 Mobile Subscription, patient independent expressed by HealthcareFacilityTypeCode, ClassCode, and list of specific EventCodeList values known and managed by the Mobile Alert System).
-2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. (ITI-42 Register Document Set-b)
-3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. (ITI-54 Document Metadata Publish)
+1. After the first login, the mobile app performs an automatic subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. ([ITI-Y1] Mobile Subscription, patient independent expressed by HealthcareFacilityTypeCode, ClassCode, and list of specific EventCodeList values known and managed by the Mobile Alert System).
+2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
+3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
 4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1. a notification is sent to the Mobile Alert System. ([ITI-Y3] mobile Notify)
 5. The Mobile Alert System will try to retrieve the document in order to inform the user of the specific information regarding the exposure and quarantine protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.

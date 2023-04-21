@@ -25,7 +25,6 @@ participant LaboratorySystem [
     =Laboratory System
     ----
     [MHD Document Source]
-    
 ] 
 
 participant NurseTablet [

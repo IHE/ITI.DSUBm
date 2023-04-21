@@ -30,7 +30,7 @@ participant ER [
 
 
 
-DHR -> DHR: Firt visit (therapy A)
+DHR -> DHR: First visit (therapy A)
 activate DHR
 DHR -> Central:  Mobile Subscription [ITI-Y1]
 deactivate DHR
