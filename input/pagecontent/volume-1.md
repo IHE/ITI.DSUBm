@@ -61,12 +61,12 @@ Table 1.XX.1-1 lists the transactions for each actor directly involved in the DS
 | Mobile Notification Recipient  | Mobile Notify [ITI-Y3]                   | Responder    | R     | ITI TF-2: 3.Y3 |
 {: .grid}
 
-*Note 1: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Broker a supports Subscription Search Option, see Section XX.2.1 Subscription Search.*
+*Note 1: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Broker supports Subscription Search Option, see Section XX.2.1 Subscription Search.*
 
-*Note 2: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Subscriber a supports Subscription Search Option, see Section XX.2.1 Subscription Search.*
+*Note 2: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Subscriber supports Subscription Search Option, see Section XX.2.1 Subscription Search.*
 
 ### 1:XX.1.1 Actors
-The actors in this profile are described in more detail in the following sections.
+The actors in this profile are described in more details in the following sections.
 
 #### 1:XX.1.1.1 Mobile Notification Broker
 
@@ -88,7 +88,7 @@ FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.h
 
 <a name="publisher"> </a>
 
-The Mobile Notification Publisher sends a Mobile Publish transaction to the Mobile Notification Broker when an event occurs for which a subscription may exist. This profile does not specify how the Mobile Notification Publisher becomes aware of those events.
+The Mobile Notification Publisher sends a Mobile Publish transaction to the Mobile Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Mobile Notification Publisher becomes aware of those events.
 
 FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.html)
 
@@ -150,7 +150,7 @@ The Mobile Notification Subscriber that supports this option shall implement the
 
 The Mobile Notification Broker that supports this option shall accept and process the Mobile Subscription Search [ITI-Y4] transaction.
 
-## 1:XX.3 ToDo Required Actor Groupings
+## 1:XX.3 Required Actor Groupings
 
 <a name="required-groupings"> </a>
 
@@ -233,61 +233,52 @@ actor (Column 2)
 
 <a name="overview"> </a>
 
-This section shows how the transactions/content modules of the profile are combined to address the use cases.
-The MHD Profile enables sharing of patient documents to, or from, mobile or constrained devices. Other IHE profiles, chiefly Cross-Enterprise Document Sharing (XDS), describe sharing of patient document in less constrained environments, and many of the concepts from those profiles are applicable to the MHD environment. For more informations on IHE Document Sharing, see Health Information Exchange: Enabling Document Sharing Using IHE Profiles White Paper.
+This section shows how the transactions/content modules of the profile are combined to address the use cases. 
 
 ### 1:XX.4.1 Concepts
 
-The subscription mechanism is very flexible and can be adapted to many use case depending on the type of subscription/notification used and the environment in which DSUBm is implemented.  
-In the following use cases are presented different subscription type such as patient dependent subscription, patient independent subscription, Folder subscription and other types. 
-The use cases cover both mobile environment (MHDs) and non mobile environment such as MHD on FHIR and DUSB.
-In the DUSB use cases (1:XX.4.2.5 Use Case \#5 and 1:XX.4.2.4 Use Case \#4) the DUSB and DSUBm coexists and both functionality are available to the users.
+The DSUBm profile enables mobile subscriptons for documents.
+The subscription mechanism is very flexible and can be adapted to many use case depending on the type of subscription used and the environment in which DSUBm is implemented.  
+In the following use cases are presented different subscription type, such as patient dependent subscription, patient independent subscription, Folder subscription and other types. 
+The use cases cover both a fully mobile environment (MHDs) and an environment in which the main infrastructure is XDS.  
+In these use cases are presented also the possbility in which the DUSB and DSUBm coexists and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:XX.4.2 Use Cases
 
-#### 1:XX.4.2.1 Use Case \#1: Document Subscription for Mobile Device in MHDS Environment with patient indipendent subscription
+#### 1:XX.4.2.1 Use Case \#1: Document Subscription for mobile applications in MHDS Environment
 
-The availability of a document is notified to a mobile device.
+The availability of a document is notified to Hospital sistems, where the main sharing infrastructure is based on MHDS.
 
-##### 1:XX.4.2.1.1 Document Subscription for Mobile Device in MHDS Environment Use Case Description
+##### 1:XX.4.2.1.1 Document Subscription for mobile applications in MHDS Environment Use Case Description
 
-Mr. Smith, a cardiopathic patient, is hospitalized in the cardiology ward at the Goodcare General Hospital. Dr. Roose, who is the only doctor working in this ward prescribes some blood tests to decide which medicine is suitable for the patient.
+Mr. Smith, a cardiopathic patient, is hospitalized in the cardiology ward at the Goodcare General Hospital. Dr. Roose, who is the only doctor working in this ward at that moment, prescribes some blood tests to decide which medicine is suitable for the patient.
 The medicine will be administrated by nurse Davis only after Dr. Roose ePrescription.
 
-In order to be notified when the laboratory report is ready, Dr. Roose submits a subscription for all the laboratory Report that will be produced with Mr. Smith as patient during the hospitalization.
-Meanwhile nurse Davis who is working only in the cardiology ward uses her tablet to subscribe for documents created by Dr.Roose. 
+In order to be notified when the laboratory report is ready, the software of Dr. Roose submits a subscription for all the laboratory reports that will be produced for Mr. Smith  during his hospitalization.
+Meanwhile nurse Davis, that works in the cardiology ward, is waiting to receive the notification of the ePrescription on her tablet, to know what medication has to be given to her patients in her cardiology ward. 
 
-When the laboratory has produced the report for Mr. Smith, Dr Roose is promptly notified and once downloaded and examinated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
-Once the ePrescription has been created another notification is sent to nurse Davis’s tablet. Now after downloading the ePrescription the nurse can give to Mr. Smith the drug that Dr. Roose prescribed.
+When the laboratory has produced the report for Mr. Smith, Dr Roose is promptly notified and, once downloaded and examinated the report, he can make an ePrescription for the correct medicine that is needed to be given to the patient.
+Once the ePrescription has been created a notification is sent to nurse Davis’s tablet. Now after downloading the ePrescription the nurse can give to Mr. Smith the drug that Dr. Roose prescribed.
 
 At the end of Mr. Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. 
 
-In order to be notified when the laboratory report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
-Nurse Davis who is taking care of Mr Smith also uses her tablet to subscribe for ePrescriptions of the drugs that must be administered to the patient.
-
-In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
-Once the ePrescription has been created a notification is also created and nurse Davis’s tablet receives the notification and once she has downloaded the ePrescription can give to Mr Smith the right drug.
-
-At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
-
-
-##### XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Enviroment Process Flow
+##### XX.4.2.1.2 Document Subscription for mobile applications in MHDS Enviroment Process Flow
 
 <div>
 {%include usecase1-processflow.svg%}
 </div>
 <br clear="all">
 
-Figure 1:XX.4.2.1-1: Document Subscription for Mobile Device in MHDS Environment in DSUBm
+Figure 1:XX.4.2.1.2-1: Document Subscription for mobile applications in MHDS Environment in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in a MHDS Environment.
+The assumption is that systems share the information in a MHDS Environment. In the community is implemented a Central Infrastructure where the MHDS Registry is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The sistems share and retrive the docuemnts by implementing MHD Document Source and/or MHD Docuemnt Consumer.
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in cardiology field in order to be update with all the document that involves the cardiology ward operability. (Mobile Subscription ITI-Y1, patient indipendent subscription with explicit AuthorPerson = Dr. Roose).  
-2. After requiring the blood tests to the Laboratory System the Hospital EHR perform a subscription to the Central Infrustructure in order to inform the Dr. Roose when the results will be available. (Mobile Subscription ITI-Y1, using the XDSSubmissionSet.IntendedRecipient = Dr. Roose).
+1. The nurse tablet has already performed a subscription for documents produced in cardiology field in order to be update with all the document that involves the cardiology ward operability. (Mobile Subscription ITI-Y1, patient indipendent subscription).  
+2. After requiring the blood tests to the Laboratory System the Hospital EHR perform a subscription to the Central Infrustructure in order to inform the Dr. Roose when the results will be available. (Mobile Subscription ITI-Y1, indicating the patiente and the intendedRecipient).
 3. When the Laboratory System has completed the analysis the results are sent to the Central Infrastructure. (Provide Document Bundle ITI-65).
 4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-Y2] Mobile Publish)
 5. Since the  publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-Y3] Mobile Notify)
@@ -299,15 +290,15 @@ The assumption is that systems share the information in a MHDS Environment.
 11. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated unsubcription. (Mobile Subscription [ITI-Y1]).
 
 
-#### 1:XX.4.2.2 Use Case \#2: Document Subscription for Mobile Device in MHDS Environment using Folder Subscription
+#### 1:XX.4.2.2 Use Case \#2: Document Subscription for mobile application in MHDS Environment using Folder Subscription
 
-The update of a collection of document (Folder) is notified to a mobile Diabetological Healthcare Record (DHR).
+The update of a collection of document (Folder), using as patient national Electronic Healthcare Record (EHR), is notified to a mobile Diabetological Healthcare Record (DHR).
 
-##### 1:XX.4.2.2.1 Document Subscription for Mobile Device Mobile Device in MHDS Environment using Folder Subscription Use Case Description
+##### 1:XX.4.2.2.1 Document Subscription for mobile application in MHDS Environment using Folder Subscription Use Case Description
 
-Dr. Rooney is taking charge of Ms. Williams a chronic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 year. 
+Dr. Rooney is taking charge of Ms. Williams, a chronic diabetic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 year. 
 
-During the first visit Dr. Rooney uses the mobile DHR application to subscribe to the national Electronic Healthcare Record (EHR) in order to be notified for any update regarding Ms. Williams clinical data. The patient is sent home with the standard therapy.
+During the first visit Dr. Rooney uses the mobile DHR application to subscribe to the national Electronic Healthcare Record (EHR) in order to be notified for any update regarding Ms. Williams clinical data. After the visit, the patient is sent home with the standard therapy.
 
 Between the first and second visit the patient is not feeling well and is required an admission to the emergency room where some blood test are performed and the acute symptoms are taken care. 
 
@@ -317,41 +308,41 @@ During the second visit Dr. Rooney uses the latest clinical information and adju
 
 A few days after the second visit Ms. Williams is forced again in the emergency room. Other test are performed and the medical report is updated in the EHR and a new notification is sent to the mobile DHR used by Dr. Rooney and the new update are retrieved.
 
-During the third visit Ms. Williams decides that a different medic will take charge of her therapy. Therefore Dr. Rooney closes the position on his mobile DHR and the subscription to the EHR is deleted.
+During the third visit Ms. Williams decides that a different medic will take charge of her therapy. Therefore Dr. Rooney closes the position for Ms Williams on his mobile DHR and the subscription to the EHR is deleted.
 
 
-##### 1:XX.4.2.2.2 Document Subscription for Mobile Device in MHDS Environment using Folder Subscription Process Flow
+##### 1:XX.4.2.2.2 Document Subscription for mobile application in MHDS Environment using Folder Subscription Process Flow
 
 <div>
 {%include usecase2-processflow.svg%}
 </div>
 <br clear="all">
 
-Figure 1:XX.4.2.2-1: Document Subscription for Mobile Device in MHDS Environment using Folder Subscription in DSUBm
+Figure 1:XX.4.2.2.2-2: Document Subscription for mobile application in MHDS Environment using Folder Subscription in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in a MHDS Environment.
+The assumption is that systems share the information in a MHDS Environment. The national EHR of a patient is maintained thanks the implementation of a MHDS Registry and it is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The sistems share and retrive the docuemnts by implementing MHD Document Source and/or MHD Docuemnt Consumer.
 
 **Main Flow**:
 
-1. During the first visit the mobile DHR application performs a folder subscription to the EHR and the therapy A is prescribed to Mr. Williams. ([ITI-Y1] Mobile Subscription )
+1. During the first visit the mobile DHR application performs a folder subscription to the EHR and the therapy A is prescribed to Mr. Williams. ([ITI-Y1] Mobile Subscription)
 2. After some days during an emergency a blood test analysis is performed on Mr. Williams  and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 3. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Mobile Publish)
 4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] Mobile Notify)
-5. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER.  The clinical data in the DHR is update. 
+5. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is update. 
 6. After some days during the second visit the Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
 7. After some days during an emergency event other analysis are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 8. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Mobile Publish)
 9. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] Mobile Notify)
-10. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER. The clinical data in the DHR is update. 
+10. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is update. 
 11. During the third visit the mobile DHR search the subscription performed on the folder present on the EHR. ([ITI-Y4] Mobile Subscription Search)
 12. The mobile DHR deletes the folder subscription. ([ITI-Y1] Mobile Subscription.)
 
 
 #### 1:XX.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
 
-The availability of a specific document for a Patient is notified in a mobile device.
+The availability of a specific document for a Patient, shared in an XDS on FHIR infrastructure, is notified in his personal mobile device.
 
 ##### 1:XX.4.2.3.1 Document Subscription for Mobile Device in XDS on FHIR Environment Use Case Description
 
@@ -367,15 +358,15 @@ When the prescription has been made Mr. Brown receives the notification on his p
 </div>
 <br clear="all">
 
-Figure 1:XX.4.2.3-1: Document Subscription for Mobile Device in XDS on FHIR Environment in DSUBm 
+Figure 1:XX.4.2.3.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment in DSUBm 
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in a XDS on FHIR Environment.
+The assumption is that systems share the information in a XDS on FHIR Environment. In the central infrastructure the XDS Registry is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The sistems share and retrive the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
 
 **Main Flow**:
 
-1. After the first login the mobile app performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-Y1] Mobile Subscription for patient and typeCode = ePrescription)
+1. After the first login the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-Y1] Mobile Subscription for patient and typeCode = ePrescription)
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-Y2] Mobile Publish)
 4. Since the the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-Y3] Mobile Notify)
@@ -383,34 +374,34 @@ The assumption is that systems share the information in a XDS on FHIR Environmen
 6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
 7. With the downloaded ePrescription the patient can now go to the local pharmacy to acquire the prescribed drug showing his mobile device.
 
-#### 1:XX.4.2.4 Use Case \#4: Document Subscription for Mobile Device in DSUB on FHIR Environment
+#### 1:XX.4.2.4 Use Case \#4: Document Subscription for Mobile Device in in XDS on FHIR Environment extending DSUB with DSUBm
 
 The availability of a documents for a Patient is notified in a mobile device.
 
-##### 1:XX.4.2.4.1 Document Subscription for Mobile Device in DSUB on FHIR Environment Use Case Description
+##### 1:XX.4.2.4.1 Document Subscription for Mobile Device in in XDS on FHIR Environment extending DSUB with DSUBm Use Case Description
 
-Mr. Wayne has a prescription for a radiographic exam and he needs to book a Radiology Appointment from his mobile app. With a phone call to the local hospital an appointment is proposed and Mr. Wayne accept the slot. After some minutes the radiology booking system produce a document for the booking reservation. 
-Since Mr.Wayne is a user of the mobile app a patient subscription has been already made to the Central Infrastructure in order to receive a notification when the booking reservation is produced.
+Mr. Wayne has a prescription for a radiographic exam and he needs to book a Radiology Appointment. With a phone call to the local hospital booking site where an appointment is proposed and Mr. Wayne, that accepts the slot. After some minutes the radiology booking system produce a document for the booking reservation. 
+Since Mr.Wayne is a user of the booking mobile app, a subscription has been already made to the Central Infrastructure in order to receive a notification when the booking reservation is produced.
 When the notification arrives on Mr.Wayne mobile device he can consult the information regarding his appointment. 
 
-##### 1:XX.4.2.4.2 Document Subscription for Mobile Device in DSUB on FHIR Environment Process Flow
+##### 1:XX.4.2.4.2 Document Subscription for Mobile Device in in XDS on FHIR Environment extending DSUB with DSUBm Process Flow
 
 <div>
 {%include usecase4-processflow.svg%}
 </div>
 <br clear="all">
 
-Figure 1.XX.4.2.4-1: Document Subscription for Mobile Device in DSUB on FHIR Environment in DSUBm
+Figure 1.XX.4.2.4.2-1: Document Subscription for Mobile Device in in XDS on FHIR Environment extending DSUB with DSUBm in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in a DSUB on FHIR Environment.
+The assumption is that systems share the information in a XDS on FHIR Environment. In the central infrastructure the XDS Registry is grouped by the DSUB Document Metadata Publisher/Document Metadata Broker. The DSUBm extends the DSUB subscription to mobile sistems grouping the Mobile Notification Broker by DSUB Document Metadata Subscriber and DSUB Document Metadata Recipient. The sistems share and retrive the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). 
 
 **Main Flow**:
 
 1. The mobile app performs a patient dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-Y1] Mobile Subscription)
 2. The DSUB interface translates the mobile subcription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will produced for the patient. 
-3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure.([ITI-42] Register Document Set-b).
+3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
 4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)
 5. Since the the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. ([ITI-53] Document Metadata Notify)
 6. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device.([ITI-Y3] mobile Notify)
@@ -419,26 +410,26 @@ The assumption is that systems share the information in a DSUB on FHIR Environme
 9. The Mobile Device can now use the appointment infoirmation.
 
 
-#### 1:XX.4.2.5 Use Case \#5: Document Subscription for Mobile Device in DSUB Environment
+#### 1:XX.4.2.5 Use Case \#5: Document Subscription for Mobile Alert System
 
 The availability of a specific document is notified in a Mobile Alert System with a patient indipendent subscription.
 
-##### 1:XX.4.2.5.1 Document Subscription for Mobile Device in DSUB Environment Use Case Description
+##### 1:XX.4.2.5.1 Document Subscription for Mobile Alert System Use Case Description
 
 Dr. Gordon is a new medic hired by the geriatric ward of the Goodcare General Hospital. In this facility there is a Mobile Alert System in order to mitigate the spreading of higly contagious diseases. In order to do this every employee has an app on his personal mobile device that is connected to the mobile Alert System. When a highly contagious disease is reported inside the geriatric ward an alert is spread in order to follow immediately the specific quarantine protocol expected for the reported disease. 
 
-##### 1:XX.4.2.5.2 Document Subscription for Mobile Device in DSUB Process Flow
+##### 1:XX.4.2.5.2 Document Subscription for Mobile Alert System Process Flow
 
 <div>
 {%include usecase5-processflow.svg%}
 </div>
 <br clear="all">
 
-Figure 1:XX.4.2.5-1: Document Subscription for Mobile Device in DSUB Environment in DSUBm
+Figure 1:XX.4.2.5-1: Document Subscription for Mobile Alert System in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in a DSUB Environment.
+The assumption is that systems share the information in a XDS on FHIR Environment. In the central infrastructure the XDS Registry is grouped by the DSUB Document Metadata Publisher. The Notification Manager System manages both mobile and non mobile subscription, groping DSUB Document Metadata Broker by the Mobile Notification Broker, The sistems share and retrive the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
 
 **Main Flow**:
 
@@ -448,7 +439,7 @@ The assumption is that systems share the information in a DSUB Environment.
 4. The Notification Manager use internal mapping to translate the publication event in a mobile event. If this publication event satisfies the subsciption parameters explicited in step 1. a notification is sent to the Mobile Alert System. ([ITI-Y3] mobile Notify)
 5. The Mobile Alert System will try to retrieve the document in order to inform the user with the specific information regading the esposure and quarantice protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.
-7. The Mobile Alert System uses the infromation retrieved in order to suggest the specific action detailed in the quarantine protocol.
+7. The Mobile Alert System uses the information retrieved in order to suggest the specific action detailed in the quarantine protocol.
 
 
 ## 1:XX.5 ToDo Security Considerations
@@ -542,48 +533,45 @@ Where audit logging is specified, a StructureDefinition profile(s) should be inc
 
 
 ## 1:XX.6 Cross-Profile Considerations
-
 <a name="other-grouping"> </a>
 
-The DSUBm actor and transaction model is very flexible. The integration with other IHE profiles is possible and higly recmmended in order to utilize the subscription/notification mobile feature in different type of environments. In this scection some information about possible cross-profile interaction are presented. 
+The DSUBm actor and transaction model is very flexible. The integration with other IHE profiles is possible and higly recommended in order to utilize the subscription/notification mobile feature in different type of environments. In this section some informations about possible cross-profile interaction are presented. 
 
 ### 1:XX.6.1. MHDS - Mobile Health Document Sharing 
+
 Within a mobile infrastructure that is implementing the MHDS model:
 * MHDS Document Registry will most likely be grouped with a Mobile Notification Publisher because all publication event are submitted to the MHDS Document Registry. 
 * MHDS Document Registry will likely be grouped with a Mobile Notification Broker 
-* MHD Document Consumer will most likely be grouped with a Mobile Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* MHD Document Consumer will likely be grouped with a Mobile Notification Subscriber.
+* A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Mobile Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
+* A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Mobile Notification Subscriber.
 
-### 1:XX.6.2. MHD - Mobile access to Health Documents 
-Within MHD environment that is implementing the "XDS on FHIR Option":
+### 1:XX.6.2. MHD - Mobile access to Health Documents as interface for XDS - Cross-Enterprise Document Sharing
+
+Within an XDS infrastructure that implement a mobile inteface tanks to MHD "XDS in FHIR Option":
 * XDS Document Registry will most likely be grouped with a Mobile Notification Publisher because all publication event are submitted to the XDS Document Registry. 
 * XDS Document Registry will likely be grouped with a Mobile Notification Broker 
 * MHD Document Consumer will most likely be grouped with a Mobile Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * MHD Document Consumer will likely be grouped with a Mobile Notification Subscriber.
 
-### 1:XX.6.3. DSUB - Document Metadata Subscription 
+### 1:XX.6.3 DSUB - Document Metadata Subscription 
 Within an already functioning DSUB infrastrucure two alternative grouping are presented based on which actor are integrated between DSUB and DSUBm. 
-
-The first DSUB grouping (DSUB on FHIR) creates a DSUB/FHIR interface that translates Mobile Subscription [ITI-Y1] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Mobile Notify [ITI-Y3]. The existing Document Metadata Broker is unaware of the precence of the functionality introducedby DSUBm profile and therefore can mantain its already implemented logic. 
-
-The second DSUB grouping creates a Notification Manager by integrating the Document Metadata Broker and Mobile Notification Broker. In this configuration the Notification Manager transaltes any the document publish event, transmitted by the Document Metadata Publish [ITI-54], into a mobile publish  event and if the subscription criteria are met one ore more notification is produced.
 
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
 
-#### 1:XX.6.3.1 (DSUB on FHIR) 
-* Document Metadata Subscriber and the Document Metadata Notification Recipient  will most likely be grouped with a Mobile Notification Broker creating the DSUB/FHIR interface.  
+#### 1:XX.6.3.1 DSUBm as interface for DSUB 
+* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Mobile Notification Broker creating the mobile DSUB interface that translates Mobile Subscription [ITI-Y1] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Mobile Notify [ITI-Y3]. The existing DSUB Document Metadata Broker is unaware of the precence of the functionality introduced by DSUBm profile and therefore can mantain its already implemented logic.  
 
 <div>
 {%include model_DSUBonFHIR.svg%}
 </div>
 <br clear="all">
-Figure 1:XX.6.3.1-1: DSUBm actors grouped with DSUB: DSUB on FHIR 
+Figure 1:XX.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as interface for DSUB 
 
-#### 1:XX.6.3.2 (DSUB Notification Manager) 
-* Document Metadata Broker and the Document Metadata notification Recipient will most likely be grouped with a Mobile Notification Broker creating the Notification Manager. The Notification Manager receives all subscription and send all the notification in this infrastructure. In this configuration is likely that the set of subcription created by Mobile Subscription [ITI-Y1] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors. In this case if the actor Mobile Notification Broker supports the "Subscription Search" option all the subscription may be returned to the Mobile Notification Subscriber including the subscription created with the Document Metadata Subscribe [ITI-52].  
+#### 1:XX.6.3.2 Notification Manager
+* Document Metadata Broker will most likely be grouped with a Mobile Notification Broker creating a Notification Manager ables to manage both mobile or non mobile subscription. The Notification Manager receives all subscription and send all the notification in this infrastructure. In this configuration is likely that the set of subcription created by Mobile Subscription [ITI-Y1] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
 
 <div>
 {%include model_DSUB.svg%}
 </div>
 <br clear="all">
-Figure 1:XX.6.3.2-1: DSUBm actors grouped with DSUB: DSUB Notification Manager 
+Figure 1:XX.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 

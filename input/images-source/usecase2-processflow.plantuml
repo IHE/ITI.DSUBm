@@ -1,7 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-title "Folder Subscription with DSUBm on MHDs infrastructure" 
+/'title "Folder Subscription with DSUBm on MHDs infrastructure" '/
 
 participant DHR [
     = Diabetological Healthcare Record

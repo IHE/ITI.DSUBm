@@ -1,7 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" 
+/'title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" '/
 
 participant Repository [
     =Integrated Document Source Repository

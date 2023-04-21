@@ -2,7 +2,7 @@
 skinparam svgDimensionStyle false
 hide footbox
 
-title "Subscription with DSUBm on MHDs infrastructure: Laboratory Results and ePrescription"
+/'title "Subscription with DSUBm on MHDs infrastructure: Laboratory Results and ePrescription"'/
 participant HospitalEHR [
     =Hospital EHR
     ----

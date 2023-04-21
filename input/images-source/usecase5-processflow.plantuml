@@ -1,7 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-title "Subscription with DSUBm on DSUB infrastructure from Mobile Device" 
+/'title "Subscription with DSUBm on DSUB infrastructure from Mobile Device" '/
 
 
 participant Repository [
