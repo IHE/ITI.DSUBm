@@ -262,7 +262,16 @@ Once the ePrescription has been created another notification is sent to nurse Da
 
 At the end of Mr. Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. 
 
-##### 1:XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Environment Process Flow
+In order to be notified when the laboratory report is ready, dr Roose submit a subscription for all the laboratory Report that will be produced while Mr Smith is hospitalized.
+Nurse Davis who is taking care of Mr Smith also uses her tablet to subscribe for ePrescriptions of the drugs that must be administered to the patient.
+
+In this way when the laboratory has produced the report for Mr Smith, Dr Roose is promptly notified and once downloaded and exminated the report can make an ePrescription for the correct medicine that is needed to be given to the patient.
+Once the ePrescription has been created a notification is also created and nurse Davis’s tablet receives the notification and once she has downloaded the ePrescription can give to Mr Smith the right drug.
+
+At the end of Mr Smith hospitalization, the software of Dr Roose automatically does the unsubscription for the laboratory documents. Nurse Davis from her tablet searches for the subscription and does the unsubscription.
+
+
+##### XX.4.2.1.2 Document Subscription for Mobile Device in MHDS Enviroment Process Flow
 
 <div>
 {%include usecase1-processflow.svg%}
