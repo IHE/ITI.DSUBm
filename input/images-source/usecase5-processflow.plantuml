@@ -24,18 +24,19 @@ participant Broker [
     =Notification Manager
     ----
     [Document Metadata Broker]
-    [Mobile Notification Broker]
+    [Resource Notification Broker]
 ] 
 
 
 participant MobDevice [
     =Mobile Alert System 
     ----
-    [Mobile Notification Subscriber]
-    [Mobile Notification Recipient]
+    [Resource Notification Subscriber]
+    [Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
 
+autonumber 1 "<b>."
 MobDevice -> Broker: Mobile Subscription [ITI-Y1]
 activate Broker
 deactivate Broker
@@ -44,7 +45,9 @@ activate Central
 Central -> Broker:  Document Metadata Publish [ITI-54]
 deactivate Central
 activate Broker
+autonumber stop 
 Broker -> Broker: internal logic\ntransalte into a mobile publication event
+autonumber 4 "<b>."
 Broker  -> MobDevice: Mobile Notify [ITI-Y3]
 deactivate Broker
 

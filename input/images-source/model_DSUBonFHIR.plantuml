@@ -25,11 +25,11 @@ Document Metadata Subscriber
 ....
 Document Metadata Notification Recipient
 ....
-Mobile Notification Broker
+Resource Notification Broker
 ]
 
-card "Mobile Notification Subscriber" as Subsciber 
-card "Mobile Notification Recipient" as Recipient 
+card "Resource Notification Subscriber" as Subsciber 
+card "Resource Notification Recipient" as Recipient 
 
 Subsciber -u-> DSUBFHIR: ITI-Y1
 DSUBFHIR -d-> Broker: ITI-52

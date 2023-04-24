@@ -7,8 +7,8 @@ participant DHR [
     = Diabetological Healthcare Record
     ----
     [MHD Document Consumer]
-    [Mobile Notification Subscriber]
-    [Mobile Notification Recipient]
+    [Resource Notification Subscriber]
+    [Resource Notification Recipient]
 ] 
 
 
@@ -17,8 +17,8 @@ participant Central [
     =Electronic Healthcare Record
     ----
     [MHDs Document Registry]
-    [Mobile Notification Publisher]
-    [Mobile Notification Broker]
+    [Resource Notification Publisher]
+    [Resource Notification Broker]
 ] 
 
 participant ER [
@@ -32,13 +32,13 @@ participant ER [
 
 DHR -> DHR: First visit (therapy A)
 activate DHR
-DHR -> Central:  Mobile Subscription [ITI-Y1]
+DHR -> Central:  Resource Subscription [ITI-Y1]
 deactivate DHR
 
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Mobile Publish [ITI-Y2]
-Central -> DHR: Mobile Notify [ITI-Y3]
+Central -> Central: Resource Publish [ITI-Y2]
+Central -> DHR: Resource Notify [ITI-Y3]
 deactivate Central
 activate DHR
 
@@ -51,8 +51,8 @@ DHR -> DHR: Second visit (therapy B)
 
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Mobile Publish [ITI-Y2]
-Central -> DHR: Mobile Notify [ITI-Y3]
+Central -> Central: Resource Publish [ITI-Y2]
+Central -> DHR: Resource Notify [ITI-Y3]
 deactivate Central
 activate DHR
 
@@ -63,8 +63,8 @@ deactivate DHR
 
 DHR -> DHR: Third visit. (Unsubscribe)
 activate DHR
-DHR -> Central: Mobile Subscription Search [ITI-Y4]
-DHR -> Central: Mobile Subscription [ITI-Y1]	
+DHR -> Central: Resource Subscription Search [ITI-Y4]
+DHR -> Central: Resource Subscription [ITI-Y1]	
 deactivate DHR
 
 @enduml
