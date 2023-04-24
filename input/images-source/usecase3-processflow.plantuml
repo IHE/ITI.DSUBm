@@ -14,8 +14,13 @@ participant Central [
     =Central Infrastructure
     ----
     [XDS Document Registry]
-    [Mobile Notification Publisher]
-    [Mobile Notification Broker]
+    [Resource Notification Publisher]
+] 
+
+participant Broker [
+    =Notification Broker
+    ----
+    [Resource Notification Broker]
 ] 
 
 participant XDSonFHIR [
@@ -29,19 +34,22 @@ participant MobileDevice [
     =Mobile Device
     ----
     [MHD Document Consumer]
-    [Mobile Notification Subscriber]
-    [Mobile Notification Recipient]
+    [Resource Notification Subscriber]
+    [Resource Notification Recipient]
 ] 
-
-MobileDevice -> Central: Mobile Subscription [ITI-Y1]
+autonumber 1 "<b>."
+MobileDevice -> Central: Resource Subscription [ITI-Y1]
 activate Central
 deactivate Central
 
 Repository -> Central: Register Document Set-b [ITI-42]
 activate Central
-Central -> Central :  Mobile Publish [ITI-Y2]
-Central -> MobileDevice: Mobile Notify [ITI-Y3]
+Central -> Broker :  Resource Publish [ITI-Y2]
 deactivate Central
+activate Broker
+Broker -> MobileDevice: Resource Notify [ITI-Y3]
+deactivate Broker
+
 activate MobileDevice
 MobileDevice -> XDSonFHIR: Retrieve Document [ITI-68]
 activate XDSonFHIR

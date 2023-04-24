@@ -21,14 +21,14 @@ card Broker [
   ----
   Document Metadata Broker
   ....
-  Mobile Notification Broker
+  Resource Notification Broker
 ]
 
 card "Document Notification Subscriber" as DSUB_Subsciber 
 card "Document Notification Recipient" as DSUB_Recipient 
 
-card "Mobile Notification Subscriber" as DSUBm_Subsciber 
-card "Mobile Notification Recipient" as DSUBm_Recipient 
+card "Resource Notification Subscriber" as DSUBm_Subsciber 
+card "Resource Notification Recipient" as DSUBm_Recipient 
 
 DSUBm_Subsciber -u-> Broker: ITI-Y1
 

@@ -24,18 +24,19 @@ participant DSUBonFHIR [
     ----
     [Document Metadata Subscriber]
     [Document Metadata Notification Recipient]
-    [Mobile Notification Broker]
+    [Resource Notification Broker]
     ] 
 
 participant MobDevice [
     =Mobile Device
     ----
-    [Mobile Notification Subscriber]
-    [Mobile Notification Recipient]
+    [Resource Notification Subscriber]
+    [Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
 
-MobDevice -> DSUBonFHIR: Mobile Subscription [ITI-Y1]
+autonumber 1 "<b>."
+MobDevice -> DSUBonFHIR: Resource Subscription [ITI-Y1]
 activate DSUBonFHIR
 DSUBonFHIR -> Central: Document Metadata Subscribe [ITI-52]
 activate Central
@@ -49,7 +50,7 @@ Central -> DSUBonFHIR: Document Metadata Notify [ITI-53]
 deactivate Central
 
 activate DSUBonFHIR
-DSUBonFHIR -> MobDevice: Mobile Notify [ITI-Y3]
+DSUBonFHIR -> MobDevice: Resource Notify [ITI-Y3]
 deactivate DSUBonFHIR
 activate MobDevice
 MobDevice -> Central: Retrieve Document [ITI-68]

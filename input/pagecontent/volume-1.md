@@ -15,23 +15,23 @@ This section defines the actors and transactions in this implementation guide.
 
 * Actors
 
-  - [Mobile Notification Broker](#broker)
+  - [Resource Notification Broker](#broker)
 
-  - [Mobile Notification Subscriber](#subscriber)
+  - [Resource Notification Subscriber](#subscriber)
 
-  - [Mobile Notification Publisher](#publisher)
+  - [Resource Notification Publisher](#publisher)
 
-  - [Mobile Notification Recipient](#recipient)  
+  - [Resource Notification Recipient](#recipient)  
 
 * Transactions
 
-  - [Mobile Subscription [ITI-Y1]](ITI-Y1.html)
+  - [Resource Subscription [ITI-Y1]](ITI-Y1.html)
 
-  - [Mobile Publish [ITI-Y2]](ITI-Y2.html)
+  - [Resource Publish [ITI-Y2]](ITI-Y2.html)
 
-  - [Mobile Notify [ITI-Y3]](ITI-Y3.html)
+  - [Resource Notify [ITI-Y3]](ITI-Y3.html)
 
-  - [Mobile Subscription Search [ITI-Y4]](ITI-Y4.html)
+  - [Resource Subscription Search [ITI-Y4]](ITI-Y4.html)
 
 
 
@@ -51,44 +51,44 @@ Table 1.XX.1-1 lists the transactions for each actor directly involved in the DS
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
 | **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
-| Mobile Notification Broker     | Mobile Subscription [ITI-Y1]             | Responder    | R     | ITI TF-2: 3.Y1 |
-|                                | Mobile Publish [ITI-Y2]               | Responder    | R     | ITI TF-2: 3.Y2 |
-|                                | Mobile Notify [ITI-Y3]                   | Initiator    | R     | ITI TF-2: 3.Y3 |
-|                                | Mobile Subscription Search [ITI-Y4]      | Responder    | O (Note 1) | ITI TF-2: 3.Y4 |
-| Mobile Notification Subscriber | Mobile Subscription [ITI-Y1]             | Initiator    | R     | ITI TF-2: 3.Y1 |
-|                                | Mobile Subscription Search [ITI-Y4]      | Initiator    | O (Note 2) | ITI TF-2: 3.Y4 |
-| Mobile Notification Publisher  | Mobile Publish [ITI-Y2]               | Initiator    | R     | ITI TF-2: 3.Y2 |
-| Mobile Notification Recipient  | Mobile Notify [ITI-Y3]                   | Responder    | R     | ITI TF-2: 3.Y3 |
+| Resource Notification Broker     | Resource Subscription [ITI-Y1]             | Responder    | R     | ITI TF-2: 3.Y1 |
+|                                | Resource Publish [ITI-Y2]               | Responder    | R     | ITI TF-2: 3.Y2 |
+|                                | Resource Notify [ITI-Y3]                   | Initiator    | R     | ITI TF-2: 3.Y3 |
+|                                | Resource Subscription Search [ITI-Y4]      | Responder    | O (Note 1) | ITI TF-2: 3.Y4 |
+| Resource Notification Subscriber | Resource Subscription [ITI-Y1]             | Initiator    | R     | ITI TF-2: 3.Y1 |
+|                                | Resource Subscription Search [ITI-Y4]      | Initiator    | O (Note 2) | ITI TF-2: 3.Y4 |
+| Resource Notification Publisher  | Resource Publish [ITI-Y2]               | Initiator    | R     | ITI TF-2: 3.Y2 |
+| Resource Notification Recipient  | Resource Notify [ITI-Y3]                   | Responder    | R     | ITI TF-2: 3.Y3 |
 {: .grid}
 
-*Note 1: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Broker supports the "Subscription Search Option", see Section XX.2.1 Subscription Search.*
+*Note 1: Transaction Resource Subscription Search [ITI-Y4] is required if Actor Resource Notification Broker supports the "Subscription Search Option", see Section XX.2.1 Subscription Search.*
 
-*Note 2: Transaction Mobile Subscription Search [ITI-Y4] is required if Actor Mobile Notification Subscriber supports the "Subscription Search Option", see Section XX.2.1 Subscription Search.*
+*Note 2: Transaction Resource Subscription Search [ITI-Y4] is required if Actor Resource Notification Subscriber supports the "Subscription Search Option", see Section XX.2.1 Subscription Search.*
 
 ### 1:XX.1.1 Actors
 The actors in this profile are described in more detail in the following sections.
 
-#### 1:XX.1.1.1 Mobile Notification Broker
+#### 1:XX.1.1.1 Resource Notification Broker
 
 <a name="broker"> </a>
 
-The Mobile Notification Broker is the receiver of the Mobile Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Mobile Publish transactions representing the stream of events against which the existing subscriptions are matched.
+The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched.
 
 FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
-#### 1:XX.1.1.2 Mobile Notification Subscriber
+#### 1:XX.1.1.2 Resource Notification Subscriber
 
 <a name="subscriber"> </a>
 
-The Mobile Notification Subscriber initiates and terminates subscriptions on behalf of a Mobile Notification Recipient. It also can send a Mobile Subscription Search transaction to the Mobile Notification Broker for existing subscription research.
+The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It also can send a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription research.
 
 FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
 
-#### 1:XX.1.1.3 Mobile Notification Publisher
+#### 1:XX.1.1.3 Resource Notification Publisher
 
 <a name="publisher"> </a>
 
-The Mobile Notification Publisher sends a Mobile Publish transaction to the Mobile Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Mobile Notification Publisher becomes aware of those events.
+The Resource Notification Publisher sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Resource Notification Publisher becomes aware of those events.
 
 FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.html)
 
@@ -96,7 +96,7 @@ FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.ht
 
 <a name="recipient"> </a>
 
-The Mobile Notification Recipient receives the notification about an event when the subscription filters specified for this Document Mobile Notification Recipient are satisfied.
+The Resource Notification Recipient receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied.
 
 FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.html)
 
@@ -104,25 +104,25 @@ FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.ht
 ### 1:XX.1.2 Transaction Descriptions
 The transactions in this profile are summarized in the sections below.
 
-#### 1:XX.1.2.1 Mobile Subscription [ITI-Y1]
+#### 1:XX.1.2.1 Resource Subscription [ITI-Y1]
 
 This transaction is used for a subscription request, by using a particular set of filters, or for a subscription deletion. 
 
 For more details see the detailed [transaction description](domain-YY.html)
 
-#### 1:XX.1.2.2 Mobile Publish [ITI-Y2]
+#### 1:XX.1.2.2 Resource Publish [ITI-Y2]
 
-This transaction delivers information from the Mobile Notification Publisher to the Mobile Notification Broker about an event that may have a subscription.
-
-For more details see the detailed [transaction description](domain-YY.html)
-
-#### 1:XX.1.2.3 Mobile Notify [ITI-Y3]
-
-This transaction is used for sending notifications to a Mobile Notification recipient.
+This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that may have a subscription.
 
 For more details see the detailed [transaction description](domain-YY.html)
 
-#### 1:XX.1.2.4 Mobile Subscription Search [ITI-Y4]
+#### 1:XX.1.2.3 Resource Notify [ITI-Y3]
+
+This transaction is used for sending notifications to a Resource Notification recipient.
+
+For more details see the detailed [transaction description](domain-YY.html)
+
+#### 1:XX.1.2.4 Resource Subscription Search [ITI-Y4]
 
 This transaction is used for existing subscription research.
 
@@ -138,17 +138,17 @@ between options when applicable are specified in notes.
 
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
-| Mobile Notification Broker | Subscription Search | ITI TF-1: XX.2.1 |
-| Mobile Notification Subscriber | Subscription Search | ITI TF-1: XX.2.1 |
-| Mobile Notification Publisher | none |--|
-| Mobile Notification Recipient | none |--|
+| Resource Notification Broker | Subscription Search | ITI TF-1: XX.2.1 |
+| Resource Notification Subscriber | Subscription Search | ITI TF-1: XX.2.1 |
+| Resource Notification Publisher | none |--|
+| Resource Notification Recipient | none |--|
 {: .grid}
 
 #### 1:XX.2.1 Subscription Search
 
-The Mobile Notification Subscriber that supports this option shall implement the Mobile Subscription Search [ITI-Y4] transaction.
+The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-Y4] transaction.
 
-The Mobile Notification Broker that supports this option shall accept and process the Mobile Subscription Search [ITI-Y4] transaction.
+The Resource Notification Broker that supports this option shall accept and process the Resource Subscription Search [ITI-Y4] transaction.
 
 ## 1:XX.3 Required Actor Groupings
 
@@ -170,7 +170,7 @@ actor (Column 2)
 <tbody>
 
 <tr class="odd">
-<td>Mobile Notification Broker</td>
+<td>Resource Notification Broker</td>
     <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
     <td>
     <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
@@ -184,7 +184,7 @@ actor (Column 2)
 </tr>
 
 <tr class="odd">
-<td>Mobile Notification Subscriber</td>
+<td>Resource Notification Subscriber</td>
     <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
     <td>
     <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
@@ -198,7 +198,7 @@ actor (Column 2)
 </tr>
 
 <tr class="odd">
-<td>Mobile Notification Publisher</td>
+<td>Resource Notification Publisher</td>
 <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
     <td>
     <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
@@ -212,7 +212,7 @@ actor (Column 2)
 </tr>
 
 <tr class="odd">
-<td>Mobile Notification Recipient</td>
+<td>Resource Notification Recipient</td>
 <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
     <td>
     <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
@@ -272,19 +272,21 @@ Figure 1:XX.4.2.1.2-1: Document Subscription for mobile applications in MHDS Env
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
+The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Mobile Subscription [ITI-Y1], patient independent subscription).  
-2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Mobile Subscription [ITI-Y1], indicating the patient and the intendedrecipient).
+1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-Y1], patient independent subscription).  
+2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-Y1], indicating the patient and the intendedrecipient).
 3. When the Laboratory System has completed the analysis the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
-4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-Y2] Mobile Publish)Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-Y3] Mobile Notify)
+4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-Y2] Resource Publish)
+5. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-Y3] Resource Notify)
 6. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient (Retrieve Document [ITI-68]).
 7. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen drug. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65]).
-8. The Central Infrastructure, having stored the metadata of the ePrescription, generates a message to inform the broker about the publication event. ([ITI-Y2] Mobile Publish)Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet the Central Infrastructure will send a notification to the Nurse Tablet. ([ITI-Y3] Mobile Notify)
+8. The Central Infrastructure, having stored the metadata of the ePrescription, generates a message to inform the broker about the publication event. ([ITI-Y2] Resource Publish)
+9. Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet the Central Infrastructure will send a notification to the Nurse Tablet. ([ITI-Y3] Resource Notify)
 10. The Nurse upon seeing the notification on his tablet can retrieve the document in order to know which drug to prepare for administration. (Retrieve Document [ITI-68]).
-11. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated unsubscription. (Mobile Subscription [ITI-Y1]).
+11. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated unsubscription. (Resource Subscription [ITI-Y1]).
 
 
 #### 1:XX.4.2.2 Use Case \#2: Document Subscription for mobile application in MHDS Environment using Folder Subscription
@@ -317,18 +319,18 @@ The assumption is that systems share the information in an MHDS Environment. The
 
 **Main Flow**:
 
-1. During the first visit, the mobile DHR application performs a folder subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-Y1] Mobile Subscription)
+1. During the first visit, the mobile DHR application performs a folder subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-Y1] Resource Subscription)
 2. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-3. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Mobile Publish)
-4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] Mobile Notify)
+3. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Resource Publish)
+4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] MobResourceile Notify)
 5. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
 6. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
 7. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-8. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Mobile Publish)
-9. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] Mobile Notify)
+8. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-Y2] Resource Publish)
+9. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-Y3] Resource Notify)
 10. When the DHR receives the notification the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-11. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-Y4] Mobile Subscription Search)
-12. The mobile DHR deletes the folder subscription. ([ITI-Y1] Mobile Subscription.)
+11. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-Y4] Resource Subscription Search)
+12. The mobile DHR deletes the folder subscription. ([ITI-Y1] Resource Subscription.)
 
 
 #### 1:XX.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
@@ -353,13 +355,14 @@ Figure 1:XX.4.2.3.2-1: Document Subscription for Mobile Device in XDS on FHIR En
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
 
 **Main Flow**:
 
-1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-Y1] Mobile Subscription for patient and typeCode = ePrescription)
+1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-Y1] Resource Subscription for patient and typeCode = ePrescription)
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. (ITI-Y2 Mobile Publish) Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-Y3] Mobile Notify)
+3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-Y2] Resource Publish).
+4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-Y3] Resource Notify)
 5. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface. 
 6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
 7. With the downloaded ePrescription the patient can now go to the local pharmacy to acquire the prescribed drug showing his mobile device.
@@ -370,7 +373,7 @@ The availability of documents for a Patient is notified on a mobile device.
 
 ##### 1:XX.4.2.4.1 Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm Use Case Description
 
-Mr. Wayne has a prescription for a radiographic exam and he needs to book a Radiology Appointment. With a phone call to the local hospital booking site where an appointment is proposed and Mr. Wayne, accepts the slot. After some minutes the radiology booking system produces a document for the booking reservation. 
+Mr. Wayne has a prescription for a radiographic exam and he needs to book a Radiology Appointment. With a phone call to the local hospital, an appointment is proposed and Mr. Wayne accepts the slot. After some minutes the radiology booking system produces a document for the booking reservation. 
 Since Mr.Wayne is a user of the booking mobile app, a subscription has been already made to the Central Infrastructure in order to receive a notification when the booking reservation is produced.
 When the notification arrives on Mr. Wayne's mobile device he can consult the information regarding his appointment. 
 
@@ -385,17 +388,17 @@ Figure 1.XX.4.2.4.2-1: Document Subscription for Mobile Device in XDS on FHIR En
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the DSUB Document Metadata Publisher/Document Metadata Broker. The DSUBm extends the DSUB subscription to mobile systems grouping the Mobile Notification Broker by DSUB Document Metadata Subscriber and DSUB Document Metadata Recipient. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). 
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the DSUB Document Metadata Publisher/Document Metadata Broker. The DSUBm extends the DSUB subscription to mobile systems grouping the Resource Notification Broker by DSUB Document Metadata Subscriber and DSUB Document Metadata Recipient. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). 
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-Y1] Mobile Subscription)
+1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-Y1] Resource Subscription)
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
 3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
 4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)Since the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. ([ITI-53] Document Metadata Notify)
-6. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. (ITI-Y3 mobile Notify)
+6. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. ([ITI-Y3] Resource Notify)
 7. The Mobile Device will try to retrieve the booking reservation in order to display the appointment information. A Retrieve Document [ITI-68] is sent to the DSUB FHIR Interface
-8. Upon receiving the Retrieve Document [ITI-68] the  DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Mobile Device information.
+8. Upon receiving the Retrieve Document [ITI-68] the  DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Resource Device information.
 9. The Mobile Device can now use the appointment information.
 
 
@@ -422,14 +425,39 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. After the first login, the mobile app performs an automatic subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. ([ITI-Y1] Mobile Subscription, patient independent expressed by HealthcareFacilityTypeCode, ClassCode, and list of specific EventCodeList values known and managed by the Mobile Alert System).
+1. After the first login, the mobile app performs an automatic subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. ([ITI-Y1] Resource Subscription, patient independent expressed by HealthcareFacilityTypeCode, ClassCode, and list of specific EventCodeList values known and managed by the Mobile Alert System).
 2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
 3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
-4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1. a notification is sent to the Mobile Alert System. ([ITI-Y3] mobile Notify)
+4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1 a notification is sent to the Mobile Alert System. ([ITI-Y3] Resource Notify)
 5. The Mobile Alert System will try to retrieve the document in order to inform the user of the specific information regarding the exposure and quarantine protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.
 7. The Mobile Alert System uses the information retrieved in order to suggest the specific action detailed in the quarantine protocol.
 
+
+#### 1:XX.4.2.6 Use Case \#6: Document Subscription Update
+
+The update of an existing subscription.
+
+##### 1:XX.4.2.6.1 Document Subscription Update System Use Case Description
+
+Mr. Ross has received the medical report of his blood test. Unfortunately, the analysis indicates that Mr. Ross is positive to the HIV. In order to give to Mr. Ross the opportunity to 
+
+##### 1:XX.4.2.6.2 Document Subscription Update Process Flow
+
+<div>
+{%include usecase6-processflow.svg%}
+</div>
+<br clear="all">
+
+Figure 1:XX.4.2.6-1: Document Subscription Update in DSUBm
+
+**Pre-conditions**:
+
+The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
+
+**Main Flow**:
+
+1. After the first login, 
 
 ## 1:XX.5 ToDo Security Considerations
 
@@ -548,7 +576,7 @@ Within an already functioning DSUB infrastructure, two alternative groupings are
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
 
 #### 1:XX.6.3.1 DSUBm as an interface for DSUB 
-* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Mobile Notification Broker creating the mobile DSUB interface that translates Mobile Subscription [ITI-Y1] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Mobile Notify [ITI-Y3]. The existing DSUB Document Metadata Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
+* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-Y1] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-Y3]. The existing DSUB Document Metadata Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
 
 <div>
 {%include model_DSUBonFHIR.svg%}
@@ -557,7 +585,7 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 Figure 1:XX.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
 
 #### 1:XX.6.3.2 Notification Manager
-* Document Metadata Broker will most likely be grouped with a Mobile Notification Broker creating a Notification Manager able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Mobile Subscription [ITI-Y1] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
+* Document Metadata Broker will most likely be grouped with a Resource Notification Broker creating a Notification Manager able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-Y1] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
 
 <div>
 {%include model_DSUB.svg%}
