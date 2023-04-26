@@ -60,11 +60,17 @@ pages:
   volume-1.md:
     #title: 1:XX. ToDo Volume 1
     #generation: markdown
-  domain-YY.md:
-    title: 2:3.YY Transaction one [Domain-YY]
+  ITI-110.md:
+    title: 2:3.110 Resource Subscription
     generation: markdown
-  domain-ZZ.md:
-    title: 3:?.ZZ Content one [Domain-ZZ]
+  ITI-111.md:
+    title: 2:3.111 Resource Publish
+    generation: markdown
+  ITI-112.md:
+    title: 2:3.112 Resource Notify
+    generation: markdown
+  ITI-113.md:
+    title: 2:3.113 Resource Subscription Search
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -90,9 +96,10 @@ menu:
     Security Considerations: volume-1.html#security-considerations
     Cross-Profile Considerations: volume-1.html#other-grouping
   Volume 2:
-    "Transaction one [Domain-YY]": domain-YY.html
-  Volume 3:
-    "Content one [Domain-ZZ]": domain-ZZ.html
+    "Resource Subscription [ITI-110]": ITI-110.html
+    "Resource Publish [ITI-111]": ITI-111.html
+    "Resource Notify [ITI-112]": ITI-112.html
+    "Resource Subscription Search [ITI-113]": ITI-113.html
   Artifacts: artifacts.html
   Other:
     Test Plan: testplan.html

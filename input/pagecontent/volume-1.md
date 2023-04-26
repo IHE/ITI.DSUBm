@@ -1,49 +1,34 @@
 
-# 1:54 DSUBm
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. SVCM, MHD, MHDS, NPFS), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
 
-IHE provides multiple profiles for mobile use (e.g. SVCM, MHD, MHDS, NPFS), defining a lot of mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
+For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
-For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities (MHD) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
-
-This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be coupled with different nonmobile profiles (eg. XDS.b, DSUB ).
-
-## 1:54.1 DSUBm Actors, Transactions, and Content Modules
+This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be grouped with different nonmobile profiles (eg. XDS.b, DSUB ).
 
 <a name="actors-and-transactions"> </a>
 
+## 1:54.1 DSUBm Actors, Transactions, and Content Modules
+
 This section defines the actors and transactions in this implementation guide.
 
-* Actors
-
+- Actors
   - [Resource Notification Broker](#broker)
-
   - [Resource Notification Subscriber](#subscriber)
-
   - [Resource Notification Publisher](#publisher)
-
   - [Resource Notification Recipient](#recipient)  
-
-* Transactions
-
+- Transactions
   - [Resource Subscription [ITI-110]](ITI-110.html)
-
   - [Resource Publish [ITI-111]](ITI-111.html)
-
   - [Resource Notify [ITI-112]](ITI-112.html)
-
   - [Resource Subscription Search [ITI-113]](ITI-113.html)
-
-
-
 
 Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
 
-<div>
+<figure>
 {%include ActorsAndTransactions.svg%}
-</div>
+<figcaption><b>Figure 1:54.1-1: DSUBm Actor Diagram</b></figcaption>
+</figure>
 <br clear="all">
-
-**Figure 1:54.1-1: DSUBm Actor Diagram**
 
 Table 1.54.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled “R”) and may support the optional transactions (labeled “O”).
 
@@ -66,42 +51,43 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 *Note 2: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports the "Subscription Search Option", see Section 54.2.1 Subscription Search.*
 
 ### 1:54.1.1 Actors
+
 The actors in this profile are described in more detail in the following sections.
 
-#### 1:54.1.1.1 Resource Notification Broker
-
 <a name="broker"> </a>
+
+#### 1:54.1.1.1 Resource Notification Broker
 
 The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched.
 
 FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
-#### 1:54.1.1.2 Resource Notification Subscriber
-
 <a name="subscriber"> </a>
+
+#### 1:54.1.1.2 Resource Notification Subscriber
 
 The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It also can send a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription research.
 
 FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
 
-#### 1:54.1.1.3 Resource Notification Publisher
-
 <a name="publisher"> </a>
+
+#### 1:54.1.1.3 Resource Notification Publisher
 
 The Resource Notification Publisher sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Resource Notification Publisher becomes aware of those events.
 
 FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.html)
 
-#### 1:54.1.1.4 Mobile Notification Recipient
-
 <a name="recipient"> </a>
+
+#### 1:54.1.1.4 Mobile Notification Recipient
 
 The Resource Notification Recipient receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied.
 
 FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.html)
 
-
 ### 1:54.1.2 Transaction Descriptions
+
 The transactions in this profile are summarized in the sections below.
 
 #### 1:54.1.2.1 Resource Subscription [ITI-110]
