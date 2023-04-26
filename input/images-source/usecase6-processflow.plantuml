@@ -7,7 +7,8 @@ participant Repository [
     =Integrated Document Source Repository
     ----
     [XDS Document Source]
-    [XDS Document Repository]  
+    [XDS Document Repository] 
+    [XDS Document Administrator]   
 ] 
 
 participant Central [
@@ -43,11 +44,12 @@ activate Central
 deactivate Central
 
 
-Repository -> Central: Register Document Set-b [ITI-42] (version 1)
+Repository -> Central: Register Document Set-b [ITI-42]
 activate Central
+Central -> Broker :  Resource Publish [ITI-111]
 deactivate Central
 
-Repository -> Central: Update Document Set [ITI-57] (version 2)
+Repository -> Central: Update Document Set [ITI-57]
 activate Central
 Central -> Broker :  Resource Publish [ITI-111]
 deactivate Central
@@ -61,7 +63,7 @@ XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
 activate Repository
 deactivate XDSonFHIR
 deactivate Repository
-MobileDevice -> MobileDevice: update information with version 2
+MobileDevice -> MobileDevice: Report view
 deactivate MobileDevice
 
 

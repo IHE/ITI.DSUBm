@@ -422,19 +422,22 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 "/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C,D")
 
 
-#### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with document update
+#### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update
 
-The availability of an updated document for a Patient shared in an XDS on FHIR infrastructure is notified in a personal mobile device.
+The availability of an updated metadata document for a Patient, shared in an XDS on FHIR infrastructure, is notified in a personal mobile device.
 
-##### 1:54.4.2.6.1 Document Subscription for Mobile Device in XDS on FHIR Environment with document update Use Case Description
+##### 1:54.4.2.6.1 Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update Use Case Description
 
-Mr. XXX 
+Ms. Fox uses an app on her phone to consult her diagnostic reports, emitted after doctor visits or diagnostics exams. 
+After one radiographic exam, a report has been produced but the doctor that produced the report wanted to have a consultation with a specialist before letting it visible to the patient.
+So that, after the consultation of the report by the specialist and sure that there are no further issues, the report lets be visible to the patient.
+Thus, Ms. Fox receives the notification on her app and consults the reports.
 
-##### 1:54.4.2.6.2 Document Subscription for Mobile Device in XDS on FHIR Environment with document update Process Flow
+##### 1:54.4.2.6.2 Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update Process Flow
 
 <figure>
 {%include usecase6-processflow.svg%}
-<figcaption><b>1:54.4.2.6.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment with document update in DSUBm</b></figcaption>
+<figcaption><b>1:54.4.2.6.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update in DSUBm</b></figcaption>
 </figure>
 <br clear="all">
 
@@ -444,7 +447,16 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. 
+1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality code, based on the community accordance, in this case equal to "N". ([ITI-110] Resource Subscription with the following criteria:
+"/DocumentReference?patient=98765&type=reports&security-label=N")
+2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with confidentiality code different from "N" ([ITI-42] Register Document Set-b).
+3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notificatio is sent.
+4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
+5. The Central Infrastructure, having updated the metadata of the document, generates a message to inform the broker about the update event. ([ITI-111] Resource Publish).
+6. Since the metadata update event meets the subscription criteria, the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
+7. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface.
+8. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
+9. Downloaded the document, Ms. Fox can view the report.
 
 <a name="security-considerations"> </a>
 
