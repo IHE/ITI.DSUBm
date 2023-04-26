@@ -1,9 +1,9 @@
 
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. SVCM, MHD, MHDS, NPFS), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
-This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be grouped with different nonmobile profiles (eg. XDS.b, DSUB ).
+This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be grouped with different nonmobile profiles (eg. [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) ).
 
 <a name="actors-and-transactions"> </a>
 
@@ -80,7 +80,7 @@ FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.ht
 
 <a name="recipient"> </a>
 
-#### 1:54.1.1.4 Mobile Notification Recipient
+#### 1:54.1.1.4 Resource Notification Recipient
 
 The Resource Notification Recipient receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied.
 
@@ -114,10 +114,9 @@ This transaction is used for existing subscription research.
 
 For more details see the detailed [transaction description](ITI-113.html)
 
+<a name="actor-options"> </a>
 
 ## 1:54.2 Actor Options
-
-<a name="actor-options"> </a>
 
 Options that may be selected for each actor in this implementation guide, are listed in Table 3.2-1 below. Dependencies 
 between options when applicable are specified in notes.
@@ -136,9 +135,9 @@ The Resource Notification Subscriber that supports this option shall implement t
 
 The Resource Notification Broker that supports this option shall accept and process the Resource Subscription Search [ITI-113] transaction.
 
-## 1:54.3 Required Actor Groupings
-
 <a name="required-groupings"> </a>
+
+## 1:54.3 Required Actor Groupings
 
 An actor from this profile (Column 1) shall implement all of the
 required transactions and/or content modules in this profile ***in
@@ -213,10 +212,9 @@ actor (Column 2)
 </tbody>
 </table>
 
+<a name="overview"> </a>
 
 ## 1:54.4 DSUBm Overview
-
-<a name="overview"> </a>
 
 This section shows how the transactions/content modules of the profile are combined to address the use cases. 
 
@@ -249,12 +247,11 @@ At the end of Mr. Smith's hospitalization, the software of Dr. Roose automatical
 
 ##### 1:54.4.2.1.2 Document Subscription for mobile applications in MHDS Environment Process Flow
 
-<div>
+<figure>
 {%include usecase1-processflow.svg%}
-</div>
+<figcaption><b>1:54.4.2.1.2-1: Document Subscription for mobile applications in MHDS Environment in DSUBm</b></figcaption>
+</figure>
 <br clear="all">
-
-Figure 1:54.4.2.1.2-1: Document Subscription for mobile applications in MHDS Environment in DSUBm
 
 **Pre-conditions**:
 
@@ -293,16 +290,15 @@ During the third visit, Ms. Williams decides that a different medic will take ch
 
 ##### 1:54.4.2.2.2 Document Subscription for mobile application in MHDS Environment using Folder Subscription Process Flow
 
-<div>
+<figure>
 {%include usecase2-processflow.svg%}
-</div>
+<figcaption><b>1:54.4.2.2.2-2: Document Subscription for mobile application in MHDS Environment using Folder Subscription in DSUBm</b></figcaption>
+</figure>
 <br clear="all">
-
-Figure 1:54.4.2.2.2-2: Document Subscription for mobile application in MHDS Environment using Folder Subscription in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the Mobile Notification Publisher/Mobile Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
+The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the Resource Notification Publisher/Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
 
 **Main Flow**:
 
@@ -334,12 +330,11 @@ When the prescription has been made Mr. Brown receives the notification on his p
 
 ##### 1:54.4.2.3.2 Document Subscription for Mobile Device in XDS on FHIR Environment Process Flow
 
-<div>
+<figure>
 {%include usecase3-processflow.svg%}
-</div>
+<figcaption><b>Figure 1:54.4.2.3.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment in DSUBm</b></figcaption>
+</figure>
 <br clear="all">
-
-Figure 1:54.4.2.3.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment in DSUBm 
 
 **Pre-conditions**:
 
@@ -368,12 +363,12 @@ When the notification arrives on Mr. Wayne's mobile device he can consult the in
 
 ##### 1:54.4.2.4.2 Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm Process Flow
 
-<div>
+<figure>
 {%include usecase4-processflow.svg%}
-</div>
+<figcaption><b>Figure 1.54.4.2.4.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm in DSUBm</b></figcaption>
+</figure>
 <br clear="all">
 
-Figure 1.54.4.2.4.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm in DSUBm
 
 **Pre-conditions**:
 
@@ -403,16 +398,15 @@ Dr. Gordon is a new medic hired by the geriatric ward of the Goodcare General Ho
 
 ##### 1:54.4.2.5.2 Document Subscription for Mobile Alert System Process Flow
 
-<div>
+<figure>
 {%include usecase5-processflow.svg%}
-</div>
+<figcaption><b>Figure 1:54.4.2.5-1: Document Subscription for Mobile Alert System in DSUBm</b></figcaption>
+</figure>
 <br clear="all">
-
-Figure 1:54.4.2.5-1: Document Subscription for Mobile Alert System in DSUBm
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the DSUB Document Metadata Publisher. The Notification Manager System manages both mobile and nonmobile subscriptions, groping DSUB Document Metadata Broker by the Mobile Notification Broker, The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the DSUB Document Metadata Publisher. The Notification Manager System manages both mobile and nonmobile subscriptions, groping DSUB Document Metadata Broker by the Resource Notification Broker, The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
 
 **Main Flow**:
 
@@ -428,33 +422,57 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 "/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C,D")
 
 
-## 1:54.5 Security Considerations
+#### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with document update
+
+The availability of an updated document for a Patient shared in an XDS on FHIR infrastructure is notified in a personal mobile device.
+
+##### 1:54.4.2.6.1 Document Subscription for Mobile Device in XDS on FHIR Environment with document update Use Case Description
+
+Mr. XXX 
+
+##### 1:54.4.2.6.2 Document Subscription for Mobile Device in XDS on FHIR Environment with document update Process Flow
+
+<figure>
+{%include usecase6-processflow.svg%}
+<figcaption><b>1:54.4.2.6.2-1: Document Subscription for Mobile Device in XDS on FHIR Environment with document update in DSUBm</b></figcaption>
+</figure>
+<br clear="all">
+
+**Pre-conditions**:
+
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
+
+**Main Flow**:
+
+1. 
 
 <a name="security-considerations"> </a>
 
+## 1:54.5 Security Considerations
+
 See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
 
+<a name="other-grouping"> </a>
 
 ## 1:54.6 Cross-Profile Considerations
-<a name="other-grouping"> </a>
 
 The DSUBm actor and transaction model is very flexible. Integration with other IHE profiles is possible and highly recommended in order to utilize the subscription/notification mobile feature in different types of environments. In this section, some information about possible cross-profile interaction is presented. 
 
 ### 1:54.6.1. MHDS - Mobile Health Document Sharing 
 
 Within a mobile infrastructure that is implementing the MHDS model:
-* MHDS Document Registry will most likely be grouped with a Mobile Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
-* MHDS Document Registry will likely be grouped with a Mobile Notification Broker 
-* A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Mobile Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Mobile Notification Subscriber.
+* MHDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
+* MHDS Document Registry will likely be grouped with a Resource Notification Broker 
+* A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
+* A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Resource Notification Subscriber.
 
 ### 1:54.6.2. MHD - Mobile access to Health Documents as an interface for XDS - Cross-Enterprise Document Sharing
 
 Within an XDS infrastructure that implements a mobile interface with the MHD "XDS on FHIR Option":
-* XDS Document Registry will most likely be grouped with a Mobile Notification Publisher because all publication events are submitted to the XDS Document Registry. 
-* XDS Document Registry will likely be grouped with a Mobile Notification Broker 
-* MHD Document Consumer will most likely be grouped with a Mobile Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* MHD Document Consumer will likely be grouped with a Mobile Notification Subscriber.
+* XDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the XDS Document Registry. 
+* XDS Document Registry will likely be grouped with a Resource Notification Broker 
+* MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
+* MHD Document Consumer will likely be grouped with a Resource Notification Subscriber.
 
 ### 1:54.6.3 DSUB - Document Metadata Subscription 
 Within an already functioning DSUB infrastructure, two alternative groupings are presented based on which actors are integrated between DSUB and DSUBm. 
@@ -463,18 +481,19 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 
 #### 1:54.6.3.1 DSUBm as an interface for DSUB 
 * Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
-
-<div>
+<figure>
 {%include model_DSUBonFHIR.svg%}
-</div>
+<figcaption><b>Figure 1:54.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
+</b></figcaption>
+</figure>
 <br clear="all">
-Figure 1:54.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
 
 #### 1:54.6.3.2 Notification Manager
 * Document Metadata Broker will most likely be grouped with a Resource Notification Broker creating a Notification Manager able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
 
-<div>
+<figure>
 {%include model_DSUB.svg%}
-</div>
+<figcaption><b>Figure 1:54.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 
+</b></figcaption>
+</figure>
 <br clear="all">
-Figure 1:54.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 

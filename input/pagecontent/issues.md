@@ -12,8 +12,8 @@
 
 ### Open Issues
 
-* ToDo_001: this is open issue 1
+* DSUBm_001: Should the DSUBm profile include the Pull Notification mechanism? No specific request have been submitted for this implementation. If needed it is possible to send change proposal during the public comment period. 
 
 ### Closed Issues
 
-* ToDo_002: this is closed issue 2
+* DSUBm_002: example this is closed issue 2
