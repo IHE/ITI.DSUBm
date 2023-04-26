@@ -36,7 +36,7 @@ participant MobDevice [
 ] 
 
 autonumber 1 "<b>."
-MobDevice -> DSUBonFHIR: Resource Subscription [ITI-Y1]
+MobDevice -> DSUBonFHIR: Resource Subscription [ITI-110]
 activate DSUBonFHIR
 DSUBonFHIR -> Central: Document Metadata Subscribe [ITI-52]
 activate Central
@@ -50,7 +50,7 @@ Central -> DSUBonFHIR: Document Metadata Notify [ITI-53]
 deactivate Central
 
 activate DSUBonFHIR
-DSUBonFHIR -> MobDevice: Resource Notify [ITI-Y3]
+DSUBonFHIR -> MobDevice: Resource Notify [ITI-112]
 deactivate DSUBonFHIR
 activate MobDevice
 MobDevice -> Central: Retrieve Document [ITI-68]

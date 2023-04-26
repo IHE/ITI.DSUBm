@@ -38,16 +38,16 @@ participant MobileDevice [
     [Resource Notification Recipient]
 ] 
 autonumber 1 "<b>."
-MobileDevice -> Central: Resource Subscription [ITI-Y1]
+MobileDevice -> Central: Resource Subscription [ITI-110]
 activate Central
 deactivate Central
 
 Repository -> Central: Register Document Set-b [ITI-42]
 activate Central
-Central -> Broker :  Resource Publish [ITI-Y2]
+Central -> Broker :  Resource Publish [ITI-111]
 deactivate Central
 activate Broker
-Broker -> MobileDevice: Resource Notify [ITI-Y3]
+Broker -> MobileDevice: Resource Notify [ITI-112]
 deactivate Broker
 
 activate MobileDevice

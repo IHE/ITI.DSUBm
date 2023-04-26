@@ -34,10 +34,17 @@ participant MobDevice [
     [Resource Notification Subscriber]
     [Resource Notification Recipient]
     [MHD Document Consumer]
+    [mACM Alert Reporter]
 ] 
 
-autonumber 1 "<b>."
-MobDevice -> Broker: Mobile Subscription [ITI-Y1]
+participant Device [
+    =Mobile Device
+    ----
+    [mACM Alert Aggregator]
+] 
+
+autonumber "<b> ."
+MobDevice -> Broker: Mobile Subscription [ITI-110]
 activate Broker
 deactivate Broker
 Repository -> Central: Register Document Set-b [ITI-42]
@@ -47,8 +54,8 @@ deactivate Central
 activate Broker
 autonumber stop 
 Broker -> Broker: internal logic\ntransalte into a mobile publication event
-autonumber 4 "<b>."
-Broker  -> MobDevice: Mobile Notify [ITI-Y3]
+autonumber 4 "<b> ."
+Broker  -> MobDevice: Mobile Notify [ITI-112]
 deactivate Broker
 
 activate MobDevice
@@ -58,9 +65,11 @@ Central -> Repository: Retrieve Document Set [ITI-43]
 activate Repository
 deactivate Repository
 deactivate Central
-MobDevice -> MobDevice: initiate quarantine protocol
+MobDevice -> Device: Mobile Report Alert [ITI-84]
 deactivate MobDevice
 
-
+MobDevice -> Broker: Mobile Subscription [ITI-110] (update)
+activate Broker
+deactivate Broker
 
 @enduml

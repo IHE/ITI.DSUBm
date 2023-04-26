@@ -3,7 +3,7 @@ skinparam svgDimensionStyle false
 skinparam componentStyle rectangle
 
 hide footbox
-title "DSUBm grouped with DSUB: Notification Manager" 
+/' title "DSUBm grouped with DSUB: Notification Manager" '/
 
 card "XDS Document Source" as Source
 card "XDS Document Repository" as Repo
@@ -30,7 +30,7 @@ card "Document Notification Recipient" as DSUB_Recipient
 card "Resource Notification Subscriber" as DSUBm_Subsciber 
 card "Resource Notification Recipient" as DSUBm_Recipient 
 
-DSUBm_Subsciber -u-> Broker: ITI-Y1
+DSUBm_Subsciber -u-> Broker: ITI-110
 
 Source -u-> Repo: ITI-41
 Repo -r-> Central: ITI-42
@@ -39,7 +39,7 @@ Central -d-> Broker: ITI-54
 
 DSUB_Subsciber -l->Broker: ITI-52
 Broker-r-> DSUB_Recipient: ITI-53
-Broker -d-> DSUBm_Recipient: ITI-Y3
+Broker -d-> DSUBm_Recipient: ITI-112
 
 
 

@@ -3,8 +3,8 @@ agent "Resource Notification Publisher" as Publisher
 agent "Resource Notification Broker" as Broker
 agent "Resource Notification Subscriber" as Subscriber
 agent "Resource Notification Recipient" as Recipient
-Publisher --> Broker : "Resource Publish [ITI-Y2]"
-Subscriber --> Broker : "Resource Subscription [ITI-Y1]"
-Subscriber --> Broker : "Resource Subscription Search [ITI-Y4]"
-Broker --> Recipient : "Resource Notify [ITI-Y3]"
+Publisher --> Broker : "Resource Publish [ITI-111]"
+Subscriber --> Broker : "Resource Subscription [ITI-110]"
+Subscriber --> Broker : "Resource Subscription Search [ITI-113]"
+Broker --> Recipient : "Resource Notify [ITI-112]"
 @enduml

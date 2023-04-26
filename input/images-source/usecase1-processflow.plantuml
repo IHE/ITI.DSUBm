@@ -35,13 +35,13 @@ participant NurseTablet [
     [MHD Document Consumer]
 ] 
 autonumber "<b>."
-NurseTablet -> MHDsDocumentRegistry:   Resource Subscription [ITI-Y1]
+NurseTablet -> MHDsDocumentRegistry:   Resource Subscription [ITI-110]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
 autonumber stop
 HospitalEHR --> LaboratorySystem:  Laboratory Order Request
 autonumber 2 "<b>."
-HospitalEHR -> MHDsDocumentRegistry:  Resource Subscription [ITI-Y1]
+HospitalEHR -> MHDsDocumentRegistry:  Resource Subscription [ITI-110]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
 
@@ -50,8 +50,8 @@ deactivate MHDsDocumentRegistry
 
 LaboratorySystem -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-Y2]
-MHDsDocumentRegistry -> HospitalEHR : Resource Notify [ITI-Y3]
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-111]
+MHDsDocumentRegistry -> HospitalEHR : Resource Notify [ITI-112]
 activate HospitalEHR
 
 HospitalEHR -> MHDsDocumentRegistry:  Retrieve Document [ITI-68]
@@ -60,8 +60,8 @@ HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 deactivate HospitalEHR
 
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-Y2]
-MHDsDocumentRegistry -> NurseTablet : Resource Notify [ITI-Y3]
+MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-111]
+MHDsDocumentRegistry -> NurseTablet : Resource Notify [ITI-112]
 deactivate MHDsDocumentRegistry
 activate NurseTablet
 NurseTablet -> MHDsDocumentRegistry: Retrieve Document [ITI-68]
@@ -73,7 +73,7 @@ deactivate NurseTablet
 
 autonumber 11 "<b>."
 group Unsubscribe
-  HospitalEHR ->MHDsDocumentRegistry: Resource Subscription [ITI-Y1]
+  HospitalEHR ->MHDsDocumentRegistry: Resource Subscription [ITI-110]
   activate MHDsDocumentRegistry
   deactivate MHDsDocumentRegistry
   

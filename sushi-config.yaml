@@ -55,7 +55,7 @@ resources:
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: 1:XX. Home
+    title: 1:54. DSUBm Home
     generation: markdown
   volume-1.md:
     #title: 1:XX. ToDo Volume 1
