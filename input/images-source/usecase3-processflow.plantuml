@@ -37,7 +37,7 @@ participant MobileDevice [
     [Resource Notification Subscriber]
     [Resource Notification Recipient]
 ] 
-autonumber 1 "<b>."
+autonumber 1 "<b>"
 MobileDevice -> Central: Resource Subscription [ITI-110]
 activate Central
 deactivate Central

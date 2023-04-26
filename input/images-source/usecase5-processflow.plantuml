@@ -43,7 +43,7 @@ participant Device [
     [mACM Alert Aggregator]
 ] 
 
-autonumber "<b> ."
+autonumber "<b>"
 MobDevice -> Broker: Mobile Subscription [ITI-110]
 activate Broker
 deactivate Broker
@@ -54,7 +54,7 @@ deactivate Central
 activate Broker
 autonumber stop 
 Broker -> Broker: internal logic\ntransalte into a mobile publication event
-autonumber 4 "<b> ."
+autonumber 4 "<b>"
 Broker  -> MobDevice: Mobile Notify [ITI-112]
 deactivate Broker
 

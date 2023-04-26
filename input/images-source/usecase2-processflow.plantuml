@@ -31,7 +31,7 @@ participant ER [
 
 
 DHR -> DHR: First visit (therapy A)
-autonumber "<b>."
+autonumber "<b>"
 activate DHR
 DHR -> Central:  Resource Subscription [ITI-110]
 deactivate DHR
@@ -61,7 +61,7 @@ deactivate DHR
 autonumber stop 
 DHR -> DHR: Third visit. (Unsubscribe)
 activate DHR
-autonumber 11 "<b>."
+autonumber 11 "<b>"
 DHR -> Central: Resource Subscription Search [ITI-113]
 DHR -> Central: Resource Subscription [ITI-110]	
 deactivate DHR

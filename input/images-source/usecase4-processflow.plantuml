@@ -35,7 +35,7 @@ participant MobDevice [
     [MHD Document Consumer]
 ] 
 
-autonumber 1 "<b>."
+autonumber 1 "<b>"
 MobDevice -> DSUBonFHIR: Resource Subscription [ITI-110]
 activate DSUBonFHIR
 DSUBonFHIR -> Central: Document Metadata Subscribe [ITI-52]

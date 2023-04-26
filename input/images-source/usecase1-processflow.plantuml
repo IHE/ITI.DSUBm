@@ -34,13 +34,13 @@ participant NurseTablet [
     [Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
-autonumber "<b>."
+autonumber "<b>"
 NurseTablet -> MHDsDocumentRegistry:   Resource Subscription [ITI-110]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
 autonumber stop
 HospitalEHR --> LaboratorySystem:  Laboratory Order Request
-autonumber 2 "<b>."
+autonumber 2 "<b>"
 HospitalEHR -> MHDsDocumentRegistry:  Resource Subscription [ITI-110]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
@@ -71,7 +71,7 @@ autonumber stop
 NurseTablet -> NurseTablet: procede with drug administration
 deactivate NurseTablet
 
-autonumber 11 "<b>."
+autonumber 11 "<b>"
 group Unsubscribe
   HospitalEHR ->MHDsDocumentRegistry: Resource Subscription [ITI-110]
   activate MHDsDocumentRegistry
