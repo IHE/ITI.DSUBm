@@ -428,9 +428,9 @@ The availability of an updated metadata document for a Patient, shared in an XDS
 
 ##### 1:54.4.2.6.1 Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update Use Case Description
 
-Ms. Fox uses an app on her phone to consult her diagnostic reports, emitted after doctor visits or diagnostics exams. 
-After one radiographic exam, a report has been produced but the doctor that produced the report wanted to have a consultation with a specialist before letting it visible to the patient.
-So that, after the consultation of the report by the specialist and sure that there are no further issues, the report lets be visible to the patient.
+Ms. Fox uses an app on her phone to consult her diagnostic reports that are emitted after doctor visits or diagnostics exams. 
+After one radiographic exam, a report has been produced but the doctor that produced the report prefers to have a consultation with another specialist before letting the report be visible to the patient.
+After the consultation of the report by the specialist the doctor is sure that there are no further issues and the report is made visible to the patient.
 Thus, Ms. Fox receives the notification on her app and consults the reports.
 
 ##### 1:54.4.2.6.2 Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update Process Flow
@@ -447,10 +447,10 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality code, based on the community accordance, in this case equal to "N". ([ITI-110] Resource Subscription with the following criteria:
+1. The mobile app performs a patient-dependent subscription specific for reports and specifying a list of possible confidentiality codes, based on the community accordance, in this case equal to "N". ([ITI-110] Resource Subscription with the following criteria:
 "/DocumentReference?patient=98765&type=reports&security-label=N")
-2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with confidentiality code different from "N" ([ITI-42] Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notificatio is sent.
+2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N" ([ITI-42] Register Document Set-b).
+3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notification is sent.
 4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
 5. The Central Infrastructure, having updated the metadata of the document, generates a message to inform the broker about the update event. ([ITI-111] Resource Publish).
 6. Since the metadata update event meets the subscription criteria, the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
