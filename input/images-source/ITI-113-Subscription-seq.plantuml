@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+participant "Resource Notification Subscriber" as  Subscriber
+participant "Resource Notification Broker" as  Broker
+
+
+
+activate Subscriber
+activate Broker
+Subscriber -> Broker : 1. Resource Subscription Search Request [ITI-113]
+Broker --> Subscriber : 2. Resource Subscription Search Response [ITI-113]
+
+deactivate Broker
+deactivate Subscriber
+
+@enduml

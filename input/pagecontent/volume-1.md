@@ -5,6 +5,8 @@ For documents, IHE provides an excellent tool to search and retrieve them throug
 
 This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be grouped with different nonmobile profiles (eg. [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) ).
 
+This profile is compliant with [HL7 FHIR Release 4.3.0](http://www.hl7.org/FHIR/R4B). For this  FHIR version it is available the [Subscriptions R5 Backport IG](http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/index.html).
+
 <a name="actors-and-transactions"> </a>
 
 ## 1:54.1 DSUBm Actors, Transactions, and Content Modules
@@ -39,16 +41,14 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 | Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R     | ITI TF-2: 3.110 |
 |                                | Resource Publish [ITI-111]               | Responder    | R     | ITI TF-2: 3.111 |
 |                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
-|                                | Resource Subscription Search [ITI-113]      | Responder    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-113]      | Responder    | R  | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 2) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
 
-*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Broker supports the "Subscription Search Option", see Section 54.2.1 Subscription Search.*
-
-*Note 2: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports the "Subscription Search Option", see Section 54.2.1 Subscription Search.*
+*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports the "Subscription Search Option", see Section 54.2.1 Subscription Search.*
 
 ### 1:54.1.1 Actors
 
@@ -58,7 +58,7 @@ The actors in this profile are described in more detail in the following section
 
 #### 1:54.1.1.1 Resource Notification Broker
 
-The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched.
+The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request, or a subscription cancellation. It keeps track of all subscriptionTopic resource that define which subscription ca be submitted to the  Resource Notification Broker and keeps track of subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched.
 
 FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
@@ -110,7 +110,7 @@ For more details see the detailed [transaction description](ITI-112.html)
 
 #### 1:54.1.2.4 Resource Subscription Search [ITI-113]
 
-This transaction is used for existing subscription research.
+This transaction is used for searching existing Subscription or for searching available SubscriptionTopic.
 
 For more details see the detailed [transaction description](ITI-113.html)
 
@@ -121,19 +121,62 @@ For more details see the detailed [transaction description](ITI-113.html)
 Options that may be selected for each actor in this implementation guide, are listed in Table 3.2-1 below. Dependencies 
 between options when applicable are specified in notes.
 
-| **Actors** | **Option Name** | **Vol. & Section** |
-|---------|-------------|-------------|
-| Resource Notification Broker | Subscription Search | ITI TF-1: 54.2.1 |
-| Resource Notification Subscriber | Subscription Search | ITI TF-1: 54.2.1 |
-| Resource Notification Publisher | none |--|
-| Resource Notification Recipient | none |--|
-{: .grid}
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow"><span style="font-weight:bold">Actors</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Option Name</span></th>
+    <th class="tg-c3ow"><span style="font-weight:bold">Vol. &amp; Section</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow">Resource Notification Broker</td>
+    <td class="tg-0pky">none</td>
+    <td class="tg-c3ow">--</td>
+  </tr>
+  <tr>
+    <td class="tg-c3ow" rowspan="2">Resource Notification Subscriber</td>
+    <td class="tg-0pky">SubscriptionTopic Search</td>
+    <td class="tg-c3ow">ITI TF-1: 54.2.2</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Subscription Search</td>
+    <td class="tg-c3ow">ITI TF-1: 54.2.1</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Resource Notification Publisher</td>
+    <td class="tg-0lax">none</td>
+    <td class="tg-baqh">--</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Resource Notification Recipient</td>
+    <td class="tg-0lax">none</td>
+    <td class="tg-baqh">--</td>
+  </tr>
+</tbody>
+</table>
+
 
 #### 1:54.2.1 Subscription Search
 
-The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction.
+The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction for the Subscription resource. This option is requested if the Resource Notification Broker is implementing the handshake process proposed by the [Subscriptions R5 Backport Workflow](http://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/workflow.html#workflow-fhir-r4b). In this case the Resource Subscription Search [ITI-113] has to be implemented by the Resource Notification Subscriber in order to verify if the handshake was successful. Indeed if the handshake was successful the subscription status has been updated from requested to active, otherwise the subscription status has been updated from requested to error.
 
-The Resource Notification Broker that supports this option shall accept and process the Resource Subscription Search [ITI-113] transaction.
+#### 1:54.2.2 SubscriptionTopic Search
+
+The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction for searching for the available SubscriptionTopic resource. The Resource Notification Subscriber should know which SubscriptionTopic resource has been published by the Resource Notification Broker before requesting the subscription to the Resource Notification Subscriber. This informations may be shared between the Resource Notification Subscriber and the Resource Notification Broker with other methods.
 
 <a name="required-groupings"> </a>
 
@@ -377,7 +420,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription with the following criteria:
-"/DocumentReference?patient=98765&type=ePrescription")
+"/DocumentReference?patient=98765&type=bookingReservation")
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
 3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
 4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)

@@ -1,0 +1,31 @@
+@startuml
+hide footbox
+participant "Resource Notification Subscriber" as  Subscriber
+participant "Resource Notification Broker" as  Broker
+
+
+
+activate Subscriber
+activate Broker
+Subscriber -> Broker : 1. Resource Subscription Request [ITI-110]
+
+/'
+participant "Resource Notification Recipient" as  Recipient
+opt handskake HTTPS   
+  Broker -> Recipient: Handshake Notification
+  alt Handshake Success
+  Recipient -> Broker: 200 OK 
+  else Handshake Failure
+  Recipient ->Broker: 404 Not Found
+  end
+end
+'/
+
+Broker --> Subscriber : 2. Resource Subscription Response [ITI-110]
+
+deactivate Broker
+deactivate Subscriber
+
+
+
+@enduml
