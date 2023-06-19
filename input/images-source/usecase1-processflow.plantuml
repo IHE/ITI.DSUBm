@@ -68,7 +68,7 @@ NurseTablet -> MHDsDocumentRegistry: Retrieve Document [ITI-68]
 activate MHDsDocumentRegistry
 deactivate MHDsDocumentRegistry
 autonumber stop
-NurseTablet -> NurseTablet: procede with drug administration
+NurseTablet -> NurseTablet: proceed with drug administration
 deactivate NurseTablet
 
 autonumber 11 "<b>"
