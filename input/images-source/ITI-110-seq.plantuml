@@ -2,13 +2,9 @@
 hide footbox
 participant "Resource Notification Subscriber" as  Subscriber
 participant "Resource Notification Broker" as  Broker
-
-
-
 activate Subscriber
+Subscriber -> Broker : Create Subscription Request [ITI-110]
 activate Broker
-Subscriber -> Broker : 1. Resource Subscription Request [ITI-110]
-
 /'
 participant "Resource Notification Recipient" as  Recipient
 opt handskake HTTPS   
@@ -20,12 +16,16 @@ opt handskake HTTPS
   end
 end
 '/
-
-Broker --> Subscriber : 2. Resource Subscription Response [ITI-110]
-
+Broker --> Subscriber :Create Subscription Response [ITI-110]
 deactivate Broker
 deactivate Subscriber
 
 
+Subscriber -> Broker: Update Subscription Request [ITI-110]
+activate Subscriber
+activate Broker
+Broker --> Subscriber: Update Subscription Response [ITI-110]
+deactivate Broker
+deactivate Subscriber
 
 @enduml
