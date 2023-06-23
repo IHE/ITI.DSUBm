@@ -6,5 +6,6 @@ agent "Resource Notification Recipient" as Recipient
 Publisher --> Broker : "Resource Publish [ITI-111]"
 Subscriber --> Broker : "Resource Subscription [ITI-110]"
 Subscriber --> Broker : "Resource Subscription Search [ITI-113]"
+Subscriber --> Broker : "Resource SubscriptionTopic Search [ITI-YY]"
 Broker --> Recipient : "Resource Notify [ITI-112]"
 @enduml

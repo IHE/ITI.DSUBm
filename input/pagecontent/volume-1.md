@@ -21,6 +21,7 @@ This section defines the actors and transactions in this implementation guide.
   - [Resource Publish [ITI-111]](ITI-111.html)
   - [Resource Notify [ITI-112]](ITI-112.html)
   - [Resource Subscription Search [ITI-113]](ITI-113.html)
+  - [Resource SubscriptionTopic Search [ITI-YY]](ITI-YY.html)
 
 Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
 
@@ -37,11 +38,13 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |---------|---------------|------------------------|-----------------|-----------------------------------|
 | **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
 | Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R     | ITI TF-2: 3.110 |
-|                                | Resource Publish [ITI-111]               | Responder    | R     | ITI TF-2: 3.111 |
+|                                | Resource Publish [ITI-111]               | Responder    | O     | ITI TF-2: 3.111 |
 |                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
+|                                | Resource SubscriptionTopic Search [ITI-YY]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
 |                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-YY]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
@@ -112,6 +115,12 @@ For more details see the detailed [transaction description](ITI-112.html)
 This transaction is used for existing subscription search.
 
 For more details see the detailed [transaction description](ITI-113.html)
+
+#### 1:54.1.2.5 Resource SubscriptionTopic Search [ITI-YY]
+
+This transaction is used for existing subscriptionTopic search.
+
+For more details see the detailed [transaction description](ITI-YY.html)
 
 <a name="actor-options"> </a>
 
