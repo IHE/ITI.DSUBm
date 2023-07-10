@@ -4,7 +4,6 @@ participant "Resource Notification Subscriber" as  Subscriber
 participant "Resource Notification Broker" as  Broker
 
 
-
 activate Subscriber
 activate Broker
 Subscriber -> Broker : 1. Resource Subscription Search Request [ITI-113]
