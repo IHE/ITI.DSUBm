@@ -44,7 +44,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |                                | Resource SubscriptionTopic Search [ITI-YY]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
 |                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
-|                                | Resource Subscription Search [ITI-YY]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource SubscriptionTopic Search [ITI-YY]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
@@ -141,7 +141,9 @@ between options when applicable are specified in notes.
 
 The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction.
 
-The Resource Notification Broker that supports this option shall accept and process the Resource Subscription Search [ITI-113] transaction.
+#### 1:54.2.2 SubscriptionTopic Search
+
+The Resource Notification Subscriber that supports this option shall implement the Resource SubscriptionTopic Search [ITI-YY] transaction.
 
 <a name="required-groupings"> </a>
 

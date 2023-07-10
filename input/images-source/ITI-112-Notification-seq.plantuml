@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+
+participant "Resource Notification Broker" as Broker
+participant "Resource Notification Recipient" as Recipient
+activate Broker
+activate Recipient
+Broker -> Recipient : 1. Notification Bundle Request [ITI-112]
+Recipient --> Broker : 2. Notification Bundle Response [ITI-112]
+deactivate Recipient
+deactivate Broker
+
+
+@enduml
