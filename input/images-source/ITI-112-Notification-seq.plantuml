@@ -2,13 +2,13 @@
 hide footbox
 
 participant "Resource Notification Broker" as  Broker
-participant "Resource Notification Subscriber" as  Subscriber
+participant "Resource Notification Recipient" as  Recipient
 
 activate Broker
-activate Subscriber
-Broker -> Subscriber : 1.Resource Subscription Search Request [ITI-113]
-Subscriber --> Broker : 2. Resource Subscription Search Response [ITI-113]
-deactivate Subscriber
+activate Recipient
+Broker -> Recipient : 1.Notificanion Bundle Request [ITI-112]
+Recipient --> Broker : 2. Notificanion Bundle Response [ITI-112]
+deactivate Recipient
 deactivate Broker
 
 @enduml
