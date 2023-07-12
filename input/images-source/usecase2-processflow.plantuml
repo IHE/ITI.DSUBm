@@ -33,7 +33,8 @@ participant ER [
 DHR -> DHR: First visit (therapy A)
 autonumber "<b>"
 activate DHR
-DHR -> Central:  Resource Subscription [ITI-110]
+DHR -> Central: Resource SubscriptionTopic Search [ITI-118]
+DHR -> Central: Resource Subscription [ITI-110]
 deactivate DHR
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 

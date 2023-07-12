@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+
+participant "Resource Notification Publisher" as  Publisher
+participant "Resource Notification Broker" as  Broker
+
+activate Publisher
+activate Broker
+Publisher -> Broker : 1.Resource Publish Request [ITI-112]
+Broker --> Publisher : 2. Resource Publish Response [ITI-112]
+deactivate Broker
+deactivate Publisher
+
+@enduml

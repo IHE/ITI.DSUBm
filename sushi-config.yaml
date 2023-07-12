@@ -72,8 +72,8 @@ pages:
   ITI-113.md:
     title: 2:3.113 Resource Subscription Search
     generation: markdown
-  ITI-YY.md:
-    title: 2:3.YY Resource SubscriptionTopic Search
+  ITI-118.md:
+    title: 2:3.118 Resource SubscriptionTopic Search
     generation: markdown
   testplan.md:
     title: "Test Plan"
@@ -103,7 +103,7 @@ menu:
     "Resource Publish [ITI-111]": ITI-111.html
     "Resource Notify [ITI-112]": ITI-112.html
     "Resource Subscription Search [ITI-113]": ITI-113.html
-    "Resource SubscriptionTopic Search [ITI-YY]": ITI-YY.html
+    "Resource SubscriptionTopic Search [ITI-118]": ITI-118.html
   Artifacts: artifacts.html
   Other:
     Test Plan: testplan.html
