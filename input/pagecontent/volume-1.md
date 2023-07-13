@@ -1,5 +1,5 @@
 
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
@@ -50,7 +50,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 {: .grid}
 
 
-*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports at least one among the options: "Subscription Search" and "SubscriptionTopic Search"	, see Section 54.2 Actor Options.*
+*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports at least one among the options: "Subscription Search" and "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
 
 ### 1:54.1.1 Actors
 
@@ -112,7 +112,7 @@ For more details see the detailed [transaction description](ITI-112.html)
 
 #### 1:54.1.2.4 Resource Subscription Search [ITI-113]
 
-This transaction is used for existing subscription search.
+This transaction is used for searching existing subscriptions.
 
 For more details see the detailed [transaction description](ITI-113.html)
 
@@ -230,11 +230,11 @@ This section shows how the transactions/content modules of the profile are combi
 
 ### 1:54.4.1 Concepts
 
-The DSUBm profile enables mobile subscription for documents.
+The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
-In the following use cases are presented different subscription types, such as patient-dependent subscription, patient independent subscription, Folder subscription and other types. 
+In the following use cases are presented different subscription types such as: patient-dependent subscription, patient-independent subscription, Folder subscription and other types. 
 The use cases cover both a fully mobile environment (MHDS) and an environment in which the main infrastructure is XDS.  
-In these use cases are presented also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
+These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:54.4.2 Use Cases
 
@@ -435,7 +435,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 #### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update
 
-The availability of an updated metadata document for a Patient, shared in an XDS on FHIR infrastructure, is notified in a personal mobile device.
+The availability of an updated metadata document (shared in an XDS on FHIR infrastructure) for a Patient is notified to a personal mobile device.
 
 ##### 1:54.4.2.6.1 Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update Use Case Description
 
@@ -458,10 +458,10 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality code, based on the community accordance, in this case equal to "N". ([ITI-110] Resource Subscription with the following criteria:
+1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription with the following criteria:
 "/DocumentReference?patient=98765&type=reports&security-label=N")
-2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with confidentiality code different from "N" ([ITI-42] Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notificatio is sent.
+2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N" ([ITI-42] Register Document Set-b).
+3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notification is sent.
 4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
 5. The Central Infrastructure, having updated the metadata of the document, generates a message to inform the broker about the update event. ([ITI-111] Resource Publish).
 6. Since the metadata update event meets the subscription criteria, the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
