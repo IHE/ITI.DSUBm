@@ -44,13 +44,15 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |                                | Resource SubscriptionTopic Search [ITI-118]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
 |                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
-|                                | Resource SubscriptionTopic Search [ITI-118]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource SubscriptionTopic Search [ITI-118]      | Initiator    | O (Note 2) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
 
 
-*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports at least one among the options: "Subscription Search" and "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
+*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports  the option "Subscription Search", see Section_ 54.2 Actor Options.*
+
+*Note 2: Transaction Resource SubscriptionTopic Search [ITI-118] is required if Actor Resource Notification Subscriber supports  the option "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
 
 ### 1:54.1.1 Actors
 
