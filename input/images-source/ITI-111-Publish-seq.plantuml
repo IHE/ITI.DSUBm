@@ -6,8 +6,8 @@ participant "Resource Notification Broker" as  Broker
 
 activate Publisher
 activate Broker
-Publisher -> Broker : 1.Resource Publish Request [ITI-112]
-Broker --> Publisher : 2. Resource Publish Response [ITI-112]
+Publisher -> Broker : 1.Resource Publish Request [ITI-111]
+Broker --> Publisher : 2. Resource Publish Response [ITI-111]
 deactivate Broker
 deactivate Publisher
 
