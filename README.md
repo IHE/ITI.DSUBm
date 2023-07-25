@@ -23,11 +23,11 @@ https://github.com/IHE/ITI.DSUBm/blob/master/DSUBm%20-%20Subscriptions%20R5%20Ba
 
 - From the previuos point we decided to split the Search transaction in 2 different transaction:
 ITI-113 Resource Subscription Search (OPTIONAL for the Subscriber --> if supported there is Option Subscription Search )
-ITI-118 Resource SubscriptionTopic Search (OPTIONAL for the Subscriber --> if supported there is Option Subscription Search )
+ITI-114 Resource SubscriptionTopic Search (OPTIONAL for the Subscriber --> if supported there is Option Subscription Search )
 
 In this way: 
 1. The transaction model is more clear. 
-2. [ITI-113] Resource Subscription Search and  [ITI-118] Resource SubscriptionTopic Search have different trigger events 
+2. [ITI-113] Resource Subscription Search and  [ITI-114] Resource SubscriptionTopic Search have different trigger events 
 
 
 ## VOLUME 2  
@@ -61,7 +61,7 @@ The notification shall include: one or more DocumentReference resource and zero 
 
 Optional for the Resource Notification Subscriber
 
-- ITI-118 Resource SubscriptionTopic Search
+- ITI-114 Resource SubscriptionTopic Search
  GET [base]/SubscriptionTopic?[Parameters]
 
 Optional for the Resource Notification Subscriber

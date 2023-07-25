@@ -27,7 +27,7 @@ This guide is organized into the following sections:
    2. [[ITI-111]](ITI-111.html)
    3. [[ITI-112]](ITI-112.html)
    4. [[ITI-113]](ITI-113.html)
-   5. [[ITI-118]](ITI-118.html)
+   5. [[ITI-114]](ITI-114.html)
    1. **TODO: point to the Volume 2 Appendix if there is one**
 3. Volume 3: Metadata and Content
    1. [Content One](domain-ZZ.html)

@@ -21,7 +21,7 @@ This section defines the actors and transactions in this implementation guide.
   - [Resource Publish [ITI-111]](ITI-111.html)
   - [Resource Notify [ITI-112]](ITI-112.html)
   - [Resource Subscription Search [ITI-113]](ITI-113.html)
-  - [Resource SubscriptionTopic Search [ITI-118]](ITI-118.html)
+  - [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
 
 Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
 
@@ -41,10 +41,10 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |                                | Resource Publish [ITI-111]               | Responder    | O     | ITI TF-2: 3.111 |
 |                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
-|                                | Resource SubscriptionTopic Search [ITI-118]      | Responder    | R | ITI TF-2: 3.113 |
+|                                | Resource SubscriptionTopic Search [ITI-114]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
 |                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
-|                                | Resource SubscriptionTopic Search [ITI-118]      | Initiator    | O (Note 2) | ITI TF-2: 3.113 |
+|                                | Resource SubscriptionTopic Search [ITI-114]      | Initiator    | O (Note 2) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
@@ -52,7 +52,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 *Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports  the option "Subscription Search", see Section_ 54.2 Actor Options.*
 
-*Note 2: Transaction Resource SubscriptionTopic Search [ITI-118] is required if Actor Resource Notification Subscriber supports  the option "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
+*Note 2: Transaction Resource SubscriptionTopic Search [ITI-114] is required if Actor Resource Notification Subscriber supports  the option "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
 
 ### 1:54.1.1 Actors
 
@@ -118,11 +118,11 @@ This transaction is used for searching existing subscriptions.
 
 For more details see the detailed [transaction description](ITI-113.html)
 
-#### 1:54.1.2.5 Resource SubscriptionTopic Search [ITI-118]
+#### 1:54.1.2.5 Resource SubscriptionTopic Search [ITI-114]
 
 This transaction is used for existing subscriptionTopic search.
 
-For more details see the detailed [transaction description](ITI-118.html)
+For more details see the detailed [transaction description](ITI-114.html)
 
 <a name="actor-options"> </a>
 
@@ -145,7 +145,7 @@ The Resource Notification Subscriber that supports this option shall implement t
 
 #### 1:54.2.2 SubscriptionTopic Search
 
-The Resource Notification Subscriber that supports this option shall implement the Resource SubscriptionTopic Search [ITI-118] transaction.
+The Resource Notification Subscriber that supports this option shall implement the Resource SubscriptionTopic Search [ITI-114] transaction.
 
 <a name="required-groupings"> </a>
 
@@ -314,7 +314,7 @@ The assumption is that systems share the information in an MHDS Environment. The
 
 **Main Flow**:
 
-1.  During the first visit a document subscription is needed. The mobile DHR application needs to discover the SubscriptioTopic supported by the Resource Notification Broke in order to choose the parameter for the new subscription. ([ITI-118] Resource SubscriptionTopic Search)  
+1.  During the first visit a document subscription is needed. The mobile DHR application needs to discover the SubscriptioTopic supported by the Resource Notification Broke in order to choose the parameter for the new subscription. ([ITI-114] Resource SubscriptionTopic Search)  
 2. At the end of the first visit, the mobile DHR application performs a folder subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription with the following criteria:
 "/List?patient=12345&code=folder" )
 3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
