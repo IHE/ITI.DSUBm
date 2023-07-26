@@ -1,0 +1,57 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam componentStyle rectangle
+
+hide footbox
+/' title "DSUBm grouped with MHD" '/
+
+card "MHD Document Source" as MHD_SOURCE
+card  SourceInterface [
+  <b> MHD to XDS Source Interface
+  ----
+  MHD Document Recipient
+  ....
+  XDS Document Source 
+]
+card "XDS Document Repository" as XDS_Repo 
+card  Registry [
+  <b> Document Registry
+  ----
+  XDS Document Registry 
+  ....
+  Resource Notification  Publisher
+]
+card "Resource Notification Broker" as DSUBm_Broker
+card "Resource Notification Subscriber" as DSUBm_Subscriber
+
+
+card  Consumer [
+  <b>System Document Consumer
+  ----
+  MHD Document Responder
+  ....
+  Resource Notification  Recipient
+]
+
+
+
+MHD_SOURCE -u-> SourceInterface: ITI-65
+SourceInterface -r-> XDS_Repo: ITI-41
+XDS_Repo -d-> Registry: ITI-42
+Registry -d-> DSUBm_Broker: ITI-111
+DSUBm_Subscriber -l-> DSUBm_Broker: ITI-110
+DSUBm_Broker --> Consumer: ITI-112
+/'
+card  ConsumerInterface [
+  <b> MHD to XDS Consumer Interface
+  ----
+  MHD Document Recipient
+  ....
+  XDS Document Consumer 
+]
+Consumer -u-> ConsumerInterface: ITI-68
+ConsumerInterface -l-> XDS_Repo: ITI-43
+ConsumerInterface --> Registry: ITI-18
+'/
+
+@enduml
