@@ -1,0 +1,43 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam componentStyle rectangle
+
+hide footbox
+/' title "DSUBm grouped with MHDS" '/
+
+
+card "Resource Notification Subscriber" as DSUBm_Subsciber 
+card "Resource Notification Broker" as DSUBm_Broker
+
+card  Registry [
+  <b>MHDs Document Registry
+  ----
+  MHD Document Responder
+  ....
+  MHD Document Recipient
+  ....
+  Resource Notification Publisher
+]
+
+card Publisher [
+  <b>System Document Publisher
+  ----
+  MHD Document Source
+]
+
+card  Consumer [
+  <b>System Document Consumer
+  ----
+  MHD Document Consumer
+  ....
+  Resource Notification  Recipient
+]
+
+
+Publisher -r-> Registry: ITI-65
+Registry -d->DSUBm_Broker: ITI-111
+DSUBm_Subsciber -u-> DSUBm_Broker: ITI-110
+DSUBm_Broker -r-> Consumer : ITI-112
+
+
+@enduml

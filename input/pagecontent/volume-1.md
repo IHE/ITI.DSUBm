@@ -491,6 +491,13 @@ Within a mobile infrastructure that is implementing the MHDS model:
 * A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Resource Notification Subscriber.
 
+<figure>
+{%include model_MHDS.svg%}
+<figcaption><b>Figure 1:54.6.1.1-1: DSUBm actors grouped with MHDS actors
+</b></figcaption>
+</figure>
+<br clear="all">
+
 ### 1:54.6.2. MHD - Mobile access to Health Documents as an interface for XDS - Cross-Enterprise Document Sharing
 
 Within an XDS infrastructure that implements a mobile interface with the MHD "XDS on FHIR Option":
@@ -498,6 +505,13 @@ Within an XDS infrastructure that implements a mobile interface with the MHD "XD
 * XDS Document Registry will likely be grouped with a Resource Notification Broker 
 * MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * MHD Document Consumer will likely be grouped with a Resource Notification Subscriber.
+
+<figure>
+{%include model_MHD.svg%}
+<figcaption><b>Figure 1:54.6.2.1-1: DSUBm actors grouped with MHD actors
+</b></figcaption>
+</figure>
+<br clear="all">
 
 ### 1:54.6.3 DSUB - Document Metadata Subscription 
 Within an already functioning DSUB infrastructure, two alternative groupings are presented based on which actors are integrated between DSUB and DSUBm. 
