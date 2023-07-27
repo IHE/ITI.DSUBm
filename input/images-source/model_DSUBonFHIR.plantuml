@@ -16,7 +16,7 @@ card  Central [
   Document Metadata Publisher
 ]
 
-card "Document Metadata Broker" as Broker 
+card "Document Metadata Notification Broker" as Broker 
 
 card  DSUBFHIR [
   <b>DSUB/FHIR interface

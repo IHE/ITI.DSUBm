@@ -19,13 +19,13 @@ card  Central [
 card Broker [
   <b>Notification Manager
   ----
-  Document Metadata Broker
+  Document Metadata Notification Broker
   ....
   Resource Notification Broker
 ]
 
-card "Document Notification Subscriber" as DSUB_Subsciber 
-card "Document Notification Recipient" as DSUB_Recipient 
+card "Document Metadata Subscriber" as DSUB_Subsciber 
+card "Document Metadata Notification Recipient" as DSUB_Recipient 
 
 card "Resource Notification Subscriber" as DSUBm_Subsciber 
 card "Resource Notification Recipient" as DSUBm_Recipient 

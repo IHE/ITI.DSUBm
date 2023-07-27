@@ -491,6 +491,7 @@ Within a mobile infrastructure that is implementing the MHDS model:
 * A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Resource Notification Subscriber.
 
+<a name="fig_MHDS"> </a>
 <figure>
 {%include model_MHDS.svg%}
 <figcaption><b>Figure 1:54.6.1.1-1: DSUBm actors grouped with MHDS actors
@@ -506,6 +507,7 @@ Within an XDS infrastructure that implements a mobile interface with the MHD "XD
 * MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * MHD Document Consumer will likely be grouped with a Resource Notification Subscriber.
 
+<a name="fig_MHD"> </a>
 <figure>
 {%include model_MHD.svg%}
 <figcaption><b>Figure 1:54.6.2.1-1: DSUBm actors grouped with MHD actors
@@ -519,7 +521,7 @@ Within an already functioning DSUB infrastructure, two alternative groupings are
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
 
 #### 1:54.6.3.1 DSUBm as an interface for DSUB 
-* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
+* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
 <figure>
 {%include model_DSUBonFHIR.svg%}
 <figcaption><b>Figure 1:54.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
@@ -528,7 +530,7 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 <br clear="all">
 
 #### 1:54.6.3.2 Notification Manager
-* Document Metadata Broker will most likely be grouped with a Resource Notification Broker creating a Notification Manager able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
+* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
 
 <figure>
 {%include model_DSUB.svg%}
