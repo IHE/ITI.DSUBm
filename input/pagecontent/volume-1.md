@@ -128,13 +128,17 @@ For more details see the detailed [transaction description](ITI-114.html)
 
 ## 1:54.2 Actor Options
 
-Options that may be selected for each actor in this implementation guide, are listed in Table 3.2-1 below. Dependencies 
+Options that may be selected for each actor in this implementation guide, are listed in Table 1:54.2-1 below. Dependencies 
 between options when applicable are specified in notes.
+
+**Table 1:54.2-1: Actor Options**
 
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
 | Resource Notification Broker | Subscription Search | ITI TF-1: 54.2.1 |
+| Resource Notification Broker | SubscriptionTopic Search | ITI TF-1: 54.2.2 |
 | Resource Notification Subscriber | Subscription Search | ITI TF-1: 54.2.1 |
+| Resource Notification Subscriber | SubscriptionTopic Search | ITI TF-1: 54.2.2 |
 | Resource Notification Publisher | none |--|
 | Resource Notification Recipient | none |--|
 {: .grid}
@@ -155,6 +159,8 @@ An actor from this profile (Column 1) shall implement all of the
 required transactions and/or content modules in this profile ***in
 addition to*** ***<u>all</u>*** of the requirements for the grouped
 actor (Column 2) 
+
+**Table 1:54.3-1: Required Actor Groups**
 
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
 <thead>
@@ -234,7 +240,7 @@ This section shows how the transactions/content modules of the profile are combi
 
 The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
-In the following use cases are presented different subscription types such as: patient-dependent subscription, patient-independent subscription, Folder subscription and other types. 
+In the following use cases are presented different subscription types such as: patient-dependent subscription, multi-patient subscription, Folder subscription and other types. 
 The use cases cover both a fully mobile environment (MHDS) and an environment in which the main infrastructure is XDS.  
 These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
@@ -271,7 +277,7 @@ The assumption is that systems share the information in an MHDS Environment. In 
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], patient independent subscription with the following criteria:
+1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient subscription with the following criteria:
 "/DocumentReference?patient:missing=true&facility=cardiologyWard").  
 2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode with the following criteria "/DocumentReference?patient=12345&type=http://loinc.org&#124;1234-5").
 3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
@@ -403,7 +409,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 #### 1:54.4.2.5 Use Case \#5: Document Subscription for Mobile Alert System
 
-The availability of a specific document is notified in a Mobile Alert System with a patient-independent subscription.
+The availability of a specific document is notified in a Mobile Alert System with a multi-patient subscription.
 
 ##### 1:54.4.2.5.1 Document Subscription for Mobile Alert System Use Case Description
 
@@ -423,7 +429,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The Mobile Alert System performs a subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (ITI-110 Resource Subscription, patient independent expressed with the following criteria:
+1. The Mobile Alert System performs a subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (ITI-110 Resource Subscription, multi-patient expressed with the following criteria:
 "/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C") The list of known and managed diseases is represented by the list of eventCodeList values submitted in the subscription by the Mobile Alert System.
 2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
 3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
@@ -431,7 +437,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 5. The Mobile Alert System will try to retrieve the document in order to inform the user of the specific information regarding the exposure and quarantine protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.
 7. The Mobile Alert System uses the information retrieved in order to send a Mobile Report Alert [ITI-84] to the Mobile device.
-8. The Mobile Alert System is updated in order to respond to a new disease. The existing subscription is updated including the new disease with eventCodeList = D. ([ITI-110] Resource Subscription, patient independent expressed with the following criteria:
+8. The Mobile Alert System is updated in order to respond to a new disease. The existing subscription is updated including the new disease with eventCodeList = D. ([ITI-110] Resource Subscription, multi-patient expressed with the following criteria:
 "/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C,D")
 
 
