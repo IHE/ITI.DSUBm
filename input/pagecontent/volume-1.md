@@ -489,7 +489,7 @@ See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profi
 
 The DSUBm actor and transaction model is very flexible. Integration with other IHE profiles is possible and highly recommended in order to utilize the subscription/notification mobile feature in different types of environments. In this section, some information about possible cross-profile interaction is presented. 
 
-### 1:54.6.1. MHDS - Mobile Health Document Sharing 
+### 1:54.6.1 MHDS - Mobile Health Document Sharing 
 
 Within a mobile infrastructure that is implementing the MHDS model:
 * MHDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
@@ -500,7 +500,7 @@ Within a mobile infrastructure that is implementing the MHDS model:
 <a name="fig_MHDS"> </a>
 <figure>
 {%include model_MHDS.svg%}
-<figcaption><b>Figure 1:54.6.1.1-1: DSUBm actors grouped with MHDS actors
+<figcaption><b>Figure 1:54.6.1-1: DSUBm actors grouped with MHDS actors
 </b></figcaption>
 </figure>
 <br clear="all">
@@ -516,7 +516,7 @@ Within an XDS infrastructure that implements a mobile interface with the MHD "XD
 <a name="fig_MHD"> </a>
 <figure>
 {%include model_MHD.svg%}
-<figcaption><b>Figure 1:54.6.2.1-1: DSUBm actors grouped with MHD actors
+<figcaption><b>Figure 1:54.6.2-1: DSUBm actors grouped with MHD actors
 </b></figcaption>
 </figure>
 <br clear="all">
