@@ -13,7 +13,7 @@
 ### Organization of This Guide
 This guide is organized into the following sections:
 
-1. Volume 1:
+- Volume 1:
    1. [Introduction](volume-1.html#introduction)
    1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
    1. [Actor Options](volume-1.html#actor-options)
@@ -22,18 +22,15 @@ This guide is organized into the following sections:
    1. [Security Considerations](volume-1.html#security-considerations)
    1. [Cross Profile Considerations](volume-1.html#other-grouping)
    1. **TODO: point to the Volume 1 Appendix if there is one**
-2. Volume 2: Transaction Detail
+- Volume 2: Transaction Detail
    1. [[ITI-110]](ITI-110.html)
    2. [[ITI-111]](ITI-111.html)
    3. [[ITI-112]](ITI-112.html)
    4. [[ITI-113]](ITI-113.html)
    5. [[ITI-114]](ITI-114.html)
    1. **TODO: point to the Volume 2 Appendix if there is one**
-3. Volume 3: Metadata and Content
-   1. [Content One](domain-ZZ.html)
-4. Volume 4: National Extensions
-   1. **TODO: point at the National Extensions if there are any**
-6. Other
+
+- Other
    1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html) 
