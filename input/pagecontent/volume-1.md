@@ -1,5 +1,5 @@
 <a name="introduction"> </a>
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved a technical interoperability suited to limited resources, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
@@ -50,9 +50,9 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 {: .grid}
 
 
-*Note 1: Transaction Resource Subscription Search [ITI-113] is required if Actor Resource Notification Subscriber supports  the option "Subscription Search", see Section_ 54.2 Actor Options.*
+*Note 1: If the actor Resource Notification Subscriber supports the option "Subscription Search", it shall support the transaction Resource Subscription Search [ITI-113] (see Section_ 54.2 Actor Options.)*
 
-*Note 2: Transaction Resource SubscriptionTopic Search [ITI-114] is required if Actor Resource Notification Subscriber supports  the option "_SubscriptionTopic Search", see Section_ 54.2 Actor Options.*
+*Note 2: If the actor Resource Notification Subscriber supports the option "SubscriptionTopic Search", it shall support the transaction Resource SubscriptionTopic Search [ITI-114] (see Section 54.2 Actor Options.)*
 
 ### 1:54.1.1 Actors
 
@@ -70,7 +70,7 @@ FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 #### 1:54.1.1.2 Resource Notification Subscriber
 
-The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It also can send a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription research.
+The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It also can send a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription search.
 
 FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
 
@@ -96,7 +96,7 @@ The transactions in this profile are summarized in the sections below.
 
 #### 1:54.1.2.1 Resource Subscription [ITI-110]
 
-This transaction is used for a subscription request, by using a particular set of filters, or for a subscription deletion. 
+This transaction is used for a subscription request, by using a particular set of filters, or for a subscription update. 
 
 For more details see the detailed [transaction description](ITI-110.html)
 
@@ -108,19 +108,19 @@ For more details see the detailed [transaction description](ITI-111.html)
 
 #### 1:54.1.2.3 Resource Notify [ITI-112]
 
-This transaction is used for sending notifications to a Resource Notification recipient.
+This transaction is used for sending notifications to a Resource Notification Recipient related to a subscription.
 
 For more details see the detailed [transaction description](ITI-112.html)
 
 #### 1:54.1.2.4 Resource Subscription Search [ITI-113]
 
-This transaction is used for searching existing subscriptions.
+This transaction is used for searching existing Subscriptions.
 
 For more details see the detailed [transaction description](ITI-113.html)
 
 #### 1:54.1.2.5 Resource SubscriptionTopic Search [ITI-114]
 
-This transaction is used for existing subscriptionTopic search.
+This transaction is used for serching existing SubscriptionTopics. This search is performed to identify the topic to be used in the subscription.
 
 For more details see the detailed [transaction description](ITI-114.html)
 
@@ -165,8 +165,8 @@ actor (Column 2)
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
 <thead>
 <tr class="header">
-<th>DSUBm Actor</th>
-<th>Actor(s) to be grouped with</th>
+<th>DSUBm Actor (1)</th>
+<th>Actor(s) to be grouped with (2)</th>
 <th>Reference</th>
 </tr>
 </thead>
@@ -241,7 +241,7 @@ This section shows how the transactions/content modules of the profile are combi
 The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription types such as: patient-dependent subscription, multi-patient subscription, Folder subscription and other types. 
-The use cases cover both a fully mobile environment (MHDS) and an environment in which the main infrastructure is XDS.  
+The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
 These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:54.4.2 Use Cases
@@ -278,7 +278,7 @@ The assumption is that systems share the information in an MHDS Environment. In 
 **Main Flow**:
 
 1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient subscription with the following criteria:
-"/DocumentReference?patient:missing=true&facility=cardiologyWard").  
+"/DocumentReference?subject:missing=false&facility=cardiologyWard").  
 2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode with the following criteria "/DocumentReference?patient=12345&type=http://loinc.org&#124;1234-5").
 3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
 4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish)
@@ -297,13 +297,13 @@ The update of a collection of documents (Folder), using a patient national Elect
 
 ##### 1:54.4.2.2.1 Document Subscription for mobile application in MHDS Environment using Folder Subscription Use Case Description
 
-Dr. Rooney is taking charge of Ms. Williams, a chronic diabetic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 years. 
+Dr. Rooney is taking care of Ms. Williams, a chronic diabetic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 years. 
 During the first visit, Dr. Rooney uses the mobile DHR application to subscribe to the National Electronic Healthcare Record (EHR) in order to be notified of any updates regarding Ms. Williams's clinical data. After the visit, the patient is sent home with the standard therapy.
-Between the first and second visit, the patient is not feeling well and is required an admission to the emergency room where some blood tests are performed and the acute symptoms are taken care of. 
+Between the first and second visit, the patient is not feeling well and was admitted in the emergency departement where some blood tests are performed and the acute symptoms are taken care of. 
 When the blood test are published on the EHR a notification is sent to the mobile DHR used by Dr. Rooney and the new update are retrieved.
- During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
-A few days after the second visit Ms. Williams is forced again into the emergency room. Other tests are performed and the medical report is updated in the EHR a new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
-During the third visit, Ms. Williams decides that a different medic will take charge of her therapy. Therefore Dr. Rooney closes the position for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
+During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
+A few days after the second visit Ms. Williams is admitted again into the emergency room. Other tests are performed and the medical report is updated in the EHR. A new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
+During the third visit, Ms. Williams decides that a different physician will take charge of her therapy. Therefore Dr. Rooney closes the s it the episode of care for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
 
 
 ##### 1:54.4.2.2.2 Document Subscription for mobile application in MHDS Environment using Folder Subscription Process Flow
@@ -320,12 +320,12 @@ The assumption is that systems share the information in an MHDS Environment. The
 
 **Main Flow**:
 
-1.  During the first visit a document subscription is needed. The mobile DHR application needs to discover the SubscriptioTopic supported by the Resource Notification Broke in order to choose the parameter for the new subscription. ([ITI-114] Resource SubscriptionTopic Search)  
-2. At the end of the first visit, the mobile DHR application performs a folder subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription with the following criteria:
-"/List?patient=12345&code=folder" )
+1.  During the first visit a document subscription is needed. The mobile DHR application needs to discover the SubscriptionTopic supported by the Resource Notification Broke in order to choose the parameter for the new subscription. ([ITI-114] Resource SubscriptionTopic Search)  
+2. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription with the following criteria:
+"/List?subject=12345&code=folder" )
 3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 4. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
-5. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] MobResourceile Notify)
+5. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
 6. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
 7. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
 8. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
@@ -362,7 +362,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription for patient and typeCode with the following criteria:
-"/DocumentReference?patient=222333&type=ePrescription")
+"/DocumentReference?subject=222333&type=ePrescription")
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish).
 4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
@@ -396,7 +396,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription with the following criteria:
-"/DocumentReference?patient=98765&type=ePrescription")
+"/DocumentReference?subject=98765&type=ePrescription")
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
 3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
 4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)
@@ -430,7 +430,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. The Mobile Alert System performs a subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (ITI-110 Resource Subscription, multi-patient expressed with the following criteria:
-"/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C") The list of known and managed diseases is represented by the list of eventCodeList values submitted in the subscription by the Mobile Alert System.
+"/DocumentReference?subject:missing=false&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C") The list of known and managed diseases is represented by the list of eventCodeList values submitted in the subscription by the Mobile Alert System.
 2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
 3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
 4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1 a notification is sent to the Mobile Alert System. ([ITI-112] Resource Notify)
@@ -467,7 +467,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription with the following criteria:
-"/DocumentReference?patient=98765&type=reports&security-label=N")
+"/DocumentReference?subject=98765&type=reports&security-label=N")
 2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N" ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notification is sent.
 4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
