@@ -481,7 +481,9 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 ## 1:54.5 Security Considerations
 
-See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations)
+See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
+The reader should consider the indication included in [Safety and Security](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/safety_security.html). 
+
 
 <a name="other-grouping"> </a>
 
