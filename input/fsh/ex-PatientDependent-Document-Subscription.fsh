@@ -2,9 +2,9 @@ Instance:    PatientDependent-Document-Subscription
 InstanceOf:  DSUBm_Subscription
 Usage:       #example
 Title:       "Patient Dependent Document Subscription"
-Description: "R4/B Example of a topic-based 'DocumentReference' subscription."
+Description: "R4/B Example of an active topic-based 'DocumentReference' subscription with filters criteria and id-only as chosen payload"
 * id       = "PatientDependent-Document-Subscription"
-* status   = #requested
+* status   = #active 
 * end      = "2023-12-31T12:00:00Z"
 * reason   = "R4/B Example Topic-Based Subscription for DocumentReference"
 * criteria = "http://example.org/FHIR/R4B/SubscriptionTopic/DocumentReference"
