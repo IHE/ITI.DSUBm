@@ -303,7 +303,7 @@ Between the first and second visit, the patient is not feeling well and was admi
 When the blood test are published on the EHR a notification is sent to the mobile DHR used by Dr. Rooney and the new update are retrieved.
 During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
 A few days after the second visit Ms. Williams is admitted again into the emergency room. Other tests are performed and the medical report is updated in the EHR. A new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
-During the third visit, Ms. Williams decides that a different physician will take charge of her therapy. Therefore Dr. Rooney closes the s it the episode of care for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
+During the third visit, Ms. Williams decides that a different physician will take charge of her therapy. Therefore Dr. Rooney closes the episode of care for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
 
 
 ##### 1:54.4.2.2.2 Document Subscription for mobile application in MHDS Environment using Folder Subscription Process Flow

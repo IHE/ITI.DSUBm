@@ -1,24 +1,11 @@
-Profile: DSUBm_SubscriptionTopic
-Parent: SubscriptionTopic
-Id: DSUBm-SubscriptionTopic
-Description: "Resource SubscriptionTopic for DSUBm profile"
-* obeys DSUBm-trigger
-* url 1..1
-* title 1..1 
-* date 1..1 
-* publisher 1..1
-* purpose 1..1
-* resourceTrigger 1..1
-* eventTrigger 0..0
-
-
 Instance:    Document-SubscriptionTopic 
-InstanceOf:  DSUBm_SubscriptionTopic
-Usage:       #example
+InstanceOf:  SubscriptionTopic
+Usage:       #definition
 Title:       "DocumentReference SubscriptionTopic"
 Description: "R4/B Example of a SubscriptionTopic describing the creation of a 'DocumentReference' resource."
 * id        = "DocumentReference-SubscriptionTopic"
-* url       = "http://example.org/FHIR/R4B/SubscriptionTopic/DocumentReference"
+// change url to canonical url inside DSUBm IG 
+//* url       = "http://example.org/FHIR/R4B/SubscriptionTopic/DocumentReference"
 * title     = "Document"
 * status    = #active
 * date      = "2023-08-01"
