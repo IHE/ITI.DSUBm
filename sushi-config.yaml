@@ -31,6 +31,7 @@ copyrightYear: 2023+
 dependencies: 
   hl7.fhir.uv.subscriptions-backport: 1.1.0
   hl7.terminology: 5.2.0
+  ihe.iti.mhd: 4.2.1
 
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters

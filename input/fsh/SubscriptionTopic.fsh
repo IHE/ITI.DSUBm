@@ -1,4 +1,4 @@
-Instance:    Document-SubscriptionTopic 
+Instance:    DocumentReference-SubscriptionTopic-PatientDependent 
 InstanceOf:  SubscriptionTopic
 Usage:       #definition
 Title:       "DocumentReference SubscriptionTopic"
@@ -12,7 +12,7 @@ Description: "R4/B Example of a SubscriptionTopic describing the creation of a '
 * publisher = "Resource Notification Broker"
 * purpose   = "This topic is used for describe events and state change of DocumentReference resource"
 * resourceTrigger.description = "Publication of a document"
-* resourceTrigger.resource = "http://example.org/FHIR/R4B/SubscriptionTopic/DocumentReference"
+* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 * resourceTrigger.supportedInteraction = #create
 //queryCriteria.previous not exists 
 //* resourceTrigger.queryCriteria.previous = "status:not=current"
@@ -22,7 +22,7 @@ Description: "R4/B Example of a SubscriptionTopic describing the creation of a '
 * resourceTrigger.fhirPathCriteria = "Bundle.entry.resource.where(resourceType='DocumentReference').status contains 'current'"
 * canFilterBy[0].description = "Filter based on the subject of the DocumentReferece: DocumentEntry.patientId  "
 * canFilterBy[=].resource = "DocumentReference"
-* canFilterBy[=].filterParameter = "subject"
+* canFilterBy[=].filterParameter = "patient"
 * canFilterBy[=].filterDefinition = "http://hl7.org/fhir/SearchParameter/DocumentReference-subject"
 * canFilterBy[=].modifier = #=
 * canFilterBy[1].description = "Filter based on the type of the DocumentReferece: DocumentEntry.typeCode"
