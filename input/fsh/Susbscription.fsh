@@ -2,6 +2,8 @@ Profile: DSUBm_Subscription
 Parent: BackportSubscription
 Id: DSUBm-Subscription
 Description: "Resource Subscription for DSUBm profile"
+- 
+
 
 * channel.type = #rest-hook 
 * channel.endpoint 1..1 MS SU  

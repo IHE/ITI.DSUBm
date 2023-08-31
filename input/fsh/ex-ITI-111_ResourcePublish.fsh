@@ -7,5 +7,5 @@ Description: "Resource Publish transaction from DSUBm profile"
 * entry[Documents] 0..0
 
 
-Instance: ResourcePublish_iti-111 
+//Instance: ResourcePublish_iti-111 
 
