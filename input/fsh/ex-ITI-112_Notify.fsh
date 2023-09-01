@@ -42,7 +42,7 @@ Usage: #inline
 * status = #current
 * type = $loinc#60591-5
 * category = $loinc#11369-6
-* subject = Reference(Patient/example)
+* subject = Reference(Patient/PatientExample)
 * date = "2020-02-01T23:50:50-05:00"
 * securityLabel = $v3-Confidentiality#R
 * content.attachment.contentType = #text/plain

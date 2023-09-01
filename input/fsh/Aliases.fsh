@@ -12,16 +12,17 @@ Alias: $DocumentReference = https://profiles.ihe.net/ITI/MHD/StructureDefinition
 Alias: $SubmissionSet = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.SubmissionSet
 Alias: $Folder = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.Folder
 */
+
 Alias: $webHookEndpoint = https://example.org/Endpoints/d7dcc004-808d-452b-8030-3a3a13cd871d
 Alias: $Payload = http://hl7.org/fhir/ValueSet/mimetypes
-
 Alias: $DocumentReference = https://example.org/fhir/DocumentReference/aaaaaaaa-bbbb-cccc-dddd-e00444400002
-
 Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
 Alias: $loinc = http://loinc.org
 Alias: $v3-Confidentiality = http://terminology.hl7.org/CodeSystem/v3-Confidentiality
 Alias: $formatcode = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode
 Alias: $sct = http://snomed.info/sct
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 
 Instance: DocumentReference1
 InstanceOf: DocumentReference
@@ -59,9 +60,6 @@ Usage: #inline
 * name.family = "Schmidt"
 * name.given = "Dee"
 
-Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 
 Instance: PatientExample
 InstanceOf: Patient
