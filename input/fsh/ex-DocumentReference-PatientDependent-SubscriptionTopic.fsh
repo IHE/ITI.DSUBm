@@ -1,18 +1,15 @@
 Instance:    DocumentReference-PatientDependent-SubscriptionTopic 
-InstanceOf:  SubscriptionTopic
+InstanceOf:  DSUBm_SubscriptionTopic_DocumentReference_PatientDependent
 Usage:       #definition
 Title:       "DocumentReference SubscriptionTopic"
-Description: "R4/B Example of a SubscriptionTopic describing the creation of a 'DocumentReference' resource."
+Description: "R4/B Example of a SubscriptionTopic describing a patient Dependent 'DocumentReference' resource."
 * id        = "DocumentReference-SubscriptionTopic"
-// change url to canonical url inside DSUBm IG 
-//* url       = "http://example.org/FHIR/R4B/SubscriptionTopic/DocumentReference"
 * title     = "Document"
 * status    = #active
 * date      = "2023-08-01"
 * publisher = "Resource Notification Broker"
 * purpose   = "This topic is used for describe events and state change of DocumentReference resource"
 * resourceTrigger.description = "Publication of a document"
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 * resourceTrigger.supportedInteraction = #create
 //queryCriteria.previous not exists 
 //* resourceTrigger.queryCriteria.previous = "status:not=current"

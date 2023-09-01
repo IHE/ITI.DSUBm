@@ -1,5 +1,4 @@
-
-Profile: ResourcePublishBundleMinimal
+Profile: DSUBm_ResourcePublishBundle
 Parent: Bundle
 Id: ResourcePublishITI-111
 Description: "Resource Publish transaction from DSUBm profile
