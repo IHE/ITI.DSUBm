@@ -1,4 +1,4 @@
-Instance:    DocumentReference-SubscriptionTopic-PatientDependent 
+Instance:    DocumentReference-PatientDependent-SubscriptionTopic 
 InstanceOf:  SubscriptionTopic
 Usage:       #definition
 Title:       "DocumentReference SubscriptionTopic"
