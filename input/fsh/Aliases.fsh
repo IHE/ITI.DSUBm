@@ -23,20 +23,21 @@ Alias: $sct = http://snomed.info/sct
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 
+/*
 Instance: DocumentReference1
 InstanceOf: DocumentReference
 Description: "Example of DocumentReference resource with minimal metadata"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-09-01T07:56:06.2583244+00:00"
-* meta.profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
+//* meta.profile = "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference"
 * meta.security = $v3-ActReason#HTEST
 * contained = aaaaaaaa-bbbb-cccc-dddd-e00444400004
 * masterIdentifier.system = "urn:ietf:rfc:3986"
 * masterIdentifier.value = "urn:oid:1.2.840.113556.1.8000.2554.53432.348.12973.17740.34205.4355.50220.62012"
 * status = #current
-* type = $LOINC#60591-5
-* category = $LOINC#11369-6
+* type = http://loinc.org#60591-5
+* category = http://loinc.org#11369-6
 * subject = Reference(PatientExample)
 * date = "2020-02-01T23:50:50-05:00"
 * securityLabel = $v3-Confidentiality#R
@@ -51,7 +52,7 @@ Usage: #example
 * context.facilityType = $sct#82242000
 * context.practiceSetting = $sct#408467006
 * context.sourcePatientInfo = Reference(aaaaaaaa-bbbb-cccc-dddd-e00444400004)
-
+*/
 Instance: aaaaaaaa-bbbb-cccc-dddd-e00444400004
 InstanceOf: Patient
 Usage: #inline

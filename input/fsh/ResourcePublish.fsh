@@ -23,6 +23,8 @@ Description: "Resource Publish transaction from DSUBm profile
     SubmissionSet 1..1 and
     DocumentRefs 0..* and
     UpdateDocumentRefs 0..* and
+    Documents 0..0 and
+    FhirDocuments 0..0 and
     Folders 0..* and
     Patient 0..1
 * entry[SubmissionSet].resource only
