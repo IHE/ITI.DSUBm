@@ -32,6 +32,9 @@ dependencies:
   hl7.fhir.uv.subscriptions-backport: 1.1.0
   hl7.terminology: 5.2.0
   ihe.iti.mhd: 4.2.1
+  hl7.fhir.extensions.r4: 4.3.0
+ 
+
 
 
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters

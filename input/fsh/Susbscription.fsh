@@ -1,8 +1,7 @@
-Profile: DSUBm_Subscription
-Parent: BackportSubscription
-Id: DSUBm-Subscription
+Profile: DSUBm_Subscription 
+Parent: http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription
+Id: DSUBm-Subscription-general
 Description: "Resource Subscription for DSUBm profile"
-
 
 * channel.type = #rest-hook 
 * channel.endpoint 1..1 MS SU  
