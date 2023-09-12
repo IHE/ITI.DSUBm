@@ -5,7 +5,8 @@ Title: "uniqueId Identifier"
 Description: "uniqueId Identifier
 - see [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.9.1-identifier-type)"
 * system 1..
-//* use = #usual
+* use 1..1
+* use = #usual
 * value 1..
 
 Profile: SubmissionSetUniqueIdIdentifierR4b
@@ -30,7 +31,7 @@ Description: "entryUUID Identifier holding a UUID"
 * system = "urn:ietf:rfc:3986" (exactly)
 * value 1..1
 * value obeys mhd-startswithuuidR4b
-//* use = #official
+* use = #official
 
 Invariant: mhd-startswithuuidR4b
 Description: "value must start with urn:uuid:"

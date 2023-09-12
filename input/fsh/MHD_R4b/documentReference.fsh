@@ -137,7 +137,7 @@ InstanceOf: ConceptMap
 Title:      "AssociationType vs RelatesTo"
 Description: "map between XDS Association Types and MHD FHIR DocumentReference relatesTo code."
 Usage: #definition
-* url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/AssociationTypeVsRelatesTo"
+* url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/AssociationTypeVsRelatesToR4b"
 * name =  "AssociationTypeVsRelatesTo"
 * title = "AssociationType vs RelatesTo"
 * description = "map between XDS Association Types and MHD FHIR DocumentReference relatesTo code."
@@ -184,7 +184,7 @@ InstanceOf: ConceptMap
 Title:      "FHIR status vs ebRIM Status Type Code"
 Description: "map between XDS ebRIM Status Type Codes and MHD FHIR DocumentReference.status code."
 Usage: #definition
-* url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/FhirStatusVsStatusCode"
+* url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/FhirStatusVsStatusCodeR4b"
 * name =  "FhirStatusVsStatusCode"
 * status = #active
 * date = 2022-05-05

@@ -21,6 +21,6 @@ XPath: "exists(f:resourceTrigger) and exists(f:eventTrigger).not()"
 
 Invariant: DSUBm-Multipatient
 Severity: #error
-Description: "the canFilterBy SHALL NOT have a patient resource "
-Expression: "resource"
-XPath: "canFilterBy.where(resource='DocumentReference').select(filterParameter = 'patient').anyTrue()"
+Description: "the canFilterBy SHALL NOT use the patient as a filter "
+Expression: "where(resource='DocumentReference').select(filterParameter = 'patient').allFalse()" 
+
