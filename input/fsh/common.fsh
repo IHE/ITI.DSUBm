@@ -85,9 +85,8 @@ Severity: #error
 Description: "SHALL have at least one canfilterBy for DocumentReference with filterParameter = 'patient' "
 Expression: "canFilterBy.where(resource='DocumentReference' or resource='Folder').select(filterParameter = 'patient').anyTrue()"
 
-/*
+
 Invariant: DSUBm-PatientDependentRule-Subscription
 Severity: #error
-Description: "the PatientDependent Subscription SHALL include the patient in the criteria.extension.valueString  element "
-Expression: "valueString.where(resource='DocumentReference' or resource='Folder').select(filterParameter = 'patient').anyTrue()"
-*/
+Description: "the PatientDependent Subscription SHALL include the patient in the criteria.extension.valueString element."
+Expression: "valueString.contains('patient=')"

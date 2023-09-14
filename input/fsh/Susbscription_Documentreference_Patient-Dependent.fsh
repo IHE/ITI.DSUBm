@@ -8,6 +8,8 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 
 * criteria 1..1 
 * criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_PatientDependent' "
-* criteria
+* criteria.extension obeys DSUBm-PatientDependentRule-Subscription
+
+
 
 
