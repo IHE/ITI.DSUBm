@@ -7,13 +7,27 @@ Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReferenc
 - the element canFilterBy shall have DocumentReference.patient as search parameter
 "
 * obeys DSUBm-trigger
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* obeys DSUBm-PatientDependentRule
+* resourceTrigger.resource = Canonical(DocumentReference)
 * resourceTrigger.fhirPathCriteria 0..0
 * eventTrigger 0..0
-// at least one canfilterBy for the 
-* canFilterBy obeys DSUBm-PatientDependentRule
+// at least one canfilterBy for the patient
+* canFilterBy 1..*
+* canFilterBy.resource = "DocumentReference"
 
-Invariant: DSUBm-PatientDependentRule
-Severity: #error
-Description: "SHALL have at least one canfilterBy for DocumentReference with filterParameter = 'patient' "
-Expression: "canFilterBy.where(resource='DocumentReference').select(filterParameter = 'patient').allFalse()"
+/* possible slice ???
+(is it possible to differentiate canFilterBy for filterParameter = patient and filterParameter != patient)
+
+* canFilterBy ^slicing.discriminator.type = #value
+* canFilterBy ^slicing.discriminator.path = "filterParameter" 
+* canFilterBy ^slicing.rules = #openAtEnd
+* canFilterBy ^slicing.ordered = false
+* canFilterBy ^slicing.description = "Slice value for canFilterBy.resource"
+* canFilterBy contains
+    patientDependentFilter 1..* MS 
+* canFilterBy[patientDependentFilter].filterParameter = "patient"  
+//* canFilterBy[otherFilter].filterParameter = not("patient")
+*/
+
+
+

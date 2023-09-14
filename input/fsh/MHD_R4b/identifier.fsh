@@ -5,6 +5,7 @@ Title: "uniqueId Identifier"
 Description: "uniqueId Identifier
 - see [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.9.1-identifier-type)"
 * system 1..
+* use 1..1
 * use = #usual
 * value 1..
 

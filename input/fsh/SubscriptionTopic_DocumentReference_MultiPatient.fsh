@@ -1,10 +1,10 @@
 Profile: DSUBm_SubscriptionTopic_DocumentReference_MultiPatient
 Parent: SubscriptionTopic
-Id: DSUBm-MultiPatient-SubscriptionTopic
+Id: DSUBm-DocumentReference-MultiPatient-SubscriptionTopic
 Title:       "DocumentReference Multi-patient SubscriptionTopic"
 Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReference without the indication of the patient
-- the trigger shall use the resourceTrigger and shall not use the eventTrigger. If 
-- the element resourceTrigger.resource shall be a DocumentReference resource
+- the trigger for this topic shall be the resourceTrigger so the eventTrigger shall not be used.
+    - the resourceTrigger.resource element shall be a DocumentReference resource
 "
 * obeys DSUBm-trigger
 * resourceTrigger.resource = Canonical(DocumentReference)
@@ -13,14 +13,3 @@ Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReferenc
 * canFilterBy obeys DSUBm-Multipatient
 
 
-Invariant: DSUBm-trigger
-Severity: #error
-Description: "SHALL have a resourceTrigger and SHALL not have an eventTrigger"
-Expression: "resourceTrigger.exists() and eventTrigger.exists().not()"
-XPath: "exists(f:resourceTrigger) and exists(f:eventTrigger).not()"
-
-Invariant: DSUBm-Multipatient
-Severity: #error
-Description: "the canFilterBy SHALL NOT have a patient resource "
-Expression: "resource"
-XPath: "canFilterBy.where(resource='DocumentReference').select(filterParameter = 'patient').anyTrue()"

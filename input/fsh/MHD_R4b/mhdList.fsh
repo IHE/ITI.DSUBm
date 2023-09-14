@@ -24,13 +24,13 @@ Instance: List-DesignationType
 InstanceOf: SearchParameter
 Title: "search on the IHE defined extension for designationType"
 Usage: #definition
-* url = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-DesignationType"
+* url = "https://profiles.ihe.net/ITI/DSUBm/SearchParameter/List-DesignationType"
 * description = "This SearchParameter enables finding Lists by the designationType code in a submissionSet or folder."
 * name = "DesignationType"
 * status = #active
 * code = #designationType
 * base = #List
-* expression = "(extension('https://profiles.ihe.net/ITI/MHD/StructureDefinition/DesignationType').value as CodeableConcept)"
+* expression = "(extension('https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DesignationType').value as CodeableConcept)"
 * type = #token
 
 CodeSystem:  MHDlistTypesR4b

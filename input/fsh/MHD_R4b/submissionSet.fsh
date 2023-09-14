@@ -57,13 +57,13 @@ Instance: List-SourceId
 InstanceOf: SearchParameter
 Title: "search on the IHE defined extension for SourceId"
 Usage: #definition
-* url = "https://profiles.ihe.net/ITI/MHD/SearchParameter/List-SourceId"
+* url = "https://profiles.ihe.net/ITI/DSUBm/SearchParameter/List-SourceId"
 * description = "This SearchParameter enables finding Lists by the SourceId of a submissionSet."
 * name = "SourceId"
 * status = #active
 * code = #sourceId
 * base = #List
-* expression = "(extension('https://profiles.ihe.net/ITI/MHD/StructureDefinition/SourceId').value as Token)"
+* expression = "(extension('https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/SourceId').value as Token)"
 * type = #token
 
 

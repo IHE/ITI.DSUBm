@@ -17,17 +17,24 @@ Description: "R4/B Example of a SubscriptionTopic describing a patient Dependent
 //queryCriteria.previous not exists 
 * resourceTrigger.queryCriteria.current = "status=current"
 //* resourceTrigger.fhirPathCriteria = "Bundle.entry.resource.where(resourceType='DocumentReference').status contains 'current'"
-* canFilterBy[0].description = "Filter based on the subject of the DocumentReferece: DocumentEntry.patientId  "
+* canFilterBy[+].description = "Filter based on the subject of the DocumentReferece: DocumentEntry.patientId  "
 * canFilterBy[=].resource = "DocumentReference"
 * canFilterBy[=].filterParameter = "patient"
 * canFilterBy[=].filterDefinition = "http://hl7.org/fhir/SearchParameter/DocumentReference-subject"
 * canFilterBy[=].modifier = #=
-* canFilterBy[1].description = "Filter based on the type of the DocumentReferece: DocumentEntry.typeCode"
+* canFilterBy[+].description = "Filter based on the type of the DocumentReferece: DocumentEntry.typeCode"
 * canFilterBy[=].resource = "DocumentReference"
 * canFilterBy[=].filterParameter = "type"
 * canFilterBy[=].filterDefinition = "http://hl7.org/fhir/SearchParameter/clinical-type"
 * canFilterBy[=].modifier = #=
-* notificationShape[0].resource = "DocumentReference"
+/*
+* canFilterBy[otherFilter].description = "Filter based on the type of the DocumentReferece: DocumentEntry.typeCode"
+* canFilterBy[otherFilter].resource = "DocumentReference"
+* canFilterBy[otherFilter].filterParameter = "type123"
+* canFilterBy[otherFilter].filterDefinition = "http://hl7.org/fhir/SearchParameter/clinical-type"
+* canFilterBy[otherFilter].modifier = #=
+*/
+* notificationShape.resource = "DocumentReference"
 
 
 
