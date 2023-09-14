@@ -1,5 +1,5 @@
 Instance:    PatientDependent-Document-Subscription 
-InstanceOf:  DocumentRefence_PatientDependent_Subscription
+InstanceOf:  DSUBm-DocumentReference-PatientDependent-Subscription
 Usage:       #example
 Title:       "Patient Dependent DocumentReference Subscription"
 Description: "R4/B Example of an active topic-based 'DocumentReference' subscription with filters criteria and id-only as chosen payload"

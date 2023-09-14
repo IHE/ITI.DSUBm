@@ -1,6 +1,6 @@
-Profile: DocumentRefence_PatientDependent_Subscription
+Profile: DSUBm_DocumentReference_PatientDependent_Subscription
 Parent: DSUBm_Subscription 
-Id: DSUBm-DocumentRefence-PatientDependent-Subscription
+Id: DSUBm-DocumentReference-PatientDependent-Subscription
 Title:       "DocumentReference Patient-Dependent Subscription"
 Description:  "Resource Subscription for DSUBm profile for DocumentReference with the indication of the patient
 - the criteria element shall contain the URL of an instance of SubscriptionTopic from the 'DSUBm_SubscriptionTopic_DocumentReference_PatientDependent' profile

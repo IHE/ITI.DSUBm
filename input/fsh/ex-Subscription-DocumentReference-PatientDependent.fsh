@@ -1,5 +1,5 @@
-Instance:    DocumentRefence_PatientDependent_Subscription 
-InstanceOf:  DSUBm_Subscription_DocumentReference_PatientDependent
+Instance: DocumentReference-PatientDependent-Subscription 
+InstanceOf: DSUBm-DocumentReference-PatientDependent-Subscription
 Usage: #example
 Title:       "DocumentReference PatientDependent Subscription"
 Description: "R4/B Example of a Subscription describing a PatientDependent 'DocumentReference' resource."
@@ -16,3 +16,4 @@ Description: "R4/B Example of a Subscription describing a PatientDependent 'Docu
 * channel.payload = #application/fhir+json
 * channel.payload.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content"
 * channel.payload.extension.valueCode = #full-resource
+
