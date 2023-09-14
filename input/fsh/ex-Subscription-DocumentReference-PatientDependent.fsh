@@ -8,7 +8,7 @@ Description: "R4/B Example of a Subscription describing a PatientDependent 'Docu
 * end = "2023-12-31T12:00:00+00:00"
 * reason = "R4/B Example Topic-Based Subscription for DocumentReference"
 // vedi DocumentReference-PatientDependent-SubscriptionTopic
-* criteria = "http://example.org/FHIR/SubscriptionTopic/DocumentReference-SubscriptionTopic2"
+* criteria = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/MultiPatient-DocumentReference-SubscriptionTopic"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
 * criteria.extension.valueString = "DocumentReference?patient=Patient/example"
 * channel.type = #rest-hook
