@@ -30,10 +30,7 @@ copyrightYear: 2023+
 
 dependencies: 
   hl7.fhir.uv.subscriptions-backport.r4b: 1.1.0
-  hl7.terminology.r4: 5.3.0
-  #ihe.iti.mhd: 4.2.1 
-  #hl7.fhir.r4b.core: 4.3.0
-  #hl7.fhir.extensions.r4: 4.3.0
+  
  
 
 
