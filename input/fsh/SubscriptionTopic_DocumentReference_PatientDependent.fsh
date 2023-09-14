@@ -8,7 +8,7 @@ Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReferenc
 "
 * obeys DSUBm-trigger
 * obeys DSUBm-PatientDependentRule
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger.resource = Canonical(DocumentReference)
 * resourceTrigger.fhirPathCriteria 0..0
 * eventTrigger 0..0
 // at least one canfilterBy for the patient
@@ -29,9 +29,5 @@ Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReferenc
 //* canFilterBy[otherFilter].filterParameter = not("patient")
 */
 
-Invariant: DSUBm-PatientDependentRule
-Severity: #error
-Description: "SHALL have at least one canfilterBy for DocumentReference with filterParameter = 'patient' "
-Expression: "canFilterBy.where(resource='DocumentReference').select(filterParameter = 'patient').anyTrue()"
 
 
