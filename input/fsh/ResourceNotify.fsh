@@ -8,7 +8,7 @@ Description: "Resource Notify transaction from DSUBm profile
     - based on the SubscriptionTopic.notificationShape.include there may be other fhir resource.
 "
 * entry contains
- SubmissionSet 1..* and 
+ SubmissionSet 0..* and 
  DocumentReference 0..* and 
  Folder 0..* and 
  other 0..*

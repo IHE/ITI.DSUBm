@@ -17,7 +17,7 @@ Description: "Resource Publish transaction from DSUBm profile
 * entry ^slicing.description = "Slicing based on the profile conformance of the entry"
 * entry and entry.resource MS
 * entry contains
-    SubmissionSet 1..1 and
+    SubmissionSet 0..1 and
     DocumentReference 0..* and
     Folders 0..* and
     Patient 0..1
