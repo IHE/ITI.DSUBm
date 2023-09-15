@@ -1,15 +1,16 @@
-Profile:        MhdListR4b
+//equivalent to MhdList
+Profile:        DSUBmListR4b
 Parent:         List
-Id:             IHE.MHD.ListR4b
-Title:          "MHD common List with designationType"
-Description:    "A profile on the List resource for MHD. Used with both Folder and SubmissionSet.
-- MHD adds a codeable Concept to List for use with Folder and SubmissionSet"
+Id:             IHE.DSUBm.ListR4b
+Title:          "DSUBm common List with designationType"
+Description:    "A profile on the List resource for DSUBm. Used with both Folder and SubmissionSet.
+- DSUBm adds a codeable Concept to List for use with Folder and SubmissionSet"
 * extension contains DesignationType named designationType 0..*
 * modifierExtension 0..0
 // code is used ONLY to switch between folder and submissionSet
 * identifier 0..* 
 * code 1..1
-* code from MHDlistTypesVSR4b (required)
+* code from DSUBmlistTypesVSR4b (required)
 
 Extension: DesignationType
 Id: ihe-designationType
@@ -33,17 +34,17 @@ Usage: #definition
 * expression = "(extension('https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DesignationType').value as CodeableConcept)"
 * type = #token
 
-CodeSystem:  MHDlistTypesR4b
-Title: "MHD List Types"
-Description:  "To use the List resource for two different use-cases we define a code-system with the types of List needed in MHD"
+CodeSystem:  DSUBmlistTypesR4b
+Title: "DSUBm List Types"
+Description:  "To use the List resource for two different use-cases we define a code-system with the types of List needed in DSUBm"
 * ^caseSensitive = true
 * ^experimental = false
 * #folder "Folder as a FHIR List"
 * #submissionset "SubmissionSet as a FHIR List"
 
-ValueSet: MHDlistTypesVSR4b
-Title: "MHD List Types ValueSet"
-Description: "ValueSet of the MHD List Types allowed"
+ValueSet: DSUBmlistTypesVSR4b
+Title: "DSUBm List Types ValueSet"
+Description: "ValueSet of the DSUBm List Types allowed"
 * ^experimental = false
-* MHDlistTypes#folder
-* MHDlistTypes#submissionset
+* DSUBmlistTypesR4b#folder
+* DSUBmlistTypesR4b#submissionset

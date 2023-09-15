@@ -36,7 +36,6 @@ dependencies:
     uri: https://profiles.ihe.net/fhir/ihe.formatcode.fhir/ImplementationGuide/ihe.formatcode.fhir
     version: 1.1.x
   #ihe.iti.mhd: 4.2.1 
-  #hl7.fhir.r4b.core: 4.3.0
   hl7.fhir.extensions.r4: 4.3.0
  
 

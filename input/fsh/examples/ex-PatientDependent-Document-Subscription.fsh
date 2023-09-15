@@ -7,7 +7,6 @@ Description: "R4/B Example of an active topic-based 'DocumentReference' subscrip
 * status   = #active 
 * end      = "2023-12-31T12:00:00Z"
 * reason   = "R4/B Example Topic-Based Subscription for DocumentReference"
-* criteria = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DocumentReference"
 * criteria.extension[filterCriteria].valueString       = "DocumentReference?patient=Patient/PatientExample4&amp;type=57832-8"
 * channel.type                                         = #rest-hook 
 * channel.endpoint                                     = $webHookEndpoint

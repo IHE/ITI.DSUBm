@@ -1,9 +1,9 @@
 // equivalent to MHD Minimal Folder
 Profile:        FolderR4b
-Parent:         MhdListR4b
-Id:             IHE.MHD.Minimal.FolderR4b
-Title:          "MHD Folder Minimal"
-Description:    "A profile on the List resource for MHD use as a Folder with minimal metadata constraints. "
+Parent:         DSUBmListR4b
+Id:             IHE.DSUBm.Minimal.FolderR4b
+Title:          "DSUBm Folder Minimal"
+Description:    "A profile on the List resource for DSUBm use as a Folder with minimal metadata constraints. "
 * extension[designationType] 0..* MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
@@ -15,7 +15,7 @@ Description:    "A profile on the List resource for MHD use as a Folder with min
 //* status 
 * mode = #working
 * title 0..1
-* code = MHDlistTypes#folder
+* code = DSUBmlistTypesR4b#folder
 * subject 0..1 MS
 * subject only Reference(Patient)
 * encounter 0..0
@@ -30,15 +30,15 @@ Description:    "A profile on the List resource for MHD use as a Folder with min
 * entry.item only Reference(DocumentReference)
 * emptyReason 0..0
 
-
+/*
 // Note there is no impact of UnContained on a folder
 // equivalent to MHD Comprehensive List Folder 
 Profile:        FolderComprehensiveR4b
-Parent:         IHE.MHD.Minimal.FolderR4b
-Id:             IHE.MHD.Comprehensive.FolderR4b
-Title:          "MHD Folder Comprehensive"
-Description:    "A profile on the List resource for MHD Comprehensive Metadata Folder. Note UnContained has no impact on Folder.
-- MHD is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
+Parent:         IHE.DSUBm.Minimal.FolderR4b
+Id:             IHE.DSUBm.Comprehensive.FolderR4b
+Title:          "DSUBm Folder Comprehensive"
+Description:    "A profile on the List resource for DSUBm Comprehensive Metadata Folder. Note UnContained has no impact on Folder.
+- DSUBm is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
 - the [3:4.1 Abstract Metadata Model](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.1.html#4.1), and 
 - the use defined here is FHIR List for use as a Folder implementation of the 
 - ebRIM implementation at [3:4.2.3.4 Folder Attributes](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2.3.4).
@@ -46,13 +46,14 @@ Description:    "A profile on the List resource for MHD Comprehensive Metadata F
 * subject 1..1
 * extension[designationType] 1..*
 * title 1..1
+*/
 
 //  mappings to XDS 
 Mapping: Folder-MappingR4b
-Source:	IHE.MHD.Minimal.FolderR4b
+Source:	IHE.DSUBm.Minimal.FolderR4b
 Target: "XDS"
-Title: "XDS and MHD Mapping"
-* -> "XDS Folder" "Used in the context of the IHE MHD ImplementationGuide"
+Title: "XDS and DSUBm Mapping"
+* -> "XDS Folder" "Used in the context of the IHE DSUBm ImplementationGuide"
 * meta.profile -> "Folder.limitedMetadata"
 * extension[designationType] -> "Folder.codeList"
 * identifier -> "Folder.entryUUID and Folder.uniqueId"
