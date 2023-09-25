@@ -1,16 +1,16 @@
 Profile:        PatchParametersR4b
 Parent:         Parameters
-Id:             IHE.MHD.Patch.ParametersR4b
-Title:          "MHD DocumentReference Patch Parameters"
+Id:             IHE.DSUBm.Patch.ParametersR4b
+Title:          "DSUBm DocumentReference Patch Parameters"
 Description:    "A profile on the Parameters resource to update DocumentReference" 
 * parameter.name = "operation"
 
 // equivalent to MHD Minimal DocumentReference
-Profile:        MinimalDocumentReferenceR4b
+Profile:        DocumentReferenceR4b
 Parent:         DocumentReference
-Id:             IHE.MHD.Minimal.DocumentReferenceR4b
-Title:          "MHD DocumentReference Minimal"
-Description:    "A profile on the DocumentReference resource for MHD with minimal metadata constraints. "
+Id:             IHE.DSUBm.Minimal.DocumentReferenceR4b
+Title:          "DSUBm DocumentReference Minimal"
+Description:    "A profile on the DocumentReference resource for DSUBm with minimal metadata constraints. "
 * modifierExtension 0..0
 * masterIdentifier only UniqueIdIdentifierR4b
 * masterIdentifier 1..1
@@ -61,12 +61,12 @@ Description: "a DocumetReference replacements needs to relate to a superseded Do
 Expression:  "code='replaces' implies target.exists()"
 Severity:    #error
 
-// equivalent to MHD DocumentReference Comprehensive UnContained Option
+/* // equivalent to DSUBm DocumentReference Comprehensive UnContained Option
 Profile:        UnContainedComprehensiveDocumentReferenceR4b
-Parent:         IHE.MHD.Minimal.DocumentReferenceR4b
-Id:             IHE.MHD.UnContained.Comprehensive.DocumentReferenceR4b
-Title:          "MHD DocumentReference Comprehensive UnContained References Option"
-Description:    "A profile on the DocumentReference resource for MHD with Comprehensive Metadata Option but without a requirement for contained author, authenticator, or sourcePatientInfo. "
+Parent:         IHE.DSUBm.Minimal.DocumentReferenceR4b
+Id:             IHE.DSUBm.UnContained.Comprehensive.DocumentReferenceR4b
+Title:          "DSUBm DocumentReference Comprehensive UnContained References Option"
+Description:    "A profile on the DocumentReference resource for DSUBm with Comprehensive Metadata Option but without a requirement for contained author, authenticator, or sourcePatientInfo. "
 * type 1..1
 * category 1..1
 * subject 1..1
@@ -79,23 +79,23 @@ Description:    "A profile on the DocumentReference resource for MHD with Compre
 * context.practiceSetting 1..1
 * context.sourcePatientInfo 1..1 
 
-// equivalent to MHD Comprehensive DocumentReference - contained
+// equivalent to DSUBm Comprehensive DocumentReference - contained
 Profile: ComprehensiveDocumentReferenceR4b
-Parent: IHE.MHD.UnContained.Comprehensive.DocumentReferenceR4b
-Id: IHE.MHD.Comprehensive.DocumentReferenceR4b
-Title: "MHD DocumentReference Comprehensive"
-Description:    "A profile on the DocumentReference resource for MHD Comprehensive Option with Contained (not UnContained), compatible with XDS-on-FHIR and XCA use.
+Parent: IHE.DSUBm.UnContained.Comprehensive.DocumentReferenceR4b
+Id: IHE.DSUBm.Comprehensive.DocumentReferenceR4b
+Title: "DSUBm DocumentReference Comprehensive"
+Description:    "A profile on the DocumentReference resource for DSUBm Comprehensive Option with Contained (not UnContained), compatible with XDS-on-FHIR and XCA use.
 "
 * author ^type.aggregation = #contained
 * authenticator ^type.aggregation = #contained
 * context.sourcePatientInfo ^type.aggregation = #contained
-
+*/
 // mappings to XDS 
 Mapping: DocumentEntry-MappingR4b
-Source:	MinimalDocumentReferenceR4b
+Source:	DocumentReferenceR4b
 Target: "XDS"
-Title: "XDS and MHD Mapping"
-* -> "XDS DocumentEntry" "Used in the context of the IHE MHD ImplementationGuide"
+Title: "XDS and DSUBm Mapping"
+* -> "XDS DocumentEntry" "Used in the context of the IHE DSUBm ImplementationGuide"
 * category -> "DocumentEntry.classCode"
 * author -> "DocumentEntry.author"
 * status -> "DocumentEntry.availabilityStatus"
@@ -135,17 +135,17 @@ Title: "XDS and MHD Mapping"
 Instance:   AssociationTypeVsRelatesToR4b
 InstanceOf: ConceptMap
 Title:      "AssociationType vs RelatesTo"
-Description: "map between XDS Association Types and MHD FHIR DocumentReference relatesTo code."
+Description: "map between XDS Association Types and DSUBm FHIR DocumentReference relatesTo code."
 Usage: #definition
 * url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/AssociationTypeVsRelatesToR4b"
 * name =  "AssociationTypeVsRelatesTo"
 * title = "AssociationType vs RelatesTo"
-* description = "map between XDS Association Types and MHD FHIR DocumentReference relatesTo code."
+* description = "map between XDS Association Types and DSUBm FHIR DocumentReference relatesTo code."
 * experimental = false
 * status = #active
 * date = 2021-05-15
 * publisher = "IHE"
-* description = "map between XDS Association Types and MHD FHIR DocumentReference relatesTo code"
+* description = "map between XDS Association Types and DSUBm FHIR DocumentReference relatesTo code"
 * purpose = "show the mapping between Association Types and relatesTo code"
 * group.source = "urn:ihe:iti:2007:AssociationType"
 * group.target = "http://hl7.org/fhir/document-relationship-type"
@@ -172,7 +172,7 @@ Usage: #definition
 
 
 ValueSet: DocumentReferenceStatsR4b
-Title: "MHD DocumentReference status codes"
+Title: "DSUBm DocumentReference status codes"
 Description: "ValueSet that does not include entered-in-error as that does not map"
 * ^experimental = false
 * http://hl7.org/fhir/document-reference-status#current
@@ -182,7 +182,7 @@ Description: "ValueSet that does not include entered-in-error as that does not m
 Instance:   FhirStatusVsStatusCodeR4b
 InstanceOf: ConceptMap
 Title:      "FHIR status vs ebRIM Status Type Code"
-Description: "map between XDS ebRIM Status Type Codes and MHD FHIR DocumentReference.status code."
+Description: "map between XDS ebRIM Status Type Codes and DSUBm FHIR DocumentReference.status code."
 Usage: #definition
 * url = "https://profiles.ihe.net/ITI/DSUBm/ConceptMap/FhirStatusVsStatusCodeR4b"
 * name =  "FhirStatusVsStatusCode"
@@ -190,7 +190,7 @@ Usage: #definition
 * date = 2022-05-05
 * publisher = "IHE"
 * title = "FHIR status vs ebRIM Status Type Code"
-* description = "map between XDS ebRIM Status Type Codes and MHD FHIR DocumentReference.status code. Table 2:3.67.4.1.3.1-2. Note that the codes given are used without a system in both FHIR and ebRIM."
+* description = "map between XDS ebRIM Status Type Codes and DSUBm FHIR DocumentReference.status code. Table 2:3.67.4.1.3.1-2. Note that the codes given are used without a system in both FHIR and ebRIM."
 * purpose = "show the mapping between ebRIM Status Type Codes and FHIR .status code"
 * experimental = false
 * group.source = "urn:ietf:rfc:3986"

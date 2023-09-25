@@ -1,7 +1,7 @@
 Profile: DSUBm_SubscriptionTopic_DocumentReference_PatientDependent
 Parent: SubscriptionTopic
-Id: DSUBm-SubscriptionTopic
-Title:       "DocumentReference PatientDependent SubscriptionTopic"
+Id: DSUBm-DocumentReference-PatientDependent-SubscriptionTopic
+Title:       "SubscriptionTopic for DocumentReference PatientDependent "
 Description:  "Resource SubscriptionTopic for DSUBm profile for DocumentReference Patient Dependent 
 - the element resourceTrigger.resource shall be a DocumentReference resource
 - the element canFilterBy shall have DocumentReference.patient as search parameter

@@ -13,7 +13,7 @@ Alias: $Folder = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Co
 */
 
 Alias: $webHookEndpoint = https://example.org/Endpoints/d7dcc004-808d-452b-8030-3a3a13cd871d
-Alias: $Payload = http://hl7.org/fhir/ValueSet/mimetypes
+Alias: $Payload = urn:ietf:bcp:13
 Alias: $DocumentReference = https://example.org/fhir/DocumentReference/aaaaaaaa-bbbb-cccc-dddd-e00444400002
 Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
 
@@ -53,66 +53,7 @@ Usage: #example
 * context.practiceSetting = $sct#408467006
 * context.sourcePatientInfo = Reference(aaaaaaaa-bbbb-cccc-dddd-e00444400004)
 */
-Instance: aaaaaaaa-bbbb-cccc-dddd-e00444400004
-InstanceOf: Patient
-Usage: #inline
-* identifier.system = "http://example.org/patients"
-* identifier.value = "mrn-1234"
-* name.family = "Schmidt"
-* name.given = "Dee"
 
-
-Instance: PatientExample
-InstanceOf: Patient
-Description: "R4B Example of Patient resource"
-Usage: #example
-* meta.security = $v3-ActReason#HTEST
-* name[0].use = #usual
-* name[=].family = "Schmidt"
-* name[=].given = "John"
-* name[+].use = #old
-* name[=].family = "Schnidt"
-* name[=].given[0] = "John"
-* name[=].given[+] = "Jacob"
-* name[=].given[+] = "Jingle"
-* name[=].given[+] = "Heimer"
-* name[=].period.end = "1960"
-* name[+].use = #official
-* name[=].family = "Schmidt"
-* name[=].given[0] = "John"
-* name[=].given[+] = "Jacob"
-* name[=].given[+] = "Jingleheimer"
-* name[=].period.start = "1960-01-01"
-* name[+].use = #nickname
-* name[=].family = "Schmidt"
-* name[=].given = "Jack"
-* gender = #other
-* birthDate = "1923-07-25"
-* address.state = "WI"
-* address.country = "USA"
-* managingOrganization = Reference(Organization/ex-organization)
-
-Instance: ex-organization
-InstanceOf: Organization
-Description: "R4B Example of Organization resource"
-Usage: #example
-* meta.security = $v3-ActReason#HTEST
-* name = "nowhere"
-
-CodeSystem:  MHDlistTypes 
-Title: "MHD List Types"
-Description:  "To use the List resource for two different use-cases we define a code-system with the types of List needed in MHD"
-* ^caseSensitive = true
-* ^experimental = false
-* #folder "Folder as a FHIR List"
-* #submissionset "SubmissionSet as a FHIR List"
-
-ValueSet: MHDlistTypesVS
-Title: "MHD List Types ValueSet"
-Description: "ValueSet of the MHD List Types allowed"
-* ^experimental = false
-* MHDlistTypes#folder
-* MHDlistTypes#submissionset
 
 
 

@@ -1,9 +1,9 @@
 // equivalent to MHD Minimal SubmissionSet
 Profile:        SubmissionSetR4b
-Parent:         MhdListR4b
-Id:             IHE.MHD.Minimal.SubmissionSetR4b
-Title:          "MHD SubmissionSet Minimal"
-Description:    "A profile on the List resource for MHD SubmissionSet."
+Parent:         DSUBmListR4b
+Id:             IHE.DSUBm.Minimal.SubmissionSetR4b
+Title:          "DSUBm SubmissionSet Minimal"
+Description:    "A profile on the List resource for DSUBm SubmissionSet."
 * extension[designationType] 0..1 MS
 * extension contains SourceId named sourceId 1..1
 * extension contains IntendedRecipient named intendedRecipient 0..*
@@ -17,7 +17,7 @@ Description:    "A profile on the List resource for MHD SubmissionSet."
 * status = #current
 * mode = #working
 * title 0..1
-* code = MHDlistTypes#submissionset
+* code = DSUBmlistTypesR4b#submissionset
 * subject 0..1 MS
 * subject only Reference(Patient)
 * encounter 0..0
@@ -76,44 +76,46 @@ Description: "holds the identity of the organization or person the SubmissionSet
 * value[x] only Reference(Practitioner or Organization or Patient or RelatedPerson or Group or Device or Location)
 * valueReference 1..1
 
-// equivalent to MHD SubmissionSet Comprehensive UnContained
+/*
+// equivalent to DSUBm SubmissionSet Comprehensive UnContained
 Profile:        SubmissionSetComprehensiveUnContainedR4b
-Parent:         IHE.MHD.Minimal.SubmissionSetR4b
-Id:             IHE.MHD.UnContained.Comprehensive.SubmissionSetR4b
-Title:          "MHD SubmissionSet Comprehensive UnContained"
-Description:    "A profile on the List resource for MHD UnContained Comprehensive SubmissionSet.
-- MHD is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
+Parent:         IHE.DSUBm.Minimal.SubmissionSetR4b
+Id:             IHE.DSUBm.UnContained.Comprehensive.SubmissionSetR4b
+Title:          "DSUBm SubmissionSet Comprehensive UnContained"
+Description:    "A profile on the List resource for DSUBm UnContained Comprehensive SubmissionSet.
+- DSUBm is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
 - the [3:4.1 Abstract Metadata Model](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.1.html#4.1), and 
 - the use defined here is FHIR List for use as a SubmissionSet implementation of the 
 - ebRIM implementation at [3:4.2.3.3 SubmissionSet Attributes](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2.3.3).
 - with use-cases and constraints found in [3:4.3.1 Submission Metadata Attribute Optionality](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.3.html#4.3.1) for 
-  - MHD Document Source that has implemented both Comprehensive Metadata Option and UnContained References Option"
+  - DSUBm Document Source that has implemented both Comprehensive Metadata Option and UnContained References Option"
 * subject 1..1
 * extension[designationType] 1..1
 
 
-// equivalent to MHD Comprehensive SubmissionSet Contained
+// equivalent to DSUBm Comprehensive SubmissionSet Contained
 Profile:        SubmissionSetComprehensiveR4b
-Parent:         IHE.MHD.UnContained.Comprehensive.SubmissionSetR4b
-Id:             IHE.MHD.Comprehensive.SubmissionSetR4b
-Title:          "MHD SubmissionSet Comprehensive"
-Description:    "A profile on the List resource for MHD Comprehensive SubmissionSet.
-- MHD is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
+Parent:         IHE.DSUBm.UnContained.Comprehensive.SubmissionSetR4b
+Id:             IHE.DSUBm.Comprehensive.SubmissionSetR4b
+Title:          "DSUBm SubmissionSet Comprehensive"
+Description:    "A profile on the List resource for DSUBm Comprehensive SubmissionSet.
+- DSUBm is based on the [IHE Document Sharing](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) model, 
 - the [3:4.1 Abstract Metadata Model](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.1.html#4.1), and 
 - the use defined here is FHIR List for use as a SubmissionSet implementation of the 
 - ebRIM implementation at [3:4.2.3.3 SubmissionSet Attributes](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.2.html#4.2.3.3).
 - with use-cases and constraints found in [3:4.3.1 Submission Metadata Attribute Optionality](https://profiles.ihe.net/ITI/TF/Volume3/ch-4.3.html#4.3.1) for 
-  - MHD Comprehensive Option Document Source
+  - DSUBm Comprehensive Option Document Source
   - aka the XDS Document Source requirements
   - aka the XDR Document Source requirements"
 * source ^type.aggregation = #contained
+*/
 
 // mappings to XDS 
 Mapping: SubmissionSet-MappingR4b
-Source:	IHE.MHD.Minimal.SubmissionSetR4b
+Source:	IHE.DSUBm.Minimal.SubmissionSetR4b
 Target: "XDS"
-Title: "XDS and MHD Mapping"
-* -> "XDS SubmissionSet" "Used in the context of the IHE MHD ImplementationGuide"
+Title: "XDS and DSUBm Mapping"
+* -> "XDS SubmissionSet" "Used in the context of the IHE DSUBm ImplementationGuide"
 * meta.profile -> "SubmissionSet.limitedMetadata"
 * extension[sourceId] -> "SubmissionSet.sourceId"
 * extension[intendedRecipient] -> "SubmissionSet.intendedRecipient"

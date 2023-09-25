@@ -1,3 +1,4 @@
+/*
 // equivalent to MHD Provide Document Bundle transaction in R4b 
 Profile:        MinimalProvideDocumentBundleR4b
 Parent:         Bundle
@@ -42,7 +43,7 @@ Description:    "A profile on the Bundle transaction for ITI-65 Provide Document
 * entry[UpdateDocumentRefs].resource 1..1
 * entry[UpdateDocumentRefs].request 1..1
 * entry[UpdateDocumentRefs].request.method = #PATCH
-/*
+
 * entry[Documents].resource ^type.code = "Binary"
 * entry[Documents].resource ^type.profile = Canonical(Binary)
 * entry[Documents] ^short = "the Documents"
@@ -58,7 +59,7 @@ Description:    "A profile on the Bundle transaction for ITI-65 Provide Document
 * entry[FhirDocuments].resource 1..1
 * entry[FhirDocuments].request 1..1
 * entry[FhirDocuments].request.method = #POST
-*/
+
 * entry[Folders].resource only 
     IHE.MHD.Minimal.FolderR4b 
 * entry[Folders] ^short = "Folders"
@@ -129,3 +130,5 @@ Description:    "A profile on the Bundle transaction-response for ITI-65 Provide
 * entry.response 1..
 * entry.response ^short = "Indicating the results of processing the entry"
 * entry.response.location 1..
+
+*/

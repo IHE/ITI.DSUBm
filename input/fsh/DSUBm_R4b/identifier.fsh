@@ -15,9 +15,9 @@ Id: DSUBm-SubmissionSetUniqueIdIdentifierR4b
 Title: "uniqueId Identifier for SubmissionSet"
 Description: "uniqueId Identifier holding a OID"
 * system = "urn:ietf:rfc:3986" (exactly)
-* value obeys mhd-startswithoidR4b
+* value obeys DSUBm-startswithoidR4b
 
-Invariant: mhd-startswithoidR4b
+Invariant: DSUBm-startswithoidR4b
 Description: "value must start with urn:oid:"
 Severity: #error
 Expression: "value.startsWith('urn:oid:')"
@@ -30,10 +30,10 @@ Description: "entryUUID Identifier holding a UUID"
 * system 1..1
 * system = "urn:ietf:rfc:3986" (exactly)
 * value 1..1
-* value obeys mhd-startswithuuidR4b
+* value obeys DSUBm-startswithuuidR4b
 * use = #official
 
-Invariant: mhd-startswithuuidR4b
+Invariant: DSUBm-startswithuuidR4b
 Description: "value must start with urn:uuid:"
 Severity: #error
 Expression: "value.startsWith('urn:uuid:')"

@@ -89,4 +89,9 @@ Expression: "canFilterBy.where(resource='DocumentReference' or resource='Folder'
 Invariant: DSUBm-PatientDependentRule-Subscription
 Severity: #error
 Description: "the PatientDependent Subscription SHALL include the patient in the criteria.extension.valueString element."
-Expression: "valueString.contains('patient=')"
+Expression: "value.contains('patient=')"
+
+Invariant: DSUBm-MultiPatientRule-Subscription
+Severity: #error
+Description: "the MultiPatient Subscription shall NOT include the patient in the criteria.extension.valueString element."
+Expression: "value.contains('patient=').not()"
