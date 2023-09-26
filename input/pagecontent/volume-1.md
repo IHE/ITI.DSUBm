@@ -42,7 +42,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) (Note 2) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
@@ -50,6 +50,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 *Note 1: If the actor Resource Notification Subscriber supports the option "Subscription Search", it shall support the transaction Resource Subscription Search [ITI-113] (see Section_ 54.2 Actor Options.)*
 
+*Note 2: For the optionality of this transaction see also the [1:54.6.3.2 Notification Manager](#Notification-Manager) section.*
 
 ### 1:54.1.1 Actors
 
@@ -524,8 +525,11 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 </figure>
 <br clear="all">
 
+<a name="Notification-Manager"> </a>
+
 #### 1:54.6.3.2 Notification Manager
-* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
+* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors. 
+* The Document Meatadata Subscriber will most likely be grouped with a Resource Notification Subscriber creating a "Subscriber". In this case it is recommended that the Subscriber shall implement the Resource Subscription Search [ITI-113] transaction to search for both the DSUB and DSUBm Subscription available on the "Notification Manager". If so, with this configuration, the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
 
 <figure>
 {%include model_DSUB.svg%}
