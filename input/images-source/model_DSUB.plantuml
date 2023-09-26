@@ -24,23 +24,24 @@ card Broker [
   Resource Notification Broker
 ]
 
-card "Document Metadata Subscriber" as DSUB_Subsciber 
+card Subscriber [
+  <b>Subscriber
+  ----
+  Document Metadata Subscriber
+  ....
+  Resource Notification Subscriber
+]
+
 card "Document Metadata Notification Recipient" as DSUB_Recipient 
 
-card "Resource Notification Subscriber" as DSUBm_Subsciber 
-card "Resource Notification Recipient" as DSUBm_Recipient 
 
-DSUBm_Subsciber -u-> Broker: ITI-110
+
+
+Subscriber -l-> Broker: ITI-52
+Subscriber -l-> Broker: ITI-113
 
 Source -u-> Repo: ITI-41
 Repo -r-> Central: ITI-42
 Central -d-> Broker: ITI-54
-
-
-DSUB_Subsciber -l->Broker: ITI-52
-Broker-r-> DSUB_Recipient: ITI-53
-Broker -d-> DSUBm_Recipient: ITI-112
-
-
-
+Broker-d-> DSUB_Recipient: ITI-53
 @enduml
