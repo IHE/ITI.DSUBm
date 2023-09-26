@@ -1,19 +1,20 @@
 Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
 Alias: $LOINC = http://loinc.org
-
+Alias: $Payload = urn:ietf:bcp:13
+/*
 Alias: $DocumentReferenceTopic = http://hl7.org/SubscriptionTopic/DocumentReference
 Alias: $DocumentReferenceSub = https://example.org/fhir/Subscription/DocumentReference
 Alias: $DocumentReferenceSubStatus = https://example.org/fhir/Subscription/DocumentReference
 
-/*from MHD 
+from MHD 
 Alias: $DocumentReference = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.DocumentReference
 Alias: $SubmissionSet = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.SubmissionSet
 Alias: $Folder = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.Folder
-*/
+
 
 Alias: $webHookEndpoint = https://example.org/Endpoints/d7dcc004-808d-452b-8030-3a3a13cd871d
-Alias: $Payload = urn:ietf:bcp:13
+
 Alias: $DocumentReference = https://example.org/fhir/DocumentReference/aaaaaaaa-bbbb-cccc-dddd-e00444400002
 Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
 
@@ -22,7 +23,7 @@ Alias: $formatcode = http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatco
 Alias: $sct = http://snomed.info/sct
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-
+*/
 /*
 Instance: DocumentReference1
 InstanceOf: DocumentReference

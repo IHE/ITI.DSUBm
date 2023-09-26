@@ -13,9 +13,3 @@ Title:       "DSUBm payload admitted Value Set"
 Description: "Codes to represent the admitted payload MIME type chosen when creating subscription"
 * include $Payload#application/fhir+json "JSON payload"
 * include $Payload#application/fhir+xml "XML payload"
-
-
-
-
-
-
