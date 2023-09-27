@@ -1,5 +1,5 @@
 <a name="introduction"> </a>
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS] (https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
@@ -42,7 +42,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 |                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R     | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) (Note 2) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
@@ -50,6 +50,7 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 *Note 1: If the actor Resource Notification Subscriber supports the option "Subscription Search", it shall support the transaction Resource Subscription Search [ITI-113] (see Section_ 54.2 Actor Options.)*
 
+*Note 2: For the optionality of this transaction see also the [1:54.6.3.2 Notification Manager](#Notification-Manager) section.*
 
 ### 1:54.1.1 Actors
 
@@ -229,7 +230,7 @@ This section shows how the transactions/content modules of the profile are combi
 The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription types such as: patient-dependent subscription, multi-patient subscription, Folder subscription and other types. 
-The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
+The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing] (https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
 These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:54.4.2 Use Cases
@@ -524,8 +525,11 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 </figure>
 <br clear="all">
 
+<a name="Notification-Manager"> </a>
+
 #### 1:54.6.3.2 Notification Manager
-* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors.
+* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors. 
+* The Document Meatadata Subscriber will most likely be grouped with a Resource Notification Subscriber creating a "Subscriber". In this case it is recommended that the Subscriber shall implement the Resource Subscription Search [ITI-113] transaction to search for both the DSUB and DSUBm Subscription available on the "Notification Manager". If so, with this configuration, the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
 
 <figure>
 {%include model_DSUB.svg%}
