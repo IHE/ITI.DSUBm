@@ -36,9 +36,9 @@ card "Document Metadata Notification Recipient" as DSUB_Recipient
 
 
 
-
-Subscriber -l-> Broker: ITI-52
 Subscriber -l-> Broker: ITI-113
+Subscriber -l-> Broker: ITI-52
+
 
 Source -u-> Repo: ITI-41
 Repo -r-> Central: ITI-42
