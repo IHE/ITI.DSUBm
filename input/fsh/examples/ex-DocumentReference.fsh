@@ -1,5 +1,5 @@
 Instance:   ex-DocumentReferenceMinimal
-InstanceOf: IHE.MHD.Minimal.DocumentReference
+InstanceOf: DocumentReferenceR4
 Title:      "DocumentReference for Minimal metadata"
 Description: "Example of a minimal DocumentReference resource. This is very unlikely to be acceptable anywhere, but it is the minimum required."
 Usage: #example

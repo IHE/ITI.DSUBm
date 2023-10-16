@@ -5,8 +5,8 @@ Description: "Resource Subscription for DSUBm profile"
 
 * channel.type = #rest-hook 
 * channel.endpoint 1..1 MS SU  
-//* channel.payload from DSUBmPayload
-//* criteria obeys DSUBm-PatientDependentRule-Subscription and DSUBm-MultiPatientRule-Subscription
+* channel.payload from DSUBmPayload
+
 
 ValueSet:    DSUBmPayload
 Id:          payload-content-value-set
