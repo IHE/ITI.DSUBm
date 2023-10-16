@@ -469,9 +469,12 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 ## 1:54.5 Security Considerations
 
+This profile require actors to audit the transactions that creates Subscription and send notifications, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application is strongly recommended in order to track the subscriptions and the notification sent.
+For further considerations about Audit record refer to [BALP profile](https://profiles.ihe.net/ITI/BALP/).
+User authentication/authorization represents another important factor to consider in order to avoid malicious creation/updating Subscription. Grouping DSUBm actors with actors in the Internet User Authorization (IUA) Profile enables deployments to mitigate these security issues.
 See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
-The reader should consider the indication included in [Safety and Security](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/safety_security.html). 
 
+The reader should also consider the indication included in [Safety and Security](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/safety_security.html). 
 
 <a name="other-grouping"> </a>
 
