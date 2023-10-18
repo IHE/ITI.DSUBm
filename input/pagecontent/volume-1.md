@@ -1,9 +1,11 @@
 <a name="introduction"> </a>
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS] (https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many mobile items (FHIR resource, documents, etc.) that can be shared, searched, and retrieved with mobile devices, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/MHDS/index.html), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many items (FHIR resource, Documents, etc.) that can be shared, searched, and retrieved with devices, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
-This profile describes the use of document subscription and notification mechanisms for mobile applications. In a similar way to the DSUB profile, a subscription is made in order to receive a notification when a document publication event matches the metadata expressed in the subscription. This profile includes a model that can be applied in a RESTful-only environment or it can be grouped with different nonmobile profiles (eg. [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html), [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) ).
+This profile describes the use of document subscription and notification mechanisms for RESTful applications. In a similar way to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile, a subscription is made in order to receive a notification when a Document publication event matches the creteria expressed in the subscription. 
+
+This profile includes a model that can be applied in a RESTful-only environment but also models in whitch it can be used with different nonmobile profiles ([XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)). This profile intends to grants the same funtionality as the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile and its supplements but also adding some other functionalities (e.g. Subscription Search). This profile can be also used only to add the Subscription Search functionality to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile.
 
 <a name="actors-and-transactions"> </a>
 
@@ -37,24 +39,26 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
 | **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
-| Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R     | ITI TF-2: 3.110 |
+| Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R (Note 1)     | ITI TF-2: 3.110 |
 |                                | Resource Publish [ITI-111]               | Responder    | O     | ITI TF-2: 3.111 |
-|                                | Resource Notify [ITI-112]                   | Initiator    | R     | ITI TF-2: 3.112 |
+|                                | Resource Notify [ITI-112]                   | Initiator    | R (Note 1)     | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
 | Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R (Note 2) | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 1) (Note 2) | ITI TF-2: 3.113 |
+|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 2) (Note 3) | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
 
 
-*Note 1: If the actor Resource Notification Subscriber supports the option "Subscription Search", it shall support the transaction Resource Subscription Search [ITI-113] (see Section_ 54.2 Actor Options.)*
+*Note 1: If the actor Resource Notification Broker supports the option "DSUB Subscription Search extension"(see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)) the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112] are not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
 
-*Note 2: For the optionality of this transaction see also the [1:54.6.3.2 Notification Manager](#Notification-Manager) section.*
+*Note 2: If the actor Resource Notification Subscriber supports the option "DSUB Subscription Search extension" (see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)), it shall support the transaction Resource Subscription Search [ITI-113] and the transaction Resource Subscription [ITI-110] is not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
+
+*Note 3: If the actor Resource Notification Subscriber supports the option "Subscription Search" (see Section [1:54.2.2 Subscription Search](#Subscription-Search)), it shall support the transaction Resource Subscription Search [ITI-113].*
 
 ### 1:54.1.1 Actors
 
-The actors in this profile are described in more detail in the following sections.
+The actors in this profile are described in more details in the following sections.
 
 <a name="broker"> </a>
 
@@ -129,25 +133,39 @@ between options when applicable are specified in notes.
 
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
-| Resource Notification Broker | none |--|
-| Resource Notification Subscriber | Subscription Search | ITI TF-1: 54.2.1 |
+| Resource Notification Broker | DSUB Subscription Search extension |ITI TF-1: 54.2.1|
+| Resource Notification Subscriber | DSUB Subscription Search extension | ITI TF-1: 54.2.1 |
+|                                  | Subscription Search | ITI TF-1: 54.2.2 |
 | Resource Notification Publisher | none |--|
 | Resource Notification Recipient | none |--|
 {: .grid}
 
-#### 1:54.2.1 Subscription Search
+<a name="dsub-extension"> </a>
+
+#### 1:54.2.1 DSUB Subscription Search extension
+
+The Resource Notification Subscriber that supports this option shall be able to be grouped with a DSUB Document Metadata Subscriber, shall implement the Resource Subscription Search [ITI-113] transaction and could not implement the Resource Subscription [ITI-110] transaction.
+
+The Resource Notification Broker that supports this option shall be able to be grouped with a DSUB Document Metadata Notification Broker, could not implement the Resource Subscription [ITI-110] transaction and the Resource Notify [ITI-112] transaction.
+
+<a name="Subscription-Search"> </a>
+
+#### 1:54.2.2 Subscription Search
 
 The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction.
+
+
 
 
 <a name="required-groupings"> </a>
 
 ## 1:54.3 Required Actor Groupings
+Actor(s) which are required to be grouped with other actor(s) are listed in this section. The grouped actor may be from this profile or a different domain/profile.
 
 An actor from this profile (Column 1) shall implement all of the
 required transactions and/or content modules in this profile ***in
 addition to*** ***<u>all</u>*** of the requirements for the grouped
-actor (Column 2) 
+actor (Column 3) 
 
 **Table 1:54.3-1: Required Actor Groups**
 
@@ -155,7 +173,8 @@ actor (Column 2)
 <thead>
 <tr class="header">
 <th>DSUBm Actor (1)</th>
-<th>Actor(s) to be grouped with (2)</th>
+<th>Grouping Condition</th>
+<th>Actor(s) to be grouped with (3)</th>
 <th>Reference</th>
 </tr>
 </thead>
@@ -163,58 +182,30 @@ actor (Column 2)
 
 <tr class="odd">
 <td>Resource Notification Broker</td>
-    <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
-</tr>
-<tr class="even">
-    <td></td>
-    <td><em>CT / Time Client</em></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html#7.1">ITI TF-1: 7.1</a>
-    </td>
+<td>DSUB Subscription Search extension option</td>
+<td><p><em>DSUB Document Metadata Notification Broker</em></p></td>
+<td><a href="#15421-dsub-subscription-search-extension">ITI TF-1: 54.2.1</a></td>
 </tr>
 
-<tr class="odd">
-<td>Resource Notification Subscriber</td>
-    <td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
-</tr>
 <tr class="even">
-    <td></td>
-    <td><em>CT / Time Client</em></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html#7.1">ITI TF-1: 7.1</a>
-    </td>
+<td>Resource Notification Subscriber</td>
+<td>DSUB Subscription Search extension option</td>
+<td><p><em>DSUB Document Metadata Subscriber</em></p></td>
+<td><a href="#15421-dsub-subscription-search-extension">ITI TF-1: 54.2.1</a></td>
 </tr>
 
 <tr class="odd">
 <td>Resource Notification Publisher</td>
-<td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
-</tr>
-<tr class="even">
-    <td></td>
-    <td><em>CT / Time Client</em></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html#7.1">ITI TF-1: 7.1</a>
-    </td>
+<td>-</td>
+<td><p><em>None</em></p></td>
+<td>-</td>
 </tr>
 
-<tr class="odd">
-<td>Resource Notification Recipient</td>
-<td><p><em>ATNA / Secure Node or Secure Application</em></p></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html#9.1">ITI TF-1: 9.1</a></td>
-</tr>
 <tr class="even">
-    <td></td>
-    <td><em>CT / Time Client</em></td>
-    <td>
-    <a href="https://profiles.ihe.net/ITI/TF/Volume1/ch-7.html#7.1">ITI TF-1: 7.1</a>
-    </td>
+<td>Resource Notification Recipient</td>
+<td>-</td>
+<td><p><em>None</em></p></td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -230,7 +221,7 @@ This section shows how the transactions/content modules of the profile are combi
 The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription types such as: patient-dependent subscription, multi-patient subscription, Folder subscription and other types. 
-The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing] (https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
+The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
 These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
  
 ### 1:54.4.2 Use Cases
@@ -484,11 +475,11 @@ The DSUBm actor and transaction model is very flexible. Integration with other I
 
 ### 1:54.6.1 MHDS - Mobile Health Document Sharing 
 
-Within a mobile infrastructure that is implementing the MHDS model:
+Within a RESTfull infrastructure that is implementing the MHDS model:
 * MHDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
 * MHDS Document Registry will likely be grouped with a Resource Notification Broker 
-* A Document Consumer System, that implements the MHD Document Consumer, will most likely grouped the MHD Document Consumer with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* A Document Consumer System, that implements the MHD Document Consumer, will likely grouped the MHD Document Consumer with a Resource Notification Subscriber.
+* The MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
+* The MHD Document Consumer, will likely be grouped with a Resource Notification Subscriber.
 
 <a name="fig_MHDS"> </a>
 <figure>
@@ -498,18 +489,25 @@ Within a mobile infrastructure that is implementing the MHDS model:
 </figure>
 <br clear="all">
 
-### 1:54.6.2. MHD - Mobile access to Health Documents as an interface for XDS - Cross-Enterprise Document Sharing
+<a name="xds-model"> </a>
 
-Within an XDS infrastructure that implements a mobile interface with the MHD "XDS on FHIR Option":
+### 1:54.6.2. XDS.b - Cross-Enterprise Document Sharing
+
+Within an XDS infrastructure:
 * XDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the XDS Document Registry. 
 * XDS Document Registry will likely be grouped with a Resource Notification Broker 
+* XDS Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
+* XDS Document Consumer will likely be grouped with a Resource Notification Subscriber.
+
+If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for a mobile interface:
 * MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * MHD Document Consumer will likely be grouped with a Resource Notification Subscriber.
+
 
 <a name="fig_MHD"> </a>
 <figure>
 {%include model_MHD.svg%}
-<figcaption><b>Figure 1:54.6.2-1: DSUBm actors grouped with MHD actors
+<figcaption><b>Figure 1:54.6.2-1: DSUBm actors grouped with XDS actors and MHD actors
 </b></figcaption>
 </figure>
 <br clear="all">
@@ -520,7 +518,7 @@ Within an already functioning DSUB infrastructure, two alternative groupings are
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
 
 #### 1:54.6.3.1 DSUBm as an interface for DSUB 
-* Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
+Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
 <figure>
 {%include model_DSUBonFHIR.svg%}
 <figcaption><b>Figure 1:54.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
@@ -528,13 +526,12 @@ In both these two groupings DSUB and DSUBm can coexist and operate with differen
 </figure>
 <br clear="all">
 
-<a name="Notification-Manager"> </a>
+<a name="DSUB-extension-model"> </a>
 
-#### 1:54.6.3.2 Notification Manager
-In this configuration an XDS infrastructure that is using DSUB may combine the Document Metadata Subscriber to a Resource Notification Subscriber to enable the Subscription Search in the DSUB infrastrusture. In this configuration the subscription are created with the DSUB Document Metadata Subscribe [ITI-52] transaction so the Resource Notification Subscriber may choose to not implemment the Resource Subscription [ITI-110] transaction. 
+#### 1:54.6.3.2 DSUB Subscription Search extension
+Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
 
-* Document Metadata Notification Broker will most likely be grouped with a Resource Notification Broker creating a "Notification Manager" able to manage both mobile and non-mobile subscriptions. The Notification Manager receives all subscriptions and sends all the notifications in this infrastructure. In this configuration is likely that the set of subscriptions created by Resource Subscription [ITI-110] and Document Metadata Subscribe [ITI-52] may be unique and shared among DSUB and DUSBm broker actors. 
-* The Document Meatadata Subscriber will most likely be grouped with a Resource Notification Subscriber creating a "Subscriber". In this case it is recommended that the Subscriber shall implement the Resource Subscription Search [ITI-113] transaction to search for both the DSUB and DSUBm Subscription available on the "Notification Manager". If so, with this configuration, the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
+In this case the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
 
 <figure>
 {%include model_DSUB.svg%}
@@ -543,4 +540,4 @@ In this configuration an XDS infrastructure that is using DSUB may combine the D
 </figure>
 <br clear="all">
 
-Note that the Resource Notification Broker actor may communicate with other DSUBm actors using the DSUBm transactions that in the Figure 1:54.6.3.2-1 are not included. 
+Note that in this scenario, if the Resource Notification Broker implemets also the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112], this model could be combined with the one in [1:54.6.2. XDS.b - Cross-Enterprise Document Sharing](#xds-model) section. 

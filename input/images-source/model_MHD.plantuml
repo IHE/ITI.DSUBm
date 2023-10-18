@@ -5,14 +5,7 @@ skinparam componentStyle rectangle
 hide footbox
 /' title "DSUBm grouped with MHD" '/
 
-card "MHD Document Source" as MHD_SOURCE
-card  SourceInterface [
-  <b> MHD to XDS Source Interface
-  ----
-  MHD Document Recipient
-  ....
-  XDS Document Source 
-]
+
 card "XDS Document Repository" as XDS_Repo 
 card  Registry [
   <b> Document Registry
@@ -25,22 +18,30 @@ card "Resource Notification Broker" as DSUBm_Broker
 card "Resource Notification Subscriber" as DSUBm_Subscriber
 
 
-card  Consumer [
-  <b>System Document Consumer
+card  Consumer_XDS[
+  <b>XDS Document Consumer System
   ----
-  MHD Document Responder
+  XDS Document Consumer
+  ....
+  Resource Notification  Recipient
+]
+
+card  Consumer_MHD[
+  <b>MHD Document Consumer System
+  ----
+  MHD Document Consumer
   ....
   Resource Notification  Recipient
 ]
 
 
 
-MHD_SOURCE -u-> SourceInterface: ITI-65
-SourceInterface -r-> XDS_Repo: ITI-41
+
 XDS_Repo -d-> Registry: ITI-42
 Registry -d-> DSUBm_Broker: ITI-111
 DSUBm_Subscriber -l-> DSUBm_Broker: ITI-110
-DSUBm_Broker --> Consumer: ITI-112
+DSUBm_Broker --> Consumer_MHD: ITI-112
+DSUBm_Broker --> Consumer_XDS: ITI-112
 /'
 card  ConsumerInterface [
   <b> MHD to XDS Consumer Interface

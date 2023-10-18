@@ -20,13 +20,13 @@ card  Registry [
 ]
 
 card Publisher [
-  <b>System Document Publisher
+  <b>Document Publisher System
   ----
   MHD Document Source
 ]
 
 card  Consumer [
-  <b>System Document Consumer
+  <b>Document Consumer System
   ----
   MHD Document Consumer
   ....

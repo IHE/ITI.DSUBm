@@ -11,9 +11,9 @@ card "XDS Document Repository" as Repo
 card  Central [
   <b>Central Infrastructure
   ----
-  XDS Docment Registry
+  XDS Document Registry
   ....
-  Document Metadata Publisher
+  DSUB Document Metadata Publisher
 ]
 
 card "Document Metadata Notification Broker" as Broker 
@@ -21,9 +21,9 @@ card "Document Metadata Notification Broker" as Broker
 card  DSUBFHIR [
   <b>DSUB/FHIR interface
   ----
-Document Metadata Subscriber
+DSUB Document Metadata Subscriber
 ....
-Document Metadata Notification Recipient
+DSUB Document Metadata Notification Recipient
 ....
 Resource Notification Broker
 ]
