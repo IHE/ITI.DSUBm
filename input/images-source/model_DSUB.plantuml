@@ -13,13 +13,13 @@ card  Central [
   ----
   XDS Docment Registry
   ....
-  Document Metadata Publisher
+  DSUB Document Metadata Publisher
 ]
 
 card Broker [
   <b>Notification Manager
   ----
-  Document Metadata Notification Broker
+  DSUB Document Metadata Notification Broker
   ....
   Resource Notification Broker
 ]
@@ -27,12 +27,12 @@ card Broker [
 card Subscriber [
   <b>Subscriber
   ----
-  Document Metadata Subscriber
+  DSUB Document Metadata Subscriber
   ....
   Resource Notification Subscriber
 ]
 
-card "Document Metadata Notification Recipient" as DSUB_Recipient 
+card "DSUB Document Metadata Notification Recipient" as DSUB_Recipient 
 
 
 
