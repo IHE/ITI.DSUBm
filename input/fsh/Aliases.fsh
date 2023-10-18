@@ -2,6 +2,7 @@ Alias: SCT = http://snomed.info/sct
 Alias: UCUM = http://unitsofmeasure.org
 Alias: $LOINC = http://loinc.org
 Alias: $Payload = urn:ietf:bcp:13
+Alias: $fhir-types = http://hl7.org/fhir/fhir-types
 /*
 Alias: $DocumentReferenceTopic = http://hl7.org/SubscriptionTopic/DocumentReference
 Alias: $DocumentReferenceSub = https://example.org/fhir/Subscription/DocumentReference

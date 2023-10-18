@@ -1,8 +1,9 @@
-Instance: DocumentReference-PatientDependent-create
+Instance: DocumentReference-PatientDependent-CUD
 InstanceOf: Basic
-Usage: #example
+Usage: #definition
 Title: "SubscriptionTopic for DocumentReference PatientDependent "
-Description: "R4 Example of a Basic resource  describing the creation of a DocumentReference PatientDependent 'SubscriptionTopic' resource."
+Description: "R4 Example of a Basic resource describing a DocumentReference PatientDependent 'SubscriptionTopic' resource. 
+\n The trigger event is the creation or update or deletion of a DocumentReference"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-09-10T21:04:49.9548614+00:00"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
@@ -21,17 +22,15 @@ Description: "R4 Example of a Basic resource  describing the creation of a Docum
 * extension[=].valueDateTime = "2023-10-17"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.description"
 * extension[=].valueMarkdown = "Example topic for DocumentReference PatientDependent"
+
+// creation from status=not(current) to stautus = current
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger"
 * extension[=].extension[0].url = "description"
-* extension[=].extension[=].valueMarkdown = "A DocumentReference has been created/updated"
+* extension[=].extension[=].valueMarkdown = "A DocumentReference has been created"
 * extension[=].extension[+].url = "resource"
 * extension[=].extension[=].valueUri = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 * extension[=].extension[+].url = "supportedInteraction"
 * extension[=].extension[=].valueCode = #create
-/*
-* extension[=].extension[+].url = "supportedInteraction"
-* extension[=].extension[=].valueCode = #update
-*/
 * extension[=].extension[+].url = "queryCriteria"
 * extension[=].extension[=].extension[0].url = "previous"
 * extension[=].extension[=].extension[=].valueString = "status:not=current "
@@ -43,6 +42,67 @@ Description: "R4 Example of a Basic resource  describing the creation of a Docum
 * extension[=].extension[=].extension[=].valueCode = #test-fails
 * extension[=].extension[=].extension[+].url = "requireBoth"
 * extension[=].extension[=].extension[=].valueBoolean = true
+
+// update from status = current to stautus = not(current)
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger"
+* extension[=].extension[0].url = "description"
+* extension[=].extension[=].valueMarkdown = "A DocumentReference has been update"
+* extension[=].extension[+].url = "resource"
+* extension[=].extension[=].valueUri = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* extension[=].extension[+].url = "supportedInteraction"
+* extension[=].extension[=].valueCode = #update
+* extension[=].extension[+].url = "queryCriteria"
+* extension[=].extension[=].extension[0].url = "previous"
+* extension[=].extension[=].extension[=].valueString = "status=current "
+* extension[=].extension[=].extension[+].url = "resultForCreate"
+* extension[=].extension[=].extension[=].valueCode = #test-passes
+* extension[=].extension[=].extension[+].url = "current"
+* extension[=].extension[=].extension[=].valueString = "status=superseded"
+* extension[=].extension[=].extension[+].url = "resultForDelete"
+* extension[=].extension[=].extension[=].valueCode = #test-fails
+* extension[=].extension[=].extension[+].url = "requireBoth"
+* extension[=].extension[=].extension[=].valueBoolean = true
+
+// update from status = current to stautus = current
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger"
+* extension[=].extension[0].url = "description"
+* extension[=].extension[=].valueMarkdown = "A DocumentReference has been update"
+* extension[=].extension[+].url = "resource"
+* extension[=].extension[=].valueUri = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* extension[=].extension[+].url = "supportedInteraction"
+* extension[=].extension[=].valueCode = #update
+* extension[=].extension[+].url = "queryCriteria"
+* extension[=].extension[=].extension[0].url = "previous"
+* extension[=].extension[=].extension[=].valueString = "status=current "
+* extension[=].extension[=].extension[+].url = "resultForCreate"
+* extension[=].extension[=].extension[=].valueCode = #test-passes
+* extension[=].extension[=].extension[+].url = "current"
+* extension[=].extension[=].extension[=].valueString = "status=current"
+* extension[=].extension[=].extension[+].url = "resultForDelete"
+* extension[=].extension[=].extension[=].valueCode = #test-fails
+* extension[=].extension[=].extension[+].url = "requireBoth"
+* extension[=].extension[=].extension[=].valueBoolean = true
+
+// delete
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger"
+* extension[=].extension[0].url = "description"
+* extension[=].extension[=].valueMarkdown = "A DocumentReference has been deleted"
+* extension[=].extension[+].url = "resource"
+* extension[=].extension[=].valueUri = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* extension[=].extension[+].url = "supportedInteraction"
+* extension[=].extension[=].valueCode = #delete
+* extension[=].extension[+].url = "queryCriteria"
+* extension[=].extension[=].extension[0].url = "previous"
+* extension[=].extension[=].extension[=].valueString = "status=current "
+* extension[=].extension[=].extension[+].url = "resultForCreate"
+* extension[=].extension[=].extension[=].valueCode = #test-passes
+* extension[=].extension[=].extension[+].url = "current"
+* extension[=].extension[=].extension[=].valueString = "status=current"
+* extension[=].extension[=].extension[+].url = "resultForDelete"
+* extension[=].extension[=].extension[=].valueCode = #test-passes
+* extension[=].extension[=].extension[+].url = "requireBoth"
+* extension[=].extension[=].extension[=].valueBoolean = true
+
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the subject of the DocumentReference."
