@@ -7,6 +7,7 @@ hide footbox
 
 
 card "XDS Document Repository" as XDS_Repo 
+card "Document Administrator" as DOC_Administrator
 card  Registry [
   <b> Document Registry
   ----
@@ -35,7 +36,7 @@ card  Consumer_MHD[
 ]
 
 
-
+DOC_Administrator --> Registry: ITI-57 / ITI-62
 
 XDS_Repo -d-> Registry: ITI-42
 Registry -d-> DSUBm_Broker: ITI-111
