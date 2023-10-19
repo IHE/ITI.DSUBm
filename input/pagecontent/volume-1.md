@@ -134,15 +134,21 @@ between options when applicable are specified in notes.
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
 | Resource Notification Broker | DSUB Subscription Search extension |ITI TF-1: 54.2.1|
+|                                  | Updating events | ITI TF-1: 54.2.3 |
+|                                  | Pull notification | ITI TF-1: 54.2.4 |
 | Resource Notification Subscriber | DSUB Subscription Search extension | ITI TF-1: 54.2.1 |
 |                                  | Subscription Search | ITI TF-1: 54.2.2 |
-| Resource Notification Publisher | none |--|
+|                                  | Updating events | ITI TF-1: 54.2.3 |
+|                                  | Pull notification | ITI TF-1: 54.2.4 |
+| Resource Notification Publisher | Updating events | ITI TF-1: 54.2.3|
 | Resource Notification Recipient | none |--|
 {: .grid}
 
 <a name="dsub-extension"> </a>
 
-#### 1:54.2.1 DSUB Subscription Search extension
+#### 1:54.2.1 DSUB Subscription Search extension option
+
+This option consents to integrate an XDS-DSUB implementation, adding to a DSUB Document Metadata Subscriber the functionality of searching for subscriptions previously requested to a DSUB Metadata Notification Broker.
 
 The Resource Notification Subscriber that supports this option shall be able to be grouped with a DSUB Document Metadata Subscriber, shall implement the Resource Subscription Search [ITI-113] transaction and could not implement the Resource Subscription [ITI-110] transaction.
 
@@ -150,9 +156,33 @@ The Resource Notification Broker that supports this option shall be able to be g
 
 <a name="Subscription-Search"> </a>
 
-#### 1:54.2.2 Subscription Search
+#### 1:54.2.2 Subscription Search option
 
 The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction.
+
+<a name="Updating-events"> </a>
+
+#### 1:54.2.3 Updating events option
+
+This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and SubmissionSet Objects.
+
+The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
+
+The Resource Notification Subscriber that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
+
+The Resource Notification Publisher that supports this option shall also support for the Resource Publish [ITI-111] transaction the trigger events define in section [Updating events option](). 
+
+<a name="Pull-notification"> </a>
+
+#### 1:54.2.4 Pull notification option
+
+This option consents to a Resource Notification Subscriber to operate in a pull modality for retrieving the notifications.
+
+The Resource Notification Broker that supports this option shall be able to be grouped with a Resource Notification Recipient and shall support the `$event` operation for the Resource Subscription Search [ITI-113] transaction.
+
+The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction and the `$event` operation for this transaction, and shall subscribe towards the Resource Notification Broker indicating in the `Subscription.endpoint` element the URL that identifies the Resource Notification Recipient grouped with the Resource Notification Broker.
+
+
 
 
 
@@ -188,20 +218,27 @@ actor (Column 3)
 </tr>
 
 <tr class="even">
+<td></td>
+<td>Pull notification option</td>
+<td><p><em>Resource Notification Recipient</em></p></td>
+<td><a href="#15424-pull-notification-option">ITI TF-1: 54.2.4</a></td>
+</tr>
+
+<tr class="odd">
 <td>Resource Notification Subscriber</td>
 <td>DSUB Subscription Search extension option</td>
 <td><p><em>DSUB Document Metadata Subscriber</em></p></td>
 <td><a href="#15421-dsub-subscription-search-extension">ITI TF-1: 54.2.1</a></td>
 </tr>
 
-<tr class="odd">
+<tr class="even">
 <td>Resource Notification Publisher</td>
 <td>-</td>
 <td><p><em>None</em></p></td>
 <td>-</td>
 </tr>
 
-<tr class="even">
+<tr class="odd">
 <td>Resource Notification Recipient</td>
 <td>-</td>
 <td><p><em>None</em></p></td>
