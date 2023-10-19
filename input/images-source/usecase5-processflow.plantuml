@@ -32,7 +32,7 @@ participant MobDevice [
     =Mobile Alert System 
     ----
     [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [Resource Notification Recipient] 
     [MHD Document Consumer]
     [mACM Alert Reporter]
 ] 
@@ -44,7 +44,7 @@ participant Device [
 ] 
 
 autonumber "<b>"
-MobDevice -> Broker: Mobile Subscription [ITI-110]
+MobDevice -> Broker: Resource Subscription [ITI-110]
 activate Broker
 deactivate Broker
 Repository -> Central: Register Document Set-b [ITI-42]
@@ -68,8 +68,16 @@ deactivate Central
 MobDevice -> Device: Mobile Report Alert [ITI-84]
 deactivate MobDevice
 
-MobDevice -> Broker: Mobile Subscription [ITI-110] (update)
-activate Broker
-deactivate Broker
+group Update Subscription
+  autonumber stop
+  autonumber 8 "<b>"
+  MobDevice -> Broker: a. Resource Subscription [ITI-110] (unsubscribe)
+  activate Broker
+  deactivate Broker
+  autonumber 8 "<b>"
+  MobDevice -> Broker: b. Resource Subscription [ITI-110] (subscribe)
+  activate Broker
+  deactivate Broker
+end  
 
 @enduml
