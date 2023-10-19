@@ -200,4 +200,11 @@ Description: "R4 Example of a Basic resource describing a DocumentReference Pati
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "related"
 
+//add notificationShape resource=X + include 
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape"
+* extension[=].extension[0].url = "resource"
+* extension[=].extension[=].valueUri = "DocumentReference"
+* extension[=].extension[+].url = "include"
+* extension[=].extension[=].valueString = "DocumentReference:patient&iterate=Patient.link"
+
 * code = $fhir-types#SubscriptionTopic
