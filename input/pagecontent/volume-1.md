@@ -164,7 +164,7 @@ The Resource Notification Subscriber that supports this option shall implement t
 
 #### 1:54.2.3 Updating events option
 
-This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and SubmissionSet Objects.
+This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, Association and SubmissionSet Objects.
 
 The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
 
