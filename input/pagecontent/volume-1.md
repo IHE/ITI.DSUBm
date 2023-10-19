@@ -257,9 +257,8 @@ The assumption is that systems share the information in an MHDS Environment. In 
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient subscription with the following criteria:
-"/DocumentReference?subject:missing=false&facility=cardiologyWard").  
-2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode with the following criteria "/DocumentReference?patient=12345&type=http://loinc.org&#124;1234-5").
+1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient subscription.)
+2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode in the criteria.)
 3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
 4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish)
 5. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-112] Resource Notify)
@@ -300,8 +299,7 @@ The assumption is that systems share the information in an MHDS Environment. The
 
 **Main Flow**:
 
-1.  During the first visit a document subscription is needed. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription with the following criteria:
-"/List?subject=12345&code=folder" )
+1.  During the first visit a document subscription is needed. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
 3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 4. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
 5. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
@@ -340,8 +338,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription for patient and typeCode with the following criteria:
-"/DocumentReference?subject=222333&type=ePrescription")
+1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription with the following criteria: patient and typeCode.) 
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish).
 4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
@@ -374,8 +371,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription with the following criteria:
-"/DocumentReference?subject=98765&type=ePrescription")
+1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription).
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
 3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
 4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)
@@ -408,16 +404,16 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The Mobile Alert System performs a subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (ITI-110 Resource Subscription, multi-patient expressed with the following criteria:
-"/DocumentReference?subject:missing=false&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C") The list of known and managed diseases is represented by the list of eventCodeList values submitted in the subscription by the Mobile Alert System.
+1. The Mobile Alert System performs a subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. ([ITI-110] Resource Subscription, using a multi-patient Subscription with the indication of the related eventCodeList to the disease of interest).
 2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
 3. The Central Infrastructure produce for every document a publication event and is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
 4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1 a notification is sent to the Mobile Alert System. ([ITI-112] Resource Notify)
 5. The Mobile Alert System will try to retrieve the document in order to inform the user of the specific information regarding the exposure and quarantine protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.
 7. The Mobile Alert System uses the information retrieved in order to send a Mobile Report Alert [ITI-84] to the Mobile device.
-8. The Mobile Alert System is updated in order to respond to a new disease. The existing subscription is updated including the new disease with eventCodeList = D. ([ITI-110] Resource Subscription, multi-patient expressed with the following criteria:
-"/DocumentReference?patient:missing=true&category=urn:oid:1.3.6.1.4.1.19376.1.2.6.1&#x7c;REPORTS&facility=geriatricWard&event=A,B,C,D")
+8. The Mobile Alert System is updated in order to respond to a new disease that is not included in the current subscription. The system is updated by: 
+  - deactivating the existing subscription ([ITI-110] Resource Subscription - Update Subscription).
+  - a new subscription is sent to  the Notification Manager in order to be informed for all the disease including the new one recently discovered. ([ITI-110] Resource Subscription, multi-patient expressed with the updated eventCodeList for two diseases of interest).
 
 
 #### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update
@@ -445,8 +441,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription with the following criteria:
-"/DocumentReference?subject=98765&type=reports&security-label=N")
+1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription).
 2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N" ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notification is sent.
 4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
