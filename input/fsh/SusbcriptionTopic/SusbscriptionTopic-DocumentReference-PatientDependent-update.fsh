@@ -7,7 +7,7 @@ Description: "R4 Example of a Basic resource describing a DocumentReference Pati
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-09-10T21:04:49.9548614+00:00"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
-* extension[=].valueUri = "http://example.org/FHIR/SubscriptionTopic/DocumentReference"
+* extension[=].valueUri = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DocumentReference-PatientDependent-CUD"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.version"
 * extension[=].valueString = "1.0.0-fhir.r4"
 /*
