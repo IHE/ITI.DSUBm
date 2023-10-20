@@ -81,11 +81,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: 1:54. DSUBm Home
+    title: DSUBm Home
     generation: markdown
   volume-1.md:
-    #title: 1:XX. ToDo Volume 1
-    #generation: markdown
+    title: 1:54 Document Subscription for Mobile (DSUBm)
+    generation: markdown
   ITI-110.md:
     title: 2:3.110 Resource Subscription
     generation: markdown
@@ -115,15 +115,15 @@ pages:
     generation: markdown
 
 menu:
-  Home: index.html
+  DSUBm Home: index.html
   Volume 1:
-    Introduction: volume-1.html
+    Introduction: index.html
     Actors and Transactions: volume-1.html#actors-and-transactions
     Actor Options: volume-1.html#actor-options
     Required Groupings: volume-1.html#required-groupings
     Overview: volume-1.html#overview
     Security Considerations: volume-1.html#security-considerations
-    Cross-Profile Considerations: volume-1.html#other-grouping
+    Cross-Profile Considerations : volume-1.html#other-grouping
   Volume 2:
     "Resource Subscription [ITI-110]": ITI-110.html
     "Resource Publish [ITI-111]": ITI-111.html
