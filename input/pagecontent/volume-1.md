@@ -193,9 +193,9 @@ actor (Column 3)
 <table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
 <thead>
 <tr class="header">
-<th>DSUBm Actor (1)</th>
+<th>DSUBm Actor</th>
 <th>Grouping Condition</th>
-<th>Actor(s) to be grouped with (3)</th>
+<th>Actor(s) to be grouped with</th>
 <th>Reference</th>
 </tr>
 </thead>

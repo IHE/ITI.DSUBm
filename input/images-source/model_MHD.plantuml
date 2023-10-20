@@ -36,7 +36,8 @@ card  Consumer_MHD[
 ]
 
 
-DOC_Administrator --> Registry: ITI-57 / ITI-62
+DOC_Administrator --> Registry: ITI-57
+DOC_Administrator --> Registry: ITI-62
 
 XDS_Repo -d-> Registry: ITI-42
 Registry -d-> DSUBm_Broker: ITI-111
