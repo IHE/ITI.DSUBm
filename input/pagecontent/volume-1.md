@@ -535,10 +535,14 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 </figure>
 <br clear="all">
 
+<a name="DSUB-grouping"> </a>
+
 ### 1:54.6.3 DSUB - Document Metadata Subscription 
 Within an already functioning DSUB infrastructure, two alternative groupings are presented based on which actors are integrated between DSUB and DSUBm. 
 
 In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
+
+<a name="DSUB-interface"> </a>
 
 #### 1:54.6.3.1 DSUBm as an interface for DSUB 
 Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
