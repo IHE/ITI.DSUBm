@@ -3,6 +3,8 @@ Alias: UCUM = http://unitsofmeasure.org
 Alias: $LOINC = http://loinc.org
 Alias: $Payload = urn:ietf:bcp:13
 Alias: $fhir-types = http://hl7.org/fhir/fhir-types
+
+Alias: $webHookEndpoint = https://example.org/Endpoints/endpoint1
 /*
 Alias: $DocumentReferenceTopic = http://hl7.org/SubscriptionTopic/DocumentReference
 Alias: $DocumentReferenceSub = https://example.org/fhir/Subscription/DocumentReference
@@ -14,7 +16,7 @@ Alias: $SubmissionSet = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE
 Alias: $Folder = https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Comprehensive.Folder
 
 
-Alias: $webHookEndpoint = https://example.org/Endpoints/d7dcc004-808d-452b-8030-3a3a13cd871d
+
 
 Alias: $DocumentReference = https://example.org/fhir/DocumentReference/aaaaaaaa-bbbb-cccc-dddd-e00444400002
 Alias: $v3-ActReason = http://terminology.hl7.org/CodeSystem/v3-ActReason
