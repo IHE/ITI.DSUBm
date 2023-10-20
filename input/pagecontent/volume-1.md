@@ -3,7 +3,7 @@ IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a nonmobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
-This profile describes the use of document subscription and notification mechanisms for RESTful applications. In a similar way to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile, a subscription is made in order to receive a notification when a Document publication event matches the creteria expressed in the subscription. 
+This profile describes the use of document subscription and notification mechanisms for RESTful applications. In a similar way to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile, a subscription is made in order to receive a notification when an XDS Document publication event matches the criteria expressed in the subscription. 
 
 This profile includes a model that can be applied in a RESTful-only environment but also models in whitch it can be used with different nonmobile profiles ([XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)). This profile intends to grants the same funtionality as the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile and its supplements but also adding some other functionalities (e.g. Subscription Search). This profile can be also used only to add the Subscription Search functionality to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile.
 
@@ -337,17 +337,17 @@ The assumption is that systems share the information in an MHDS Environment. The
 **Main Flow**:
 
 1.  During the first visit a document subscription is needed. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
-3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-4. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
-5. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-6. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-7. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
-8. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-9. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
-10. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-11. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-12. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
-13. The mobile DHR deletes the folder subscription. ([ITI-110] Resource Subscription.)
+2. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+3. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
+4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+5. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+6. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
+7. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+8. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
+9. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+10. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+11. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
+12. The mobile DHR unsubscribe from the folder subscription. ([ITI-110] Resource Subscription.)
 
 
 #### 1:54.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
