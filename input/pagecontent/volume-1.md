@@ -91,25 +91,25 @@ The transactions in this profile are summarized in the sections below.
 
 This transaction is used for a subscription request, by using a particular set of filters, or for a subscription update. 
 
-For more details see the detailed [transaction description](ITI-110.html)
+For more details see the detailed [[ITI-110] transaction description](ITI-110.html)
 
 #### 1:54.1.2.2 Resource Publish [ITI-111]
 
 This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that may have a subscription.
 
-For more details see the detailed [transaction description](ITI-111.html)
+For more details see the detailed [[ITI-111] transaction description](ITI-111.html)
 
 #### 1:54.1.2.3 Resource Notify [ITI-112]
 
 This transaction is used for sending notifications to a Resource Notification Recipient related to a subscription.
 
-For more details see the detailed [transaction description](ITI-112.html)
+For more details see the detailed [[ITI-112] transaction description](ITI-112.html)
 
 #### 1:54.1.2.4 Resource Subscription Search [ITI-113]
 
 This transaction is used for searching existing Subscriptions.
 
-For more details see the detailed [transaction description](ITI-113.html)
+For more details see the detailed [[ITI-113] transaction description](ITI-113.html)
 
 
 
@@ -155,7 +155,7 @@ The Resource Notification Subscriber that supports this option shall implement t
 
 #### 1:54.2.3 Updating events option
 
-This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, Association and SubmissionSet Objects.
+This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and Association Objects.
 
 The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
 
@@ -250,7 +250,7 @@ The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
 In the following use cases are presented different subscription types such as: patient-dependent subscription, multi-patient subscription, Folder subscription and other types. 
 The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/MHDS/index.html)) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html)   
-These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users, but also the possibility to extend DSUB with DSUBm for mobile use.
+These use cases present also the possibility in which the DUSB and DSUBm coexist and both functionality are available to the users.
  
 ### 1:54.4.2 Use Cases
 
@@ -535,6 +535,8 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 </figure>
 <br clear="all">
 
+Note that in this scenario, implementers should be aware about what events on DocumentEntry, Folder, Association and SubmissionSet Objects could determinated events on DocumentReference, Folder type List and SubmissionSet type List resources and the supporting of Updating events option.
+
 <a name="DSUB-grouping"> </a>
 
 ### 1:54.6.3 DSUB - Document Metadata Subscription 
@@ -554,6 +556,8 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 <br clear="all">
 
 <a name="DSUB-extension-model"> </a>
+
+Note that in this scenario, implementers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
 
 #### 1:54.6.3.2 DSUB Subscription Search extension
 Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
