@@ -30,22 +30,22 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
 | **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
-| Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R (Note 1)     | ITI TF-2: 3.110 |
+| Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R      | ITI TF-2: 3.110 |
 |                                | Resource Publish [ITI-111]               | Responder    | O     | ITI TF-2: 3.111 |
-|                                | Resource Notify [ITI-112]                   | Initiator    | R (Note 1)     | ITI TF-2: 3.112 |
+|                                | Resource Notify [ITI-112]                   | Initiator    | R      | ITI TF-2: 3.112 |
 |                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
-| Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R (Note 2) | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O (Note 2) (Note 3) | ITI TF-2: 3.113 |
+| Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R  | ITI TF-2: 3.110 |
+|                                | Resource Subscription Search [ITI-113]      | Initiator    | O   | ITI TF-2: 3.113 |
 | Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
 | Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
 {: .grid}
 
 
-*Note 1: If the actor Resource Notification Broker supports the option "DSUB Subscription Search extension"(see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)) the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112] are not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
+<!--*Note 1: If the actor Resource Notification Broker supports the option "DSUB Subscription Search extension"(see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)) the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112] are not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
 
 *Note 2: If the actor Resource Notification Subscriber supports the option "DSUB Subscription Search extension" (see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)), it shall support the transaction Resource Subscription Search [ITI-113] and the transaction Resource Subscription [ITI-110] is not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
 
-*Note 3: If the actor Resource Notification Subscriber supports the option "Subscription Search" (see Section [1:54.2.2 Subscription Search](#Subscription-Search)), it shall support the transaction Resource Subscription Search [ITI-113].*
+*Note 3: If the actor Resource Notification Subscriber supports the option "Subscription Search" (see Section [1:54.2.2 Subscription Search](#Subscription-Search)), it shall support the transaction Resource Subscription Search [ITI-113].*-->
 
 ### 1:54.1.1 Actors
 
@@ -124,17 +124,15 @@ between options when applicable are specified in notes.
 
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
-| Resource Notification Broker | DSUB Subscription Search extension |ITI TF-1: 54.2.1|
-|                                  | Updates to document sharing resources | ITI TF-1: 54.2.3 |
-|                                  | Pull notification | ITI TF-1: 54.2.4 |
-| Resource Notification Subscriber | DSUB Subscription Search extension | ITI TF-1: 54.2.1 |
-|                                  | Updates to document sharing resources | ITI TF-1: 54.2.3 |
-|                                  | Pull notification | ITI TF-1: 54.2.4 |
-| Resource Notification Publisher | Updates to document sharing resources option | ITI TF-1: 54.2.3|
+| Resource Notification Broker | Updates to document sharing resources |ITI TF-1: 54.2.1|
+|                                  | Pull notification | ITI TF-1: 54.2.2 |
+| Resource Notification Subscriber |Updates to document sharing resources |ITI TF-1: 54.2.1|
+|                                  | Pull notification | ITI TF-1: 54.2.2 |
+| Resource Notification Publisher | Updates to document sharing resources option | ITI TF-1: 54.2.1|
 | Resource Notification Recipient | none |--|
 {: .grid}
 
-<a name="dsub-extension"> </a>
+<!--<a name="dsub-extension"> </a>
 
 #### 1:54.2.1 DSUB Subscription Search extension option
 
@@ -142,12 +140,12 @@ This option consents to integrate an XDS-DSUB implementation, adding to a DSUB D
 
 The Resource Notification Subscriber that supports this option shall be able to be grouped with a DSUB Document Metadata Subscriber, shall implement the Resource Subscription Search [ITI-113] transaction and could not implement the Resource Subscription [ITI-110] transaction.
 
-The Resource Notification Broker that supports this option shall be able to be grouped with a DSUB Document Metadata Notification Broker, could not implement the Resource Subscription [ITI-110] transaction and the Resource Notify [ITI-112] transaction.
+The Resource Notification Broker that supports this option shall be able to be grouped with a DSUB Document Metadata Notification Broker, could not implement the Resource Subscription [ITI-110] transaction and the Resource Notify [ITI-112] transaction.-->
 
 
 <a name="Updating-events"> </a>
 
-#### 1:54.2.2 Updates to document sharing resources option
+#### 1:54.2.1 Updates to document sharing resources option
 
 This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and Association Objects.
 
@@ -159,7 +157,7 @@ The Resource Notification Publisher that supports this option shall also support
 
 <a name="Pull-notification"> </a>
 
-#### 1:54.2.3 Pull notification option
+#### 1:54.2.2 Pull notification option
 
 This option consents to a Resource Notification Subscriber to operate in a pull modality for retrieving the notifications.
 
@@ -195,25 +193,19 @@ actor (Column 3)
 </thead>
 <tbody>
 
-<tr class="odd">
-<td>Resource Notification Broker</td>
-<td>DSUB Subscription Search extension option</td>
-<td><p><em>DSUB Document Metadata Notification Broker</em></p></td>
-<td><a href="#15421-dsub-subscription-search-extension">ITI TF-1: 54.2.1</a></td>
-</tr>
 
 <tr class="even">
-<td></td>
+<td>Resource Notification Broker</td>
 <td>Pull notification option</td>
 <td><p><em>Resource Notification Recipient</em></p></td>
-<td><a href="#15424-pull-notification-option">ITI TF-1: 54.2.4</a></td>
+<td><a href="#15422-pull-notification-option">ITI TF-1: 54.2.2</a></td>
 </tr>
 
 <tr class="odd">
 <td>Resource Notification Subscriber</td>
-<td>DSUB Subscription Search extension option</td>
-<td><p><em>DSUB Document Metadata Subscriber</em></p></td>
-<td><a href="#15421-dsub-subscription-search-extension">ITI TF-1: 54.2.1</a></td>
+<td>-</td>
+<td><p><em>None</em></p></td>
+<td>-</td>
 </tr>
 
 <tr class="even">
@@ -275,21 +267,19 @@ At the end of Mr. Smith's hospitalization, the software of Dr. Roose automatical
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
+The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
 
 **Main Flow**:
 
 1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the document that involves the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient subscription.)
 2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode in the criteria.)
 3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
-4. The Central Infrastructure, having stored the metadata of the medical report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish)
-5. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-112] Resource Notify)
-6. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient (Retrieve Document [ITI-68]).
-7. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen drug. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65]).
-8. The Central Infrastructure, having stored the metadata of the ePrescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish)
-9. Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet the Central Infrastructure will send a notification to the Nurse Tablet. ([ITI-112] Resource Notify)
-10. The Nurse upon seeing the notification on his tablet can retrieve the document in order to know which drug to prepare for administration. (Retrieve Document [ITI-68]).
-11. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated unsubscription. (Resource Subscription [ITI-110]).
+4. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-112] Resource Notify)
+5. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient (Retrieve Document [ITI-68]).
+6. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen drug. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65]).
+7. Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet the Central Infrastructure will send a notification to the Nurse Tablet. ([ITI-112] Resource Notify)
+8. The Nurse upon seeing the notification on his tablet can retrieve the document in order to know which drug to prepare for administration. (Retrieve Document [ITI-68]).
+9. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated unsubscription. (Resource Subscription [ITI-110]).
 
 
 #### 1:54.4.2.2 Use Case \#2: Document Subscription for mobile application in MHDS Environment using Folder Subscription
@@ -317,22 +307,20 @@ During the third visit, Ms. Williams decides that a different physician will tak
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the Resource Notification Publisher/Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the ["Subscription Search"](#actor-options). 
+The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the ["Subscription Search"](#actor-options). 
 
 **Main Flow**:
 
 1.  During the first visit a document subscription is needed. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
 2. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-3. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
-4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-5. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-6. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
-7. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-8. The publication of this medical report generates a message to inform the broker regarding the new event. ([ITI-111] Resource Publish)
-9. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-10. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-11. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
-12. The mobile DHR unsubscribe from the folder subscription. ([ITI-110] Resource Subscription.)
+3. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+4. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+5. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
+6. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+7. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+8. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+9. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
+10. The mobile DHR unsubscribe from the folder subscription. ([ITI-110] Resource Subscription.)
 
 
 #### 1:54.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
@@ -356,7 +344,7 @@ When the prescription has been made Mr. Brown receives the notification on his p
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the DSUBm Resource Notification Publisher. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
 
 **Main Flow**:
 
@@ -396,12 +384,11 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 1. The mobile app performs a patient-dependent subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription).
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
 3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
-4. The Central Infrastructure generates a message to inform the document metadata broker about the publication event. ([ITI-54] Document Metadata Publish)
-5. Since the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. ([ITI-53] Document Metadata Notify)
-6. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. ([ITI-112] Resource Notify)
-7. The Mobile Device will try to retrieve the booking reservation in order to display the appointment information. A Retrieve Document [ITI-68] is sent to the DSUB FHIR Interface
-8. Upon receiving the Retrieve Document [ITI-68] the  DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Resource Device information.
-9. The Mobile Device can now use the appointment information.
+4. Since the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. ([ITI-53] Document Metadata Notify)
+5. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. ([ITI-112] Resource Notify)
+6. The Mobile Device will try to retrieve the booking reservation in order to display the appointment information. A Retrieve Document [ITI-68] is sent to the DSUB FHIR Interface
+7. Upon receiving the Retrieve Document [ITI-68] the  DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Resource Device information.
+8. The Mobile Device can now use the appointment information.
 
 
 #### 1:54.4.2.5 Use Case \#5: Document Subscription for Mobile Alert System
@@ -564,20 +551,13 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 
 Note that in this scenario, implementers should be aware about what events on DocumentEntry, Folder, Association and SubmissionSet Objects could determinated events on DocumentReference, Folder type List and SubmissionSet type List resources and the supporting of Updating events option.
 
-<a name="DSUB-grouping"> </a>
-
-### 1:54.6.3 DSUB - Document Metadata Subscription 
-Within an already functioning DSUB infrastructure, two alternative groupings are presented based on which actors are integrated between DSUB and DSUBm. 
-
-In both these two groupings DSUB and DSUBm can coexist and operate with different consumers both mobile and non-mobile.
-
 <a name="DSUB-interface"> </a>
 
-#### 1:54.6.3.1 DSUBm as an interface for DSUB 
+### 1:54.6.3 DSUBm as an interface for DSUB 
 Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
 <figure>
 {%include model_DSUBonFHIR.svg%}
-<figcaption><b>Figure 1:54.6.3.1-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
+<figcaption><b>Figure 1:54.6.3-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
 </b></figcaption>
 </figure>
 <br clear="all">
@@ -586,6 +566,7 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 
 Note that in this scenario, implementers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
 
+<!--
 #### 1:54.6.3.2 DSUB Subscription Search extension
 Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
 
@@ -599,3 +580,4 @@ In this case the existing DSUB infrastructure is enriched with the possibility t
 <br clear="all">
 
 Note that in this scenario, if the Resource Notification Broker implemets also the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112], this model could be combined with the one in [1:54.6.2. XDS.b - Cross-Enterprise Document Sharing](#xds-model) section. 
+-->
