@@ -7,8 +7,8 @@ participant DHR [
     = Diabetological Healthcare Record
     ----
     [MHD Document Consumer]
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
 ] 
 
 
@@ -17,8 +17,7 @@ participant Central [
     =Electronic Healthcare Record
     ----
     [MHDs Document Registry]
-    [Resource Notification Publisher]
-    [Resource Notification Broker]
+    [DSUBm Resource Notification Broker]
 ] 
 
 participant ER [
@@ -38,7 +37,6 @@ DHR -> Central: Resource Subscription [ITI-110]
 deactivate DHR
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Resource Publish [ITI-111]
 Central -> DHR: Resource Notify [ITI-112]
 deactivate Central
 activate DHR
@@ -50,7 +48,6 @@ deactivate DHR
 DHR -> DHR: Second visit (therapy B)
 ER->Central:  Provide Document Bundle [ITI-65]
 activate Central 
-Central -> Central: Resource Publish [ITI-111]
 Central -> DHR: Resource Notify [ITI-112]
 deactivate Central
 activate DHR
@@ -62,7 +59,7 @@ deactivate DHR
 autonumber stop 
 DHR -> DHR: Third visit. (Unsubscribe)
 activate DHR
-autonumber 11 "<b>"
+autonumber 9 "<b>"
 DHR -> Central: Resource Subscription Search [ITI-113]
 DHR -> Central: Resource Subscription [ITI-110]	
 deactivate DHR
