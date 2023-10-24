@@ -125,13 +125,12 @@ between options when applicable are specified in notes.
 | **Actors** | **Option Name** | **Vol. & Section** |
 |---------|-------------|-------------|
 | Resource Notification Broker | DSUB Subscription Search extension |ITI TF-1: 54.2.1|
-|                                  | Updating events | ITI TF-1: 54.2.3 |
+|                                  | Updates to document sharing resources | ITI TF-1: 54.2.3 |
 |                                  | Pull notification | ITI TF-1: 54.2.4 |
 | Resource Notification Subscriber | DSUB Subscription Search extension | ITI TF-1: 54.2.1 |
-|                                  | Subscription Search | ITI TF-1: 54.2.2 |
-|                                  | Updating events | ITI TF-1: 54.2.3 |
+|                                  | Updates to document sharing resources | ITI TF-1: 54.2.3 |
 |                                  | Pull notification | ITI TF-1: 54.2.4 |
-| Resource Notification Publisher | Updating events | ITI TF-1: 54.2.3|
+| Resource Notification Publisher | Updates to document sharing resources option | ITI TF-1: 54.2.3|
 | Resource Notification Recipient | none |--|
 {: .grid}
 
@@ -145,27 +144,22 @@ The Resource Notification Subscriber that supports this option shall be able to 
 
 The Resource Notification Broker that supports this option shall be able to be grouped with a DSUB Document Metadata Notification Broker, could not implement the Resource Subscription [ITI-110] transaction and the Resource Notify [ITI-112] transaction.
 
-<a name="Subscription-Search"> </a>
-
-#### 1:54.2.2 Subscription Search option
-
-The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction.
 
 <a name="Updating-events"> </a>
 
-#### 1:54.2.3 Updating events option
+#### 1:54.2.2 Updates to document sharing resources option
 
 This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and Association Objects.
 
-The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
+The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updates to document sharing resources option]().
 
-The Resource Notification Subscriber that supports this option shall support the Subscription define in section [Subscription with Updating events option]().
+The Resource Notification Subscriber that supports this option shall support the Subscription define in section [Subscription with Updates to document sharing resources option]().
 
 The Resource Notification Publisher that supports this option shall also support for the Resource Publish [ITI-111] transaction the trigger events define in section [Updating events option](). 
 
 <a name="Pull-notification"> </a>
 
-#### 1:54.2.4 Pull notification option
+#### 1:54.2.3 Pull notification option
 
 This option consents to a Resource Notification Subscriber to operate in a pull modality for retrieving the notifications.
 
@@ -478,6 +472,39 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 7. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface.
 8. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
 9. Downloaded the document, Ms. Fox can view the report.
+
+
+#### 1:54.4.2.7 Use Case \#7: Document Subscription with pull notification for Mobile Device in a MHDS Environment 
+
+The new document are pulled by the client in order to know the new documents that have been published.
+
+##### 1:54.4.2.7.1 Document Subscription with pull notification for Mobile Device in MHDS Environment Use Case Description
+
+Ms. Smith is a doctor that, during the patient visit, uses a mobile app in order to see the exam reports produced for the patient that is currentrly visiting. When the doctor switch the context to the currently visited patient M the app retrieve only the new documents that were produced since the last time the app was used for that specific patient.
+During the first visit Dr. Smith subscribe for documents prodcued for Mr. Jones. 
+Before the second visit a medical report has been produced for Mr. Jones. When Mr. Jones shows up for the second visit the app that Dr. Smith is using will retrieve the documents that were prodcued between the end of the last visit done for Mr. Jones and the start of teh current visit. 
+
+##### 1:54.4.2.7.2 Document Subscription with pull notification for Mobile Device in MHDS Environment Process Flow
+
+<figure>
+{%include usecase7-processflow.svg%}
+<figcaption><b>1:54.4.2.7.2-1: Document Subscription with pull notification for Mobile Device in MHDS Environment</b></figcaption>
+</figure>
+<br clear="all">
+
+**Pre-conditions**:
+
+The assumption is that the visit app is working in a MHDS Environment. In the central infrastructure, the MHDS Registry is grouped by the Resource Notification Publisher and Resource Notification Broker. The Resource Notification Broker is  supporting the [Pull notification option](#Pull-notification) and is grouped with a Resource Notification Recipient. 
+
+**Main Flow**:
+
+1. The visit app during the first visit performs a patient-dependent subscription in order to subscribe for the documents produced for the new patient ([ITI-110] Resource Subscription). In the subscription a local endpoint is indicated in order to explicit that the notification are going to be retrieved with pull modality. 
+2. After the first visit a medical report has been produced ([ITI-65] Provide Document Bundle).
+3. The Resource Notification Publisher deliver a publication event to the Resource Notification Broker([ITI-111] Resource Publish). 
+4. The Resource Notification Broker seeing that the publication event is matching the criteria subscription expressed in the first step, and, recognizing that a local endpoint has been used in the subscription produce a notification towards the grouped Resource Notification Recipient ([ITI-112] Resource Notify). 
+5. At the start of the second visit, when Dr.smith choose Mr. Jones on the Visit app the app will retrieve any notification produced and stashed in the Broker([ITI-113] Resource Subscription Search) using the `$event` operation.
+6. The Visit App will retrieve the Document described in the notification. ([ITI-68] Retrieve Document).   
+
 
 <a name="security-considerations"> </a>
 
