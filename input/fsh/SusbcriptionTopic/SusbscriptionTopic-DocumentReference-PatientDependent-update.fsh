@@ -1,4 +1,4 @@
-Instance: DocumentReference-PatientDependent-CUD
+Instance: SubscriptionTopic-DocumentReference-PatientDependent-CUD
 InstanceOf: Basic
 Usage: #definition
 Title: "SubscriptionTopic for DocumentReference PatientDependent "
@@ -6,14 +6,12 @@ Description: "R4 Example of a Basic resource describing a DocumentReference Pati
 \n The trigger event is the creation or update or deletion of a DocumentReference"
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-09-10T21:04:49.9548614+00:00"
+* identifier.value = "urn:uuid:aa2332d0-f8fe-11e0-be50-0800200c9a66_DECIDE"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
 * extension[=].valueUri = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DocumentReference-PatientDependent-CUD"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.version"
 * extension[=].valueString = "1.0.0-fhir.r4"
-/*
-* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.name"
-* extension[=].valueString = "Example DocumentReference PatientDependent Topic"
-*/
+
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.title"
 * extension[=].valueString = "DocumentReference-PatientDependent"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status"

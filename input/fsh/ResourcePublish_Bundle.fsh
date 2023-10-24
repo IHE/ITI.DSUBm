@@ -1,4 +1,4 @@
-// equivalent to MHD Provide Document Bundle transaction in R4
+
 Profile:        ResourcePublishBundleR4
 Parent:         Bundle
 Id:             IHE.DSUBm.Minimal.PublishBundleR4
@@ -32,31 +32,7 @@ Description:    "A profile on the Bundle transaction for ITI-111 Resource Publis
 * entry[DocumentRefs].resource 1..1
 * entry[DocumentRefs].request 1..1
 * entry[DocumentRefs].request.method = #POST
-/*
-* entry[UpdateDocumentRefs].resource only 
-    IHE.DSUBm.Patch.ParametersR4
-* entry[UpdateDocumentRefs] ^short = "the superseded DocumentReference resources"
-* entry[UpdateDocumentRefs] ^definition = "any updated DocumentReference that are part of the SubmissionSet if a new new DocumentReference replaces this DocumentReference."
-* entry[UpdateDocumentRefs].resource 1..1
-* entry[UpdateDocumentRefs].request 1..1
-* entry[UpdateDocumentRefs].request.method = #PATCH
 
-* entry[Documents].resource ^type.code = "Binary"
-* entry[Documents].resource ^type.profile = Canonical(Binary)
-* entry[Documents] ^short = "the Documents"
-* entry[Documents] ^definition = "the Documents referenced by the DocumentReference resources"
-* entry[Documents].resource 1..1
-* entry[Documents].request 1..1
-* entry[FhirDocuments].request.method = #POST
-* entry[FhirDocuments].resource ^type.code = "Bundle"
-* entry[FhirDocuments].resource ^type.profile = Canonical(Bundle)
-// TODO Should there be more to be sure it is a FHIR Document Bundle?
-* entry[FhirDocuments] ^short = "the FHIR-FhirDocuments"
-* entry[FhirDocuments] ^definition = "the FHIR-FhirDocuments referenced by the DocumentReference resources"
-* entry[FhirDocuments].resource 1..1
-* entry[FhirDocuments].request 1..1
-* entry[FhirDocuments].request.method = #POST
-*/
 * entry[Folders].resource only 
     IHE.DSUBm.Minimal.FolderR4
 * entry[Folders] ^short = "Folders"

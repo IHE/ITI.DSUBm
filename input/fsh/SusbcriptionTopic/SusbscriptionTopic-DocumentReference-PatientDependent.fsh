@@ -1,10 +1,11 @@
-Instance: DocumentReference-PatientDependent-create
+Instance: SubscriptionTopic-DocumentReference-PatientDependent-create
 InstanceOf: Basic
-Usage: #example
+Usage: #definition
 Title: "SubscriptionTopic for DocumentReference PatientDependent "
 Description: "R4 Example of a Basic resource  describing the creation of a DocumentReference PatientDependent 'SubscriptionTopic' resource."
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-09-10T21:04:49.9548614+00:00"
+* identifier.value = "urn:uuid:aa2332d0-f8fe-11e0-be50-0800200c9a66"
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
 * extension[=].valueUri = "http://example.org/FHIR/SubscriptionTopic/DocumentReference"
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.version"
@@ -28,10 +29,7 @@ Description: "R4 Example of a Basic resource  describing the creation of a Docum
 * extension[=].extension[=].valueUri = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 * extension[=].extension[+].url = "supportedInteraction"
 * extension[=].extension[=].valueCode = #create
-/*
-* extension[=].extension[+].url = "supportedInteraction"
-* extension[=].extension[=].valueCode = #update
-*/
+
 * extension[=].extension[+].url = "queryCriteria"
 * extension[=].extension[=].extension[0].url = "previous"
 * extension[=].extension[=].extension[=].valueString = "status:not=current "
@@ -95,15 +93,7 @@ Description: "R4 Example of a Basic resource  describing the creation of a Docum
 * extension[=].extension[=].valueUri = "DocumentReference"
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "setting"
-/*
-* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
-* extension[=].extension[0].url = "description"
-* extension[=].extension[=].valueMarkdown = "Filter based on the period of an DocumentReference."
-* extension[=].extension[+].url = "resource"
-* extension[=].extension[=].valueUri = "DocumentReference"
-* extension[=].extension[+].url = "filterParameter"
-* extension[=].extension[=].valueString = "period"
-*/
+
 * extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the kind of facility where patient was seen."
