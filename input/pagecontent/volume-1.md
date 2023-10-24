@@ -163,9 +163,9 @@ The Resource Notification Publisher that supports this option shall also support
 
 This option consents to a Resource Notification Subscriber to operate in a pull modality for retrieving the notifications.
 
-The Resource Notification Broker that supports this option shall be able to be grouped with a Resource Notification Recipient and shall support the `$event` operation for the Resource Subscription Search [ITI-113] transaction.
+The Resource Notification Broker that supports this option shall be able to be grouped with a Resource Notification Recipient and shall support the `$events` operation for the Resource Subscription Search [ITI-113] transaction.
 
-The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction and the `$event` operation for this transaction, and shall subscribe towards the Resource Notification Broker indicating in the `Subscription.endpoint` element the URL that identifies the Resource Notification Recipient grouped with the Resource Notification Broker.
+The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction and the `$events` operation for this transaction, and shall subscribe towards the Resource Notification Broker indicating in the `Subscription.endpoint` element the URL that identifies the Resource Notification Recipient grouped with the Resource Notification Broker.
 
 
 
