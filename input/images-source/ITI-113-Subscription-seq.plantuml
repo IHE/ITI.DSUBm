@@ -4,10 +4,22 @@ participant "Resource Notification Subscriber" as  Subscriber
 participant "Resource Notification Broker" as  Broker
 
 
-
-Subscriber -> Broker : 1. Resource Subscription Search Request [ITI-113]
+== Subscription Search ==
+Subscriber -> Broker : 1. Subscription Search Request [ITI-113]
 activate Broker
-Broker --> Subscriber : 2. Resource Subscription Search Response [ITI-113]
+Broker --> Subscriber : 2. Subscription Search Response [ITI-113]
+deactivate Broker
+
+== Subscription Status Search ==
+Subscriber -> Broker : 1. Subscription Status Search Request [ITI-113]
+activate Broker
+Broker --> Subscriber : 2. Subscription Status Search Response [ITI-113]
+deactivate Broker
+
+== Subscription Events Search ==
+Subscriber -> Broker : 1. Subscription Events Search Request [ITI-113]
+activate Broker
+Broker --> Subscriber : 2. Subscription Events Search Response [ITI-113]
 
 deactivate Broker
 
