@@ -1,6 +1,7 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
+/' DEPRECATED '/
 /'title "Subscription with DSUBm on DSUB infrastructure from Mobile Device" '/
 
 
@@ -15,7 +16,7 @@ participant Central [
     =Central Infrastructure
     ----
     [XDS Document Registry]
-    [Document Metadata Publisher]
+    [DSUB Document Metadata Publisher]
     [XDS Document Consumer]
     [MHD Document Responder]
 ] 
@@ -23,16 +24,16 @@ participant Central [
 participant Broker [
     =Notification Manager
     ----
-    [Document Metadata Broker]
-    [Resource Notification Broker]
+    [DSUB Document Metadata Broker]
+    [DSUBm Resource Notification Broker]
 ] 
 
 
 participant MobDevice [
     =Mobile Alert System 
     ----
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient] 
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient] 
     [MHD Document Consumer]
     [mACM Alert Reporter]
 ] 

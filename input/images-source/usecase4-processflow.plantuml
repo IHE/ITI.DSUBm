@@ -13,8 +13,7 @@ participant Central [
     =Central Infrastructure
     ----
     [XDS Document Registry]
-    [Document Metadata Publisher]
-    [Document Metadata Broker]
+    [DSUB Document Metadata Broker]
     [XDS Document Consumer]
     [MHD Document Responder]
 ] 
@@ -22,16 +21,16 @@ participant Central [
 participant DSUBonFHIR [
     =DSUB/FHIR Interface
     ----
-    [Document Metadata Subscriber]
-    [Document Metadata Notification Recipient]
-    [Resource Notification Broker]
+    [DSUB Document Metadata Subscriber]
+    [DSUB Document Metadata Notification Recipient]
+    [DSUBm Resource Notification Broker]
     ] 
 
 participant MobDevice [
     =Mobile Device
     ----
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
 
@@ -45,7 +44,7 @@ deactivate DSUBonFHIR
 
 Repository -> Central: Register Document Set-b [ITI-42]
 activate Central
-Central -> Central:  Document Metadata Publish [ITI-54]
+
 Central -> DSUBonFHIR: Document Metadata Notify [ITI-53]
 deactivate Central
 

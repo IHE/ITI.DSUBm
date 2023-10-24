@@ -13,20 +13,20 @@ participant MHDsDocumentRegistry [
     =Central Infrastructure
     ----
     [MHDs Document Registry]
-    [Resource Notification Publisher]
+    [DSUBm Resource Notification Publisher]
 ] 
 
 participant Broker[
     = Broker
     ----
-    [Resource Notification Broker]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Broker]
+    [DSUBm Resource Notification Recipient]
 ]
 
 participant App [
     = Visit App
     ----
-    [Resource Notification Subscriber]
+    [DSUBm Resource Notification Subscriber]
     [MHD Document Consumer]
 ] 
 
@@ -39,14 +39,13 @@ end
 HospitalEHR -> MHDsDocumentRegistry:  Provide Document Bundle [ITI-65]
 MHDsDocumentRegistry -> Broker : Resource Publish [ITI-111]
 activate Broker
-Broker -> Broker : Resource Notify [ITI-112]
 deactivate Broker
 
 
 group Second Visit
   App -> Broker: Resource Subscription Search [ITI-113] ($events operation)
-  activate BRoker
-  deactivate MHDsDocumentRegistry
+  activate Broker
+  deactivate Broker
   App -> MHDsDocumentRegistry: Retrieve Document [ITI-68]
   activate MHDsDocumentRegistry
   deactivate MHDsDocumentRegistry

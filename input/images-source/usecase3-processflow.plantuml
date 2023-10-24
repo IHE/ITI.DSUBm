@@ -14,13 +14,13 @@ participant Central [
     =Central Infrastructure
     ----
     [XDS Document Registry]
-    [Resource Notification Publisher]
+    [DSUBm Resource Notification Publisher]
 ] 
 
 participant Broker [
     =Notification Broker
     ----
-    [Resource Notification Broker]
+    [DSUBm Resource Notification Broker]
 ] 
 
 participant XDSonFHIR [
@@ -34,8 +34,8 @@ participant MobileDevice [
     =Mobile Device
     ----
     [MHD Document Consumer]
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
 ] 
 autonumber 1 "<b>"
 MobileDevice -> Central: Resource Subscription [ITI-110]

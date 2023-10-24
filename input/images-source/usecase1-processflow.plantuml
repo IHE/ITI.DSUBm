@@ -16,8 +16,7 @@ participant MHDsDocumentRegistry [
     =Central Infrastructure
     ----
     [MHDs Document Registry]
-    [Resource Notification Publisher]
-    [Resource Notification Broker]
+    [DSUBm Resource Notification Broker]
     ] 
 
 
@@ -30,8 +29,8 @@ participant LaboratorySystem [
 participant NurseTablet [
     =Nurse Tablet
     ----
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
 autonumber "<b>"
@@ -50,17 +49,15 @@ deactivate MHDsDocumentRegistry
 
 LaboratorySystem -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-111]
+
 MHDsDocumentRegistry -> HospitalEHR : Resource Notify [ITI-112]
 activate HospitalEHR
-
 HospitalEHR -> MHDsDocumentRegistry:  Retrieve Document [ITI-68]
 deactivate MHDsDocumentRegistry
 HospitalEHR -> MHDsDocumentRegistry: Provide Document Bundle [ITI-65]
 deactivate HospitalEHR
 
 activate MHDsDocumentRegistry
-MHDsDocumentRegistry -> MHDsDocumentRegistry : Resource Publish [ITI-111]
 MHDsDocumentRegistry -> NurseTablet : Resource Notify [ITI-112]
 deactivate MHDsDocumentRegistry
 activate NurseTablet
@@ -71,7 +68,7 @@ autonumber stop
 NurseTablet -> NurseTablet: proceed with drug administration
 deactivate NurseTablet
 
-autonumber 11 "<b>"
+autonumber 9 "<b>"
 group Unsubscribe
   HospitalEHR ->MHDsDocumentRegistry: Resource Subscription [ITI-110]
   activate MHDsDocumentRegistry
