@@ -4,10 +4,28 @@ hide footbox
 participant "Resource Notification Broker" as  Broker
 participant "Resource Notification Recipient" as  Recipient
 
-
-Broker -> Recipient : 1.Notificanion Bundle Request [ITI-112]
+== Handshake Notification ==
+Broker -> Recipient :  Handshake Notification Message [ITI-112]
 activate Recipient
-Recipient --> Broker : 2. Notificanion Bundle Response [ITI-112]
+Recipient --> Broker :  Notification Response [ITI-112]
+deactivate Recipient
+
+== Heartbeat Notification ==
+Broker -> Recipient :  Heartbeat Notification Message  [ITI-112]
+activate Recipient
+Recipient --> Broker :  Notification Response [ITI-112]
+deactivate Recipient
+
+== Event Notification ==
+Broker -> Recipient :  Event Notification Message [ITI-112]
+activate Recipient
+Recipient --> Broker :  Notification Response [ITI-112]
+deactivate Recipient
+
+== Subscription Deactivation Notification ==
+Broker -> Recipient :  Subscription Deactivation Notification Message  [ITI-112]
+activate Recipient
+Recipient --> Broker :  Notification Response [ITI-112]
 deactivate Recipient
 
 @enduml
