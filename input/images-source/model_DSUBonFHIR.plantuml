@@ -16,7 +16,7 @@ card  Central [
   DSUB Document Metadata Publisher
 ]
 
-card "Document Metadata Notification Broker" as Broker 
+card "DSUB Document Metadata Notification Broker" as Broker 
 
 card  DSUBFHIR [
   <b>DSUB/FHIR interface
@@ -25,11 +25,11 @@ DSUB Document Metadata Subscriber
 ....
 DSUB Document Metadata Notification Recipient
 ....
-Resource Notification Broker
+DSUBm Resource Notification Broker
 ]
 
-card "Resource Notification Subscriber" as Subsciber 
-card "Resource Notification Recipient" as Recipient 
+card "DSUBm Resource Notification Subscriber" as Subsciber 
+card "DSUBm Resource Notification Recipient" as Recipient 
 
 Subsciber -u-> DSUBFHIR: ITI-110
 DSUBFHIR -d-> Broker: ITI-52

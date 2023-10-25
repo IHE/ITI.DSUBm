@@ -446,8 +446,7 @@ Thus, Ms. Fox receives the notification on her app and consults the reports.
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile).
-
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker is  supporting the [Updates to document sharing resources option](#Updating-events).
 **Main Flow**:
 
 1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription).
@@ -566,3 +565,18 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 
 Note that in this scenario, implementers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
 
+<!--
+#### 1:54.6.3.2 DSUB Subscription Search extension
+Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
+
+In this case the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
+
+<figure>
+{%include model_DSUB.svg%}
+<figcaption><b>Figure 1:54.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 
+</b></figcaption>
+</figure>
+<br clear="all">
+
+Note that in this scenario, if the Resource Notification Broker implemets also the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112], this model could be combined with the one in [1:54.6.2. XDS.b - Cross-Enterprise Document Sharing](#xds-model) section. 
+-->
