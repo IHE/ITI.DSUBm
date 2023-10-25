@@ -29,23 +29,16 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 **Table 1:54.1-1: DSUBm Profile - Actors and Transactions**
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
-| **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   | **Reference**  |
-| Resource Notification Broker     | Resource Subscription [ITI-110]             | Responder    | R      | ITI TF-2: 3.110 |
-|                                | Resource Publish [ITI-111]               | Responder    | O     | ITI TF-2: 3.111 |
-|                                | Resource Notify [ITI-112]                   | Initiator    | R      | ITI TF-2: 3.112 |
-|                                | Resource Subscription Search [ITI-113]      | Responder    | R | ITI TF-2: 3.113 |
-| Resource Notification Subscriber | Resource Subscription [ITI-110]             | Initiator    | R  | ITI TF-2: 3.110 |
-|                                | Resource Subscription Search [ITI-113]      | Initiator    | O   | ITI TF-2: 3.113 |
-| Resource Notification Publisher  | Resource Publish [ITI-111]               | Initiator    | R     | ITI TF-2: 3.111 |
-| Resource Notification Recipient  | Resource Notify [ITI-112]                   | Responder    | R     | ITI TF-2: 3.112 |
+| **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   |
+| Resource Notification Broker     | [Resource Subscription [ITI-110]](ITI-110.html)             | Responder    | R      | 
+|                                | [Resource Publish [ITI-111]](ITI-111.html)              | Responder    | O     |
+|                                | [Resource Notify [ITI-112]](ITI-112.html)                   | Initiator    | R      | 
+|                                | [Resource Subscription Search [ITI-113]](ITI-113.html)      | Responder    | R | 
+| Resource Notification Subscriber | [Resource Subscription [ITI-110]](ITI-110.html)             | Initiator    | R  | 
+|                                | [Resource Subscription Search [ITI-113]](ITI-113.html)      | Initiator    | O   |
+| Resource Notification Publisher  | [Resource Publish [ITI-111]](ITI-111.html)               | Initiator    | R     |
+| Resource Notification Recipient  | [Resource Notify [ITI-112]](ITI-112.html)                   | Responder    | R     | 
 {: .grid}
-
-
-<!--*Note 1: If the actor Resource Notification Broker supports the option "DSUB Subscription Search extension"(see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)) the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112] are not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
-
-*Note 2: If the actor Resource Notification Subscriber supports the option "DSUB Subscription Search extension" (see Section [1:54.2.1 DSUB Subscription Search extension](#dsub-extension)), it shall support the transaction Resource Subscription Search [ITI-113] and the transaction Resource Subscription [ITI-110] is not Required. See also the proposed model for [DSUB extension](#DSUB-extension-model) in Cross-Profile Considerations section.*
-
-*Note 3: If the actor Resource Notification Subscriber supports the option "Subscription Search" (see Section [1:54.2.2 Subscription Search](#Subscription-Search)), it shall support the transaction Resource Subscription Search [ITI-113].*-->
 
 ### 1:54.1.1 Actors
 
@@ -122,25 +115,15 @@ between options when applicable are specified in notes.
 
 **Table 1:54.2-1: Actor Options**
 
-| **Actors** | **Option Name** | **Vol. & Section** |
+| **Actors** | **Option Name** |
 |---------|-------------|-------------|
-| Resource Notification Broker | Updates to document sharing resources |ITI TF-1: 54.2.1|
-|                                  | Pull notification | ITI TF-1: 54.2.2 |
-| Resource Notification Subscriber |Updates to document sharing resources |ITI TF-1: 54.2.1|
-|                                  | Pull notification | ITI TF-1: 54.2.2 |
-| Resource Notification Publisher | Updates to document sharing resources | ITI TF-1: 54.2.1|
-| Resource Notification Recipient | none |--|
+| Resource Notification Broker | [Updates to document sharing resources](#Updating-event) |
+|                                  | [Pull notification](#Pull-notificatio) | 
+| Resource Notification Subscriber |[Updates to document sharing resources](#Updating-event) |
+|                                  | [Pull notification](#Pull-notificatio) | 
+| Resource Notification Publisher | [Updates to document sharing resources](#Updating-event) |
+| Resource Notification Recipient | none |
 {: .grid}
-
-<!--<a name="dsub-extension"> </a>
-
-#### 1:54.2.1 DSUB Subscription Search extension option
-
-This option consents to integrate an XDS-DSUB implementation, adding to a DSUB Document Metadata Subscriber the functionality of searching for subscriptions previously requested to a DSUB Metadata Notification Broker.
-
-The Resource Notification Subscriber that supports this option shall be able to be grouped with a DSUB Document Metadata Subscriber, shall implement the Resource Subscription Search [ITI-113] transaction and could not implement the Resource Subscription [ITI-110] transaction.
-
-The Resource Notification Broker that supports this option shall be able to be grouped with a DSUB Document Metadata Notification Broker, could not implement the Resource Subscription [ITI-110] transaction and the Resource Notify [ITI-112] transaction.-->
 
 
 <a name="Updating-events"> </a>
@@ -153,7 +136,7 @@ The Resource Notification Broker that supports this option shall support the Sub
 
 The Resource Notification Subscriber that supports this option shall support the Subscription define in section [Subscription with Updates to document sharing resources option]().
 
-The Resource Notification Publisher that supports this option shall also support for the Resource Publish [ITI-111] transaction the trigger events define in section [Updating events option](). 
+The Resource Notification Publisher that supports this option shall also support for the Resource Publish [ITI-111] transaction the trigger events define in section [Subscription with Updates to document sharing resources option](). 
 
 <a name="Pull-notification"> </a>
 
@@ -564,19 +547,3 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 <a name="DSUB-extension-model"> </a>
 
 Note that in this scenario, implementers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
-
-<!--
-#### 1:54.6.3.2 DSUB Subscription Search extension
-Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
-
-In this case the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
-
-<figure>
-{%include model_DSUB.svg%}
-<figcaption><b>Figure 1:54.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 
-</b></figcaption>
-</figure>
-<br clear="all">
-
-Note that in this scenario, if the Resource Notification Broker implemets also the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112], this model could be combined with the one in [1:54.6.2. XDS.b - Cross-Enterprise Document Sharing](#xds-model) section. 
--->
