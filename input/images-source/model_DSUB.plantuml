@@ -21,7 +21,7 @@ card Broker [
   ----
   DSUB Document Metadata Notification Broker
   ....
-  Resource Notification Broker
+  DSUBm Resource Notification Broker
 ]
 
 card Subscriber [
@@ -29,7 +29,7 @@ card Subscriber [
   ----
   DSUB Document Metadata Subscriber
   ....
-  Resource Notification Subscriber
+  DSUBm Resource Notification Subscriber
 ]
 
 card "DSUB Document Metadata Notification Recipient" as DSUB_Recipient 

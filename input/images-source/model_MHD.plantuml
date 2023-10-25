@@ -13,10 +13,10 @@ card  Registry [
   ----
   XDS Document Registry 
   ....
-  Resource Notification  Publisher
+  DSUBm Resource Notification  Publisher
 ]
-card "Resource Notification Broker" as DSUBm_Broker
-card "Resource Notification Subscriber" as DSUBm_Subscriber
+card "DSUBm Resource Notification Broker" as DSUBm_Broker
+card "DSUBm Resource Notification Subscriber" as DSUBm_Subscriber
 
 
 card  Consumer_XDS[
@@ -24,7 +24,7 @@ card  Consumer_XDS[
   ----
   XDS Document Consumer
   ....
-  Resource Notification  Recipient
+  DSUBm Resource Notification  Recipient
 ]
 
 card  Consumer_MHD[
@@ -32,7 +32,7 @@ card  Consumer_MHD[
   ----
   MHD Document Consumer
   ....
-  Resource Notification  Recipient
+  DSUBm Resource Notification  Recipient
 ]
 
 

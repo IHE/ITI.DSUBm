@@ -7,8 +7,8 @@ participant HospitalEHR [
     =Hospital EHR
     ----
     [MHD Document Source]
-    [Resource Notification Subscriber]
-    [Resource Notification Recipient]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
     [MHD Document Consumer]
 ] 
 

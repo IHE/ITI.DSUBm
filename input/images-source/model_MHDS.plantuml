@@ -6,8 +6,8 @@ hide footbox
 /' title "DSUBm grouped with MHDS" '/
 
 
-card "Resource Notification Subscriber" as DSUBm_Subsciber 
-card "Resource Notification Broker" as DSUBm_Broker
+card "DSUBm Resource Notification Subscriber" as DSUBm_Subsciber 
+card "DSUBm Resource Notification Broker" as DSUBm_Broker
 
 card  Registry [
   <b>MHDs Document Registry
@@ -16,7 +16,7 @@ card  Registry [
   ....
   MHD Document Recipient
   ....
-  Resource Notification Publisher
+  DSUBm Resource Notification Publisher
 ]
 
 card Publisher [
@@ -30,7 +30,7 @@ card  Consumer [
   ----
   MHD Document Consumer
   ....
-  Resource Notification  Recipient
+  DSUBm Resource Notification Recipient
 ]
 
 
