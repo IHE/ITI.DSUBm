@@ -128,7 +128,7 @@ between options when applicable are specified in notes.
 |                                  | Pull notification | ITI TF-1: 54.2.2 |
 | Resource Notification Subscriber |Updates to document sharing resources |ITI TF-1: 54.2.1|
 |                                  | Pull notification | ITI TF-1: 54.2.2 |
-| Resource Notification Publisher | Updates to document sharing resources option | ITI TF-1: 54.2.1|
+| Resource Notification Publisher | Updates to document sharing resources | ITI TF-1: 54.2.1|
 | Resource Notification Recipient | none |--|
 {: .grid}
 
@@ -147,7 +147,7 @@ The Resource Notification Broker that supports this option shall be able to be g
 
 #### 1:54.2.1 Updates to document sharing resources option
 
-This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations or by Remove Metadata [ITI-62] transaction operations to DocumentEntry, Folder, and Association Objects.
+This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations, by Remove Metadata [ITI-62] transaction or by [ITI-92] Restricted Update Document Set transaction operations to DocumentEntry, Folder, and Association Objects.
 
 The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updates to document sharing resources option]().
 
@@ -307,7 +307,7 @@ During the third visit, Ms. Williams decides that a different physician will tak
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the ["Subscription Search"](#actor-options). 
+The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the Resource Subscription Search [ITI-113] transaction. 
 
 **Main Flow**:
 
@@ -566,18 +566,3 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 
 Note that in this scenario, implementers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
 
-<!--
-#### 1:54.6.3.2 DSUB Subscription Search extension
-Implementing the "DSUB Subscription Search extension" option the DSUB Document Meatadata Subscriber will be grouped with a Resource Notification Subscriber and the DSUB Document Metadata Notification Broker will be grouped with a Resource Notification Broker.
-
-In this case the existing DSUB infrastructure is enriched with the possibility to search for the Subscription. 
-
-<figure>
-{%include model_DSUB.svg%}
-<figcaption><b>Figure 1:54.6.3.2-1: DSUBm actors grouped with DSUB: Notification Manager 
-</b></figcaption>
-</figure>
-<br clear="all">
-
-Note that in this scenario, if the Resource Notification Broker implemets also the transaction Resource Subscription [ITI-110] and the the transaction Resource Notify [ITI-112], this model could be combined with the one in [1:54.6.2. XDS.b - Cross-Enterprise Document Sharing](#xds-model) section. 
--->
