@@ -14,6 +14,7 @@ This section defines the actors and transactions in this implementation guide.
   - [Resource Publish [ITI-111]](ITI-111.html)
   - [Resource Notify [ITI-112]](ITI-112.html)
   - [Resource Subscription Search [ITI-113]](ITI-113.html)
+  - [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
 
 
 Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
