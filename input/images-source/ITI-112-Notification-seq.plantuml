@@ -7,25 +7,25 @@ participant "Resource Notification Recipient" as  Recipient
 == Handshake Notification ==
 Broker -> Recipient :  Handshake Notification Message [ITI-112]
 activate Recipient
-Recipient --> Broker :  Notification Response [ITI-112]
+Recipient --> Broker :  Handshake Notification Response [ITI-112]
 deactivate Recipient
 
 == Heartbeat Notification ==
 Broker -> Recipient :  Heartbeat Notification Message  [ITI-112]
 activate Recipient
-Recipient --> Broker :  Notification Response [ITI-112]
+Recipient --> Broker :  Heartbeat Notification Response [ITI-112]
 deactivate Recipient
 
 == Event Notification ==
 Broker -> Recipient :  Event Notification Message [ITI-112]
 activate Recipient
-Recipient --> Broker :  Notification Response [ITI-112]
+Recipient --> Broker :  Event Notification Response [ITI-112]
 deactivate Recipient
 
 == Subscription Deactivation Notification ==
 Broker -> Recipient :  Subscription Deactivation Notification Message  [ITI-112]
 activate Recipient
-Recipient --> Broker :  Notification Response [ITI-112]
+Recipient --> Broker :  Subscription Deactivation Notification Response [ITI-112]
 deactivate Recipient
 
 @enduml

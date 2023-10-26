@@ -17,3 +17,35 @@
 ### Closed Issues
 
 * DSUBm_002: example this is closed issue 2
+<!--
+#### 1:54.4.2.7 Use Case \#7: Document Subscription with pull notification for Mobile Device in a MHDS Environment 
+
+The new document are pulled by the client in order to know the new documents that have been published.
+
+##### 1:54.4.2.7.1 Document Subscription with pull notification for Mobile Device in MHDS Environment Use Case Description
+
+Ms. Smith is a doctor that, during the patient visit, uses a mobile app in order to see the exam reports produced for the patient that is currentrly visiting. When the doctor switch the context to the currently visited patient M the app retrieve only the new documents that were produced since the last time the app was used for that specific patient.
+During the first visit Dr. Smith subscribe for documents prodcued for Mr. Jones. 
+Before the second visit a medical report has been produced for Mr. Jones. When Mr. Jones shows up for the second visit the app that Dr. Smith is using will retrieve the documents that were prodcued between the end of the last visit done for Mr. Jones and the start of teh current visit. 
+
+##### 1:54.4.2.7.2 Document Subscription with pull notification for Mobile Device in MHDS Environment Process Flow
+
+<figure>
+{%include usecase7-processflow.svg%}
+<figcaption><b>1:54.4.2.7.2-1: Document Subscription with pull notification for Mobile Device in MHDS Environment</b></figcaption>
+</figure>
+<br clear="all">
+
+**Pre-conditions**:
+
+The assumption is that the visit app is working in a MHDS Environment. In the central infrastructure, the MHDS Registry is grouped by the Resource Notification Publisher and Resource Notification Broker. The Resource Notification Broker is  supporting the [Pull notification option](#Pull-notification) and is grouped with a Resource Notification Recipient. 
+
+**Main Flow**:
+
+1. The visit app during the first visit performs a patient-dependent subscription in order to subscribe for the documents produced for the new patient ([ITI-110] Resource Subscription). In the subscription a local endpoint is indicated in order to explicit that the notification are going to be retrieved with pull modality. 
+2. After the first visit a medical report has been produced ([ITI-65] Provide Document Bundle).
+3. The Resource Notification Publisher deliver a publication event to the Resource Notification Broker([ITI-111] Resource Publish). 
+4. The Resource Notification Broker seeing that the publication event is matching the criteria subscription expressed in the first step, and, recognizing that a local endpoint has been used in the subscription produce a notification towards the grouped Resource Notification Recipient ([ITI-112] Resource Notify). 
+5. At the start of the second visit, when Dr.smith choose Mr. Jones on the Visit app the app will retrieve any notification produced and stashed in the Broker([ITI-113] Resource Subscription Search) using the `$event` operation.
+6. The Visit App will retrieve the Document described in the notification. ([ITI-68] Retrieve Document).   
+-->

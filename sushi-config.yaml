@@ -90,19 +90,19 @@ pages:
     title: 1:54 Document Subscription for Mobile (DSUBm)
     generation: markdown
   ITI-110.md:
-    title: 2:3.110 Resource Subscription
+    title: 2:3.110 Resource Subscription [ITI-110]
     generation: markdown
   ITI-111.md:
-    title: 2:3.111 Resource Publish
+    title: 2:3.111 Resource Publish [ITI-111]
     generation: markdown
   ITI-112.md:
-    title: 2:3.112 Resource Notify
+    title: 2:3.112 Resource Notify [ITI-112]
     generation: markdown
   ITI-113.md:
-    title: 2:3.113 Resource Subscription Search
+    title: 2:3.113 Resource Subscription Search [ITI-113]
     generation: markdown
   ITI-114.md:
-    title: 2:3.114 Resource SubscriptionTopic Search
+    title: 2:3.114 Resource SubscriptionTopic Search [ITI-114]
     generation: markdown
   testplan.md:
     title: "Test Plan"
