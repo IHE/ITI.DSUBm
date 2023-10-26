@@ -1,8 +1,8 @@
 {
     "package-id" : "ihe.iti.dsubm",
-    "version" : "1.0.0-comment",
-    "path" : "https://profiles.ihe.net/ITI/DSUBm/1.0.0-comment",
-    "milestone" : true,
+    "version" : "1.0.0-ballot",
+    "path" : "https://profiles.ihe.net/ITI/DSUBm/1.0.0-ballot",
+    "mode" : "working",
     "status" : "ballot",
     "sequence" : "Publication",
     "desc" : "First Public-Comment",
@@ -11,8 +11,8 @@
     - First Public-Comment",
     "changes" : "issues.html",
     "first" : true,
-    "title" : "IHE ITI DSUBm",
+    "title" : "Mobile Access to Health Documents (MHD",
     "ci-build" : "http://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html",
-    "category" : "Subscription Clinical Document",
+    "category" : "Clinical Document",
     "introduction" : "This profile describes the use of document subscription and notification mechanisms for RESTful applications."
   }
