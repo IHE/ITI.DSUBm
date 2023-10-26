@@ -16,9 +16,9 @@ This section modifies other IHE profiles or the General Introduction appendices 
 | Document Metadata Notification Broker    | Document Metadata Subscribe    | R    | ITI TF-2: 3.52     |  
 |                                          | Document Metadata Notify   | R    | ITI TF-2: 3.53     | 
 |                                          | Document Metadata Publish    | O    | ITI TF-2: 3.54    |  
-|                                          | **Document Metadata Notify**   | **O**  | **ITI TF-2: 3.113**     | 
+|                                          | **Resource Subscription Search**   | **O**  | **ITI TF-2: 3.113**     | 
 | Document Metadata Subscriber              |Document Metadata Subscribe |R |ITI TF-2: 3.52| 
-|                                          | **Document Metadata Notify**   | **O**  | **ITI TF-2: 3.113**     | 
+|                                          | **Resource Subscription Search**   | **O**  | **ITI TF-2: 3.113**     | 
 |Document Metadata Publisher |Document Metadata Publish | R | ITI TF-2: 3.54 |
 |Document Metadata Notification Recipient | Document Metadata Notify | R | ITI TF-2:3.53|
 {: .grid}
