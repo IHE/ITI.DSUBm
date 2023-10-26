@@ -11,7 +11,7 @@
     - First Public-Comment",
     "changes" : "issues.html",
     "first" : true,
-    "title" : "Mobile Access to Health Documents (MHD",
+    "title" : "Document Subscription for Mobile (DSUBm)",
     "ci-build" : "http://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html",
     "category" : "Clinical Document",
     "introduction" : "This profile describes the use of document subscription and notification mechanisms for RESTful applications."
