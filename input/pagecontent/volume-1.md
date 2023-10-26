@@ -14,6 +14,7 @@ This section defines the actors and transactions in this implementation guide.
   - [Resource Publish [ITI-111]](ITI-111.html)
   - [Resource Notify [ITI-112]](ITI-112.html)
   - [Resource Subscription Search [ITI-113]](ITI-113.html)
+  - [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
 
 
 Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
@@ -30,14 +31,16 @@ Table 1.54.1-1 lists the transactions for each actor directly involved in the DS
 
 |---------|---------------|------------------------|-----------------|-----------------------------------|
 | **Actors**  | **Transactions**  | **Initiator or Responder** | **Optionality**                   |
-| Resource Notification Broker     | [Resource Subscription [ITI-110]](ITI-110.html)             | Responder    | R      | 
-|                                | [Resource Publish [ITI-111]](ITI-111.html)              | Responder    | O     |
-|                                | [Resource Notify [ITI-112]](ITI-112.html)                   | Initiator    | R      | 
+| Resource Notification Broker     | [Resource Subscription [ITI-110]](ITI-110.html)     | Responder    | R      | 
+|                                | [Resource Publish [ITI-111]](ITI-111.html)           | Responder    | O     |
+|                                | [Resource Notify [ITI-112]](ITI-112.html)           | Initiator    | R      | 
 |                                | [Resource Subscription Search [ITI-113]](ITI-113.html)      | Responder    | R | 
+|                                | [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)  | Responder    | R | 
 | Resource Notification Subscriber | [Resource Subscription [ITI-110]](ITI-110.html)             | Initiator    | R  | 
 |                                | [Resource Subscription Search [ITI-113]](ITI-113.html)      | Initiator    | O   |
+|                                | [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)  | Initiator    | O | 
 | Resource Notification Publisher  | [Resource Publish [ITI-111]](ITI-111.html)               | Initiator    | R     |
-| Resource Notification Recipient  | [Resource Notify [ITI-112]](ITI-112.html)                   | Responder    | R     | 
+| Resource Notification Recipient  | [Resource Notify [ITI-112]](ITI-112.html)             | Responder    | R     | 
 {: .grid}
 
 ### 1:54.1.1 Actors
@@ -100,9 +103,15 @@ For more details see the detailed [[ITI-112] transaction description](ITI-112.ht
 
 #### 1:54.1.2.4 Resource Subscription Search [ITI-113]
 
-This transaction is used for searching existing Subscriptions.
+This transaction is used for searching existing Subscriptions Resource.
 
 For more details see the detailed [[ITI-113] transaction description](ITI-113.html)
+
+#### 1:54.1.2.5 Resource SubscriptionTopic Search [ITI-114]
+
+This transaction is used for searching existing SubscriptionsTopic Resource.
+
+For more details see the detailed [[ITI-114] transaction description](ITI-114.html)
 
 
 
@@ -118,9 +127,7 @@ between options when applicable are specified in notes.
 | **Actors** | **Option Name** |
 |---------|-------------|-------------|
 | Resource Notification Broker | [Updates to document sharing resources](#Updating-event) |
-|                                  | [Pull notification](#Pull-notificatio) | 
 | Resource Notification Subscriber |[Updates to document sharing resources](#Updating-event) |
-|                                  | [Pull notification](#Pull-notificatio) | 
 | Resource Notification Publisher | [Updates to document sharing resources](#Updating-event) |
 | Resource Notification Recipient | none |
 {: .grid}
@@ -130,7 +137,7 @@ between options when applicable are specified in notes.
 
 #### 1:54.2.1 Updates to document sharing resources option
 
-This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations, by Remove Metadata [ITI-62] transaction or by [ITI-92] Restricted Update Document Set transaction operations to DocumentEntry, Folder, and Association Objects.
+This option consents to include in the notification events also the updating and deleting of the Resources which could be subscribed. In an XDS enviroment, this option permits to consider the updating and deleting events determinated by Update Document Set [ITI-57] transaction operations, by Remove Metadata [ITI-62] transaction or by Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
 
 The Resource Notification Broker that supports this option shall support the Subscription define in section [Subscription with Updates to document sharing resources option]().
 
@@ -138,74 +145,10 @@ The Resource Notification Subscriber that supports this option shall support the
 
 The Resource Notification Publisher that supports this option shall also support for the Resource Publish [ITI-111] transaction the trigger events define in section [Subscription with Updates to document sharing resources option](). 
 
-<a name="Pull-notification"> </a>
-
-#### 1:54.2.2 Pull notification option
-
-This option consents to a Resource Notification Subscriber to operate in a pull modality for retrieving the notifications.
-
-The Resource Notification Broker that supports this option shall be able to be grouped with a Resource Notification Recipient and shall support the `$events` operation for the Resource Subscription Search [ITI-113] transaction.
-
-The Resource Notification Subscriber that supports this option shall implement the Resource Subscription Search [ITI-113] transaction and the `$events` operation for this transaction, and shall subscribe towards the Resource Notification Broker indicating in the `Subscription.endpoint` element the URL that identifies the Resource Notification Recipient grouped with the Resource Notification Broker.
-
-
-
-
-
-
 <a name="required-groupings"> </a>
 
 ## 1:54.3 Required Actor Groupings
-Actor(s) which are required to be grouped with other actor(s) are listed in this section. The grouped actor may be from this profile or a different domain/profile.
-
-An actor from this profile (Column 1) shall implement all of the
-required transactions and/or content modules in this profile ***in
-addition to*** ***<u>all</u>*** of the requirements for the grouped
-actor (Column 3) 
-
-**Table 1:54.3-1: Required Actor Groups**
-
-<table border="1" borderspacing="0" style='border: 1px solid black; border-collapse: collapse'>
-<thead>
-<tr class="header">
-<th>DSUBm Actor</th>
-<th>Grouping Condition</th>
-<th>Actor(s) to be grouped with</th>
-<th>Reference</th>
-</tr>
-</thead>
-<tbody>
-
-
-<tr class="even">
-<td>Resource Notification Broker</td>
-<td>Pull notification option</td>
-<td><p><em>Resource Notification Recipient</em></p></td>
-<td><a href="#15422-pull-notification-option">ITI TF-1: 54.2.2</a></td>
-</tr>
-
-<tr class="odd">
-<td>Resource Notification Subscriber</td>
-<td>-</td>
-<td><p><em>None</em></p></td>
-<td>-</td>
-</tr>
-
-<tr class="even">
-<td>Resource Notification Publisher</td>
-<td>-</td>
-<td><p><em>None</em></p></td>
-<td>-</td>
-</tr>
-
-<tr class="odd">
-<td>Resource Notification Recipient</td>
-<td>-</td>
-<td><p><em>None</em></p></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+This profile does not mandate the grouping with other actors.
 
 <a name="overview"> </a>
 
@@ -430,6 +373,7 @@ Thus, Ms. Fox receives the notification on her app and consults the reports.
 **Pre-conditions**:
 
 The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system share and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker is  supporting the [Updates to document sharing resources option](#Updating-events).
+
 **Main Flow**:
 
 1. The mobile app performs a patient-dependent subscription specific for reports and specifing a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription).
