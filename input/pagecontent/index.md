@@ -38,12 +38,12 @@ This guide is organized into the following sections:
    1. [Resource Subscription [ITI-111]](ITI-111.html)
    1. [Resource Notify [ITI-112]](ITI-112.html)
    1. [Resource Subscription Search [ITI-113]](ITI-113.html)
-   1. [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html) -->
+   1. [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
    <!-- 1. **TODO: point to the Volume 2 Appendix if there is one** -->
 
 - Other
    <!--1. [Test Plan](testplan.html)-->
-   1. [Changes to Other IHE Specifications](other.html)-->
+   1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html) 
 
 See also the [Table of Contents](toc.html) and the index of [Artifacts](artifacts.html) defined as part of this implementation guide.
