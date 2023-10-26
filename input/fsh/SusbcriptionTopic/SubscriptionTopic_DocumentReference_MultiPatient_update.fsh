@@ -1,12 +1,14 @@
 Instance: SubscriptionTopic-DocReference-MultiPatient-All-Interaction
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for MultiPatient DocumentReference events. "
+Title:       "Canonical Topic for create/update/delete events of a DocumentReference resource."
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation/update/delete of a DocumentReference. 
 This topic shall be used in all DocumentReference subscriptions that have not a specific patient in the criteria element.
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
 - the resourceTrigger.resource element shall be a DocumentReference resource
+- the canFilterBy.filterParameter does not include the patient parameter
+- this resource shall be used when the [Updates to document sharing resources option](volume-1.html#15421-updates-to-document-sharing-resources-option) is supported.
 "
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"

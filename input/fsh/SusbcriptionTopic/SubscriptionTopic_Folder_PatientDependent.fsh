@@ -1,12 +1,13 @@
 Instance: DSUBm-SubscriptionTopic-Folder-PatientDependent
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for a Folder PatientDependent creation event for a specific patient"
+Title:       "Canonical Topic for a create event of a Folder List resource. "
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder List Resource. 
-This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element.
+This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
 - the resourceTrigger.resource element shall be a Folder List resource
+- this topic only covers the create event
 "
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"

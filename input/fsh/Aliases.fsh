@@ -6,6 +6,7 @@ Alias: $fhir-types = http://hl7.org/fhir/fhir-types
 
 Alias: $webHookEndpoint = https://example.org/Endpoints/endpoint1
 
+Alias: $base = https://profiles.ihe.net/ITI/DSUBm
 
 
 
