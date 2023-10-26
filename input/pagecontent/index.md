@@ -25,7 +25,7 @@ This profile intends to be compliant with [Subscriptions R5 Backport](http://hl7
 This guide is organized into the following sections:
 
 - Volume 1:
-   1. [Introduction](volume-1.html#introduction)
+   1. [Introduction](index.html)
    1. [Actors, Transactions, and Content](volume-1.html#actors-and-transactions)
    1. [Actor Options](volume-1.html#actor-options)
    1. [Actor Required Groupings](volume-1.html#required-groupings)
