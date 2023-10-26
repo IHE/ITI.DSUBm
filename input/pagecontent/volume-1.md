@@ -237,16 +237,17 @@ The assumption is that systems share the information in an MHDS Environment. The
 
 **Main Flow**:
 
-1.  During the first visit a document subscription is needed. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
-2. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-3. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-4. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-5. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
-6. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-7. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-8. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
-9. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
-10. The mobile DHR unsubscribe from the folder subscription. ([ITI-110] Resource Subscription.)
+1.  During the first visit a document subscription is needed. The mobile DHR application search on the Resource Notification Broker for the supported SubscriptionTopic resource.([ITI-114] Resource SubscriptionTopic Search). 
+2. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
+3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+5. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+6. After some days during the second visit, Dr. Rooney use the updated clinical data to adjust the therapy from A to B.
+7. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+8. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+9. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+10. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
+11. The mobile DHR unsubscribe from the folder subscription. ([ITI-110] Resource Subscription.)
 
 
 #### 1:54.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
