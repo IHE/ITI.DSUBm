@@ -1,15 +1,18 @@
 {
-    "package-id" : "{pid} -- ihe.domain.profile",
-    "version" : "{version to release}",
-    "path" : "{path} -- https://profiles.ihe.net/Domain/Profile/1.0.0",
-    "milestone" : true | false,
-    "status" : "release",
-    "sequence" : "Releases",
-    "desc" : "{desc of release} (optional)",
-    "descmd" : "{markdown desc of release} (optional)",
-    "changes" : "{relative link to description of changes} (optional)",
-    "title" : "{title} (only for first release)",
-    "ci-build" : "{link to ci-build location} (only for first release) -- http://build.fhir.org/ig/IHE/Profile",
-    "category" : "{category} (only for first release)",
-    "introduction" : "{intro} (only for first release)"
+    "package-id" : "ihe.iti.dsubm",
+    "version" : "1.0.0-comment",
+    "path" : "https://profiles.ihe.net/ITI/DSUBm/1.0.0-comment",
+    "milestone" : true,
+    "status" : "ballot",
+    "sequence" : "Publication",
+    "desc" : "First Public-Comment",
+    "descmd" : "Version 1.0.0-comment
+    
+    - First Public-Comment",
+    "changes" : "issues.html",
+    "first" : true,
+    "title" : "IHE ITI DSUBm",
+    "ci-build" : "http://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html",
+    "category" : "Subscription Clinical Document",
+    "introduction" : "This profile describes the use of document subscription and notification mechanisms for RESTful applications."
   }

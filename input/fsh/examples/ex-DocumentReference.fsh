@@ -1,5 +1,6 @@
+/*
 Instance:   ex-DocumentReferenceMinimal
-InstanceOf: DocumentReferenceR4
+InstanceOf: IHE.MHD.Minimal.DocumentReference
 Title:      "DocumentReference for Minimal metadata"
 Description: "Example of a minimal DocumentReference resource. This is very unlikely to be acceptable anywhere, but it is the minimum required."
 Usage: #example
@@ -12,3 +13,5 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
+
+*/
