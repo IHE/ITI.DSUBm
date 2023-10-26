@@ -4,9 +4,9 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.dsubm
 canonical: https://profiles.ihe.net/ITI/DSUBm
-version: 1.0.0-comment
+version: 1.0.0-ballot
 name: IHE_ITI_DSUBm
-title: "IHE ITI DSUBm"
+title: "Mobile Access to Health Documents (MHD"
 description:  profile describes the use of document subscription and notification mechanisms for RESTful applications. 
 ##releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
