@@ -1,12 +1,13 @@
 Instance: DSUBm-SubscriptionTopic-Folder-PatientDependent-update
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for a Folder PatientDependent creation or update events."
+Title:       "Canonical Topic for the create/update/delete events of a Folder List resource."
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder List Resource. 
 This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element.
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
 - the resourceTrigger.resource element shall be a Folder List resource
+- this resource shall be used when the [Updates to document sharing resources option](https://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/volume-1.html#15421-updates-to-document-sharing-resources-option) is supported.
 "
 * meta.versionId = "1"
 * meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"

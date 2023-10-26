@@ -12,3 +12,18 @@ Description:  "Resource Subscription for DSUBm profile for Folder with the indic
 * criteria = Canonical(DSUBm-SubscriptionTopic-Folder-PatientDependent)
 
 
+
+Profile: DSUBm_Folder_PatientDependent_Subscription_update
+Parent: DSUBm_Subscription 
+Id: DSUBm-Folder-PatientDependent-Subscription-update
+Title:       "Subscription for Folder Patient-Dependent with update option"
+Description:  "Resource Subscription for DSUBm profile for Folder with the indication of the patient
+- the criteria element shall contain the URL of an instance of SubscriptionTopic from the 'DSUBm_SubscriptionTopic_Folder_PatientDependent' profile
+"
+* criteria 1..1 
+* criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_Folder_PatientDependent' "
+* criteria.extension obeys Folder-PatientDependent
+* criteria = Canonical(DSUBm-SubscriptionTopic-Folder-PatientDependent-update)
+
+
+
