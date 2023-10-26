@@ -1,3 +1,4 @@
+/*
 Instance:    PatientDependent-Document-Subscription 
 InstanceOf:  DSUBm_DocumentReference_PatientDependent_Subscription
 Usage:       #example
@@ -12,3 +13,4 @@ Description: "R4 Example of an active topic-based 'DocumentReference' subscripti
 * channel.endpoint                                     = $webHookEndpoint
 * channel.payload                                      = #application/fhir+json
 * channel.payload.extension[content].valueCode         = #full-resource
+*/

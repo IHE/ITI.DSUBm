@@ -4,8 +4,8 @@ Id: DSUBm-Subscription-general
 Description: "Resource Subscription for DSUBm profile"
 
 * channel.type = #rest-hook 
-* channel.endpoint 1..1 MS SU  
-* channel.endpoint ^short = "If the enpoint is \"https://localhost\" then the pull modality will be used by the Subscriber in order retrieve the notifications. "
+* channel.endpoint 0..1 MS SU  
+* channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload
 
 

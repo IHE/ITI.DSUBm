@@ -9,4 +9,4 @@ Description:  "Resource Subscription for DSUBm profile for SubmissionSet with th
 * criteria 1..1 
 * criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_SubmissionSet_PatientDependent' "
 * criteria.extension obeys SubmissionSet-PatientDependent
-* criteria = "urn:uuid:fbede94e-dbdc-4f6b-bc1f-d730e677cece"
+* criteria = Canonical(DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent)
