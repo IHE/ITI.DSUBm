@@ -16,23 +16,24 @@
 
 * **DSUBm_003**: The DUSBm profile proposed a changes to the DSUB profile in order to extend DSUB with a RESTfull search functionality regarding the subscription. [There](other.html), is present the proposed changes. Is this functionality something usefull to extend DSUB or the proposed change is too challenging? 
 
-* **DSUBm_007**: Should the DSUBm profile include a pure Pull Notification mechanism? No specific request have been submitted for this implementation. If needed it is possible to send change proposal during the public comment period. The possible way to actuate a pure Pull Notification is to use the $events operation of the Resource Subscription Search [ITI-113] transaction. A possible use case is represented below:
+* **DSUBm_007**: Should the DSUBm profile include a Pull Notification mechanism or is it sufficient to use a search (ITI-66 or ITI-67) on the resources using the subscription criteria as query parameter? At the moment no specific request have been already submitted for this implementation. If the pull notification is needed and a real use case is provided, it is possible to send change proposal during the public comment period. We propose here a possible way to utilize a pure Pull Notification modality using the $events operation of the Resource Subscription Search [ITI-113] transaction. A possible use case is represented below:
 
-    Ms. Smith is a doctor that, during the patient visit, uses a mobile app in order to see the exam reports produced for the patient that is currentrly visiting. When the doctor switch the context to the currently visited patient M the app retrieve only the new documents that were produced since the last time the app was used for that specific patient.
-    During the first visit Dr. Smith subscribe for documents prodcued for Mr. Jones. 
-    Before the second visit a medical report has been produced for Mr. Jones. When Mr. Jones shows up for the second visit the app that Dr. Smith is using will retrieve the documents that were prodcued between the end of the last visit done for Mr. Jones and the start of teh current visit. 
+    Ms. Smith is a doctor that, during the patient visit, uses a mobile app in order to see the exam reports produced for the patient that is currentrly visiting. When the doctor switches the context to the currently visited patient, the app retrieves the notification regarding the new documents that were produced since the last time the app was used for that specific patient.
+    During the first visit, Dr. Smith subscribes for documents prodcued for Mr. Jones. 
+    Before the second visit some medical reports has been produced for Mr. Jones.
+    When Mr. Jones shows up for the second visit the app, used by Dr. Smith, will retrieve the notification that were produced between the end of the last visit done for Mr. Jones and the start of the current visit. Dr.Smith, based on the notification retrieved by the app will  to retrieve only some of the documents that  
 
     **Document Subscription with pull notification for Mobile Device in MHDS Environment Process Flow**
 
     <figure>
     {%include usecase7-processflow.svg%}
-    <figcaption><b>1:54.4.2.7.2-1: Document Subscription with pull notification for Mobile Device in MHDS Environment</b></figcaption>
+    <figcaption><b>Document Subscription with pull notification for Mobile Device in MHDS Environment</b></figcaption>
     </figure>
     <br clear="all">
 
     **Pre-conditions**:
 
-    The assumption is that the visit app is working in a MHDS Environment. In the central infrastructure, the MHDS Registry is grouped by the Resource Notification Publisher and Resource Notification Broker. The Resource Notification Broker is  supporting the [Pull notification option](#Pull-notification) and is grouped with a Resource Notification Recipient. 
+    The assumption is that the visit app is working in a MHDS Environment. In the central infrastructure, the MHDS Registry is grouped by the Resource Notification Publisher and Resource Notification Broker. The Resource Notification Broker is  supporting the Pull notification and is grouped with a Resource Notification Recipient. 
 
     **Main Flow**:
 

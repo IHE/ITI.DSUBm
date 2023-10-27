@@ -7,7 +7,7 @@ Description:    "Profile on the R4B Bundle resource for transaction for the ITI-
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
 * entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the entry. \n All notification bundle MUST have a Parameters as the first entry "
+* entry ^slicing.description = "Slicing based on the profile conformance of the entry. \n All notification bundle MUST have a ParSubscriptionStatus  as the first entry "
 * entry and entry.resource MS
 * entry contains 
     SubmissionSet 0..* and
