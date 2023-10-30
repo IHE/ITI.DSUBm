@@ -3,7 +3,7 @@ Profile:        DSUBm_MinimalSubmissionSet
 Parent:         DSUBmList
 Id:             IHE.DSUBm.Minimal.SubmissionSet
 Title:          "DSUBm SubmissionSet Minimal"
-Description:    "A profile on the List resource for DSUBm SubmissionSet."
+Description:    "The same profile of [MHD SubmissionSet Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet) reported in R4B Fhir version"
 * extension[designationType] 0..1 MS
 * extension contains SourceId named sourceId 1..1
 * extension contains IntendedRecipient named intendedRecipient 0..*
@@ -109,7 +109,7 @@ Description:    "A profile on the List resource for DSUBm Comprehensive Submissi
   - aka the XDR Document Source requirements"
 * source ^type.aggregation = #contained
 */
-
+/*
 // mappings to XDS 
 Mapping: SubmissionSet-Mapping
 Source:	IHE.DSUBm.Minimal.SubmissionSet
@@ -137,3 +137,4 @@ Title: "XDS and DSUBm Mapping"
 * entry.date -> "n/a"
 * entry.item -> "references to DocumentReference(s) and Folder List(s)"
 * emptyReason -> "n/a"
+*/

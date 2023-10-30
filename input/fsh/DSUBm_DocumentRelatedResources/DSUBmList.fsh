@@ -3,8 +3,7 @@ Profile:        DSUBmList
 Parent:         List
 Id:             IHE.DSUBm.List
 Title:          "DSUBm common List with designationType"
-Description:    "A profile on the List resource for DSUBm. Used with both Folder and SubmissionSet.
-- DSUBm adds a codeable Concept to List for use with Folder and SubmissionSet"
+Description:    "The same profile from [MHD common List with designationType](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.List) reported in R4B Fhir version"
 * extension contains DesignationType named designationType 0..*
 * modifierExtension 0..0
 // code is used ONLY to switch between folder and submissionSet

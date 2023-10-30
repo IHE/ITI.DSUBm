@@ -1,11 +1,8 @@
 == Suppressed Messages ==
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 
-# Some profiles doe not have examples yet
+# Some profiles,data type or extension do not have examples yet
 The Implementation Guide contains no examples for this profile
+The Implementation Guide contains no examples for this data type profile
+The Implementation Guide contains no examples for this extension
 
-# warning produced because using R4B see Bundle.Signature with "trial-use"
-Reference to draft item http://hl7.org/fhir/standards-status|5.1.0-cibuild
-
-# warning produced by the builder issue 
-The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole

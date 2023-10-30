@@ -73,10 +73,6 @@ profile also include a pull modality for the notification. Should also the DSUBm
     5. At the start of the second visit, when Dr.smith choose Mr. Jones on the Visit app the app will retrieve any notification produced and stashed in the Broker([ITI-113] Resource Subscription Search) using the `$events` operation.
     6. The Visit App will retrieve the Document described in the notification. ([ITI-68] Retrieve Document). 
 
-* **[DSUBm_008](https://github.com/IHE/ITI.DSUBm/issues/16)**: The QA Report presents the following error:
-- "The link 'csv.zip' for "csv" cannot be resolved"
-
-This error still remain and may be connected to the IG publisher. These issues are in the process of being resolved
 
 ### Closed Issues
 

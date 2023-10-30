@@ -3,7 +3,7 @@ Profile:        DSUBm_MinimalDocumentReference
 Parent:         DocumentReference
 Id:             IHE.DSUBm.Minimal.DocumentReference
 Title:          "DSUBm DocumentReference Minimal"
-Description:    "A profile on the DocumentReference resource for DSUBm with minimal metadata constraints. "
+Description:    "The same profile of [MHD DocumentReference Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference) reported in R4B Fhir version"
 * modifierExtension 0..0
 * masterIdentifier only UniqueIdIdentifier
 * masterIdentifier 1..1
@@ -83,7 +83,8 @@ Description:    "A profile on the DocumentReference resource for DSUBm Comprehen
 * authenticator ^type.aggregation = #contained
 * context.sourcePatientInfo ^type.aggregation = #contained
 */
-// mappings to XDS 
+// mappings to XDS
+/* 
 Mapping: DocumentEntry-Mapping
 Source:	IHE.DSUBm.Minimal.DocumentReference
 Target: "XDS"
@@ -123,8 +124,8 @@ Title: "XDS and DSUBm Mapping"
 * relatesTo -> "DocumentEntry Associations"
 * relatesTo.code -> "DocumentEntry Associations.type"
 * relatesTo.target -> "DocumentEntry Associations.reference"
-
-
+*/
+/*
 Instance:   AssociationTypeVsRelatesTo
 InstanceOf: ConceptMap
 Title:      "AssociationType vs RelatesTo"
@@ -162,7 +163,7 @@ Usage: #definition
 * group.element[=].target.equivalence = #inexact
 * group.element[=].target.code = #transforms
 * group.element[=].target.comment = "An XDS IsSnapshotOf is a new instance of what is defined in the parent DocumentEntry (DocumentReference), thus it is a transform in a manner, but is not exactly a transform of the parent document."
-
+*/
 
 ValueSet: DocumentReferenceStats
 Title: "DSUBm DocumentReference status codes"
@@ -171,7 +172,7 @@ Description: "ValueSet that does not include entered-in-error as that does not m
 * http://hl7.org/fhir/document-reference-status#current
 * http://hl7.org/fhir/document-reference-status#superseded
 
-
+/*
 Instance:   FhirStatusVsStatusCode
 InstanceOf: ConceptMap
 Title:      "FHIR status vs ebRIM Status Type Code"
@@ -194,3 +195,4 @@ Usage: #definition
 * group.element[+].code = #urn:oasis:names:tc:ebxml-regrep:StatusType:Deprecated
 * group.element[=].target.equivalence = #equal
 * group.element[=].target.code = #superseded
+*/

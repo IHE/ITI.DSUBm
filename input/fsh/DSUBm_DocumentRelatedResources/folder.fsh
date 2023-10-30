@@ -3,7 +3,7 @@ Profile:        DSUBm_MinimalFolder
 Parent:         DSUBmList
 Id:             IHE.DSUBm.Minimal.Folder
 Title:          "DSUBm Folder Minimal"
-Description:    "A profile on the List resource for DSUBm use as a Folder with minimal metadata constraints. "
+Description:    "The same profile of [MHD Folder Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder) reported in R4B Fhir version"
 * extension[designationType] 0..* MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"
@@ -47,7 +47,7 @@ Description:    "A profile on the List resource for DSUBm Comprehensive Metadata
 * extension[designationType] 1..*
 * title 1..1
 */
-
+/*
 //  mappings to XDS 
 Mapping: Folder-Mapping
 Source:	IHE.DSUBm.Minimal.Folder
@@ -72,3 +72,5 @@ Title: "XDS and DSUBm Mapping"
 * entry.date -> "n/a"
 * entry.item -> "references to DocumentReference(s)"
 * emptyReason -> "n/a"
+
+*/
