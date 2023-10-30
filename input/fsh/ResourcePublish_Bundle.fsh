@@ -35,7 +35,7 @@ and the update or delete of DocumentReference and/or Folders
 * entry[SubmissionSet] ^definition = "The SubmissionSet defines who submitted it, why they submitted it, when they submitted, what is in it, and where it is destine."
 * entry[SubmissionSet].resource 1..1
 * entry[SubmissionSet].request 1..1
-* entry[SubmissionSet].request.method = #PUT
+* entry[SubmissionSet].request.method = #POST
 * entry[DocumentRefs].resource only 
     IHE.MHD.Minimal.DocumentReference 
 * entry[DocumentRefs] ^short = "the DocumentReference resources"
@@ -79,8 +79,8 @@ and the update or delete of DocumentReference and/or Folders
 * entry[Patient].resource 1..1
 * entry[Patient].request.method from MHDprovidePatientActions
 
-//PUT e DELETE  DOcumentReference
-//DELETE Folder
+// added PUT e DELETE DocumentReference
+//added DELETE Folder to Valueset 
 
 ValueSet: DSUBmPublishBundleActions
 Title: "DSUBm Update to document sharing resources actions ValueSet"
