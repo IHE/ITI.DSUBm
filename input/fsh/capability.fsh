@@ -82,7 +82,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -92,7 +92,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -102,7 +102,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -112,7 +112,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update         
   * resource[+]
@@ -122,7 +122,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * interaction[+]
