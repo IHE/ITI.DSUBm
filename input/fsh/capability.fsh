@@ -375,7 +375,7 @@ The Resource Notification Broker Actor shall support the canonical instances of 
     
 
 
-Instance: IHE.DSUBm.ResourceNotification.Publisher
+Instance: IHE.DSUBm.ResourceNotificationPublisher
 InstanceOf: CapabilityStatement
 Title: "DSUBm Resource Notification Publisher Actor"
 Usage: #definition
@@ -407,7 +407,7 @@ The DSUBm Resource Notification Publisher Actor CapabilityStatement requirements
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html"  
 
-Instance: IHE.DSUBm.ResourceNotification.Publisher.UpdateOption
+Instance: IHE.DSUBm.ResourceNotificationPublisher.UpdateOption
 InstanceOf: CapabilityStatement
 Title: "DSUBm Resource Notification Publisher Actor with update option"
 Usage: #definition
