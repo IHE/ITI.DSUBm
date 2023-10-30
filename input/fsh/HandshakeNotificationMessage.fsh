@@ -1,6 +1,6 @@
 Profile:     HandshakeNotification
 Parent:      Bundle
-Id:          IHE.DSUBm.ResourceNotify.HandshakeNotification
+Id:          IHE.DSUBm.HandshakeNotification
 Title:       "Handshake Notification Bundle"
 Description: "Profile on the Bundle resource to enable R5-style topic-based subscription Handshake Notification."
 

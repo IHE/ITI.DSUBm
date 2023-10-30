@@ -41,7 +41,7 @@ Note that:
 
 * canFilterBy[+].description = "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)"
 * canFilterBy[=].resource = "List"
-* canFilterBy[=].filterParameter = "status "
+* canFilterBy[=].filterParameter = "status"
 
 * notificationShape.resource = "List"
 * notificationShape.include = "List:patient&iterate=Patient.link"

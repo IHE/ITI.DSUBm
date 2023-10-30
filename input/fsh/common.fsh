@@ -18,7 +18,7 @@ Expression: "where(resource='DocumentReference').select(filterParameter = 'patie
 
 Invariant: DSUBm-PatientDependentRule
 Severity: #error
-Description: "SHALL have at least one canfilterBy for DocumentReference with filterParameter = 'patient' "
+Description: "SHALL have at least one canfilterBy for DocumentReference with filterParameter = 'patient'"
 Expression: "canFilterBy.where(resource='DocumentReference' or resource='Folder').select(filterParameter = 'patient').anyTrue()"
 
 /*
@@ -44,12 +44,12 @@ Expression: "value.contains('List?') and (value.contains('code=submissionset') o
 
 Invariant: SubmissionSet-MultiPatient
 Severity: #error
-Description: "the Subscription for Folder shall include the resource LIST and no reference to the patient "
+Description: "the Subscription for Folder shall include the resource LIST and no reference to the patient"
 Expression: "value.contains('List?') and (value.contains('code=submissionset') or value.contains('code=https%3A%2F%2Fprofiles.ihe.net%2FITI%2FDSUBm%2FCodeSystem%2FDSUBmlistTypesR4%7Csubmissionset') ) and value.contains('patient').not()"
 
 Invariant: DocumentReference-PatientDependent
 Severity: #error
-Description: "the Subscription for DocumentReference shall include the resource DocumentReference and the patient parameter "
+Description: "the Subscription for DocumentReference shall include the resource DocumentReference and the patient parameter"
 Expression: "value.contains('DocumentReference?') and value.contains('patient')"
 
 Invariant: DocumentReference-MultiPatient

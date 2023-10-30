@@ -1,15 +1,15 @@
 Profile:        ResourceNotify_EventNotification
 Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification
-Id:             IHE.DSUBm.ResourceNotify.EventNotification
+Id:             IHE.DSUBm.EventNotification
 Title:          "Event Notification Bundle"
-Description:    "Profile on the Bundle resource for transaction ITI-112 Resource Notify for Event Notification ."
+Description:    "Profile on the Bundle resource for transaction ITI-112 Resource Notify for Event Notification."
 
 * entry[subscriptionStatus].resource only SubscriptionStatus_NotificationEvent
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
 * entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the entry. \n All notification bundle MUST have a ParSubscriptionStatus  as the first entry "
+* entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle MUST have a SubscriptionStatus as the first entry."
 * entry and entry.resource MS
 * entry contains 
     SubmissionSet 0..* and
@@ -26,7 +26,7 @@ Description:    "Profile on the Bundle resource for transaction ITI-112 Resource
 * entry[DocumentRefs].resource only 
     IHE.MHD.Minimal.DocumentReference
 * entry[DocumentRefs] ^short = "the DocumentReference resources"
-* entry[DocumentRefs] ^definition = "any new DocumentReference that are part of the SubmissionSet. These might be new or other associations"
+* entry[DocumentRefs] ^definition = "any new DocumentReference that are part of the SubmissionSet. These might be new or other associations."
 * entry[DocumentRefs].resource 1..1
 * entry[DocumentRefs].request 1..1
 * entry[DocumentRefs].request.method from DSUBmPublishBundleActions

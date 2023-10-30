@@ -1,17 +1,17 @@
 
 Profile:     ResourceNotify_Events
 Parent:      Bundle
-Id:          DSUBm-EventsOperation-Bundle
+Id:          IHE.DSUBm.EventsOperation-Bundle
 Title:       "Bundle response for $events"
 Description: "Profile on the Bundle resource for the response of $events operation."
-* type = #searchset
+* type = #history
 * entry 0..*
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.ordered = false 
 * entry ^slicing.description = "Slice based on resource"
-* entry contains SubscriptionStatus 0..* and 
+* entry contains SubscriptionStatus 0..1 and 
     SubmissionSet 0..* and
     DocumentRefs 0..* and
     Folders 0..* and
