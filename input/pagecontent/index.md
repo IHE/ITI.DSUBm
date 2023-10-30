@@ -35,6 +35,7 @@ This guide is organized into the following sections:
    1. [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
 
 - Other
+   1. [Test Plan](testplan.html)
    1. [Changes to Other IHE Specifications](other.html)
    1. [Download and Analysis](download.html) 
 

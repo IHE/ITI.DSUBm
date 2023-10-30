@@ -132,11 +132,11 @@ between options when applicable are specified in notes.
 
 This option includes update and delete events for the Resources that are included in the subscriptions.  In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
 
-The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#31105211-subscription-with-updates-to-document-sharing-resources-option).
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
 
-The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#31105211-subscription-with-updates-to-document-sharing-resources-option).
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
 
-The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that trigger events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#31105211-subscription-with-updates-to-document-sharing-resources-option).
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that trigger events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
 
 ## 1:54.3 Required Actor Groupings
 This profile does not mandate grouping with other actors.
