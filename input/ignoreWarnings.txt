@@ -4,5 +4,7 @@
 # Some profiles doe not have examples yet
 The Implementation Guide contains no examples for this profile
 
+# warning produced because using R4B see Bundle.Signature with "trial-use"
+Reference to draft item http://hl7.org/fhir/standards-status|5.1.0-cibuild
 
 
