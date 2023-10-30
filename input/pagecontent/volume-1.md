@@ -1,5 +1,3 @@
-<a name="actors-and-transactions"> </a>
-
 ## 1:54.1 DSUBm Actors, Transactions, and Content Modules
 
 This section defines the actors and transactions in this implementation guide.
@@ -17,7 +15,7 @@ This section defines the actors and transactions in this implementation guide.
   - [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)
 
 
-Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
+Figure 1:54.1-1 shows the actors directly involved in the DSUBm Profile and the relevant transactions between them.
 
 <figure>
 {%include ActorsAndTransactions.svg%}
@@ -25,7 +23,7 @@ Figure 1.54.1-1 shows the actors directly involved in the DSUBm Profile and the 
 </figure>
 <br clear="all">
 
-Table 1.54.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled "R") and may support the optional transactions (labeled "O").
+Table 1:54.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor shall support all required transactions (labeled "R") and may support the optional transactions (labeled "O").
 
 **Table 1:54.1-1: DSUBm Profile - Actors and Transactions**
 
@@ -49,15 +47,21 @@ The actors in this profile are described in more details in the following sectio
 
 #### 1:54.1.1.1 Resource Notification Broker
 
-The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched.
+The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers whn events occur. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched. It support the search and retrieve of Subscription and SubscriptionTopic resource.
 
-FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+The following CapabilityStatements define the actor capabilities given the various Options:
+
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 #### 1:54.1.1.2 Resource Notification Subscriber
 
-The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It also can send a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription search.
+The Resource Notification Subscriber initiates and terminates subscriptions on behalf of a Resource Notification Recipient. It can perform a Resource Subscription Search transaction to the Resource Notification Broker for existing subscription search. It also can perform a Resource SubscriptionTopic Search transaction to the Resource Notification Broker for searching the SubscriptionTopic.
 
-FHIR Capability Statement for [subscriber](CapabilityStatement-IHE.ToDo.server.html)
+The following CapabilityStatements define the actor capabilities given the various Options:
+
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 #### 1:54.1.1.3 Resource Notification Publisher
 
@@ -69,7 +73,10 @@ FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.ht
 
 The Resource Notification Recipient receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied.
 
-FHIR Capability Statement for [recipient](CapabilityStatement-IHE.ToDo.server.html)
+The following CapabilityStatements define the actor capabilities given the various Options:
+
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 ### 1:54.1.2 Transaction Descriptions
 
@@ -77,19 +84,19 @@ The transactions in this profile are summarized in the sections below.
 
 #### 1:54.1.2.1 Resource Subscription [ITI-110]
 
-This transaction is used for a `Subscription` request, by using a particular set of filters, or for a `Subscription` update.
+This transaction is used for subscribe for Documents, by using a particular set of filters, or for unsubscribe, using `Subscription` resources.
 
 For more details see the detailed [[ITI-110] transaction description](ITI-110.html)
 
 #### 1:54.1.2.2 Resource Publish [ITI-111]
 
-This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that may have a `Subscription`.
+This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that may have a subscription.
 
 For more details see the detailed [[ITI-111] transaction description](ITI-111.html)
 
 #### 1:54.1.2.3 Resource Notify [ITI-112]
 
-This transaction is used for sending notifications to a Resource Notification Recipient related to a `Subscription`.
+This transaction is used for sending notifications to a Resource Notification Recipient related to a subscription.
 
 For more details see the detailed [[ITI-112] transaction description](ITI-112.html)
 
