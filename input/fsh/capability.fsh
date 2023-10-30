@@ -26,7 +26,14 @@ The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements
   * documentation = "DSUBm Resource Notification Recipient provides capability to receive notification ."
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
-  * interaction[+]
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+    * documentation = "Resource Notify [ITI-112]"
+/*  * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
   * interaction[+]
@@ -38,9 +45,8 @@ The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+  */  
 
-
-    
 Instance: IHE.DSUBm.ResourceNotificationBroker
 InstanceOf: CapabilityStatement
 Title: "DSUBm Resource Notification Broker Actor"
@@ -54,8 +60,8 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 
 - Shall support the ITI-110 transaction
-- Shall supoprt the ITI-111 transaction
-- Shall supoprt the ITI-112 transaction
+- Shall support the ITI-111 transaction
+- Shall implement the ITI-112 transaction
 - Shall support the ITI-113 transaction
 - Shall support the ITI-114 transaction
 
@@ -72,66 +78,229 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 * format[+] = #application/fhir+json
 * rest
   * mode = #server
-  * documentation = "DSUBm Resource Notification Recipient provides capability to receive subscription, receive publication event and send."
+  * documentation = "DSUBm Resource Notification broker provides capability to receive subscription, receive publication event, receive subscriptionTopic search"
+  * security
+    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
+  * resource[0]
+    * type = #Subscription
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
+    * documentation = " Resource Subscription [ITI-110]"
+    * interaction[+].code = #read
+    * interaction[+].code = #create
+    * interaction[+].code = #update
+    * interaction[+].code = #search-type
+    * searchParam[+]
+      * name = "contact"
+      * type = #token
+      * documentation = "Contact details for the subscription"
+    * searchParam[+]
+      * name = "criteria"
+      * type = #string
+      * documentation = "The search rules used to determine when to send a notification"
+    * searchParam[+]
+      * name = "payload"
+      * type = #token
+      * documentation = "The mime-type of the notification payload"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "The current state of the subscription"
+    * searchParam[+]
+      * name = "type"
+      * type = #token
+      * documentation = "The type of channel for the sent notifications"
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "The URI that will receive the notifications"
+    * searchParam[+]
+      * name = "custom-channel"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
+    * searchParam[+]
+      * name = "filter-criteria"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
+    * searchParam[+]
+      * name = "payload-type"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
+    * searchParam[+]
+      * name = "topic"
+      * type = #uri
+      * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
+    * operation[+]
+      * name = "$events"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
+    * operation[+]
+      * name = "$status"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
+  * resource[1]
+    * type = #SubscriptionTopic
+    * interaction[0]
+      * code = #read
+      * documentation = """
+The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
+see [here](artifacts.html#other)
+"""
+    * interaction[1]
+      * code = #search-type
+      * documentation = """
+The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
+see [here](artifacts.html#other)
+"""
+    * searchParam[+]
+      * name = "resource"
+      * type = #uri
+      * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
+    * searchParam[+]
+      * name = "derived-or-self"
+      * type = #uri
+      * documentation = "A server defined search that matches either the url or derivedFrom"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "Should be valued with `active`. "      
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"      
+    
+   
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html"  
+
+  
+// iti-113
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
+* rest[+]
+  * mode = #client
+  * documentation = "DSUBm Resource Notification Broker provides capability to send notification"
+  * security
+    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+    * documentation = "Resource Notify [ITI-112]"
+
+
+Instance: IHE.DSUBm.ResourceNotificationBroker.UpdateOption
+InstanceOf: CapabilityStatement
+Title: "DSUBm Resource Notification Broker Actor with update option"
+Usage: #definition
+* description = """
+The DSUBm Resource Notification Broker Actor CapabilityStatement requirements expresses the requirements that shall be provided when the update events option is used.
+
+- Query against the FHIR endpoint to the SubscriptionTopic Resource endpoint
+- Using FHIR R4B
+- Shall support both json or xml encoding
+- Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
+
+- Shall support the ITI-110 transaction
+- Shall support the ITI-111 transaction
+- Shall implement the ITI-112 transaction
+- Shall support the ITI-113 transaction
+- Shall support the ITI-114 transaction
+
+"""
+
+* name = "IHE_DSUBm_RESOURCE_NOTIFICATION_BROKER"
+* title = "IHE DSUBm RESOURCE NOTIFICATION BROKER"
+* status = #active
+* experimental = false
+* date = "2023-10-27"
+* kind = #requirements
+* fhirVersion = #4.3.0
+* format[+] = #application/fhir+xml
+* format[+] = #application/fhir+json
+* rest
+  * mode = #server
+  * documentation = "DSUBm Resource Notification broker provides capability to receive subscription, receive publication event, receive subscriptionTopic search"
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
   * resource[+]
     * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription-update"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription-update"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription-update"
     * documentation = """
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
-  * resource[+]
-    * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
-    * documentation = """
-Resource Subscription [ITI-110]
-"""
-    * interaction[+].code = #read
     * interaction[+].code = #search-type
-    * interaction[+].code = #create
-    * interaction[+].code = #update
-  * resource[+]
-    * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
-    * documentation = """
-Resource Subscription [ITI-110]
-"""
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * interaction[+].code = #create
-    * interaction[+].code = #update
-  * resource[+]
-    * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
-    * documentation = """
-Resource Subscription [ITI-110]
-"""
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * interaction[+].code = #create
-    * interaction[+].code = #update         
-  * resource[+]
-    * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
-    * documentation = """
-Resource Subscription [ITI-110]
-"""
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * interaction[+].code = #create
-    * interaction[+].code = #update
+    * searchParam[+]
+      * name = "contact"
+      * type = #token
+      * documentation = "Contact details for the subscription"
+    * searchParam[+]
+      * name = "criteria"
+      * type = #string
+      * documentation = "The search rules used to determine when to send a notification"
+    * searchParam[+]
+      * name = "payload"
+      * type = #token
+      * documentation = "The mime-type of the notification payload"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "The current state of the subscription"
+    * searchParam[+]
+      * name = "type"
+      * type = #token
+      * documentation = "The type of channel for the sent notifications"
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "The URI that will receive the notifications"
+    * searchParam[+]
+      * name = "custom-channel"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
+    * searchParam[+]
+      * name = "filter-criteria"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
+    * searchParam[+]
+      * name = "payload-type"
+      * type = #string
+      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
+    * searchParam[+]
+      * name = "topic"
+      * type = #uri
+      * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
+    * operation[+]
+      * name = "$events"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
+    * operation[+]
+      * name = "$status"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
   * resource[+]
     * type = #SubscriptionTopic
-    * profile = "https://hl7.org/fhir/R4B/subscriptiontopic.html"
+//    * supportedProfile = "https://hl7.org/fhir/R4B/subscriptiontopic.html"
     * documentation = """
 The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
 """
-    * interaction[+].code = #create
+
     * interaction[+].code = #read
     * interaction[+].code = #search-type
     * searchParam[+]
@@ -150,27 +319,12 @@ The Resource Notification Broker Actor shall support the canonical instances of 
       * name = "url"
       * type = #uri
       * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"      
-// iti-110 
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/IHE/ITI.DSUBm/branches/master/ITI-110.html"
+    
 // iti-111 
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceBundle"
-// iti-112  
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+  
 // iti-113
   * interaction[+]
     * code = #transaction
@@ -178,10 +332,19 @@ The Resource Notification Broker Actor shall support the canonical instances of 
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
-// iti-114    
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/IHE/ITI.DSUBm/branches/master/ITI-114.html"
+* rest[+]
+  * mode = #client
+  * documentation = "DSUBm Resource Notification Broker provides capability to send notification"
+  * security
+    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
+  * resource[+]
+    * type = #Bundle
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+    * documentation = "Resource Notify [ITI-112]"
+    
 
 
 
