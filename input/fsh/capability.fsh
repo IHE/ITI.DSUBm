@@ -75,24 +75,56 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   * documentation = "DSUBm Resource Notification Recipient provides capability to receive notification."
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
-   * resource[+]
+  * resource[+]
     * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.DSUBm-DocumentReference-PatientDependent-Subscription"
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription"
     * documentation = """
 Resource Subscription [ITI-110]
 """
+    * interaction[+].code = #read
+    * interaction[+].code = #search
     * interaction[+].code = #create
     * interaction[+].code = #update
-   * resource[+]
+  * resource[+]
     * type = #Subscription
-    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.DSUBm-DocumentReference-PatientDependent-Subscription"
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
     * documentation = """
 Resource Subscription [ITI-110]
 """
+    * interaction[+].code = #read
+    * interaction[+].code = #search
     * interaction[+].code = #create
     * interaction[+].code = #update
-
-
+  * resource[+]
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
+    * documentation = """
+Resource Subscription [ITI-110]
+"""
+    * interaction[+].code = #read
+    * interaction[+].code = #search
+    * interaction[+].code = #create
+    * interaction[+].code = #update
+  * resource[+]
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
+    * documentation = """
+Resource Subscription [ITI-110]
+"""
+    * interaction[+].code = #read
+    * interaction[+].code = #search
+    * interaction[+].code = #create
+    * interaction[+].code = #update         
+  * resource[+]
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
+    * documentation = """
+Resource Subscription [ITI-110]
+"""
+    * interaction[+].code = #read
+    * interaction[+].code = #search
+    * interaction[+].code = #create
+    * interaction[+].code = #update
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"

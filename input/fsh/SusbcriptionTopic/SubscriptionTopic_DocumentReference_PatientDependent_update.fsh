@@ -1,4 +1,4 @@
-Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-UpdateOption
+Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-UpdateOpt
 InstanceOf: SubscriptionTopic
 Usage: #definition
 Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource with update option"
