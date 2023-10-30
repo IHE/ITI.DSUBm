@@ -26,11 +26,23 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 
 * **[DSUBm_005](https://github.com/IHE/ITI.DSUBm/issues/13)**: The [Resource Subscription Search [ITI-113]](ITI-113.html) define the $events operation that permits to retrieve from the Resource Notification Broker the events associated to a Subscription. This operation could be use to retrive puntually the missed event when, for example, a connection problem occur and the Resource Notification Recipient does note recieve the notification. But, this operation requires the Resource Notification Broker to be capable of mantain previous events associated with the Subscriptions. Should the supporting of this operation be required for the Resource Notification Broker or should be mantain optional?
 
-* **[DSUBm_006](https://github.com/IHE/ITI.DSUBm/issues/14)**: The QA Report presents some errors about: 
-- ValueSet derived from MHD
-- invariant 'dom-3' that differs between the R4 and R4B
-- "The link 'csv.zip' for "csv" cannot be resolved"
-These errors still remain and may be connected to the IG publisher. These issues are in the process of being resolved.
+* **[DSUBm_006](https://github.com/IHE/ITI.DSUBm/issues/14)**:If the following resource are directly used (with dependency) from MHD profiles: 
+ - Minimal DocumentReference 
+ - Minimal SubmissionSet
+ - Minimal Folder
+there are the following errors in the QA report : 
+- The reference http://hl7.org/fhir/ValueSet/identifier-use|4.0.1 could not be resolved
+- The reference http://hl7.org/fhir/ValueSet/list-status|4.0.1 could not be resolved
+- The reference http://hl7.org/fhir/ValueSet/list-mode|4.0.1 could not be resolved
+- The reference http://hl7.org/fhir/ValueSet/c80-doc-typecodes could not be resolved
+- The reference http://hl7.org/fhir/ValueSet/document-classcodes could not be resolved
+- The reference http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1 could not be resolved
+
+- The constraint 'dom-3' has an expression 'contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()', which differs from the earlier expression provided of 'contained.where(((id.exists() and ('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url)))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(uri) = '#').exists()).not()).trace('unmatched', id).empty()' (invariants are allowed to repeat, but cannot differ)
+
+(see comparison Domain resource from R4 and R4B).
+
+The TEMPORARY SOLUTION for now is to replicate some MHD content that is used in DSUBm in R4B. (files in folder "DSUBm_DocumentRelatedResources")
 
 * **[DSUBm_007](https://github.com/IHE/ITI.DSUBm/issues/15)**: The DSUBm profile propose notifications in a push mechanism. The [Extensions to the Document Metadata Subscription (DSUB)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB_Extensions.pdf)
 profile also include a pull modality for the notification. Should also the DSUBm profile include a Pull Notification mechanism or is it sufficient to search (e.g using [Find Document Lists [ITI-66]](https://profiles.ihe.net/ITI/MHD/ITI-66.html) or [Find Document References [ITI-67]](https://profiles.ihe.net/ITI/MHD/ITI-67.html) transactions) on the resources combining query parameters and proper interval of time? At the moment no specific request have been already submitted for this implementation. If the pull notification is needed and a real use case is provided, it is possible to send change proposal during the public comment period. We propose here a possible way to utilize a pure Pull Notification modality using the $events operation of the [Resource Subscription Search [ITI-113]](ITI-113.html) transaction. A possible use case is represented below:
@@ -60,6 +72,11 @@ profile also include a pull modality for the notification. Should also the DSUBm
     4. The Resource Notification Broker seeing that the publication event is matching the criteria subscription expressed in the first step, and, recognizing that a local endpoint has been used in the subscription produce a notification towards the grouped Resource Notification Recipient ([ITI-112] Resource Notify). 
     5. At the start of the second visit, when Dr.smith choose Mr. Jones on the Visit app the app will retrieve any notification produced and stashed in the Broker([ITI-113] Resource Subscription Search) using the `$events` operation.
     6. The Visit App will retrieve the Document described in the notification. ([ITI-68] Retrieve Document). 
+
+* **[DSUBm_008](https://github.com/IHE/ITI.DSUBm/issues/16)**: The QA Report presents the following error:
+- "The link 'csv.zip' for "csv" cannot be resolved"
+
+This error still remain and may be connected to the IG publisher. These issues are in the process of being resolved
 
 ### Closed Issues
 

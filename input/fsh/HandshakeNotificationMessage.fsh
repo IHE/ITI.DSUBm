@@ -3,7 +3,6 @@ Parent:      Bundle
 Id:          IHE.DSUBm.HandshakeNotification
 Title:       "Handshake Notification Bundle"
 Description: "Profile on the Bundle resource to enable R5-style topic-based subscription Handshake Notification."
-
 * type = #history
 * entry 1..1 
 * entry.resource 1..1 MS
