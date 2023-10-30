@@ -1,6 +1,6 @@
 Profile:     SubscriptionDeactivationNotification
 Parent:      Bundle
-Id:          IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification
+Id:          IHE.DSUBm.SubscriptionDeactivationNotification
 Title:       "Subscription Deactivation Notification Bundle"
 Description: "Profile on the Bundle resource for Subscription Deactivation Notification."
 * type = #history

@@ -7,7 +7,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 - the criteria element shall contain the URL of an instance of SubscriptionTopic from the 'DSUBm-SubscriptionTopic-DocumentReference-MultiPatient' profile
 "
 * criteria 1..1 
-* criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_MultiPatient' "
+* criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_MultiPatient."
 * criteria.extension obeys DocumentReference-MultiPatient
 * criteria.extension ^short = "The criteria.extension shall not have the patient or the patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(DSUBm-SubscriptionTopic-DocumentReference-MultiPatient)
@@ -25,7 +25,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 - the criteria element shall contain the URL of an instance of SubscriptionTopic from the 'DSUBm-SubscriptionTopic-DocumentReference-MultiPatient' profile
 "
 * criteria 1..1 
-* criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_MultiPatient' "
+* criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_MultiPatient."
 * criteria.extension obeys DocumentReference-MultiPatient
 * criteria.extension ^short = "The criteria.extension shall not have the patient or the patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(DSUBm-SubscriptionTopic-DocReference-MultiPatient-UpdateOption)

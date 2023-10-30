@@ -30,7 +30,7 @@ Note that:
 
 * canFilterBy[+].description = "Filter based on the intendedRecipient of a SubmissionSet List Resource. (SubmissionSet.intendedRecipient)"
 * canFilterBy[=].resource = "List"
-* canFilterBy[=].filterParameter = "intendedRecipient "
+* canFilterBy[=].filterParameter = "intendedRecipient"
 
 * notificationShape.resource = "List"
 * notificationShape.include = "List:patient&iterate=Patient.link"

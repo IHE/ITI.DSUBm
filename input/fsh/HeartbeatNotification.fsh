@@ -1,7 +1,7 @@
 
 Profile:     HeartbeatNotification
 Parent:      Bundle
-Id:          IHE.DSUBm.ResourceNotify.HeartbeatNotification
+Id:          IHE.DSUBm.HeartbeatNotification
 Title:       "Heartbeat Notification Bundle"
 Description: "Profile on the Bundle resource to enable R5-style topic-based subscription Heartbeat Notification."
 * type = #history

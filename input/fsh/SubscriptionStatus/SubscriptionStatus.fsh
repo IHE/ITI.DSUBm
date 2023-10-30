@@ -37,7 +37,7 @@ Profile:        SubscriptionStatus_EventsOperation
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-EventsOperation
 Title:          "SubscriptionStatus for the $events operation"
-Description:    "Profile on the SubscriptionStatus resource for the $events opertion"
+Description:    "Profile on the SubscriptionStatus resource for the $events operation"
 * status ^short = "Recommended. Should be valued with the current status of the relevant subscription"
 * type = #query-event
 * eventsSinceSubscriptionStart 0..1
@@ -52,7 +52,7 @@ Profile:        SubscriptionStatus_StatusOperation
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-StatusOperation
 Title:          "SubscriptionStatus for the status operation"
-Description:    "Profile on the SubscriptionStatus resource for the $status opertion"
+Description:    "Profile on the SubscriptionStatus resource for the $status operation"
 * status 1..1 
 * status ^short = "Current status of the relevant subscription"
 * type = #query-status
