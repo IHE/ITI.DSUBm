@@ -57,7 +57,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Shall supoprt the ITI-111 transaction
 - Shall supoprt the ITI-112 transaction
 - Shall support the ITI-113 transaction
-- Shall support the ITI-141 transaction
+- Shall support the ITI-114 transaction
 
 """
 
@@ -72,7 +72,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 * format[+] = #application/fhir+json
 * rest
   * mode = #server
-  * documentation = "DSUBm Resource Notification Recipient provides capability to receive notification."
+  * documentation = "DSUBm Resource Notification Recipient provides capability to receive subscription, receive publication event and send."
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
   * resource[+]
@@ -82,7 +82,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -92,7 +92,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -102,7 +102,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
   * resource[+]
@@ -112,7 +112,7 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update         
   * resource[+]
@@ -122,9 +122,43 @@ Resource Subscription [ITI-110]
 Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
-    * interaction[+].code = #search
+    * interaction[+].code = #search-type
     * interaction[+].code = #create
     * interaction[+].code = #update
+  * resource[+]
+    * type = #SubscriptionTopic
+    * profile = "https://hl7.org/fhir/R4B/subscriptiontopic.html"
+    * documentation = """
+The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
+"""
+    * interaction[+].code = #create
+    * interaction[+].code = #read
+    * interaction[+].code = #search-type
+    * searchParam[+]
+      * name = "resource"
+      * type = #uri
+      * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
+    * searchParam[+]
+      * name = "derived-or-self"
+      * type = #uri
+      * documentation = "A server defined search that matches either the url or derivedFrom"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "Should be valued with `active`. "      
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"      
+// iti-110 
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/IHE/ITI.DSUBm/branches/master/ITI-110.html"
+// iti-111 
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceBundle"
+// iti-112  
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
@@ -137,6 +171,25 @@ Resource Subscription [ITI-110]
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+// iti-113
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
+// iti-114    
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/IHE/ITI.DSUBm/branches/master/ITI-114.html"
+
+
+
+
+
+
+
+
 
 /*
 Instance: IHE.ToDo.server
