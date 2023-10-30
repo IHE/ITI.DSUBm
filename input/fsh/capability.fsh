@@ -74,8 +74,13 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - payload-type
   - topic
 - Shall support the DSUBm $status operation  
-- Shall support the DSUBm $events operation  
+- Should support the DSUBm $events operation  
 - Shall support the ITI-114 transaction
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+    - resource
+    - derived-or-self
+    - status
+    - url
 
 """
 
@@ -230,8 +235,13 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - payload-type
   - topic
 - Shall support the DSUBm $status operation  
-- Shall support the DSUBm $events operation  
+- Should support the DSUBm $events operation  
 - Shall support the ITI-114 transaction
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+    - resource
+    - derived-or-self
+    - status
+    - url
 
 """
 
@@ -375,7 +385,6 @@ The DSUBm Resource Notification Publisher Actor CapabilityStatement requirements
 - Using FHIR R4B
 - Shall support both json or xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
-
 - Shall support the ITI-111 transaction
 
 """
@@ -408,7 +417,6 @@ he DSUBm Resource Notification Publisher Actor CapabilityStatement requirements 
 - Using FHIR R4B
 - Shall support both json or xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
-
 - Shall support the ITI-111 transaction
 
 """
@@ -443,8 +451,27 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 
 - Shall implement the ITI-110 transaction
-- May implement the ITI-113 transaction
-- May implement the ITI-114 transaction
+- Should implement the ITI-113 transaction; if implemented: 
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+    - contact
+    - criteria
+    - payload
+    - status
+    - type
+    - url
+    - custom-channel
+    - filter-criteria
+    - payload-type
+    - topic
+  - Should support the DSUBm $status operation  
+  - Should support the DSUBm $events operation  
+- Should implement the ITI-114 transaction; if implemented: 
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+    - resource
+    - derived-or-self
+    - status
+    - url
+
 
 """
 
@@ -535,8 +562,26 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 
 - Shall implement the ITI-110 transaction
-- May implement the ITI-113 transaction
-- May implement the ITI-114 transaction
+- Should implement the ITI-113 transaction; if implemented: 
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+    - contact
+    - criteria
+    - payload
+    - status
+    - type
+    - url
+    - custom-channel
+    - filter-criteria
+    - payload-type
+    - topic
+  - Should support the DSUBm $status operation  
+  - Should support the DSUBm $events operation  
+- Should implement the ITI-114 transaction; if implemented: 
+  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+    - resource
+    - derived-or-self
+    - status
+    - url
 
 """
 
