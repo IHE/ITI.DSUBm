@@ -51,8 +51,8 @@ The Resource Notification Broker is the receiver of the Resource Subscription tr
 
 The following CapabilityStatements define the actor capabilities given the various Options:
 
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.html)
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
 
 #### 1:54.1.1.2 Resource Notification Subscriber
 
@@ -60,23 +60,24 @@ The Resource Notification Subscriber initiates and terminates subscriptions on b
 
 The following CapabilityStatements define the actor capabilities given the various Options:
 
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.html)
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
 
 #### 1:54.1.1.3 Resource Notification Publisher
 
 The Resource Notification Publisher sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Resource Notification Publisher becomes aware of those events.
 
-FHIR Capability Statement for [publisher](CapabilityStatement-IHE.ToDo.server.html)
+The following CapabilityStatements define the actor capabilities given the various Options:
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.html)
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
 
 #### 1:54.1.1.4 Resource Notification Recipient
 
 The Resource Notification Recipient receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied.
 
-The following CapabilityStatements define the actor capabilities given the various Options:
+FHIR Capability Statement for [Resource Notification Recipient](CapabilityStatement-IHE.DSUBm.ResourceNotificationRecipient.html)
 
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
-- FHIR Capability Statement for [broker](CapabilityStatement-IHE.ToDo.client.html)
 
 ### 1:54.1.2 Transaction Descriptions
 

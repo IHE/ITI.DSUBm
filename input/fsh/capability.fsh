@@ -172,7 +172,7 @@ see [here](artifacts.html#other)
     * searchParam[+]
       * name = "status"
       * type = #token
-      * documentation = "Should be valued with `active`. "      
+      * documentation = "Should be valued with `active`"      
     * searchParam[+]
       * name = "url"
       * type = #uri
