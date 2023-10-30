@@ -2,8 +2,8 @@
 Profile:     HeartbeatNotification
 Parent:      Bundle
 Id:          DSUBm-HeartbeatNotification
-Title:       "R4B Topic-Based Subscription Heartbeat Notification Bundle"
-Description: "Profile on the R4B Bundle resource to enable R5-style topic-based subscription Heartbeat Notification in FHIR R4B."
+Title:       "Heartbeat Notification Bundle"
+Description: "Profile on the Bundle resource to enable R5-style topic-based subscription Heartbeat Notification."
 * type = #history
 * entry 1..1 
 * entry.resource 1..1 MS

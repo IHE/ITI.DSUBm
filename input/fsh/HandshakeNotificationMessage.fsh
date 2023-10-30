@@ -1,8 +1,8 @@
 Profile:     HandshakeNotification
 Parent:      Bundle
 Id:          DSUBm-HandshakeNotification
-Title:       "R4B Topic-Based Subscription Handshake Notification Bundle"
-Description: "Profile on the R4B Bundle resource to enable R5-style topic-based subscription Handshake Notification in FHIR R4B."
+Title:       "Handshake Notification Bundle"
+Description: "Profile on the Bundle resource to enable R5-style topic-based subscription Handshake Notification."
 
 * type = #history
 * entry 1..1 

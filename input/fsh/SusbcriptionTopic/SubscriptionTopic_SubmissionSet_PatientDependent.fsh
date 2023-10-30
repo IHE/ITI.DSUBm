@@ -1,7 +1,7 @@
 Instance: DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for a SubmissionSet PatientDependent creation event."
+Title:       "SubscriptionTopic for SubmissionSet PatientDependent resource"
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a SubmissionSet List resource. 
 This topic shall be used in all SubmissionSet subscriptions that have a specific patient in the criteria element and are just focusing on the create event.
 Note that:

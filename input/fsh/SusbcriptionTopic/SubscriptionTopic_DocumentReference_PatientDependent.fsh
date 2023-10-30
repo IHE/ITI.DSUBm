@@ -1,7 +1,7 @@
 Instance: DSUBm-SubscriptionTopic-DocumentReference-PatientDependent
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for a DocumentReference PatientDependent creation event."
+Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource."
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a DocumentReference. 
 This topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element and are just focusing on the create event. 
 Note that:

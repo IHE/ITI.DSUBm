@@ -9,6 +9,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria 1..1 
 * criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_PatientDependent' "
 * criteria.extension obeys DocumentReference-PatientDependent
+* criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(DSUBm-SubscriptionTopic-DocumentReference-PatientDependent)
 * channel.type = #rest-hook 
 * channel.endpoint 0..1 MS SU  
@@ -26,6 +27,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria 1..1 
 * criteria ^short = "Canonical URL for the SubscriptionTopic used to generate events. The SubsciptionTopic shall be an instance of the 'DSUBm_SubscriptionTopic_DocumentReference_PatientDependent' "
 * criteria.extension obeys DocumentReference-PatientDependent
+* criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(SubscriptionTopic-DocReference-PatientDependent-All-Interaction)
 * channel.type = #rest-hook 
 * channel.endpoint 0..1 MS SU  

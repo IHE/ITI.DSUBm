@@ -2,7 +2,7 @@ Profile:        SubscriptionStatus_NotificationEvent
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-Event
 Title:          "SubscriptionStatus for the notification event"
-Description:    "Profile on the R4B SubscriptionStatus resource for the event notification"
+Description:    "Profile on the SubscriptionStatus resource for the event notification"
 * type = #event-notification
 * eventsSinceSubscriptionStart 1..1
 * eventsSinceSubscriptionStart ^short = "Servers SHALL include this value when sending event notifications in order to allow clients to detect missing events. 
@@ -14,7 +14,7 @@ Profile:        SubscriptionStatus_Handshake
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-Handshake
 Title:          "SubscriptionStatus for the handshake event"
-Description:    "Profile on the R4B SubscriptionStatus resource to be used in the handshake notification"
+Description:    "Profile on the SubscriptionStatus resource to be used in the handshake notification"
 * status = #requested
 * type = #handshake
 
@@ -22,14 +22,14 @@ Profile:        SubscriptionStatus_Heartbeat
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-Heartbeat
 Title:          "SubscriptionStatus for the handshake event"
-Description:    "Profile on the R4B SubscriptionStatus resource for the handshake notification"
+Description:    "Profile on the SubscriptionStatus resource for the handshake notification"
 * type = #heartbeat
 
 Profile:        SubscriptionStatus_Deactivation
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-Deactivation
 Title:          "SubscriptionStatus for the Subscription Deactivation Notification event"
-Description:    "Profile on the R4B SubscriptionStatus resource the Subscription Deactivation Notification"
+Description:    "Profile on the SubscriptionStatus resource the Subscription Deactivation Notification"
 * status = #event-notification 
 * type = #off
 
@@ -37,7 +37,7 @@ Profile:        SubscriptionStatus_EventsOperation
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-EventsOperation
 Title:          "SubscriptionStatus for the $events operation"
-Description:    "Profile on the R4B SubscriptionStatus resource for the $events opertion"
+Description:    "Profile on the SubscriptionStatus resource for the $events opertion"
 * status ^short = "Recommended. Should be valued with the current status of the relevant subscription"
 * type = #query-event
 * eventsSinceSubscriptionStart 0..1
@@ -52,7 +52,7 @@ Profile:        SubscriptionStatus_StatusOperation
 Parent:         SubscriptionStatus
 Id:             IHE.DSUBm.SubscriptionStatus-StatusOperation
 Title:          "SubscriptionStatus for the status operation"
-Description:    "Profile on the R4B SubscriptionStatus resource for the $status opertion"
+Description:    "Profile on the SubscriptionStatus resource for the $status opertion"
 * status 1..1 
 * status ^short = "Current status of the relevant subscription"
 * type = #query-status

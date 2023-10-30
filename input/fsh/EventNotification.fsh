@@ -1,9 +1,8 @@
 Profile:        ResourceNotify_EventNotification
-//Parent:         ResourceNotify
 Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification
 Id:             IHE.DSUBm.ResourceNotify.EventNotification
-Title:          "Resource Notify Bundle R4B for Event Notification"
-Description:    "Profile on the R4B Bundle resource for transaction ITI-112 Resource Notify for Event Notification ."
+Title:          "Event Notification Bundle"
+Description:    "Profile on the Bundle resource for transaction ITI-112 Resource Notify for Event Notification ."
 
 * entry[subscriptionStatus].resource only SubscriptionStatus_NotificationEvent
 

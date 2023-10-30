@@ -1,7 +1,7 @@
 Instance: DSUBm-SubscriptionTopic-Folder-PatientDependent-update
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "Canonical Topic for the create/update/delete events of a Folder List resource."
+Title:       "SubscriptionTopic for Folder Patient-Dependent resource with update option."
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder List Resource. 
 This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element.
 Note that:

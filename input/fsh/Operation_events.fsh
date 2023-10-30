@@ -2,8 +2,8 @@
 Profile:     ResourceNotify_Events
 Parent:      Bundle
 Id:          DSUBm-EventsOperation-Bundle
-Title:       "R4B Bundle response for $Events"
-Description: "Profile on the R4B Bundle resource for the response of $Events operation."
+Title:       "Bundle response for $events"
+Description: "Profile on the Bundle resource for the response of $events operation."
 * type = #searchset
 * entry 0..*
 * entry ^slicing.discriminator.type = #type
