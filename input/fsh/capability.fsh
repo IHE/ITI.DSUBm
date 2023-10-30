@@ -1,96 +1,112 @@
-Instance: IHE.ToDo.client
+Instance: IHE.DSUBm.ResourceNotificationRecipient
 InstanceOf: CapabilityStatement
-Title: "ToDo Actor"
+Title: "DSUBm Resource Notification Recipient Actor"
 Usage: #definition
 * description = """
-CapabilityStatement for Client Actor 
+The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements expresses the requirements that shall be provided.
 
-Explain
-- blah
-- blah
+- Using FHIR R4B
+- Shall support both json or xml encoding
+- Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
+- Shall support the ITI-112 transaction
+
 """
-* url = "https://profiles.ihe.net/Domain/Profile/CapabilityStatement/IHE.ToDo.client"
-* name = "IHE_ToDo_client"
-* title = "IHE ToDo client"
+
+* name = "IHE_DSUBm_RESOURCE_NOTIFICATION_RECIPIENT"
+* title = "IHE DSUBm RESOURCE NOTIFICATION RECIPIENT"
 * status = #active
 * experimental = false
-* date = "2022-10-27"
+* date = "2023-10-27"
 * kind = #requirements
-* fhirVersion = #4.0.1
+* fhirVersion = #4.3.0
 * format[+] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * rest
-  * mode = #client
-  * documentation = "ToDo Client provides capability to blah blah."
+  * mode = #server
+  * documentation = "DSUBm Resource Notification Recipient provides capability to receive notification ."
   * security
-    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"
-  * resource[+]
-    * type = #Patient
-    * documentation = """
-ToDo transaction [ITI-00]
+    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+
+
+    
+Instance: IHE.DSUBm.ResourceNotificationBroker
+InstanceOf: CapabilityStatement
+Title: "DSUBm Resource Notification Broker Actor"
+Usage: #definition
+* description = """
+The DSUBm Resource Notification Broker Actor CapabilityStatement requirements expresses the requirements that shall be provided.
+
+- Query against the FHIR endpoint to the SubscriptionTopic Resource endpoint
+- Using FHIR R4B
+- Shall support both json or xml encoding
+- Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
+
+- Shall support the ITI-110 transaction
+- Shall supoprt the ITI-111 transaction
+- Shall supoprt the ITI-112 transaction
+- Shall support the ITI-113 transaction
+- Shall support the ITI-141 transaction
+
 """
-    * interaction[+].code = #read
-    * interaction[+].code = #search-type
-    * searchParam[+]
-      * name = "_lastUpdated"
-      * type = #date
-      * documentation = "When the resource version last changed"
-    * searchParam[+]
-      * name = "_id"
-      * type = #token
-      * documentation = "Logical id of this artifact"
-    * searchParam[+]
-      * name = "active"
-      * type = #token
-      * documentation = "Whether the patient record is active"
-    * searchParam[+]
-      * name = "family"
-      * type = #string
-      * documentation = "A portion of the family name of the patient"
-    * searchParam[+]
-      * name = "given"
-      * type = #string
-      * documentation = "A portion of the given name of the patient"
-    * searchParam[+]
-      * name = "identifier"
-      * type = #token
-      * documentation = "A patient identifier"
-    * searchParam[+]
-      * name = "telecom"
-      * type = #token
-      * documentation = "The value in any kind of telecom details of the patient"
-    * searchParam[+]
-      * name = "birthdate"
-      * type = #date
-      * documentation = "The patient's date of birth"
-    * searchParam[+]
-      * name = "address-city"
-      * type = #string
-      * documentation = "A city specified in an address"
-    * searchParam[+]
-      * name = "address-country"
-      * type = #string
-      * documentation = "A country specified in an address"
-    * searchParam[+]
-      * name = "address-postalcode"
-      * type = #string
-      * documentation = "A postalCode specified in an address"
-    * searchParam[+]
-      * name = "address-state"
-      * type = #string
-      * documentation = "A state specified in an address"
-    * searchParam[+]
-      * name = "gender"
-      * type = #token
-      * documentation = "Gender of the patient"
-    * searchParam[+]
-      * name = "mothersMaidenName"
-      * definition = "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-mothersMaidenName"
-      * type = #string
-      * documentation = "Mother's maiden (unmarried) name, commonly collected to help verify patient identity."
-  * interaction.code = #search-system
+
+* name = "IHE_DSUBm_RESOURCE_NOTIFICATION_BROKER"
+* title = "IHE DSUBm RESOURCE NOTIFICATION BROKER"
+* status = #active
+* experimental = false
+* date = "2023-10-27"
+* kind = #requirements
+* fhirVersion = #4.3.0
+* format[+] = #application/fhir+xml
+* format[+] = #application/fhir+json
+* rest
+  * mode = #server
+  * documentation = "DSUBm Resource Notification Recipient provides capability to receive notification."
+  * security
+    * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
+   * resource[+]
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.DSUBm-DocumentReference-PatientDependent-Subscription"
+    * documentation = """
+Resource Subscription [ITI-110]
+"""
+    * interaction[+].code = #create
+    * interaction[+].code = #update
+   * resource[+]
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.DSUBm-DocumentReference-PatientDependent-Subscription"
+    * documentation = """
+Resource Subscription [ITI-110]
+"""
+    * interaction[+].code = #create
+    * interaction[+].code = #update
 
 
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
+  * interaction[+]
+    * code = #transaction
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
+
+/*
 Instance: IHE.ToDo.server
 InstanceOf: CapabilityStatement
 Title: "ToDo Server Actor"
@@ -114,13 +130,14 @@ Explain
 * format[+] = #application/fhir+json
 * rest
   * mode = #server
-  * documentation = "ToDo Client provides capability to blah blah."
+  * documentation = "CapabilityStatement for DSUBm Resource Notification Broker."
   * security
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"
   * resource[+]
-    * type = #Patient
+    * type = #Subscription
+    * profile = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.DSUBm-DocumentReference-PatientDependent-Subscription"
     * documentation = """
-ToDo transaction [ITI-00]
+Resource Subscription [ITI-110]
 """
     * interaction[+].code = #read
     * interaction[+].code = #search-type
@@ -183,3 +200,4 @@ ToDo transaction [ITI-00]
       * documentation = "Mother's maiden (unmarried) name, commonly collected to help verify patient identity."
   * interaction.code = #search-system
 
+*/
