@@ -1,7 +1,7 @@
-Instance: SubscriptionTopic-DocReference-PatientDependent-All-Interaction
+Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-UpdateOption
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource with update option."
+Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource with update option"
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation/update/delete of a DocumentReference. 
 This topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element.
 Note that:
@@ -10,18 +10,21 @@ Note that:
 - this resource shall be used when the [Updates to document sharing resources option](https://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/volume-1.html#15421-updates-to-document-sharing-resources-option) is supported.
 "
 * meta.versionId = "1"
-* meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"
-* title = "Canonical Topic that describe the creation,update or delete of a DocumentReference resource"
+* title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with Updates to document sharing resources option"
 * status = #active 
-* resourceTrigger.description = "A DocumentReference resource is created with status = current"
+* resourceTrigger.description = "A DocumentReference resource is created, updated or deleted"
 * resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger.supportedInteraction = #create
-* resourceTrigger.supportedInteraction = #update
-* resourceTrigger.supportedInteraction = #delete
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #update
+* resourceTrigger.supportedInteraction[+] = #delete
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"
-* canFilterBy[=].filterParameter = "author"
+* canFilterBy[=].filterParameter = "author.given"
+
+* canFilterBy[+].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
+* canFilterBy[=].resource = "DocumentReference"
+* canFilterBy[=].filterParameter = "author.family"
 
 * canFilterBy[+].description = "Filter based on the event of a DocumentReference. (DocumentEntry.class)"
 * canFilterBy[=].resource = "DocumentReference"
@@ -39,9 +42,13 @@ Note that:
 * canFilterBy[=].resource = "DocumentReference"
 * canFilterBy[=].filterParameter = "format"
 
-* canFilterBy[+].description = "Filter based on the patinet associated to the DocumentReference. (DocumentEntry.patientId)"
+* canFilterBy[+].description = "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)"
 * canFilterBy[=].resource = "DocumentReference"
 * canFilterBy[=].filterParameter = "patient"
+
+* canFilterBy[+].description = "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)"
+* canFilterBy[=].resource = "DocumentReference"
+* canFilterBy[=].filterParameter = "patient.identifier"
 
 * canFilterBy[+].description = "Filter based on the security-label of the DocumentReference (DocumentEntry.confidentialityCode)"
 * canFilterBy[=].resource = "DocumentReference"

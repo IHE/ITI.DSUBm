@@ -1,7 +1,7 @@
 Instance: DSUBm-SubscriptionTopic-Folder-PatientDependent
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for Folder Patient-Dependent resource."
+Title:       "SubscriptionTopic for Folder Patient-Dependent resource"
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder List Resource. 
 This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.
 Note that:
@@ -10,14 +10,12 @@ Note that:
 - this topic only covers the create event
 "
 * meta.versionId = "1"
-* meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"
-* title = "Canonical Topic that describe the creation of a Folder List resource"
+* title = "SubscriptionTopic for Folder Patient-Dependent resource"
 * status = #active 
-* resourceTrigger.description = "A Folder resource is created with status = current"
+* resourceTrigger.description = "A Folder type List resource is created or updated"
 * resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/List"
-* resourceTrigger.supportedInteraction = #create
-* resourceTrigger.queryCriteria.resultForCreate = #test-passes
-* resourceTrigger.queryCriteria.current = "status=current"
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #update
 
 * canFilterBy[0].description = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"
 * canFilterBy[=].resource = "List"
@@ -26,6 +24,10 @@ Note that:
 * canFilterBy[+].description = "Filter based on the patient of a Folder List Resource. (Folder.patientId)"
 * canFilterBy[=].resource = "List"
 * canFilterBy[=].filterParameter = "patient"
+
+* canFilterBy[+].description = "Filter based on the patient of a Folder List Resource. (Folder.patientId)"
+* canFilterBy[=].resource = "List"
+* canFilterBy[=].filterParameter = "patient.identifier"
 
 * canFilterBy[+].description = "Filter based on the identifier of a Folder List Resource. (Folder.entryUUID and Folder.uniqueId)"
 * canFilterBy[=].resource = "List"
@@ -38,7 +40,6 @@ Note that:
 * canFilterBy[+].description = "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)"
 * canFilterBy[=].resource = "List"
 * canFilterBy[=].filterParameter = "status "
-
 
 * notificationShape.resource = "List"
 * notificationShape.include = "List:patient&iterate=Patient.link"

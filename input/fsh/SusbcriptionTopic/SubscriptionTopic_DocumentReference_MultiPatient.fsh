@@ -1,7 +1,7 @@
 Instance: DSUBm-SubscriptionTopic-DocumentReference-MultiPatient
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for DocumentReference Multi-Patient resource."
+Title:       "SubscriptionTopic for DocumentReference Multi-Patient resource"
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a DocumentReference. 
 This topic shall be used in all DocumentReference subscriptions that have not a specific patient in the criteria element and are just focusing on the create event.
 Note that:
@@ -11,14 +11,11 @@ Note that:
 - this topic only covers the create event
 "
 * meta.versionId = "1"
-* meta.lastUpdated = "2023-10-26T21:04:49.9548614+00:00"
-* title = "Canonical Topic that describe the creation of a DocumentReference resource"
+* title = "SubscriptionTopic for DocumentReference Multi-Patient resource"
 * status = #active 
-* resourceTrigger.description = "A DocumentReference resource is created with status = current"
+* resourceTrigger.description = "A DocumentReference resource is created"
 * resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
 * resourceTrigger.supportedInteraction = #create
-* resourceTrigger.queryCriteria.resultForCreate = #test-passes
-* resourceTrigger.queryCriteria.current = "status=current"
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"
