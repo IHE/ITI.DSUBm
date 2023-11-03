@@ -12,7 +12,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria.extension ^short = "The criteria.extension shall not have the patient or the patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(DSUBm-SubscriptionTopic-DocumentReference-MultiPatient)
 * channel.type = #rest-hook 
-* channel.endpoint 0..1 MS SU  
+* channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload
 
@@ -30,6 +30,6 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria.extension ^short = "The criteria.extension shall not have the patient or the patient.identifier parameter as a subscription criteria."
 * criteria = Canonical(DSUBm-SubscriptionTopic-DocReference-MultiPatient-UpdateOption)
 * channel.type = #rest-hook 
-* channel.endpoint 0..1 MS SU  
+* channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload

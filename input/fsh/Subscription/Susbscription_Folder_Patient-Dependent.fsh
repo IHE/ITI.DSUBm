@@ -12,7 +12,7 @@ Description:  "Resource Subscription for DSUBm profile for Folder with the indic
 * criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria. The code parameter shall be used and shall indicates the List of type Folder."
 * criteria = Canonical(DSUBm-SubscriptionTopic-Folder-PatientDependent)
 * channel.type = #rest-hook 
-* channel.endpoint 0..1 MS SU  
+* channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload
 
@@ -31,7 +31,7 @@ Description:  "Resource Subscription for DSUBm profile for Folder with the indic
 * criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria. The code parameter shall be used and shall indicates the List of type Folder."
 * criteria = Canonical(DSUBm-SubscriptionTopic-Folder-PatientDependent-UpdateOption)
 * channel.type = #rest-hook 
-* channel.endpoint 0..1 MS SU  
+* channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload
 
