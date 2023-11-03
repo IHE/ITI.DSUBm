@@ -61,20 +61,16 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Shall support the ITI-110 transaction
 - Shall support the ITI-111 transaction
 - Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction, with the following [Search Parameters](ITI-113.html#2311352-message-semantics)
-  - contact
-  - criteria
-  - payload
-  - status
-  - type
-  - url
-  - custom-channel
-  - filter-criteria
-  - payload-type
-  - topic
+- Shall support the ITI-113 transaction and the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+    - _id
+    - status
+    - url
+    - filter-criteria
+    - topic
 - Shall support the DSUBm $status operation  
 - Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction, with the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+- Shall support the ITI-114 transaction and the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+    - _id
     - resource
     - derived-or-self
     - status
@@ -103,60 +99,45 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
-    * documentation = " Resource Subscription [ITI-110]"
+    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
     * searchParam[+]
-      * name = "contact"
-      * type = #token
-      * documentation = "Contact details for the subscription"
-    * searchParam[+]
-      * name = "criteria"
+      * name = "_id"
       * type = #string
-      * documentation = "The search rules used to determine when to send a notification"
-    * searchParam[+]
-      * name = "payload"
-      * type = #token
-      * documentation = "The mime-type of the notification payload"
+      * documentation = "The id of the Subscription"
     * searchParam[+]
       * name = "status"
       * type = #token
       * documentation = "The current state of the subscription"
     * searchParam[+]
-      * name = "type"
-      * type = #token
-      * documentation = "The type of channel for the sent notifications"
-    * searchParam[+]
       * name = "url"
       * type = #uri
       * documentation = "The URI that will receive the notifications"
     * searchParam[+]
-      * name = "custom-channel"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
-    * searchParam[+]
       * name = "filter-criteria"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-filter-criteria"
       * type = #string
       * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
     * searchParam[+]
-      * name = "payload-type"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
-    * searchParam[+]
       * name = "topic"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-topic"
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
       * name = "$events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
+      * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
       * name = "$status"
-      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+      * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """    
   * resource[1]
     * type = #SubscriptionTopic
     * documentation = """
+Resource SubscriptionTopic Search [ITI-114]
 The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
 see [here](artifacts.html#other)
 """
@@ -164,6 +145,10 @@ see [here](artifacts.html#other)
       * code = #read
     * interaction[1]
       * code = #search-type
+    * searchParam[+]
+      * name = "_id"
+      * type = #string
+      * documentation = "The id of the SubscriptionTopic"
     * searchParam[+]
       * name = "resource"
       * type = #uri
@@ -183,15 +168,6 @@ see [here](artifacts.html#other)
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html"  
-
-  
-// iti-113
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle"
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
 * rest[+]
   * mode = #client
   * documentation = "DSUBm Resource Notification Broker provides capability to send notification"
@@ -220,20 +196,16 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Shall support the ITI-110 transaction
 - Shall support the ITI-111 transaction
 - Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction with the following [Search Parameters](ITI-113.html#2311352-message-semantics)
-  - contact
-  - criteria
-  - payload
-  - status
-  - type
-  - url
-  - custom-channel
-  - filter-criteria
-  - payload-type
-  - topic
+- Shall support the ITI-113 transaction and the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+    - _id
+    - status
+    - url
+    - filter-criteria
+    - topic
 - Shall support the DSUBm $status operation  
 - Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction with the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+- Shall support the ITI-114 transaction and the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+    - _id
     - resource
     - derived-or-self
     - status
@@ -266,67 +238,56 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription-update"
     * documentation = """
-Resource Subscription [ITI-110]
+Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]
 """
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
     * searchParam[+]
-      * name = "contact"
-      * type = #token
-      * documentation = "Contact details for the subscription"
-    * searchParam[+]
-      * name = "criteria"
+      * name = "_id"
       * type = #string
-      * documentation = "The search rules used to determine when to send a notification"
-    * searchParam[+]
-      * name = "payload"
-      * type = #token
-      * documentation = "The mime-type of the notification payload"
+      * documentation = "The id of the Subscription"
     * searchParam[+]
       * name = "status"
       * type = #token
       * documentation = "The current state of the subscription"
     * searchParam[+]
-      * name = "type"
-      * type = #token
-      * documentation = "The type of channel for the sent notifications"
-    * searchParam[+]
       * name = "url"
       * type = #uri
       * documentation = "The URI that will receive the notifications"
     * searchParam[+]
-      * name = "custom-channel"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
-    * searchParam[+]
       * name = "filter-criteria"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-filter-criteria"
       * type = #string
       * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
     * searchParam[+]
-      * name = "payload-type"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
-    * searchParam[+]
       * name = "topic"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-topic"
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
       * name = "$events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
+      * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
     * operation[+]
       * name = "$status"
-      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
+      * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle"    
   * resource[+]
     * type = #SubscriptionTopic
 //    * supportedProfile = "https://hl7.org/fhir/R4B/subscriptiontopic.html"
     * documentation = """
+Resource SubscriptionTopic Search [ITI-114]
 The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
 """
 
     * interaction[+].code = #read
     * interaction[+].code = #search-type
+    * searchParam[+]
+      * name = "_id"
+      * type = #string
+      * documentation = "The id of the SubscriptionTopic"
     * searchParam[+]
       * name = "resource"
       * type = #uri
@@ -338,24 +299,14 @@ The Resource Notification Broker Actor shall support the canonical instances of 
     * searchParam[+]
       * name = "status"
       * type = #token
-      * documentation = "Should be valued with `active`. "      
+      * documentation = "Should be valued with `active`"      
     * searchParam[+]
       * name = "url"
       * type = #uri
-      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"      
-    
-// iti-111 
+      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           
   * interaction[+]
     * code = #transaction
     * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceBundle"
-  
-// iti-113
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle"
-  * interaction[+]
-    * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle"
 * rest[+]
   * mode = #client
   * documentation = "DSUBm Resource Notification Broker provides capability to send notification"
@@ -448,21 +399,17 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 
 - Shall implement the ITI-110 transaction
 - Should implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that shall be supported](ITI-113.html#2311352-message-semantics)
-    - contact
-    - criteria
-    - payload
+  - [Search Parameters that should be supported](ITI-113.html#2311352-message-semantics)
+    - _id
     - status
-    - type
     - url
-    - custom-channel
     - filter-criteria
-    - payload-type
     - topic
   - Should support the DSUBm $status operation  
   - Should support the DSUBm $events operation  
 - Should implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that shall be supported](ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that should  be supported](ITI-114.html#2311452-message-semantics)
+    - _id
     - resource
     - derived-or-self
     - status
@@ -492,60 +439,69 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
-    * documentation = " Resource Subscription [ITI-110]"
+    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
     * searchParam[+]
-      * name = "contact"
-      * type = #token
-      * documentation = "Contact details for the subscription"
-    * searchParam[+]
-      * name = "criteria"
+      * name = "_id"
       * type = #string
-      * documentation = "The search rules used to determine when to send a notification"
-    * searchParam[+]
-      * name = "payload"
-      * type = #token
-      * documentation = "The mime-type of the notification payload"
+      * documentation = "The id of the Subscription"
     * searchParam[+]
       * name = "status"
       * type = #token
       * documentation = "The current state of the subscription"
     * searchParam[+]
-      * name = "type"
-      * type = #token
-      * documentation = "The type of channel for the sent notifications"
-    * searchParam[+]
       * name = "url"
       * type = #uri
       * documentation = "The URI that will receive the notifications"
     * searchParam[+]
-      * name = "custom-channel"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
-    * searchParam[+]
       * name = "filter-criteria"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-filter-criteria"
       * type = #string
       * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
     * searchParam[+]
-      * name = "payload-type"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
-    * searchParam[+]
       * name = "topic"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-topic"
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
       * name = "$events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
-      * documentation = """ this operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER """
+      * documentation = """ This operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER; if supported, the Resource Notification Subscriber shall support in response a Bundle that is conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
       * name = "$status"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
-      * documentation = " this operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER "
-
+      * documentation = """ This operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER; if supported, the Resource Notification Subscriber shall support in response a Bundle that is conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """
+  * resource[1]
+    * type = #SubscriptionTopic
+    * documentation = "Resource SubscriptionTopic Search [ITI-114]"
+    * interaction[0]
+      * code = #read
+    * interaction[1]
+      * code = #search-type
+    * searchParam[+]
+      * name = "_id"
+      * type = #string
+      * documentation = "The id of the SubscriptionTopic"
+    * searchParam[+]
+      * name = "resource"
+      * type = #uri
+      * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
+    * searchParam[+]
+      * name = "derived-or-self"
+      * type = #uri
+      * documentation = "A server defined search that matches either the url or derivedFrom"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "Should be valued with `active`"      
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           
+  
 Instance: IHE.DSUBm.ResourceNotificationSubscriber.UpdateOption
 InstanceOf: CapabilityStatement
 Title: "DSUBm Resource Notification Subscriber Actor  with update option"
@@ -559,25 +515,22 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 
 - Shall implement the ITI-110 transaction
 - Should implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that shall be supported](ITI-113.html#2311352-message-semantics)
-    - contact
-    - criteria
-    - payload
+  - [Search Parameters that should be supported](ITI-113.html#2311352-message-semantics)
+    - _id
     - status
-    - type
     - url
-    - custom-channel
     - filter-criteria
-    - payload-type
     - topic
   - Should support the DSUBm $status operation  
   - Should support the DSUBm $events operation  
 - Should implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that shall be supported](ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that should  be supported](ITI-114.html#2311452-message-semantics)
+    - _id
     - resource
     - derived-or-self
     - status
     - url
+
 
 """
 
@@ -605,59 +558,68 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-PatientDependent-Subscription-update"
-    * documentation = " Resource Subscription [ITI-110]"
+    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
     * searchParam[+]
-      * name = "contact"
-      * type = #token
-      * documentation = "Contact details for the subscription"
-    * searchParam[+]
-      * name = "criteria"
+      * name = "_id"
       * type = #string
-      * documentation = "The search rules used to determine when to send a notification"
-    * searchParam[+]
-      * name = "payload"
-      * type = #token
-      * documentation = "The mime-type of the notification payload"
+      * documentation = "The id of the Subscription"
     * searchParam[+]
       * name = "status"
       * type = #token
       * documentation = "The current state of the subscription"
     * searchParam[+]
-      * name = "type"
-      * type = #token
-      * documentation = "The type of channel for the sent notifications"
-    * searchParam[+]
       * name = "url"
       * type = #uri
       * documentation = "The URI that will receive the notifications"
     * searchParam[+]
-      * name = "custom-channel"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by additional channel type"
-    * searchParam[+]
       * name = "filter-criteria"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-filter-criteria"
       * type = #string
       * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
     * searchParam[+]
-      * name = "payload-type"
-      * type = #string
-      * documentation = "This SearchParameter enables query of subscriptions by payload type"   
-    * searchParam[+]
       * name = "topic"
+      * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-topic"
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
       * name = "$events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
-      * documentation = """ this operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER """
+      * documentation = """ This operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER; if supported, the Resource Notification Subscriber shall support in response a Bundle that is conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
       * name = "$status"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"    
-      * documentation = " this operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER "
+      * documentation = """ This operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER; if supported, the Resource Notification Subscriber shall support in response a Bundle that is conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """
+  * resource[1]
+    * type = #SubscriptionTopic
+    * documentation = "Resource SubscriptionTopic Search [ITI-114]"
+    * interaction[0]
+      * code = #read
+    * interaction[1]
+      * code = #search-type
+    * searchParam[+]
+      * name = "_id"
+      * type = #string
+      * documentation = "The id of the SubscriptionTopic"
+    * searchParam[+]
+      * name = "resource"
+      * type = #uri
+      * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
+    * searchParam[+]
+      * name = "derived-or-self"
+      * type = #uri
+      * documentation = "A server defined search that matches either the url or derivedFrom"
+    * searchParam[+]
+      * name = "status"
+      * type = #token
+      * documentation = "Should be valued with `active`"      
+    * searchParam[+]
+      * name = "url"
+      * type = #uri
+      * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           
 
 
 /*
