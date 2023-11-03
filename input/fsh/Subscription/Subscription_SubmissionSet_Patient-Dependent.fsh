@@ -12,6 +12,6 @@ Description:  "Resource Subscription for DSUBm profile for SubmissionSet with th
 * criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria. The code parameter shall be used and shall indicates the List of type SubmissionSet."
 * criteria = Canonical(DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent)
 * channel.type = #rest-hook 
-* channel.endpoint 0..1 MS SU  
+* channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
 * channel.payload from DSUBmPayload
