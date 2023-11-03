@@ -376,6 +376,45 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 8. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
 9. Downloaded the document, Ms. Fox can view the report.
 
+
+#### 1:54.4.2.7 Use Case \#7: SubmissionSet Subscription in a XDS Environment  where DSUBm is grouped with DSUB
+
+In this use case, a system desires to subscribe to a submissionSet with a specific intended recipient of clinical information. A source of clinical content can identify the intended target for a submissionSet using the XDSSubmissionSet.IntendedRecipient metadata attribute.
+
+##### 1:54.4.2.7.1 Patient-dependent SubmissionSet Subscription in an infrastructure where DSUBm is grouped with DSUB Use Case Description
+
+Dr. Brown is a clinician and can request exams for many patients. He works in multiple hospital and due to his obligations he is not always connected and available to review the document that are produced from other hospitals. So the doctor uses a mobile app in order to get notifications for documents produced from other hospital that are intended for him (the subscription created has the intendedRecipient as subscrition criteria). 
+Mr. White attends a consultation with Dr. Brown, who requests a Laboratory Report for the patient. The app that the doctor is using creates a mobile subscription with an intendedRecipient of Dr. Brown. This mobile subscription is replicated by a middleware (DSUB/FHIR interfare) in order to intercept XDS documents with the same filter criteria of the mobile susbcritpion created by the app. 
+The patient receives the exam in a Clinical Laboratory. The Laboratory Information System produces a report and submits the document in the Document Sharing Infrastructure identifying Dr. Brown as the intended Recipient for the submission. This publishing event matches the existing subscription performed by the middleware and a notification is sent to the middleware. 
+The middleware converts the notification in a mobile notification that is sent to  Dr. Brown’s mobile system (identified as the Resource Notification Recipient in the mobile subscription created). 
+Dr. Brown, after seeing the notification on his app, can access to the EMR system and retrieve the laboratory report and can quickly analyze the report published and can make other clinical decisions in an efficient way. 
+
+##### 1:54.4.2.7.2 Patient-dependent SubmissionSet Subscription in an infrastructure where DSUBm is grouped with DSUB Process Flow
+
+<figure>
+{%include usecase7-processflow.svg%}
+<figcaption><b>1:54.4.2.7.2-1: Patient-dependent SubmissionSet Subscription in a infrastructure where DSUBm is grouped with DSUB</b></figcaption>
+</figure>
+<br clear="all">
+
+**Pre-conditions**:
+
+The assumption is that systems share the information in an XDS Environment where a DSUB and DSUBm are used a the same time. In the central infrastructure, the XDS Registry is grouped with XDS document Repository and the Document Notification Publisher. The DSUB Document Metadata Subscriber and the DSUB Document Metadata Recipient are grouped with a DSUBm Resource Notification Broker. 
+
+
+**Main Flow**:
+
+1. The mobile app performs a patient-dependent SubmissionSet subscription specific for document produced for Mr.White that have Dr.Brown as the intended Recipient. ([ITI-110] Resource Subscription)  
+2. When the DSUB/FHIR interface receives the Subscrption creates a DSUB subscription with equivalent filter criteria. ([ITI-52] Document Metadata Subscribe)
+3. The Laboratory Information System produce the report for Mr. White exams  ([ITI-41] Provide and Register Document Set-b )
+4. The Central Infrastracture propagetes to the DSUB Broker a Publication Event.  ([ITI-54] Document Metdata Publish)
+5. The DSUB Broker matches the publication with all the available subscriptions and a notification is triggered for the subscription created at step 2 ([ITI-53] Document Metdata Notify).
+6. The DSUB/FHIR interface receives the notification and the subscription created at step 1 is triggered since the document had Dr.Brown as the intended recipient. ([ITI-112] Resource Notify)  
+7. When Dr.Brown receives the notification he access to his system in order to consult the new document produced. 
+8. From his system Dr.Brown searches for the document that has been submitted with the submissionSet that he has been notified. ([ITI-18] Registry Stored Query) 
+9. The doctor can now retrieve the document and consult it.([ITI-43] Retrieve Document Set-b) 
+
+
 ## 1:54.5 Security Considerations
 
 This profile requires actors to audit the transactions that create subscriptions and send notifications, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application is strongly recommended in order to track the subscriptions and the notification sent.
