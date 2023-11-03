@@ -61,8 +61,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Shall support the ITI-110 transaction
 - Shall support the ITI-111 transaction
 - Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction
-- [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+- Shall support the ITI-113 transaction, with the following [Search Parameters](ITI-113.html#2311352-message-semantics)
   - contact
   - criteria
   - payload
@@ -75,8 +74,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - topic
 - Shall support the DSUBm $status operation  
 - Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+- Shall support the ITI-114 transaction, with the following [Search Parameters](ITI-114.html#2311452-message-semantics)
     - resource
     - derived-or-self
     - status
@@ -222,8 +220,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - Shall support the ITI-110 transaction
 - Shall support the ITI-111 transaction
 - Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction
-- [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+- Shall support the ITI-113 transaction with the following [Search Parameters](ITI-113.html#2311352-message-semantics)
   - contact
   - criteria
   - payload
@@ -236,8 +233,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - topic
 - Shall support the DSUBm $status operation  
 - Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+- Shall support the ITI-114 transaction with the following [Search Parameters](ITI-114.html#2311452-message-semantics)
     - resource
     - derived-or-self
     - status
@@ -452,7 +448,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 
 - Shall implement the ITI-110 transaction
 - Should implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+  - [Search Parameters that shall be supported](ITI-113.html#2311352-message-semantics)
     - contact
     - criteria
     - payload
@@ -466,7 +462,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - Should support the DSUBm $status operation  
   - Should support the DSUBm $events operation  
 - Should implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that shall be supported](ITI-114.html#2311452-message-semantics)
     - resource
     - derived-or-self
     - status
@@ -563,7 +559,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 
 - Shall implement the ITI-110 transaction
 - Should implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-113.html#2311352-message-semantics)
+  - [Search Parameters that shall be supported](ITI-113.html#2311352-message-semantics)
     - contact
     - criteria
     - payload
@@ -577,7 +573,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - Should support the DSUBm $status operation  
   - Should support the DSUBm $events operation  
 - Should implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that shall be supported](https://profiles.ihe.net/ITI/DSUBm/ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that shall be supported](ITI-114.html#2311452-message-semantics)
     - resource
     - derived-or-self
     - status

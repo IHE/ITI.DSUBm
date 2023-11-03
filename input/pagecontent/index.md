@@ -1,4 +1,4 @@
-IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many items (FHIR resource, Documents, etc.) that can be shared, searched, and retrieved with devices, but doesn’t provide a common framework for subscribing those items.
+IHE provides multiple profiles for [mobile use](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html) (e.g. [SVCM](https://profiles.ihe.net/ITI/SVCM/index.html), [MHD](https://profiles.ihe.net/ITI/MHD/index.html), [MHDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50), [NPFS](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_NPFS.pdf)), defining many items (FHIR resources, Documents, etc.) that can be shared, searched, and retrieved with devices, but doesn’t provide a common framework for subscribing those items.
 
 For documents, IHE provides an excellent tool to search and retrieve them through RESTful capabilities [Mobile Access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD/index.html) but doesn’t address the subscription from a mobile device although it’s possible through a non-mobile application ([DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html)).
 
@@ -29,7 +29,7 @@ This guide is organized into the following sections:
    1. [Cross Profile Considerations](volume-1.html#1546-cross-profile-considerations)
 - Volume 2: Transaction Detail
    1. [Resource Subscription [ITI-110]](ITI-110.html)
-   1. [Resource Subscription [ITI-111]](ITI-111.html)
+   1. [Resource Publish [ITI-111]](ITI-111.html)
    1. [Resource Notify [ITI-112]](ITI-112.html)
    1. [Resource Subscription Search [ITI-113]](ITI-113.html)
    1. [Resource SubscriptionTopic Search [ITI-114]](ITI-114.html)

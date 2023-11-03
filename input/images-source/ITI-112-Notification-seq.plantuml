@@ -11,19 +11,18 @@ Recipient --> Broker :  Handshake Notification Response [ITI-112]
 deactivate Recipient
 
 == Heartbeat Notification ==
-Broker -> Recipient :  Heartbeat Notification Message  [ITI-112]
+Broker -> Recipient :  Heartbeat Notification Message [ITI-112]
 activate Recipient
 Recipient --> Broker :  Heartbeat Notification Response [ITI-112]
 deactivate Recipient
 
 == Event Notification ==
-Broker -> Recipient :  Event Notification Message [ITI-112]
-activate Recipient
+Broker -> Recipient :  Event Notification Message [ITI-112]activate Recipient
 Recipient --> Broker :  Event Notification Response [ITI-112]
 deactivate Recipient
 
 == Subscription Deactivation Notification ==
-Broker -> Recipient :  Subscription Deactivation Notification Message  [ITI-112]
+Broker -> Recipient :  Subscription Deactivation Notification Message [ITI-112]
 activate Recipient
 Recipient --> Broker :  Subscription Deactivation Notification Response [ITI-112]
 deactivate Recipient

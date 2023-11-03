@@ -150,7 +150,7 @@ This section shows how the transactions and content modules of the profile are c
 
 The DSUBm profile enables mobile subscriptions for documents.
 The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented.  
-In the following use cases different subscription types are presented such as: patient-dependent subscription, multi-patient subscription, Folder subscription, and other types.
+In the following use cases different subscription types are presented. The different subscription presented are focused on DocumentReferences, SubmissionSets adn Folders. These subscriptions can be explicit for a specific patient (patient-dependent subscription) or can be expressed without a specific patient hence covering all patients (in this case they are referred as multi-patient subscriptions). 
 The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50) and an environment in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html).
 These use cases present also the possibility in which DSUB and DSUBm coexist and both are available to the users.
  
@@ -183,7 +183,7 @@ At the end of Mr. Smith's hospitalization, the software of Dr. Roose automatical
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. In the community is implemented Central Infrastructure where the MHDS Registry is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
+The assumption is that systems share the information in an MHDS Environment. In the environment is implemented Central Infrastructure where the MHDS Registry is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer.
 
 **Main Flow**:
 
@@ -207,7 +207,7 @@ The update of a collection of documents (Folder), using a patient national Elect
 Dr. Rooney is taking care of Ms. Williams, a chronic diabetic patient. In order to adjust the therapy the doctor and the patient will perform a visit every month for the next 2 years. 
 During the first visit, Dr. Rooney uses the mobile DHR application to subscribe to the National Electronic Healthcare Record (EHR) in order to be notified of any updates regarding Ms. Williams's clinical data. After the visit, the patient is sent home with the standard therapy.
 Between the first and second visit, the patient is not feeling well and is admitted in the emergency department where some blood tests are performed and the acute symptoms are taken care of. 
-When the blood tests are published on the EHR a notification is sent to the mobile DHR used by Dr. Rooney and the new update are retrieved.
+When the blood tests are published on the EHR a notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
 During the second visit, Dr. Rooney uses the latest clinical information and adjust the therapy. 
 A few days after the second visit Ms. Williams is admitted again into the emergency room. Other tests are performed and the medical report is updated in the EHR. A new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
 During the third visit, Ms. Williams decides that a different physician will take charge of her therapy. Therefore Dr. Rooney closes the episode of care for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
@@ -228,14 +228,14 @@ The assumption is that systems share the information in an MHDS Environment. The
 **Main Flow**:
 
 1. During the first visit a document subscription is needed. The mobile DHR application search on the Resource Notification Broker for the supported SubscriptionTopic resource.([ITI-114] Resource SubscriptionTopic Search). 
-2. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Mr. Williams. ([ITI-110] Resource Subscription). 
-3. After some days during an emergency a blood test analysis is performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+2. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Ms. Williams. ([ITI-110] Resource Subscription). 
+3. After some days during an emergency a blood test analysis is performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-5. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+5. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
 6. After some days during the second visit, Dr. Rooney uses the updated clinical data to adjust the therapy from A to B.
-7. After some days during an emergency event other analyses are performed on Mr. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
+7. After some days during an emergency event other analyses are performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 8. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-9. When the DHR receives the notification, the mobile application will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+9. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
 10. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
 11. The mobile DHR unsubscribes from the folder subscription. ([ITI-110] Resource Subscription.)
 
@@ -246,10 +246,9 @@ The availability of a specific document for a Patient shared in an XDS on FHIR i
 
 ##### 1:54.4.2.3.1 Document Subscription for Mobile Device in XDS on FHIR Environment Use Case Description
 
-Mr. Brown went to see his doctor. During the examination, the doctor decided that he will choose which prescription to make after seeing the blood test results. Meanwhile, Mr. Brown is sent home because he has already submitted a subscription in order to receive a notification on his mobile app when the prescription will be ready.
+Mr. Brown went to see his doctor. During the examination, the doctor considered important to check the blood test results before making a medication prescription. Meanwhile, Mr. Brown is sent home because he has already submitted a subscription in order to receive a notification on his mobile app when the prescription will be ready.
 
-When the doctor is notified that the blood test results are ready he can retrieve these results and decide which drug will be included in the prescription. 
-When the prescription has been made Mr. Brown receives the notification on his phone. From the app, he can now retrieve the prescription required to purchase the drug in the local pharmacy.
+When the doctor was notified that the blood test results were ready, he retrieved them and, after checking them, the doctor prescribed the drug to Mr. Brown. Mr. Brown receives a notification on his phone when the prescription is ready (created). From the app, he can now retrieve the prescription required to purchase the drug in the local pharmacy.
 
 ##### 1:54.4.2.3.2 Document Subscription for Mobile Device in XDS on FHIR Environment Process Flow
 
@@ -265,12 +264,12 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription with the following criteria: patient and typeCode.) 
+1. After the first login, the mobile app for the prescription performs an automatic subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription with the following criteria: patient and typeCode) 
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish).
 4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
-5. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface. 
-6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
+5. When the user sees the notification on his app it is possible to retrieve the document. The app retrieves the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface. 
+6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface retrieves the document from the XDS Repository. Retrieve Document Set [ITI-43].
 7. With the downloaded ePrescription the patient can now go to the local pharmacy to acquire the prescribed drug showing his mobile device.
 
 #### 1:54.4.2.4 Use Case \#4: Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm
