@@ -39,6 +39,6 @@ This section modifies other IHE profiles or the General Introduction appendices 
 
 ### 26.2.2 Subscription Search Option
 
-The Document Metadata Notification Broker that support this option shall support the Resource Subscription Search [ITI-113] transaction.
+The Document Metadata Notification Broker that support this option shall support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Notification Broker shall be capable of return a list of Subscription Resources that match the search parameter, on the base of the subscription it has received with the Document Metadata Subscribe [ITI-52] transaction and that it has tracked. It should support the %status operation and it may support the $events operation Resource Subscription Search [ITI-113] transaction.
 
-The Document Metadata Subscriber that support this option shall support the Resource Subscription Search [ITI-113] transaction.
+The Document Metadata Subscriber that support this option shall support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Subscriber can search the subscription towards the Document Metadata Notification Broker. With this option the Document Metadata Subscriber shall support the search and/or read of Subscription Resource. It may support the %status operation and it may support the $events operation of the Resource Subscription Search [ITI-113] transaction.
