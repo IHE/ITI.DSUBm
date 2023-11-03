@@ -1,55 +1,80 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
+/' title "patientDependent Subscription" '/
 
-/'title "Subscription with DSUBm on MHDs infrastructure with pull notification" '/
-participant HospitalEHR [
-    = Hospital EHR
-    ----
-    [MHD Document Source]
-] 
-
-participant MHDsDocumentRegistry [
-    =Central Infrastructure
-    ----
-    [MHDs Document Registry]
-    [DSUBm Resource Notification Publisher]
-] 
-
-participant Broker[
-    = Broker
-    ----
-    [DSUBm Resource Notification Broker]
-    [DSUBm Resource Notification Recipient]
+participant Source [
+ = Laboratory Information System
+ ----
+ [XDS Document Source] 
 ]
 
-participant App [
-    = Visit App
-    ----
-    [DSUBm Resource Notification Subscriber]
-    [MHD Document Consumer]
+participant Central [
+  =Central Infrastructure
+  ----
+  [XDS Document Registry]
+  [XDS Document Repository]
+  [DSUB Document Metadata Publisher]
+]
+
+participant Broker [
+ = DSUB Broker
+ ----
+ [DSUB Document Metadata Subscriber]
+]
+
+participant DSUBFHIR [
+  =DSUB/FHIR interface
+  ----
+  [DSUB Document Metadata Subscriber]
+  [DSUB Document Metadata Notification Recipient]
+  [DSUBm Resource Notification Broker]
+]
+
+participant Subscriber [
+  = EMR app
+  ----
+  [DSUBm Resource Notification Subscriber]
+  [DSUBm Resource Notification Recipient]
+  [XDS Document Consumer]
 ] 
 
+
+
 autonumber "<b>"
-group First Visit
-  App -> Broker:   Resource Subscription [ITI-110]
-  activate Broker
-  deactivate Broker
-end
-HospitalEHR -> MHDsDocumentRegistry:  Provide Document Bundle [ITI-65]
-MHDsDocumentRegistry -> Broker : Resource Publish [ITI-111]
+Subscriber -> DSUBFHIR: Resource Subscription [ITI-110]
+activate DSUBFHIR
+
+DSUBFHIR -> Broker:Document Metadata Subscribe [ITI-52]
+deactivate DSUBFHIR
 activate Broker
+
+
+
+Source -> Central: Provide and Register Document Set-b [ITI-41] 
 deactivate Broker
+deactivate Broker
+activate Central
 
 
-group Second Visit
-  App -> Broker: Resource Subscription Search [ITI-113] ($events operation)
-  activate Broker
-  deactivate Broker
-  App -> MHDsDocumentRegistry: Retrieve Document [ITI-68]
-  activate MHDsDocumentRegistry
-  deactivate MHDsDocumentRegistry
-end
+Central -> Broker: Document Metdata Publish [ITI-54]
+deactivate Central
+activate Broker 
 
 
+Broker -> DSUBFHIR: Document Metdata Publish [ITI-53]
+deactivate Broker
+activate DSUBFHIR
+
+
+DSUBFHIR ->Subscriber: Resource Notify [ITI-112]
+deactivate DSUBFHIR
+
+Subscriber --> Subscriber: Dr. Brown access to his System
+Activate Subscriber
+Subscriber -> Central: Registry Stored Query [ITI-18]
+activate Central
+Subscriber -> Central: Retrieve Document Set-b [ITI-43]
+deactivate Central
+deactivate Subscriber
 @enduml
