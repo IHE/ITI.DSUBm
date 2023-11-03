@@ -33,4 +33,3 @@ Note that:
 * canFilterBy[=].filterParameter = "intendedRecipient"
 
 * notificationShape.resource = "List"
-* notificationShape.include = "List:patient&iterate=Patient.link"
