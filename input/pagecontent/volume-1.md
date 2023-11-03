@@ -391,29 +391,52 @@ The DSUBm actor and transaction model is very flexible. Integration with other I
 
 ### 1:54.6.1 MHDS - Mobile Health Document Sharing 
 
-Within a RESTfull infrastructure that is implementing the MHDS model:
+Within a RESTfull infrastructure that is implementing the MHDS model there are two possible grouping. 
+
+#### 1:54.6.1.1  MHDS - Mobile Health Document Sharing Grouping 1
+In the first proposed grouping:
+
 * MHDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
-* MHDS Document Registry will likely be grouped with a Resource Notification Broker.
 * The MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* The MHD Document Consumer, will likely be grouped with a Resource Notification Subscriber.
 
 <a name="fig_MHDS"> </a>
 <figure>
 {%include model_MHDS.svg%}
-<figcaption><b>Figure 1:54.6.1-1: DSUBm actors grouped with MHDS actors
+<figcaption><b>Figure 1:54.6.1.1-1: DSUBm actors grouped with MHDS actors showing the first of the two possible grouping. 
 </b></figcaption>
 </figure>
 <br clear="all">
 
-### 1:54.6.2. XDS.b - Cross-Enterprise Document Sharing
+#### 1:54.6.1.2  MHDS - Mobile Health Document Sharing Grouping 2
+In the second proposed grouping:
 
-Within an XDS infrastructure:
+* MHDS Document Registry will likely be grouped with a Resource Notification Broker.
+* The MHD Document Consumer, will likely be grouped with a Resource Notification Subscriber.
+
+
+
+<a name="fig_MHDS2"> </a>
+<figure>
+{%include model_MHDS2.svg%}
+<figcaption><b>Figure 1:54.6.1.2-1: DSUBm actors grouped with MHDS actors showing the second of the two possible grouping. 
+</b></figcaption>
+</figure>
+<br clear="all">
+
+### 1:54.6.2 XDS.b - Cross-Enterprise Document Sharing
+
+Within an XDS infrastructure there are two possible grouping. 
+
+### 1:54.6.2.1 XDS.b - Cross-Enterprise Document Sharing grouping 1
+
+In the first proposed grouping:
+
 * XDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the XDS Document Registry. 
-* XDS Document Registry will likely be grouped with a Resource Notification Broker.
+
 * XDS Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
-* XDS Document Consumer will likely be grouped with a Resource Notification Subscriber.
 
 If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for a mobile interface:
+
 * MHD Document Consumer will most likely be grouped with a Resource Notification Recipient. This grouping makes sense since the receiver of the notification is most likely the user of the information.
 * MHD Document Consumer will likely be grouped with a Resource Notification Subscriber.
 
@@ -421,12 +444,29 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 <a name="fig_MHD"> </a>
 <figure>
 {%include model_MHD.svg%}
-<figcaption><b>Figure 1:54.6.2-1: DSUBm actors grouped with XDS actors and MHD actors
+<figcaption><b>Figure 1:54.6.2.1-1: DSUBm actors grouped with XDS actors and MHD actors
 </b></figcaption>
 </figure>
 <br clear="all">
 
-Note that in this scenario,  should be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of Updating events option.
+Note that in this scenario, developers should be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
+
+### 1:54.6.2.2 XDS.b - Cross-Enterprise Document Sharing grouping 2
+In the second proposed grouping:
+
+* XDS Document Registry will likely be grouped with a Resource Notification Broker.
+* XDS Document Consumer will likely be grouped with a Resource Notification Subscriber.
+
+
+<a name="fig_MHD2"> </a>
+<figure>
+{%include model_MHD2.svg%}
+<figcaption><b>Figure 1:54.6.2.2-1: DSUBm actors grouped with XDS actors 
+</b></figcaption>
+</figure>
+<br clear="all">
+
+Note that in this scenario, developers should be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
 
 ### 1:54.6.3 DSUBm as an interface for DSUB 
 Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
