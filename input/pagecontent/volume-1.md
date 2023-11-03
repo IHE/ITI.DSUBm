@@ -393,7 +393,7 @@ The DSUBm actor and transaction model is very flexible. Integration with other I
 
 Within a RESTfull infrastructure that is implementing the MHDS model there are two possible grouping. 
 
-#### 1:54.6.1.1  MHDS - Mobile Health Document Sharing Grouping 1
+#### 1:54.6.1.1 MHDS - Mobile Health Document Sharing Grouping 1
 In the first proposed grouping:
 
 * MHDS Document Registry will most likely be grouped with a Resource Notification Publisher because all publication events are submitted to the MHDS Document Registry. 
@@ -407,7 +407,7 @@ In the first proposed grouping:
 </figure>
 <br clear="all">
 
-#### 1:54.6.1.2  MHDS - Mobile Health Document Sharing Grouping 2
+#### 1:54.6.1.2 MHDS - Mobile Health Document Sharing Grouping 2
 In the second proposed grouping:
 
 * MHDS Document Registry will likely be grouped with a Resource Notification Broker.
