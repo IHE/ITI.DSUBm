@@ -56,4 +56,4 @@ Note that:
 * canFilterBy[=].filterParameter = "type"
 
 * notificationShape.resource = "DocumentReference"
-* notificationShape.include = "DocumentReference:patient&iterate=Patient.link"
+
