@@ -40,10 +40,12 @@ activate Central
 Central -> DHR: Resource Notify [ITI-112]
 deactivate Central
 activate DHR
-DHR -> ER: Retrieve Document [ITI-68]
-activate ER
-deactivate ER
+
+DHR -> Central: Retrieve Document [ITI-68]
+activate Central
 deactivate DHR 
+deactivate Central
+
 
 DHR -> DHR: Second visit (therapy B)
 ER->Central:  Provide Document Bundle [ITI-65]
@@ -52,14 +54,16 @@ Central -> DHR: Resource Notify [ITI-112]
 deactivate Central
 activate DHR
 
-DHR -> ER: Retrieve Document [ITI-68]
-activate ER
-deactivate ER
+DHR -> Central: Retrieve Document [ITI-68]
+
+activate Central
 deactivate DHR 
+deactivate Central
+
 autonumber stop 
 DHR -> DHR: Third visit. (Unsubscribe)
 activate DHR
-autonumber 9 "<b>"
+autonumber 10 "<b>"
 DHR -> Central: Resource Subscription Search [ITI-113]
 DHR -> Central: Resource Subscription [ITI-110]	
 deactivate DHR

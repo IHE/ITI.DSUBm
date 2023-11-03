@@ -231,11 +231,11 @@ The assumption is that systems share the information in an MHDS Environment. The
 2. At the end of the first visit, the mobile DHR application performs a folder Subscription to the EHR, and therapy A is prescribed to Ms. Williams. ([ITI-110] Resource Subscription). 
 3. After some days during an emergency a blood test analysis is performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-5. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+5. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the Electronic HealthCare Record. The clinical data in the DHR is updated. 
 6. After some days during the second visit, Dr. Rooney uses the updated clinical data to adjust the therapy from A to B.
 7. After some days during an emergency event other analyses are performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
 8. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
-9. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the ER system. The clinical data in the DHR is updated. 
+9. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the Electronic HealthCare Record. The clinical data in the DHR is updated. 
 10. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
 11. The mobile DHR unsubscribes from the folder subscription. ([ITI-110] Resource Subscription.)
 
