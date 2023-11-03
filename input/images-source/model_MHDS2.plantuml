@@ -3,11 +3,11 @@ skinparam svgDimensionStyle false
 skinparam componentStyle rectangle
 
 hide footbox
-/' title "DSUBm grouped with MHDS grouping 1" '/
+/' title "DSUBm grouped with MHDS  grouping 2 " '/
 
 
-card "DSUBm Resource Notification Subscriber" as DSUBm_Subsciber 
-card "DSUBm Resource Notification Broker" as DSUBm_Broker
+card "DSUBm Resource Notification Recipient" as DSUBm_Recipient
+
 
 card  Registry [
   <b>MHDs Document Registry
@@ -16,7 +16,7 @@ card  Registry [
   ....
   MHD Document Recipient
   ....
-  DSUBm Resource Notification Publisher
+  DSUBm Resource Notification Broker
 ]
 
 card Publisher [
@@ -30,14 +30,12 @@ card  Consumer [
   ----
   MHD Document Consumer
   ....
-  DSUBm Resource Notification Recipient
+  DSUBm Resource Notification Subscriber
 ]
 
 
 Publisher -r-> Registry: ITI-65
-Registry -d->DSUBm_Broker: ITI-111
-DSUBm_Subsciber -u-> DSUBm_Broker: ITI-110
-DSUBm_Broker -r-> Consumer : ITI-112
-
+Consumer -l-> Registry: ITI-110
+Registry -d->DSUBm_Recipient: ITI-112
 
 @enduml

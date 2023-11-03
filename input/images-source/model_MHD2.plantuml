@@ -1,0 +1,41 @@
+@startuml
+skinparam svgDimensionStyle false
+skinparam componentStyle rectangle
+
+
+
+hide footbox
+/' title "DSUBm grouped with MHD grouping 2" '/
+
+
+card "XDS Document Repository" as XDS_Repo 
+card "Document Administrator" as DOC_Administrator
+card  Registry [
+  <b> Document Registry
+  ----
+  XDS Document Registry 
+  ....
+  DSUBm Resource Notification  Broker
+]
+card "DSUBm Resource Notification Recipient" as DSUBm_Recipient
+
+
+card  Consumer_XDS[
+  <b>XDS Document Consumer System
+  ----
+  XDS Document Consumer
+  ....
+  DSUBm Resource Notification Subscriber
+]
+
+
+
+DOC_Administrator --> Registry: ITI-57
+DOC_Administrator --> Registry: ITI-62
+
+XDS_Repo -d-> Registry: ITI-42
+
+Consumer_XDS -u-> Registry: ITI-110
+Registry -r-> DSUBm_Recipient: ITI-112
+
+@enduml

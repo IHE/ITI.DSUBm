@@ -2,8 +2,10 @@
 skinparam svgDimensionStyle false
 skinparam componentStyle rectangle
 
+
+
 hide footbox
-/' title "DSUBm grouped with MHD" '/
+/' title "DSUBm grouped with MHD grouping 1" '/
 
 
 card "XDS Document Repository" as XDS_Repo 
@@ -24,7 +26,7 @@ card  Consumer_XDS[
   ----
   XDS Document Consumer
   ....
-  DSUBm Resource Notification  Recipient
+  DSUBm Resource Notification Recipient
 ]
 
 card  Consumer_MHD[
@@ -32,7 +34,9 @@ card  Consumer_MHD[
   ----
   MHD Document Consumer
   ....
-  DSUBm Resource Notification  Recipient
+  DSUBm Resource Notification Recipient
+  ....
+  DSUBm Resource Notification Subscriber
 ]
 
 
@@ -41,8 +45,9 @@ DOC_Administrator --> Registry: ITI-62
 
 XDS_Repo -d-> Registry: ITI-42
 Registry -d-> DSUBm_Broker: ITI-111
-DSUBm_Subscriber -l-> DSUBm_Broker: ITI-110
-DSUBm_Broker --> Consumer_MHD: ITI-112
+Consumer_MHD -l-> DSUBm_Broker: ITI-110
+DSUBm_Subscriber -r-> DSUBm_Broker: ITI-110
+DSUBm_Broker -r-> Consumer_MHD: ITI-112
 DSUBm_Broker --> Consumer_XDS: ITI-112
 /'
 card  ConsumerInterface [
@@ -53,7 +58,7 @@ card  ConsumerInterface [
   XDS Document Consumer 
 ]
 Consumer -u-> ConsumerInterface: ITI-68
-ConsumerInterface -l-> XDS_Repo: ITI-43
+ConsumerInterface --> XDS_Repo: ITI-43
 ConsumerInterface --> Registry: ITI-18
 '/
 
