@@ -6,7 +6,7 @@ Usage: #definition
 The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements expresses the requirements that shall be provided.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - Shall support the ITI-112 transaction
 
@@ -55,26 +55,31 @@ Usage: #definition
 The DSUBm Resource Notification Broker Actor CapabilityStatement requirements expresses the requirements that shall be provided.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
-
 - Shall support the ITI-110 transaction
-- Shall support the ITI-111 transaction
-- Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction and the following [Search Parameters](ITI-113.html#2311352-message-semantics)
-    - _id
-    - status
-    - url
-    - filter-criteria
-    - topic
-- Shall support the DSUBm $status operation  
-- Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction and the following [Search Parameters](ITI-114.html#2311452-message-semantics)
-    - _id
-    - resource
-    - derived-or-self
-    - status
-    - url
+- May support the ITI-111 transaction
+- Shall support the ITI-112 transaction:
+  - Shall support Handshake Notification
+  - Shall support Heartbeat Notification
+  - Shall support Event Notification
+  - Should support Subscription Deactivation Notification
+- Shall support the ITI-113 transaction: 
+    - Shall support the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+      - _id
+      - status
+      - url
+      - filter-criteria
+      - topic
+    - Shall support the DSUBm $status operation  
+    - Should support the DSUBm $events operation  
+- Shall support the ITI-114 transaction:
+    - Shall support the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+      - _id
+      - resource
+      - derived-or-self
+      - status
+      - url
 
 """
 
@@ -190,26 +195,31 @@ Usage: #definition
 The DSUBm Resource Notification Broker Actor CapabilityStatement requirements expresses the requirements that shall be provided when the update events option is used.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
-
 - Shall support the ITI-110 transaction
-- Shall support the ITI-111 transaction
-- Shall implement the ITI-112 transaction
-- Shall support the ITI-113 transaction and the following [Search Parameters](ITI-113.html#2311352-message-semantics)
-    - _id
-    - status
-    - url
-    - filter-criteria
-    - topic
-- Shall support the DSUBm $status operation  
-- Should support the DSUBm $events operation  
-- Shall support the ITI-114 transaction and the following [Search Parameters](ITI-114.html#2311452-message-semantics)
-    - _id
-    - resource
-    - derived-or-self
-    - status
-    - url
+- May support the ITI-111 transaction
+- Shall support the ITI-112 transaction:
+  - Shall support Handshake Notification
+  - Shall support Heartbeat Notification
+  - Shall support Event Notification
+  - Should support Subscription Deactivation Notification
+- Shall support the ITI-113 transaction: 
+    - Shall support the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+      - _id
+      - status
+      - url
+      - filter-criteria
+      - topic
+    - Shall support the DSUBm $status operation  
+    - Should support the DSUBm $events operation  
+- Shall support the ITI-114 transaction:
+    - Shall support the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+      - _id
+      - resource
+      - derived-or-self
+      - status
+      - url
 
 """
 
@@ -330,7 +340,7 @@ Usage: #definition
 The DSUBm Resource Notification Publisher Actor CapabilityStatement requirements expresses the requirements that shall be provided.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - Shall support the ITI-111 transaction
 
@@ -362,7 +372,7 @@ Usage: #definition
 he DSUBm Resource Notification Publisher Actor CapabilityStatement requirements expresses the requirements that shall be provided  when the update events option is used.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - Shall support the ITI-111 transaction
 
@@ -394,7 +404,7 @@ Usage: #definition
 The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirements expresses the requirements that shall be provided.
 
 - Using FHIR R4B
-- Shall support both json or xml encoding
+- Shall support both json and xml encoding
 - Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 
 - Shall implement the ITI-110 transaction
@@ -408,7 +418,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - Should support the DSUBm $status operation  
   - Should support the DSUBm $events operation  
 - Should implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that should  be supported](ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that should be supported](ITI-114.html#2311452-message-semantics)
     - _id
     - resource
     - derived-or-self
