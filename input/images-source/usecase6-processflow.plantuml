@@ -1,22 +1,22 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-/'title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" '/
 
-participant Repository [
-    =Integrated Document Source Repository
+/'title "Subscription with DSUBm on XDS on FHIR infrastructure with update "'/
+
+participant Source [
+    =Radiographic System
     ----
     [XDS Document Source]
-    [XDS Document Repository] 
-    [XDS Document Administrator]   
 ] 
 
-participant Central [
+participant Registry [
     =Central Infrastructure
     ----
     [XDS Document Registry]
+    [XDS Document Repository]
     [DSUBm Resource Notification Publisher]
-] 
+    ] 
 
 participant Broker [
     =Notification Broker
@@ -31,40 +31,47 @@ participant XDSonFHIR [
     [MHD Document Responder]
 ] 
 
-participant MobileDevice [
-    =Mobile Device
+
+participant App [
+    = Mobile Device
     ----
-    [MHD Document Consumer]
     [DSUBm Resource Notification Subscriber]
     [DSUBm Resource Notification Recipient]
+    [MHD Document Consumer]
 ] 
-autonumber 1 "<b>"
-MobileDevice -> Central: Resource Subscription [ITI-110]
-activate Central
-deactivate Central
 
-
-Repository -> Central: Register Document Set-b [ITI-42]
-activate Central
-Central -> Broker :  Resource Publish [ITI-111]
-deactivate Central
-
-Repository -> Central: Update Document Set [ITI-57]
-activate Central
-Central -> Broker :  Resource Publish [ITI-111]
-deactivate Central
+autonumber "<b>"
+App -> Broker: Resource Subscription [ITI-110]
 activate Broker
-Broker -> MobileDevice: Resource Notify [ITI-112]
 deactivate Broker
-activate MobileDevice
-MobileDevice -> XDSonFHIR: Retrieve Document [ITI-68]
+
+Source -> Registry: Provide Document Set-b [ITI-41]
+activate Registry
+Registry -> Broker: Resource Publish [ITI-111]
+deactivate Registry
+activate Broker
+Broker -> App: Resource Notify [ITI-112]
+deactivate Broker
+activate App 
+deactivate Broker
+App -> XDSonFHIR: Retrieve Document [ITI-68]
 activate XDSonFHIR
-XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
-activate Repository
+XDSonFHIR -> Registry: Retrieve Document Set [ITI-43]
+activate Registry
 deactivate XDSonFHIR
-deactivate Repository
-MobileDevice -> MobileDevice: Report view
-deactivate MobileDevice
+deactivate Registry
+App -> App: Noticed anomaly in metadata
+deactivate App
+
+
+Source ->Registry: Update Document Set [ITI-57]
+activate Registry
+Registry -> Broker: Resource Publish [ITI-111]
+deactivate Registry
+activate Broker
+Broker -> App: Resource Notify [ITI-112]
+deactivate Broker
+
 
 
 @enduml

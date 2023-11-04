@@ -1,80 +1,70 @@
 @startuml
 skinparam svgDimensionStyle false
 hide footbox
-/' title "patientDependent Subscription" '/
+/'title "Subscription with DSUBm on MHD on FHIR infrastructure from Mobile Device" '/
 
-participant Source [
- = Laboratory Information System
- ----
- [XDS Document Source] 
-]
-
-participant Central [
-  =Central Infrastructure
-  ----
-  [XDS Document Registry]
-  [XDS Document Repository]
-  [DSUB Document Metadata Publisher]
-]
-
-participant Broker [
- = DSUB Broker
- ----
- [DSUB Document Metadata Subscriber]
-]
-
-participant DSUBFHIR [
-  =DSUB/FHIR interface
-  ----
-  [DSUB Document Metadata Subscriber]
-  [DSUB Document Metadata Notification Recipient]
-  [DSUBm Resource Notification Broker]
-]
-
-participant Subscriber [
-  = EMR app
-  ----
-  [DSUBm Resource Notification Subscriber]
-  [DSUBm Resource Notification Recipient]
-  [XDS Document Consumer]
+participant Repository [
+    =Integrated Document Source Repository
+    ----
+    [XDS Document Source]
+    [XDS Document Repository] 
+    [XDS Document Administrator]   
 ] 
 
+participant Central [
+    =Central Infrastructure
+    ----
+    [XDS Document Registry]
+    [DSUBm Resource Notification Publisher]
+] 
+
+participant Broker [
+    =Notification Broker
+    ----
+    [DSUBm Resource Notification Broker]
+] 
+
+participant XDSonFHIR [
+    =XDS FHIR Interface
+    ----
+    [XDS Document Consumer]
+    [MHD Document Responder]
+] 
+
+participant MobileDevice [
+    =Mobile Device
+    ----
+    [MHD Document Consumer]
+    [DSUBm Resource Notification Subscriber]
+    [DSUBm Resource Notification Recipient]
+] 
+autonumber 1 "<b>"
+MobileDevice -> Central: Resource Subscription [ITI-110]
+activate Central
+deactivate Central
 
 
-autonumber "<b>"
-Subscriber -> DSUBFHIR: Resource Subscription [ITI-110]
-activate DSUBFHIR
+Repository -> Central: Register Document Set-b [ITI-42]
+activate Central
+Central -> Broker :  Resource Publish [ITI-111]
+deactivate Central
 
-DSUBFHIR -> Broker:Document Metadata Subscribe [ITI-52]
-deactivate DSUBFHIR
+Repository -> Central: Update Document Set [ITI-57]
+activate Central
+Central -> Broker :  Resource Publish [ITI-111]
+deactivate Central
 activate Broker
-
-
-
-Source -> Central: Provide and Register Document Set-b [ITI-41] 
+Broker -> MobileDevice: Resource Notify [ITI-112]
 deactivate Broker
-deactivate Broker
-activate Central
+activate MobileDevice
+MobileDevice -> XDSonFHIR: Retrieve Document [ITI-68]
+activate XDSonFHIR
+XDSonFHIR -> Repository: Retrieve Document Set [ITI-43]
+activate Repository
+deactivate XDSonFHIR
+deactivate Repository
+MobileDevice -> MobileDevice: Report view
+deactivate MobileDevice
 
 
-Central -> Broker: Document Metdata Publish [ITI-54]
-deactivate Central
-activate Broker 
-
-
-Broker -> DSUBFHIR: Document Metdata Publish [ITI-53]
-deactivate Broker
-activate DSUBFHIR
-
-
-DSUBFHIR ->Subscriber: Resource Notify [ITI-112]
-deactivate DSUBFHIR
-
-Subscriber --> Subscriber: Dr. Brown access to his System
-Activate Subscriber
-Subscriber -> Central: Registry Stored Query [ITI-18]
-activate Central
-Subscriber -> Central: Retrieve Document Set-b [ITI-43]
-deactivate Central
-deactivate Subscriber
 @enduml

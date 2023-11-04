@@ -1,0 +1,80 @@
+@startuml
+skinparam svgDimensionStyle false
+hide footbox
+/' title "patientDependent Subscription" '/
+
+participant Source [
+ = Laboratory Information System
+ ----
+ [XDS Document Source] 
+]
+
+participant Central [
+  =Central Infrastructure
+  ----
+  [XDS Document Registry]
+  [XDS Document Repository]
+  [DSUB Document Metadata Publisher]
+]
+
+participant Broker [
+ = DSUB Broker
+ ----
+ [DSUB Document Metadata Subscriber]
+]
+
+participant DSUBFHIR [
+  =DSUB/FHIR interface
+  ----
+  [DSUB Document Metadata Subscriber]
+  [DSUB Document Metadata Notification Recipient]
+  [DSUBm Resource Notification Broker]
+]
+
+participant Subscriber [
+  = EMR app
+  ----
+  [DSUBm Resource Notification Subscriber]
+  [DSUBm Resource Notification Recipient]
+  [XDS Document Consumer]
+] 
+
+
+
+autonumber "<b>"
+Subscriber -> DSUBFHIR: Resource Subscription [ITI-110]
+activate DSUBFHIR
+
+DSUBFHIR -> Broker:Document Metadata Subscribe [ITI-52]
+deactivate DSUBFHIR
+activate Broker
+
+
+
+Source -> Central: Provide and Register Document Set-b [ITI-41] 
+deactivate Broker
+deactivate Broker
+activate Central
+
+
+Central -> Broker: Document Metdata Publish [ITI-54]
+deactivate Central
+activate Broker 
+
+
+Broker -> DSUBFHIR: Document Metdata Publish [ITI-53]
+deactivate Broker
+activate DSUBFHIR
+
+
+DSUBFHIR ->Subscriber: Resource Notify [ITI-112]
+deactivate DSUBFHIR
+
+Subscriber --> Subscriber: Dr. Brown access to his System
+Activate Subscriber
+Subscriber -> Central: Registry Stored Query [ITI-18]
+activate Central
+Subscriber -> Central: Retrieve Document Set-b [ITI-43]
+deactivate Central
+deactivate Subscriber
+@enduml
