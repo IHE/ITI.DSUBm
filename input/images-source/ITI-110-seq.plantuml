@@ -18,14 +18,14 @@ opt handskake HTTPS
   end
 end
 '/
-Broker --> Subscriber : Subscription Response Message [ITI-110]
+Broker --> Subscriber : Create Subscription Response Message [ITI-110]
 deactivate Broker
 
 == Unsubscribe ==
 Subscriber -> Broker: Update Subscription Request [ITI-110]
 
 activate Broker
-Broker --> Subscriber: Subscription Response Message [ITI-110]
+Broker --> Subscriber: Update Subscription Response Message [ITI-110]
 deactivate Broker
 
 @enduml
