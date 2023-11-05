@@ -1,22 +1,22 @@
-Instance: DSUBm-SubscriptionTopic-Folder-PatientDependent-UpdateOption
+Instance: DSUBm-SubscriptionTopic-Folder-Subscription-UpdateOpt
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for Folder Patient-Dependent resource with update option"
-Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder List Resource. 
+Title:       "SubscriptionTopic for Folder Patient-Dependent resource with Folder Subscription for Update Option"
+Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder type List Resource. 
 This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element.
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
-- the resourceTrigger.resource element shall be a Folder List resource
-- this resource shall be used when the [Updates to document sharing resources option](https://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/volume-1.html#15421-updates-to-document-sharing-resources-option) is supported.
+- the resourceTrigger.resource element shall be a Folder type List resource
+- this resource shall be used when the Folder Subscription for Update Option is supported.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for Folder Patient-Dependent resource with Updates to document sharing resources option"
+* title = "SubscriptionTopic for Folder Subscription for Full Events Option"
 * status = #active 
-* resourceTrigger.description = "A Folder type List resource is created, updated or deleted"
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/List"
-* resourceTrigger.supportedInteraction[0] = #create
-* resourceTrigger.supportedInteraction[+] = #update
-* resourceTrigger.supportedInteraction[+] = #delete
+* resourceTrigger[0].description = "A Folder type List resource is created or updated"
+* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"
+* resourceTrigger[=].supportedInteraction[0] = #create
+* resourceTrigger[=].supportedInteraction[+] = #update
+* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/MHDlistTypes').code='folder'))"
 
 
 * canFilterBy[0].description = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"
