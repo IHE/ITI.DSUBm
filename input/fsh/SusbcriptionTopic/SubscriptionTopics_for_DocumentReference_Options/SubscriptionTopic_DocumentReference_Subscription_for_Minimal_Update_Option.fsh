@@ -12,7 +12,7 @@ Note that:
 - the events are creation, deletion and update only in the \"status\" of a DocumentReference.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with Updates to document sharing resources option"
+* title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Minimal Update Option"
 * status = #active 
 * resourceTrigger[0].description = "A DocumentReference resource is created or deleted."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
@@ -92,7 +92,7 @@ Note that:
 - the events are creation, deletion and update only in the \"status\" of a DocumentReference.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for DocumentReference Multi-Patient resource with Updates to document sharing resources option"
+* title = "SubscriptionTopic for DocumentReference Multi-Patient resource with DocumentReference Subscription for Minimal Update Option"
 * status = #active 
 * resourceTrigger[0].description = "A DocumentReference resource is created or deleted."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"

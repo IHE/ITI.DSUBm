@@ -122,16 +122,81 @@ between options when applicable are specified in notes.
 
 | **Actors** | **Option Name** |
 |---------|-------------|-------------|
-| Resource Notification Broker | [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) |
-| Resource Notification Subscriber |[Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) |
-| Resource Notification Publisher | [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) |
+| Resource Notification Broker | [DocumentReference Subscription for Minimal Update](#15421-documentreference-subscription-for-minimal-update-option) |
+|                              | [DocumentReference Subscription for Full Events](#15422-documentreference-subscription-for-full-events-option) |
+|                              | [Basic Folder Subscription](#15423-basic-folder-subscription-option) |
+|                              | [Folder Subscription for Minimal Update](#15424-folder-subscription-for-minimal-update-option) |
+|                              | [Folder Subscription for Update](#15425-folder-subscription-for-full-events-option) |
+|                              | [Folder Subscription for Full Events](#15426-folder-subscription-for-full-events-option) |
+| Resource Notification Subscriber | [DocumentReference Subscription for Minimal Update](#15421-documentreference-subscription-for-minimal-update-option) |
+|                              | [DocumentReference Subscription for Full Events](#15422-documentreference-subscription-for-full-events-option) |
+|                              | [Basic Folder Subscription](#15423-basic-folder-subscription-option) |
+|                              | [Folder Subscription for Minimal Update](#15424-folder-subscription-for-minimal-update-option) |
+|                              | [Folder Subscription for Update](#15425-folder-subscription-for-full-events-option) |
+|                              | [Folder Subscription for Full Events](#15426-folder-subscription-for-full-events-option) |
+| Resource Notification Publisher |  [DocumentReference Subscription for Minimal Update](#15421-documentreference-subscription-for-minimal-update-option) |
+|                              | [DocumentReference Subscription for Full Events](#15422-documentreference-subscription-for-full-events-option) |
+|                              | [Basic Folder Subscription](#15423-basic-folder-subscription-option) |
+|                              | [Folder Subscription for Minimal Update](#15424-folder-subscription-for-minimal-update-option) |
+|                              | [Folder Subscription for Update](#15425-folder-subscription-for-full-events-option) |
+|                              | [Folder Subscription for Full Events](#15426-folder-subscription-for-full-events-option) |
 | Resource Notification Recipient | none |
 {: .grid}
 
 
-#### 1:54.2.1 Updates to document sharing resources option
+#### 1:54.2.1 DocumentReference Subscription for Minimal Update option
 
-This option includes update and delete events for the Resources that are included in the subscriptions.  In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that triggers events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+#### 1:54.2.2 DocumentReference Subscription for Full Events option
+
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that triggers events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+#### 1:54.2.3 Basic Folder Subscription option
+
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that triggers events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+#### 1:54.2.4 Folder Subscription for Minimal Update option
+
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that triggers events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+#### 1:54.2.5 Folder Subscription for Update option
+
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
+
+The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Subscriber that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+The Resource Notification Publisher that supports this option shall also support the Resource Publish [ITI-111] transaction that triggers events defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
+
+#### 1:54.2.6 Folder Subscription for Full Events option
+
+This option includes update and delete events for the Resources that are included in the subscriptions. In an XDS environment, this option includes the updating and deleting events determined by Update Document Set [ITI-57], Remove Metadata [ITI-62], or Restricted Update Document Set [ITI-92] transaction operations to DocumentEntry, Folder, and Association Objects.
 
 The Resource Notification Broker that supports this option shall support the `Subscription` defined in section [Subscription with Updates to document sharing resources option](ITI-110.html#231105211-subscription-with-updates-to-document-sharing-resources-option).
 

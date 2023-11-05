@@ -10,7 +10,7 @@ Note that:
 - this resource shall be used when the Folder Subscription for Update Option is supported.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for Folder Subscription for Full Events Option"
+* title = "SubscriptionTopic for Folder Subscription for Update Option"
 * status = #active 
 * resourceTrigger[0].description = "A Folder type List resource is created or updated"
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"

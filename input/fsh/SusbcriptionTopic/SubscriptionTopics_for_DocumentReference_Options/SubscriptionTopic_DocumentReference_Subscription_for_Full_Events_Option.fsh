@@ -2,7 +2,7 @@
 Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource with update option"
+Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Full Events Option"
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. 
 This topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element.
 Note that:
@@ -11,13 +11,13 @@ Note that:
 - this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with Updates to document sharing resources option"
+* title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Full Events Option"
 * status = #active 
-* resourceTrigger.description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger[0].supportedInteraction = #create
-* resourceTrigger[+].supportedInteraction = #update
-* resourceTrigger[+].supportedInteraction = #delete
+* resourceTrigger[0].description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
+* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger[=].supportedInteraction = #create
+* resourceTrigger[=].supportedInteraction = #update
+* resourceTrigger[=].supportedInteraction = #delete
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"
@@ -75,7 +75,7 @@ Note that:
 Instance: DSUBm-SubscriptionTopic-DocReference-MultiPatient-AllEvents
 InstanceOf: SubscriptionTopic
 Usage: #definition
-Title:       "SubscriptionTopic for DocumentReference Multi-Patient resource with update option"
+Title:       "SubscriptionTopic for DocumentReference Multi-Patient resource with DocumentReference Subscription for Full Events Option"
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription.
 This topic shall be used in all DocumentReference subscriptions that have not a specific patient in the criteria element.
 Note that:
@@ -85,13 +85,13 @@ Note that:
 - this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for DocumentReference Multi-Patient resource with Updates to document sharing resources option"
+* title = "SubscriptionTopic for DocumentReference Multi-Patient resource with DocumentReference Subscription for Full Events Option"
 * status = #active 
-* resourceTrigger.description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
-* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger.supportedInteraction[0] = #create
-* resourceTrigger.supportedInteraction[+] = #update
-* resourceTrigger.supportedInteraction[+] = #delete
+* resourceTrigger[0].description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
+* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger[=].supportedInteraction = #create
+* resourceTrigger[=].supportedInteraction = #update
+* resourceTrigger[=].supportedInteraction = #delete
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"

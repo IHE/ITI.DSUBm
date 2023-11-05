@@ -11,7 +11,7 @@ Note that:
 - this resource shall be used when the Basic Folder Subscription Option is supported.
 "
 * meta.versionId = "1"
-* title = "SubscriptionTopic for Folder Patient-Dependent resource"
+* title = "SubscriptionTopic for Folder Patient-Dependent resource with Basic Folder Subscription Option"
 * status = #active 
 * resourceTrigger[0].description = "A Folder type List resource is created."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"
