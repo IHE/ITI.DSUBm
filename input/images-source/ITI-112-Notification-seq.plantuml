@@ -17,7 +17,8 @@ Recipient --> Broker :  Heartbeat Notification Response [ITI-112]
 deactivate Recipient
 
 == Event Notification ==
-Broker -> Recipient :  Event Notification Message [ITI-112]activate Recipient
+Broker -> Recipient :  Event Notification Message [ITI-112]
+activate Recipient
 Recipient --> Broker :  Event Notification Response [ITI-112]
 deactivate Recipient
 
