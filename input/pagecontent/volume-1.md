@@ -347,7 +347,7 @@ During the third visit, Ms. Williams decides that a different physician will tak
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the Resource Subscription Search [ITI-113] transaction. The Resource Notification Subscriber and the Resource Notification Broker support the [Folder Subscription for Minimal Update option](#15424-Folder-Subscription-for-Minimal-Update-option).
+The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the Resource Subscription Search [ITI-113] transaction. The Resource Notification Subscriber and the Resource Notification Broker support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option).
 
 **Main Flow**:
 
@@ -483,7 +483,7 @@ After one radiographic exam a report has been produced. Due to a human error thi
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Minimal Update option](#15421-DocumentReference-Subscription-for-Minimal-Update-option).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Minimal Update option](#15421-documentreference-subscription-for-minimal-update-option).
 
 **Main Flow**:
 
@@ -519,7 +519,7 @@ Thus, Ms. Fox receives the notification on her app and consults the reports.
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Full Events option](#15422-DocumentReference-Subscription-for-Full-Events-option).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped by the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see XDS on FHIR Option of MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Full Events option](#15422-documentreference-subscription-for-full-events-option).
 
 **Main Flow**:
 
