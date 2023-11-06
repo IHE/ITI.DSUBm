@@ -52,7 +52,18 @@ The Resource Notification Broker is the receiver of the Resource Subscription tr
 The following CapabilityStatements define the actor capabilities given the various Options:
 
 - FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.html)
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.MinUpd.html) that support the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.FullEvents.html) that support the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Basic.html) that support the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.MinUpd.html) that support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Upd.html) that support the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.FullEvents.html) that support the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option.
 
 #### 1:54.1.1.2 Resource Notification Subscriber
 
@@ -61,7 +72,19 @@ The Resource Notification Subscriber initiates and terminates subscriptions on b
 The following CapabilityStatements define the actor capabilities given the various Options:
 
 - FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.html)
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.MinUpd.html) that support the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.FullEvents.html) that support the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Basic.html) tthat support the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.MinUpd.html) that support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Upd.html) that support the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.FullEvents.html) that support the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option.
+
 
 #### 1:54.1.1.3 Resource Notification Publisher
 
@@ -70,7 +93,19 @@ The Resource Notification Publisher sends a Resource Publish transaction to the 
 The following CapabilityStatements define the actor capabilities given the various Options:
 
 - FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.html)
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.UpdateOption.html) that support the [Updates to document sharing resources](#15421-updates-to-document-sharing-resources-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.MinUpd.html) that support the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.FullEvents.html) that support the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Basic.html) that support the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.MinUpd.html) that support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Upd.html) that support the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option.
+
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.FullEvents.html) that support the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option.
+
 
 #### 1:54.1.1.4 Resource Notification Recipient
 

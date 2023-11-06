@@ -35,8 +35,8 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 
 """
 
-* name = "IHE_DSUBm_ResourceNotificationBroker"
-* title = "IHE DSUBm ResourceNotificationBroker"
+* name = "IHE_DSUBm_ResourceNotificationBroker_DocRef_MinUpd"
+* title = "IHE DSUBm ResourceNotificationBroker DocRef MinUpd"
 * status = #active
 * experimental = false
 * date = "2023-10-27"
@@ -126,7 +126,7 @@ see [here](artifacts.html#other)
       * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           
   * interaction[+]
     * code = #transaction
-    * documentation = "https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.ProvideBundle.html"  
+    * documentation = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-IHE.DSUBm.ResourceBundle.html"  
 * rest[+]
   * mode = #client
   * documentation = "DSUBm Resource Notification Broker provides capability to send notification"
