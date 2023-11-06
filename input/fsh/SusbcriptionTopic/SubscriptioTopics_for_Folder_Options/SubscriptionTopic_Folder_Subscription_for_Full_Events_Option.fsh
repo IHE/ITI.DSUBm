@@ -17,7 +17,7 @@ Note that:
 * resourceTrigger[=].supportedInteraction[0] = #create
 * resourceTrigger[=].supportedInteraction[+] = #update
 * resourceTrigger[=].supportedInteraction[+] = #delete
-* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/MHDlistTypes').code='folder'))"
+* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
 
 
 * canFilterBy[0].description = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"

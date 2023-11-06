@@ -174,7 +174,7 @@ This option permits to subscribe for Folder type List Resource.
 
 This option includes creation of a Folder type List Resource and update of a Folder type List Resource to insert a new document in the Folder events. In an XDS environment, this option includes the creating events determined by Register Document Set [ITI-42] and by Update Document Set [ITI-57] transaction operations to Folder and Association Objects.
 
-This option limited the Update events to limited the efford of the Resource Notification Brokers on the basic events on Folder and because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates.
+This option limited the Update events to limited the effort of the Resource Notification Brokers on the basic events on Folder and because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates.
 
 The Resource Notification Broker that declares to support this option shall be able to support the Subscription defined in Section [2:3.110.5.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105211-s), and the related SubscriptionTopic, accepting these type of Subscribtion sendend from a Resource Notification Subscriber.
 
@@ -188,7 +188,7 @@ This option permits to subscribe for Folder type List Resource.
 
 This option includes creation of a Folder type List Resource, update of a Folder type List Resource to insert a new document in the Folder, update of a Folder type List Resource to remove a document from the Folder and update of a Folder type List Resource to update the "status" events. In an XDS environment, this option includes the creating, updating and deleting events determined by Register Document Set [ITI-42], by Update Document Set [ITI-57] or by Remove Metadata [ITI-62] transaction operations to Folder and Association Objects.
 
-This option limited the Update events to limited the efford of the Resource Notification Brokers on the most interested events on Folder and because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates.
+This option limited the Update events to limited the effort of the Resource Notification Brokers on the most interested events on Folder and because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates.
 
 The Resource Notification Broker that declares to support this option shall be able to support the Subscription defined in Section [2:3.110.5.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105211-s), and the related SubscriptionTopic, accepting these type of Subscribtion sendend from a Resource Notification Subscriber.
 

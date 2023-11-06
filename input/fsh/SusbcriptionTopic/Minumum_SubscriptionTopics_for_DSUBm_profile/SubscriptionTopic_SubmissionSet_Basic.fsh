@@ -16,7 +16,7 @@ Note that:
 * resourceTrigger.description = "A SubmissionSet type List resource is created"
 * resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/List"
 * resourceTrigger.supportedInteraction = #create
-* resourceTrigger.fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='submissionset' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/MHDlistTypes').code='submissionset'))"
+* resourceTrigger.fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='submissionset' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='submissionset'))"
 
 * canFilterBy[0].description = "Filter based on the code of a SubmissionSet List Resource. (Fixed Value: submissionset)"
 * canFilterBy[=].resource = "List"

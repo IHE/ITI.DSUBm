@@ -15,12 +15,12 @@ Note that:
 * resourceTrigger[0].description = "A Folder type List resource is created."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"
 * resourceTrigger[=].supportedInteraction[0] = #create
-* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/MHDlistTypes').code='folder'))"
+* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
 
 * resourceTrigger[+].description = "A Folder type List resource is updated to insert new documents in the Folder, to remove documents from the Folder or to update the status."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"
 * resourceTrigger[=].supportedInteraction[0] = #update
-* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/MHDlistTypes').code='folder')) and ( ((%previous.entry.item).count() < (%current.entry.item).count()) or (((%previous.entry.item).count() > (%current.entry.item).count())) or ((%previous.status != %current.status)) )"
+* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder')) and ( ((%previous.entry.item).count() < (%current.entry.item).count()) or (((%previous.entry.item).count() > (%current.entry.item).count())) or ((%previous.status != %current.status)) )"
 
 
 * canFilterBy[0].description = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"
