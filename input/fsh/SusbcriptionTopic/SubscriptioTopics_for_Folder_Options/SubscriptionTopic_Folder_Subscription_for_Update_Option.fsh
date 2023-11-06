@@ -8,7 +8,7 @@ Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
 - the resourceTrigger.resource element shall be a Folder type List resource
 - this resource shall be used when the \"Folder Subscription for Update Option\" is supported
-- \"- the events are creation and update of a Folder type List resource
+- the events are creation and update of a Folder type List resource
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for Folder Subscription for Update Option"

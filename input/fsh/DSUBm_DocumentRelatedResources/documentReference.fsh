@@ -3,7 +3,7 @@ Profile:        DSUBm_MinimalDocumentReference
 Parent:         DocumentReference
 Id:             IHE.DSUBm.Minimal.DocumentReference
 Title:          "DSUBm DocumentReference Minimal"
-Description:    "The same profile of [MHD DocumentReference Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference) reported in R4B Fhir version"
+Description:    "The same profile from [MHD DocumentReference Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.DocumentReference) reported in R4B Fhir version"
 * modifierExtension 0..0
 * masterIdentifier only UniqueIdIdentifier
 * masterIdentifier 1..1
