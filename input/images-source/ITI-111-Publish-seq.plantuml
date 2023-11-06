@@ -6,9 +6,9 @@ participant "Resource Notification Broker" as  Broker
 
 
 
-Publisher -> Broker : Resource Publish Request [ITI-111]
+Publisher -> Broker : Resource Publish Request 
 activate Broker
-Broker --> Publisher : Resource Publish Response [ITI-111]
+Broker --> Publisher : Resource Publish Response 
 deactivate Broker
 
 @enduml

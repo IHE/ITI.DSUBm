@@ -5,21 +5,21 @@ participant "Resource Notification Broker" as  Broker
 
 
 == Subscription Search ==
-Subscriber -> Broker :  Subscription Search Request [ITI-113]
+Subscriber -> Broker :  [[ITI-113.html#231135-subscription-search-request-message Subscription Search Request]] 
 activate Broker
-Broker --> Subscriber :  Subscription Search Response [ITI-113]
+Broker --> Subscriber : [[ITI-113.html#231136-subscription-search-response-message Subscription Search Response]] 
 deactivate Broker
 
 == Subscription Status Search ==
-Subscriber -> Broker :  Subscription Status Search Request [ITI-113]
+Subscriber -> Broker : [[ITI-113.html#231137-subscription-status-search-request-message Subscription Status Search Request]] 
 activate Broker
-Broker --> Subscriber :  Subscription Status Search Response [ITI-113]
+Broker --> Subscriber : [[ITI-113.html#231138-subscription-status-search-response-message Subscription Status Search Response]] 
 deactivate Broker
 
 == Subscription Events Search ==
-Subscriber -> Broker :  Subscription Events Search Request [ITI-113]
+Subscriber -> Broker : [[ITI-113.html#231139-subscription-events-search-request-message Subscription Events Search Request]] 
 activate Broker
-Broker --> Subscriber :  Subscription Events Search Response [ITI-113]
+Broker --> Subscriber : [[ITI-113.html#2311310-subscription-events-search-response-message Subscription Events Search Response]] 
 
 deactivate Broker
 
