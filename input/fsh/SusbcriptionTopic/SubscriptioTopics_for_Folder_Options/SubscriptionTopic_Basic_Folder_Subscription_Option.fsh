@@ -7,8 +7,8 @@ This topic shall be used in all Folder subscriptions that have a specific patien
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
 - the resourceTrigger.resource element shall be a Folder List resource
-- this topic covers the create and the update to insert new documents in the Folder event 
 - this resource shall be used when the \"Basic Folder Subscription Option\" is supported
+- this topic covers the create and the update to insert new documents in the Folder event 
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for Folder Patient-Dependent resource with Basic Folder Subscription Option"
