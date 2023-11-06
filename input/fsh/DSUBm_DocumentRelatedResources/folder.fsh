@@ -3,7 +3,7 @@ Profile:        DSUBm_MinimalFolder
 Parent:         DSUBmList
 Id:             IHE.DSUBm.Minimal.Folder
 Title:          "DSUBm Folder Minimal"
-Description:    "The same profile of [MHD Folder Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder) reported in R4B Fhir version"
+Description:    "The same profile from [MHD Folder Minimal](https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder) reported in R4B Fhir version"
 * extension[designationType] 0..* MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "use"

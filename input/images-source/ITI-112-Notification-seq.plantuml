@@ -5,27 +5,27 @@ participant "Resource Notification Broker" as  Broker
 participant "Resource Notification Recipient" as  Recipient
 
 == Handshake Notification ==
-Broker -> Recipient :  Handshake Notification Message [ITI-112]
+Broker -> Recipient : [[ITI-112.html#231125-handshake-notification-request-message Handshake Notification Request Message]]
 activate Recipient
-Recipient --> Broker :  Handshake Notification Response [ITI-112]
+Recipient --> Broker : [[ITI-112.html#231126-handshake-notification-response-message Handshake Notification Response Message]]
 deactivate Recipient
 
 == Heartbeat Notification ==
-Broker -> Recipient :  Heartbeat Notification Message [ITI-112]
+Broker -> Recipient : [[ITI-112.html#231127-heartbeat-notification-request-message Heartbeat Notification Request Message]] 
 activate Recipient
-Recipient --> Broker :  Heartbeat Notification Response [ITI-112]
+Recipient --> Broker : [[ITI-112.html#231128-heartbeat-notification-response-message Heartbeat Notification Response Message]] 
 deactivate Recipient
 
 == Event Notification ==
-Broker -> Recipient :  Event Notification Message [ITI-112]
+Broker -> Recipient :  [[ITI-112.html#231129-event-notification-request-message Event Notification Request Message]]
 activate Recipient
-Recipient --> Broker :  Event Notification Response [ITI-112]
+Recipient --> Broker :  [[ITI-112.html#2311210-event-notification-response-message Event Notification Response Message]]
 deactivate Recipient
 
 == Subscription Deactivation Notification ==
-Broker -> Recipient :  Subscription Deactivation Notification Message [ITI-112]
+Broker -> Recipient :  [[ITI-112.html#2311211-subscription-deactivation-notification-request-message Subscription Deactivation Notification Request Message]]
 activate Recipient
-Recipient --> Broker :  Subscription Deactivation Notification Response [ITI-112]
+Recipient --> Broker : [[ITI-112.html#2311212-subscription-deactivation-notification-response-message Subscription Deactivation Notification Response Message]]
 deactivate Recipient
 
 @enduml
