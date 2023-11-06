@@ -77,7 +77,7 @@ The following CapabilityStatements define the actor capabilities given the vario
 
 - FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.FullEvents.html) that support the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option.
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Basic.html) tthat support the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option.
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Basic.html) that support the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option.
 
 - FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.MinUpd.html) that support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option.
 

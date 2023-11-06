@@ -5,10 +5,10 @@ Title:       "SubscriptionTopic for Folder Patient-Dependent with Basic Folder S
 Description:  "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder type List Resource and the update to insert new documents in the Folder. 
 This topic shall be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used);
-- the resourceTrigger.resource element shall be a Folder List resource;
-- this topic covers the create and the update to insert new documents in the Folder event; 
-- this resource shall be used when the \"Basic Folder Subscription Option\" is supported.
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
+- the resourceTrigger.resource element shall be a Folder List resource
+- this topic covers the create and the update to insert new documents in the Folder event 
+- this resource shall be used when the \"Basic Folder Subscription Option\" is supported
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for Folder Patient-Dependent resource with Basic Folder Subscription Option"
