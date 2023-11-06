@@ -6,9 +6,9 @@ Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. 
 This topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element and are just focusing on the create event. 
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
-- the resourceTrigger.resource element shall be a DocumentReference resource
-- this topic only covers the create event of a DocumentReference
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used);
+- the resourceTrigger.resource element shall be a DocumentReference resource;
+- this topic only covers the create event of a DocumentReference.
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Patient-Dependent resource"

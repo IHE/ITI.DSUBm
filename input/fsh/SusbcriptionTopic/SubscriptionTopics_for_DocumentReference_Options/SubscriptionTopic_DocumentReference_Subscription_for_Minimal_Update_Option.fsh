@@ -8,7 +8,7 @@ This topic shall be used in all DocumentReference subscriptions that have a spec
 Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
 - the resourceTrigger.resource element shall be a DocumentReference resource.
-- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
+- this resource shall be used when the \"DocumentReference Subscription for Minimal Update Option\" is supported.
 - the events are creation, deletion and update only in the \"status\" of a DocumentReference.
 "
 * meta.versionId = "1"
@@ -88,7 +88,7 @@ Note that:
 - the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
 - the resourceTrigger.resource element shall be a DocumentReference resource
 - the canFilterBy.filterParameter does not include the patient and patient.identifier parameters
-- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
+- this resource shall be used when the \"DocumentReference Subscription for Minimal Update Option\" is supported.
 - the events are creation, deletion and update only in the \"status\" of a DocumentReference.
 "
 * meta.versionId = "1"
