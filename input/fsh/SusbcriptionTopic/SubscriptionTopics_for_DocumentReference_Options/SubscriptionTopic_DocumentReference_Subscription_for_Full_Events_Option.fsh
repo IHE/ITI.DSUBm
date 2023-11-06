@@ -6,10 +6,10 @@ Title:       "SubscriptionTopic for DocumentReference Patient-Dependent resource
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. 
 This topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element.
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
-- the resourceTrigger.resource element shall be a DocumentReference resource.
-- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
-- the events are creation, update and deletion of a DocumentReference.
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
+- the resourceTrigger.resource element shall be a DocumentReference resource
+- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported
+- the events are creation, update and deletion of a DocumentReference
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Full Events Option"
@@ -80,11 +80,11 @@ Title:       "SubscriptionTopic for DocumentReference Multi-Patient resource wit
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription.
 This topic shall be used in all DocumentReference subscriptions that have not a specific patient in the criteria element.
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used).
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
 - the resourceTrigger.resource element shall be a DocumentReference resource
 - the canFilterBy.filterParameter does not include the patient and patient.identifier parameters
-- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported.
-- the events are creation, update and deletion of a DocumentReference.
+- this resource shall be used when the \"DocumentReference Subscription for Full Events Option\" is supported
+- the events are creation, update and deletion of a DocumentReference
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Multi-Patient resource with DocumentReference Subscription for Full Events Option"

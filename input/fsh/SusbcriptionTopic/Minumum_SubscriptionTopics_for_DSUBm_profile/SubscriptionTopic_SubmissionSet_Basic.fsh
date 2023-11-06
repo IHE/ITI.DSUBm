@@ -6,9 +6,9 @@ Title:       "SubscriptionTopic for SubmissionSet PatientDependent resource"
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. 
 This topic shall be used in all SubmissionSet subscriptions that have a specific patient in the criteria element and are just focusing on the create event.
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used);
-- the resourceTrigger.resource element shall be a SubmissionSet type List Resource;
-- this topic only covers the create event of a SubmissionSet typèe List resource.
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
+- the resourceTrigger.resource element shall be a SubmissionSet type List Resource
+- this topic only covers the create event of a SubmissionSet type List resource
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for SubmissionSet PatientDependent resource"
@@ -53,10 +53,10 @@ Title:       "SubscriptionTopic for SubmissionSet Multi-Patient resource"
 Description:  "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. 
 This topic shall be used in all SubmissionSet type List subscriptions that have not a specific patient in the criteria element and are just focusing on the create event.
 Note that:
-- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used);
-- the resourceTrigger.resource element shall be a SubmissionSet type List resource;
-- the canFilterBy.filterParameter does not include the patient and patient.identifier parameters;
-- this topic only covers the create event of a SubmissionSet typèe List resource.
+- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)
+- the resourceTrigger.resource element shall be a SubmissionSet type List resource
+- the canFilterBy.filterParameter does not include the patient and patient.identifier parameters
+- this topic only covers the create event of a SubmissionSet type List resource
 "
 * meta.versionId = "1"
 * title = "SubscriptionTopic for SubmissionSet Multi-Patient resource"
