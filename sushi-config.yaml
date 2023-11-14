@@ -4,7 +4,7 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.dsubm
 canonical: https://profiles.ihe.net/ITI/DSUBm
-version: 1.0.0-ballot
+version: 1.0.0-comment
 name: IHE_ITI_DSUBm
 title: "Document Subscription for Mobile (DSUBm)"
 description:  profile describes the use of document subscription and notification mechanisms for RESTful applications. 
