@@ -31,6 +31,7 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
     - Minimal DocumentReference 
     - Minimal SubmissionSet
     - Minimal Folder
+      
     there are the following errors in the QA report : 
         
         - The reference http://hl7.org/fhir/ValueSet/identifier-use|4.0.1 could not be resolved
