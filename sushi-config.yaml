@@ -82,7 +82,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 pages:
 # itemize here each narrative page. Include assigned section numbers when appropriate. The order they appear here is the order they will appear in the TOC and on the next/prev navigation.
   index.md:
-    title: DSUBm Home
+    title: Document Subscription for Mobile (DSUBm) Home
     generation: markdown
   volume-1.md:
     title: 1:54 Document Subscription for Mobile (DSUBm)
@@ -106,25 +106,25 @@ pages:
     title: "Test Plan"
     generation: markdown
   other.md:
-    title: Changes to Other Documents
+    title: Changes to Other IHE Specifications
     generation: markdown
   download.md:
     title: "Download and Analysis"
     generation: markdown
   issues.md:
-    title: Significant Changes & Issues
+    title: Significant Changes and Issues
     generation: markdown
 
 menu:
   DSUBm Home: index.html
   Volume 1:
-    Introduction: index.html
+    Introduction: volume-1.html
     Actors and Transactions: volume-1.html#1541-dsubm-actors-transactions-and-content-modules
     Actor Options: volume-1.html#1542-actor-options
     Required Groupings: volume-1.html#1543-required-actor-groupings
     Overview: volume-1.html#1544-dsubm-overview
     Security Considerations: volume-1.html#1545-security-considerations
-    Cross-Profile Considerations : volume-1.html#1546-cross-profile-considerations
+    Cross-Profile Considerations: volume-1.html#1546-cross-profile-considerations
   Volume 2:
     "Resource Subscription [ITI-110]": ITI-110.html
     "Resource Publish [ITI-111]": ITI-111.html
@@ -133,6 +133,6 @@ menu:
     "Resource SubscriptionTopic Search [ITI-114]": ITI-114.html
   Artifacts: artifacts.html
   Other:
-    Test Plan: testplan.html
     Changes to Other IHE Specifications: other.html
     Download and Analysis: download.html
+    Test Plan: testplan.html
