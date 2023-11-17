@@ -14,5 +14,5 @@
     "title" : "Document Subscription for Mobile (DSUBm)",
     "ci-build" : "http://build.fhir.org/ig/IHE/ITI.DSUBm/branches/master/index.html",
     "category" : "Clinical Document",
-    "introduction" : "This profile describes the use of document subscription and notification mechanisms for RESTful applications."
+    "introduction" : "The Document Subscription for Mobile (DSUBm) profile provides a FHIR based subscription and notification mechanisms for Document Sharing. Enabling a subscription and notification when a document publication event matches the criteria expressed in the subscription."
   }
