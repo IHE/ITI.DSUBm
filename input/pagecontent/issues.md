@@ -42,8 +42,6 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
         - The reference http://hl7.org/fhir/ValueSet/document-relationship-type|4.0.1 could not be resolved
         - The constraint 'dom-3' has an expression 'contained.where((('#'+id in (%resource.descendants().reference &#124; %resource.descendants().as(canonical) &#124; %resource.descendants().as(uri) &#124; %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()', which differs from the earlier expression provided of 'contained.where(((id.exists() and ('#'+id in (%resource.descendants().reference &#124; %resource.descendants().as(canonical) &#124; %resource.descendants().as(uri) &#124; %resource.descendants().as(url)))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(uri) = '#').exists()).not()).trace('unmatched', id).empty()' (invariants are allowed to repeat, but cannot differ)
 
-    (see comparison Domain resource from R4 and R4B).
-
     The TEMPORARY SOLUTION for now is to replicate some MHD content that is used in DSUBm in R4B. (files in folder "DSUBm_DocumentRelatedResources")
 
 - **[DSUBm_007](https://github.com/IHE/ITI.DSUBm/issues/15)**: The DSUBm Profile proposes notifications in a push mechanism. The [Extensions to the Document Metadata Subscription (DSUB)](https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_DSUB_Extensions.pdf)

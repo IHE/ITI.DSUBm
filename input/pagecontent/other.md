@@ -5,7 +5,7 @@ This section modifies other IHE profiles or the General Introduction appendices 
 ## IHE Technical Frameworks Document Metadata Subscription (DSUB) Profile
 
 |------------------------------------------------|
-| Editor: Apply the following updates to Table 26.1-1 |
+| Editor: Apply the following updates to DSUB Table 26.1-1 |
 | Note for the Editor: Be aware of a possible previous integration of DSUB supplement (Extensions to the Document Metadata Subscription (DSUB) Profile)  |
 {:.grid .bg-info}
 
@@ -23,14 +23,14 @@ This section modifies other IHE profiles or the General Introduction appendices 
 {: .grid}
 
 |------------------------------------------------|
-| Editor: Add this Note below Table 26.1-1 |
+| Editor: Add this Note to DSUB below Table 26.1-1 |
 | Note for the Editor: Be aware of a possible previous integration of DSUB supplement (Extensions to the Document Metadata Subscription (DSUB) Profile)  |
 {:.grid .bg-info}
 
 *Note 1: The Document Metadata Notification Broker and the Document Metadata Subscriber shall support the Resource Subscription Search [ITI-113] transaction if they supports the Subscription Search Option (see Section 26.2.2).*
 
 |------------------------------------------------|
-| Editor: add Sections 26.2.2  |
+| Editor: add to DSUB Sections 26.2.2  |
 | Note for the Editor: Be aware of a possible previous integration of DSUB supplement (Extensions to the Document Metadata Subscription (DSUB) Profile)  |
 {:.grid .bg-info}
 
