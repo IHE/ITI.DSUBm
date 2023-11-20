@@ -4,15 +4,14 @@
 # e.g. ihe.iti.mhds, or ihe.iti.basicaudit
 id: ihe.iti.dsubm
 canonical: https://profiles.ihe.net/ITI/DSUBm
-version: 1.0.0-comment
+version: 1.0.0-current
 name: IHE_ITI_DSUBm
 title: "Document Subscription for Mobile (DSUBm)"
 description:  profile describes the use of document subscription and notification mechanisms for RESTful applications. 
-##releaseLabel: ci-build
+releaseLabel: ci-build
 #releaseLabel: Trial-Implementation
-#date: 2022-01-02
-releaseLabel: ballot
-date: 2023-11-17
+#releaseLabel: ballot
+#date: 2023-11-17
 status: active
 publisher:
   ## Find your domain contact on the https://www.ihe.net/ihe_domains page
