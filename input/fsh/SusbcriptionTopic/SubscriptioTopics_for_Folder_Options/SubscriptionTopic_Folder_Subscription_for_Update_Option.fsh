@@ -13,11 +13,11 @@ Note that:
 * meta.versionId = "1"
 * title = "SubscriptionTopic for Folder Subscription for Update Option"
 * status = #active 
-* resourceTrigger[0].description = "A Folder type List resource is created or updated"
-* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/List"
-* resourceTrigger[=].supportedInteraction[0] = #create
-* resourceTrigger[=].supportedInteraction[+] = #update
-* resourceTrigger[=].fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
+* resourceTrigger.description = "A Folder type List resource is created or updated"
+* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/List"
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #update
+* resourceTrigger.fhirPathCriteria = "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
 
 
 * canFilterBy[0].description = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"

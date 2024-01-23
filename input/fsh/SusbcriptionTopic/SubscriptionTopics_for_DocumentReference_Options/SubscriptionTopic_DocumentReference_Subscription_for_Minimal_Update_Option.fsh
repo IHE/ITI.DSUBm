@@ -14,10 +14,10 @@ Note that:
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Minimal Update Option"
 * status = #active 
-* resourceTrigger[0].description = "A DocumentReference resource is created or deleted."
-* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger[=].supportedInteraction[0] = #create
-* resourceTrigger[=].supportedInteraction[+] = #delete
+* resourceTrigger.description = "A DocumentReference resource is created or deleted."
+* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #delete
 
 * resourceTrigger[+].description = "A DocumentReference resource is updated only in the \"status\"."
 * resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"

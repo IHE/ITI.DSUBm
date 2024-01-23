@@ -86,19 +86,19 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
-      * name = "$events"
+      * name = "events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
       * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
-      * name = "$status"
+      * name = "status"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
       * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """    
   * resource[1]
     * type = #SubscriptionTopic
     * documentation = """
-Resource SubscriptionTopic Search [ITI-114]
+Resource SubscriptionTopic Search [ITI-114]:
 The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
-see [here](artifacts.html#other)
+See [here](artifacts.html#other)
 """
     * interaction[0]
       * code = #read

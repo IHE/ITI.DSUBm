@@ -14,11 +14,11 @@ Note that:
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Patient-Dependent resource with DocumentReference Subscription for Full Events Option"
 * status = #active 
-* resourceTrigger[0].description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
-* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger[=].supportedInteraction = #create
-* resourceTrigger[=].supportedInteraction = #update
-* resourceTrigger[=].supportedInteraction = #delete
+* resourceTrigger.description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
+* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #update
+* resourceTrigger.supportedInteraction[+] = #delete
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"
@@ -89,11 +89,11 @@ Note that:
 * meta.versionId = "1"
 * title = "SubscriptionTopic for DocumentReference Multi-Patient resource with DocumentReference Subscription for Full Events Option"
 * status = #active 
-* resourceTrigger[0].description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
-* resourceTrigger[=].resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-* resourceTrigger[=].supportedInteraction = #create
-* resourceTrigger[=].supportedInteraction = #update
-* resourceTrigger[=].supportedInteraction = #delete
+* resourceTrigger.description = "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference)."
+* resourceTrigger.resource = "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+* resourceTrigger.supportedInteraction[0] = #create
+* resourceTrigger.supportedInteraction[+] = #update
+* resourceTrigger.supportedInteraction[+] = #delete
 
 * canFilterBy[0].description = "Filter based on the author of an DocumentReference. (DocumentEntry.author)"
 * canFilterBy[=].resource = "DocumentReference"

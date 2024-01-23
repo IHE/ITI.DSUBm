@@ -15,8 +15,7 @@ This profile intends to be compliant with [Subscriptions R5 Backport](http://hl7
 ### Organization of This Guide
 This guide is organized into the following sections:
 
-- Volume 1:
-   - [Introduction](index.html)
+- Volume 1: Actors, Transactions and use cases
    - [Actors, Transactions, and Content](volume-1.html#1541-dsubm-actors-transactions-and-content-modules)
    - [Actor Options](volume-1.html#1542-actor-options)
    - [Actor Required Groupings](volume-1.html#1543-required-actor-groupings)
