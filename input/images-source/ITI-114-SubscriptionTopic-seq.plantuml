@@ -7,8 +7,8 @@ participant "Resource Notification Broker" as  Broker
 
 activate Subscriber
 activate Broker
-Subscriber -> Broker : 1. Resource SubscriptionTopic Search Request 
-Broker --> Subscriber : 2. Resource SubscriptionTopic Search Response 
+Subscriber -> Broker : 1. [[ITI-114.html#231145-resource-subscriptionTopic-search-request-message Resource SubscriptionTopic Search Request Message]]
+Broker --> Subscriber : 2. [[ITI-114.html#231146-resource-subscriptionTopic-search-response-message Resource SubscriptionTopic Search Response Message]]
 
 deactivate Broker
 deactivate Subscriber

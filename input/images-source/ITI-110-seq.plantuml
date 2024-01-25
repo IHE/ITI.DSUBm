@@ -5,7 +5,7 @@ participant "Resource Notification Broker" as  Broker
 
 
 == Subscribe ==
-Subscriber -> Broker : Create Subscription Request 
+Subscriber -> Broker : [[ITI-110.html#231105-create-subscription-request-message Create Subscription Request Message]]
 activate Broker
 /'
 participant "Resource Notification Recipient" as  Recipient
@@ -18,14 +18,14 @@ opt handskake HTTPS
   end
 end
 '/
-Broker --> Subscriber : Create Subscription Response Message 
+Broker --> Subscriber : [[ITI-110.html#231106-create-subscription-response-message Create Subscription Response Message]]
 deactivate Broker
 
-== Unsubscribe ==
-Subscriber -> Broker: Update Subscription Request 
+== Update ==
+Subscriber -> Broker: [[ITI-110.html#231107-update-subscription-request-message Update Subscription Request Message]]
 
 activate Broker
-Broker --> Subscriber: Update Subscription Response Message 
+Broker --> Subscriber: [[ITI-110.html#231108-update-subscription-response-message Update Subscription Response Message]]
 deactivate Broker
 
 @enduml
