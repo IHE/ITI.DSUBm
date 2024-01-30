@@ -55,40 +55,53 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
-    
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-Basic-Folder-Subscription"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Basic-Folder-Subscription"
     * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "_id"
       * type = #string
       * documentation = "The id of the Subscription"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "status"
       * type = #token
       * documentation = "The current state of the subscription"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "url"
       * type = #uri
       * documentation = "The URI that will receive the notifications"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "filter-criteria"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-filter-criteria"
       * type = #string
       * documentation = "This SearchParameter enables query of subscriptions by filter criteria"          
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "topic"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/SearchParameter/Subscription-topic"
       * type = #uri
       * documentation = "This SearchParameter enables query of subscriptions by canonical topic-url"   
     * operation[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "events"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
       * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "status"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
       * documentation = """ The Response Bundle shall be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """    
@@ -104,22 +117,32 @@ See [here](artifacts.html#other)
     * interaction[1]
       * code = #search-type
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "_id"
       * type = #string
       * documentation = "The id of the SubscriptionTopic"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "resource"
       * type = #uri
       * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "derived-or-self"
       * type = #uri
       * documentation = "A server defined search that matches either the url or derivedFrom"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "status"
       * type = #token
       * documentation = "Should be valued with `active`"      
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "url"
       * type = #uri
       * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           

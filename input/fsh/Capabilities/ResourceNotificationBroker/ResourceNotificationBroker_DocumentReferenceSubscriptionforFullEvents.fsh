@@ -56,8 +56,8 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-DocumentReference-PatientDependent-Subscription-AllEvents"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-DocumentReference-MultiPatient-Subscription-AllEvents"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription-AllEvents"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription-AllEvents"
     * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
