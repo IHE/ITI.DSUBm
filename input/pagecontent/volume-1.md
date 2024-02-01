@@ -183,7 +183,7 @@ This option extends the basic trigger events considered for a DocumentReference 
 This option extends the triggers for the creation of a DocumentReference resource to also include updates of the document “status” and delete events of a DocumentReference Resource. In an XDS environment, this option includes the update and the delete events on DocumentEntry object with the following transactions: 
 - Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)
 - Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
-- Restricted Update Document Set [ITI-92](https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html)
+
 
 This option limited the Update events because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all possible update events.
 
