@@ -8,6 +8,7 @@ Alias: $webHookEndpoint = https://example.org/Endpoints/endpoint1
 
 Alias: $base = https://profiles.ihe.net/ITI/DSUBm
 
+Alias: $query-types = http://example.org/query-types
 
 
 

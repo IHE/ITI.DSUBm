@@ -17,19 +17,19 @@ Description:    "Profile on the Bundle resource for transaction ITI-112 Resource
     Resource 0..* 
 * entry[SubscriptionStatus].resource only SubscriptionStatus_NotificationEvent
 * entry[SubmissionSet].resource only
-    IHE.DSUBm.Minimal.SubmissionSet
+    IHE.MHD.Minimal.SubmissionSet
 * entry[SubmissionSet] ^short = "the SubmissionSet"
 * entry[SubmissionSet] ^definition = "The SubmissionSet defines who submitted it, why they submitted it, when they submitted, what is in it, and where it is destine."
 * entry[SubmissionSet].resource 1..1
 * entry[DocumentRefs].resource only 
-    IHE.DSUBm.Minimal.DocumentReference
+    IHE.MHD.Minimal.DocumentReference
 * entry[DocumentRefs] ^short = "the DocumentReference resources"
 * entry[DocumentRefs] ^definition = "any new DocumentReference that are part of the SubmissionSet. These might be new or other associations."
 * entry[DocumentRefs].resource 1..1
 * entry[DocumentRefs].request 1..1
 * entry[DocumentRefs].request.method from DSUBmPublishBundleActions
 * entry[Folders].resource only 
-    IHE.DSUBm.Minimal.Folder
+    IHE.MHD.Minimal.Folder
 * entry[Folders] ^short = "Folders"
 * entry[Folders] ^definition = "any Folders being created or updated"
 * entry[Folders].resource 1..1

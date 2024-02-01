@@ -24,13 +24,13 @@ contact:
       - system: email
         value: iti@ihe.net
 license:  CC-BY-4.0
-fhirVersion: 4.3.0
+fhirVersion: 4.0.1
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 #copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
 copyrightYear: 2023+
 
 dependencies: 
-  hl7.fhir.uv.subscriptions-backport.r4b: 
+  hl7.fhir.uv.subscriptions-backport.r4: 
     version: 1.1.x
     uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport 
   ihe.iti.mhd: 
