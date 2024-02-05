@@ -1,8 +1,10 @@
+
 Profile:        SubscriptionStatus_NotificationEvent
 Parent:         backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Event
 Title:          "SubscriptionStatus for the notification event"
 Description:    "Profile on the SubscriptionStatus resource for the event notification"
+
 * parameter[type].value[x] = #event-notification 
 
 Profile:        SubscriptionStatus_StatusOperation
@@ -75,12 +77,6 @@ Description:    "Profile on the SubscriptionStatus resource for the $events oper
 * parameter[type].value[x] = #query-event 
 * parameter[eventsSinceSubscriptionStart] 0..1
 * parameter[eventsSinceSubscriptionStart].value[x] ^short = "Recommended. This value is allows clients to know if they are missing notifications. Note: this value SHALL NOT be incremented by sending a query-event bundle."
-/*
-* parameter[notificationEvent] 1..1
-// * parameter[notificationEvent].part[eventNumber] 1..1
-// * parameter[notificationEvent].part[eventTimestamp] 0..1
-* parameter[notificationEvent].part[eventTimestamp].value[x] ^short = "Recommended	So that clients can discover when an event actually occurred, timestamp is recommended."
-*/
 
 /* commented old version R4B 
 * status ^short = "Recommended. Should be valued with the current status of the relevant subscription"
@@ -113,10 +109,10 @@ Note: this value SHALL NOT be incremented by sending a query-status notification
 * parameter[status] 1..1
 * parameter[status] ^short = "Current status of the relevant subscription"
 * parameter[type].value[x] = #query-status
+
+/*
 * parameter[eventsSinceSubscriptionStart] 1..1
-* parameter[eventsSinceSubscriptionStart].value[x] ^short = "This value is required because clients may use it to know if there are missing notifications.
-Note: this value SHALL NOT be incremented by sending a query-status notification."
+* parameter[eventsSinceSubscriptionStart].value[x] ^short = "This value is required because clients may use it to know if there are missing notifications. Note: this value SHALL NOT be incremented by sending a query-status notification."
 * parameter[eventsSinceSubscriptionStart].value[x] 0..1
 * parameter[notificationEvent] 0..0
-
 */
