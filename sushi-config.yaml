@@ -36,9 +36,7 @@ dependencies:
   ihe.iti.mhd: 
     version: 4.2.x
     uri: https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd
-  hl7.fhir.uv.extensions.r4: 1.0.0
-#  hl7.fhir.uv.tools: current  
-#  hl7.terminology.r4: 5.3.0
+  hl7.terminology.r5: 5.3.0
 #  hl7.fhir.uv.extensions: current
 
 
