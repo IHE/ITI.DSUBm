@@ -36,7 +36,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 * experimental = false
 * date = "2023-10-27"
 * kind = #requirements
-* fhirVersion = #4.3.0
+* fhirVersion = #4.0.1
 * format[+] = #application/fhir+xml
 * format[+] = #application/fhir+json
 * rest

@@ -30,14 +30,14 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
 copyrightYear: 2023+
 
 dependencies: 
-  hl7.fhir.uv.subscriptions-backport.r4: 
+  hl7.fhir.uv.subscriptions-backport.r4:
     version: 1.1.x
     uri: http://hl7.org/fhir/uv/subscriptions-backport/ImplementationGuide/hl7.fhir.uv.subscriptions-backport 
   ihe.iti.mhd: 
     version: 4.2.x
     uri: https://profiles.ihe.net/ITI/MHD/ImplementationGuide/ihe.iti.mhd
-#  hl7.fhir.uv.extensions.r4: 1.0.0
-  hl7.fhir.uv.tools: current  
+# hl7.fhir.uv.extensions.r4: 1.0.0
+#  hl7.fhir.uv.tools: current  
 #  hl7.terminology.r4: 5.3.0
 #  hl7.fhir.uv.extensions: current
 
