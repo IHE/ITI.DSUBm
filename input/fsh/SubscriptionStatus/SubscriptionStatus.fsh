@@ -1,4 +1,4 @@
-
+/*
 Profile:        SubscriptionStatus_NotificationEvent
 Parent:         backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Event
@@ -65,9 +65,9 @@ Id:             IHE.DSUBm.SubscriptionStatus-StatusOperation
 Title:          "SubscriptionStatus for the status operation"
 Description:    "Profile on the SubscriptionStatus resource for the $status operation"
 
-
 * parameter[status] ^short = "Current status of the relevant subscription"
-* parameter[type].value[x] = #query-status
+* parameter[type].valueCode = #query-status
+*/
 
 /*
 * parameter[eventsSinceSubscriptionStart] 1..1
