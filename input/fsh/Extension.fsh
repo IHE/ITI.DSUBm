@@ -18,7 +18,7 @@ Description: "Extension to define the resourceTrigger in the Basic resource"
 
 * extension[resource] ^short = "URL of the Resource that is the type used in this resource trigger."
 * extension[resource].value[x] 1..1 
-* extension[resource].value[x] only string
+* extension[resource].value[x] only uri
 
 * extension[supportedInteraction] ^short = "The FHIR RESTful interaction which can be used to trigger a notification for the SubscriptionTopic. Multiple values are considered OR joined (e.g., CREATE or UPDATE)."
 * extension[supportedInteraction].value[x] 1..1
@@ -48,7 +48,7 @@ Description: "Extension to define a list of properties by which Subscriptions on
 
 * extension[resource] ^short = "URL of the Resource that is the type used in this filter."
 * extension[resource].value[x] 1..1 
-* extension[resource].value[x] only string
+* extension[resource].value[x] only uri
 
 * extension[filterParameter] ^short = "Either the canonical URL to a search parameter (like \"http://hl7.org/fhir/SearchParameter/encounter-patient\") or topic-defined parameter (like \"hub.event\") which is a label for the filter."
 * extension[filterParameter].value[x] 1..1
@@ -69,7 +69,7 @@ Description: "Extension to define a list of properties to describe the shape (e.
 
 * extension[resource] ^short = "URL of the Resource that is the type used in this filter."
 * extension[resource].value[x] 1..1 
-* extension[resource].value[x] only string
+* extension[resource].value[x] only uri
 
 * extension[includ] ^short = "Search-style _include directives, rooted in the resource for this shape. Servers SHOULD include resources listed here, if they exist and the user is authorized to receive them. Clients SHOULD be prepared to receive these additional resources, but SHALL function properly without them."
 * extension[includ].value[x] 1..1
