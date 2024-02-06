@@ -1,3 +1,4 @@
+/*
 Instance: DSUBm-SubscriptionTopic-Folder-Subscription-UpdateOpt
 InstanceOf: Basic
 Usage: #example
@@ -19,7 +20,7 @@ Note that:
 * extension[=].valueString = "SubscriptionTopic for Folder Subscription for Update Option"
 
 
-* extension[+].url = Canonical(BackportResourceTrigger)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.resourceTrigger"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "A SubmissionSet type List resource is created resource"
 * extension[=].extension[+].url = "resource"
@@ -34,7 +35,7 @@ Note that:
 * extension[=].extension[+].url = "fhirPathCriteria"
 * extension[=].extension[=].valueString = "%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder'"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the code of a Folder List Resource. (Fixed Value: folder)"
 * extension[=].extension[+].url = "resource"
@@ -42,7 +43,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "code"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the patient of a Folder List Resource. (Folder.patientId)"
 * extension[=].extension[+].url = "resource"
@@ -50,7 +51,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "patient"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the patient of a Folder List Resource. (Folder.patientId)"
 * extension[=].extension[+].url = "resource"
@@ -58,7 +59,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "patient.identifier"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the identifier of a Folder List Resource. (Folder.entryUUID and Folder.uniqueId)"
 * extension[=].extension[+].url = "resource"
@@ -66,7 +67,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "identifier"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the designationType of a Folder List Resource. (Folder.codeList)"
 * extension[=].extension[+].url = "resource"
@@ -74,7 +75,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "designationType"
 
-* extension[+].url = Canonical(BackportCanFilterBy)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.canFilterBy"
 * extension[=].extension[0].url = "description"
 * extension[=].extension[=].valueMarkdown = "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)"
 * extension[=].extension[+].url = "resource"
@@ -82,7 +83,7 @@ Note that:
 * extension[=].extension[+].url = "filterParameter"
 * extension[=].extension[=].valueString = "status"
 
-* extension[+].url = Canonical(BackportNotificationShape)
+* extension[+].url = "http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.notificationShape"
 * extension[=].extension[0].url = "resource"
 * extension[=].extension[=].valueUri = "Folder"
 
@@ -90,3 +91,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

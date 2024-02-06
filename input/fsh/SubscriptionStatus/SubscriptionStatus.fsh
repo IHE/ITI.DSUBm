@@ -61,5 +61,6 @@ Description:    "Profile on the SubscriptionStatus resource for the $events oper
 * parameter[eventsSinceSubscriptionStart].value[x] ^short = "Recommended. This value is allows clients to know if they are missing notifications. Note: this value SHALL NOT be incremented by sending a query-event bundle."
 * parameter[notificationEvent] 1..*
 * parameter[notificationEvent].part[eventTimestamp].value[x] 0..1 
-//* parameter[notificationEvent].part[eventTimestamp].value[x] ^short = "Recommended so that clients can discover when an event actually occurred, timestamp is recommended."
-
+/* activate this line to obtain following error:  error Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+* parameter[notificationEvent].part[eventTimestamp].value[x] ^short = "Recommended so that clients can discover when an event actually occurred, timestamp is recommended."
+*/
