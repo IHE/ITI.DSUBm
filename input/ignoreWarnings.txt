@@ -6,3 +6,6 @@ The Implementation Guide contains no examples for this profile
 The Implementation Guide contains no examples for this data type profile
 The Implementation Guide contains no examples for this extension
 
+# using fhir R4 SubscriptionTopic is represented with Basic. Some of the  extensions are defined in R4B for SubscriptionTopic
+The extension http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic%
+The modifier extension http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic%

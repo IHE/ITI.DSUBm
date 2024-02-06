@@ -106,7 +106,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * documentation = """
 Resource SubscriptionTopic Search [ITI-114]:
 The Resource Notification Broker Actor shall support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
-See [here](artifacts.html#other)
+See [here](artifacts.html#example-example-instances)
 """
     * interaction[0]
       * code = #read

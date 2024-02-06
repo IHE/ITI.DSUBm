@@ -1,5 +1,5 @@
 Profile:        ResourceNotify_EventNotification
-Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-notification
+Parent:         Bundle
 Id:             IHE.DSUBm.EventNotification
 Title:          "Event Notification Bundle"
 Description:    "Profile on the Bundle resource for transaction ITI-112 Resource Notify for Event Notification."

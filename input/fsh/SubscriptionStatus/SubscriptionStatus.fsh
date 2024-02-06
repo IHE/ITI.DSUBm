@@ -5,7 +5,7 @@ Title:          "SubscriptionStatus for the notification event"
 Description:    "Profile on the SubscriptionStatus resource for the event notification"
 * parameter[type].value[x] = #event-notification 
 * parameter[eventsSinceSubscriptionStart] 1..1
-* parameter[eventsSinceSubscriptionStart] ^short = "Servers SHALL include this value when sending event notifications in order to allow clients to detect missing events. "
+* parameter[eventsSinceSubscriptionStart] ^short = "Servers SHALL include this value when sending event notifications in order to allow clients to detect missing events."
 * parameter[eventsSinceSubscriptionStart].value[x] 1..1
 * parameter[notificationEvent] 1..1
 * parameter[notificationEvent] ^short = "Servers SHALL include this value when sending event notifications in order to allow clients to detect missing events. This value is inclusive of this notification (e.g., the first event notification sent would include one (1) in this element)."

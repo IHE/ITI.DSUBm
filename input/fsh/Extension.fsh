@@ -12,7 +12,7 @@ Description: "Extension to define the resourceTrigger in the Basic resource"
     supportedInteraction 1..* and
     fhirPathCriteria 0..*
 
-* extension[description] ^short = "The human readable description of this resource trigger for the SubscriptionTopic - for example, \"An Encounter enters the 'in-progress' state\". "
+* extension[description] ^short = "The human readable description of this resource trigger for the SubscriptionTopic - for example, \"An Encounter enters the 'in-progress' state\"."
 * extension[description].value[x] 1..1
 * extension[description].value[x] only markdown
 
@@ -42,7 +42,7 @@ Description: "Extension to define a list of properties by which Subscriptions on
     resource 1..1 and 
     filterParameter 1..1 
 
-* extension[description] ^short = "Description of how this filtering parameter is intended to be used. "
+* extension[description] ^short = "Description of how this filtering parameter is intended to be used."
 * extension[description].value[x] 1..1
 * extension[description].value[x] only markdown
 

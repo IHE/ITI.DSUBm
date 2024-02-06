@@ -28,7 +28,7 @@ Note that:
 * extension[=].extension[+].url = "supportedInteraction"
 * extension[=].extension[=].valueCode = #create
 * extension[=].extension[+].url = "fhirPathCriteria"
-* extension[=].extension[=].valueString = "%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' "
+* extension[=].extension[=].valueString = "%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder'"
 
 * extension[=].extension[+].url = "supportedInteraction"
 * extension[=].extension[=].valueCode = #update
