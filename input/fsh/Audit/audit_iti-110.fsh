@@ -1,8 +1,3 @@
-Invariant: val-audit-source
-Description: "The Audit Source is this agent too."
-Expression: "$this.who = %resource.source.observer"
-Severity: #error
-
 Profile:        AuditCreateResourceSubscriptionPatientSubscriber
 Parent:         IHE.BasicAudit.PatientCreate
 Id:             IHE.DSUBm.ResourceSubscriptionPatient.Audit.Subscriber
@@ -11,10 +6,12 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the client
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -22,8 +19,8 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[client] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 Profile:        AuditCreateResourceSubscriptionSubscriber
@@ -34,10 +31,13 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the client
+
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -45,8 +45,8 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[client] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 
@@ -58,10 +58,13 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the server
+
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -69,8 +72,8 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[server] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 Profile:        AuditCreateResourceSubscriptionBroker
@@ -81,10 +84,12 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the server
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -92,8 +97,8 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[server] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 //UNSUBSCRIBE 
@@ -105,10 +110,13 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the client
+
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -116,8 +124,8 @@ Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[client] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 Profile:        AuditUpdateResourceSubscriptionSubscriber
@@ -128,10 +136,13 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the client
+
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -139,8 +150,8 @@ Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[client] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 Profile:        AuditUpdateResourceSubscriptionPatientBroker
@@ -151,10 +162,13 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the server
+
+
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -162,8 +176,8 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[server] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"
 
 Profile:        AuditUpdateResourceSubscriptionBroker
@@ -174,10 +188,11 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Subscriber agent
-- shall have a Broker agent
+- shall have a Resource Notification Subscriber agent
+- shall have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
+- source is the server
 """
 * modifierExtension 0..0
 * subtype 2..
@@ -185,6 +200,6 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
 * agent[server] obeys val-audit-source
-* agent[client] ^short = "Subscriber"
-* agent[server] ^short = "Broker"
+* agent[client] ^short = "Resource Notification Subscriber"
+* agent[server] ^short = "Resource Notification Broker"
 * entity[data] ^short = "the reference to the Subscription"

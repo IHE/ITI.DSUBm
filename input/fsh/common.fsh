@@ -57,3 +57,8 @@ Invariant: DocumentReference-MultiPatient
 Severity: #error
 Description: "the Subscription for DocumentReference shall include the resource DocumentReference and no reference to the patient parameter"
 Expression: "value.contains('DocumentReference?') and value.contains('patient').not()"
+
+Invariant: val-audit-source
+Description: "The Audit Source is this agent too."
+Expression: "$this.who = %resource.source.observer"
+Severity: #error
