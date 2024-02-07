@@ -62,3 +62,12 @@ Invariant: val-audit-source
 Description: "The Audit Source is this agent too."
 Expression: "$this.who = %resource.source.observer"
 Severity: #error
+
+
+ValueSet: DSUBmInteractionTrigger
+Title: "Restful-interaction available for resource"
+Description: "A ValueSet of the allowed Restful-interaction used for defining resourceTriggers."
+* ^experimental = false
+* http://hl7.org/fhir/restful-interaction#create
+* http://hl7.org/fhir/restful-interaction#update
+* http://hl7.org/fhir/restful-interaction#delete
