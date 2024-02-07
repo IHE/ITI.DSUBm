@@ -1,5 +1,6 @@
+/*
 Profile:        AuditResourcePublishBroker
-Parent:         AuditEvent
+Parent:         IHE.BasicAudit.PatientCreate
 Id:             IHE.DSUBm.ResourcePublish.Audit.Broker
 Title:          "Audit Event for Resource Publish Transaction at Broker"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Resource Publish Transaction happens at the Broker.
@@ -49,7 +50,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * entity ^slicing.description = "patient and submission set involved"
 * entity contains
 	patient 1..1 and
-	submissionSet 1..1
+	submissionSet 0..* and docRef 0..* and Folder 0..* and 
 * entity[patient].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#1 "Person"
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what 1..1
@@ -57,13 +58,24 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * entity[submissionSet].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[submissionSet].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * entity[submissionSet].what 1..1
-* entity[submissionSet].what only Reference(List) 
+* entity[submissionSet].what only Reference(List)
+
+* entity[docRef].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
+* entity[docRef].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[docRef].what 1..1
+* entity[docRef].what only Reference(DocumentReference)
+
+* entity[Folder].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
+* entity[Folder].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[Folder].what 1..1
+* entity[Folder].what only Reference(List) 
+
 * entity[patient] ^short = "Patient"
 * entity[submissionSet] ^short = "SubmissionSet"
 
 
 Profile:        AuditResourcePublishPublisher
-Parent:         AuditEvent
+Parent:         IHE.BasicAudit.PatientCreate
 Id:             IHE.DSUBm.ResourcePublish.Audit.Publisher
 Title:          "Audit Event for Resource Publish Transaction at Publisher"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Resource Publish Transaction happens at the Publisher.
@@ -124,3 +136,5 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * entity[submissionSet].what only Reference(List) 
 * entity[patient] ^short = "Patient"
 * entity[submissionSet] ^short = "SubmissionSet"
+
+*/
