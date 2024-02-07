@@ -1,3 +1,4 @@
+/*
 // SubscriptionTopic for DocumentReference Patient Dependent with DocumentReference Subscription for Full Events Option
 Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents
 InstanceOf: Basic
@@ -13,7 +14,7 @@ Note that:
 "
 
 * meta.versionId = "2"
-/*
+
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
 * extension[=].valueUri = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents"
 
@@ -134,7 +135,7 @@ Note that:
 * extension[=].extension[=].valueUri = "DocumentReference"
 * modifierExtension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status"
 * modifierExtension[=].valueCode = #active
-*/
+
 * code =  DSUBmFhirType#SubscriptionTopic
 
 // SubscriptionTopic for DocumentReference MULTI-PATIENT with DocumentReference Subscription for Full Events Option
@@ -260,3 +261,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

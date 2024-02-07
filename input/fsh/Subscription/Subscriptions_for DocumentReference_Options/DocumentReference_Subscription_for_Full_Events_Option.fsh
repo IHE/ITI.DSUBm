@@ -9,7 +9,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria ^short = "Canonical URL for the SubscriptionTopic."
 * criteria.extension obeys DocumentReference-PatientDependent
 * criteria.extension ^short = "The criteria.extension shall have at least one of the patient or patient.identifier parameter as a subscription criteria."
-* criteria = Canonical(DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents)
+* criteria = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents"
 * channel.type = #rest-hook 
 * channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."
@@ -29,7 +29,7 @@ Description:  "Resource Subscription for DSUBm profile for DocumentReference wit
 * criteria ^short = "Canonical URL for the SubscriptionTopic."
 * criteria.extension obeys DocumentReference-MultiPatient
 * criteria.extension ^short = "The criteria.extension shall not have the patient or the patient.identifier parameter as a subscription criteria."
-* criteria = Canonical(DSUBm-SubscriptionTopic-DocReference-MultiPatient-AllEvents)
+* criteria = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-MultiPatient-AllEvents"
 * channel.type = #rest-hook 
 * channel.endpoint 1..1 MS SU  
 * channel.endpoint ^short = "The endpoint should be the endpoint that the Resource Notification Recipient is receiving the notifications."

@@ -1,3 +1,4 @@
+/*
 Instance: DSUBm-SubscriptionTopic-Folder-Subscription-for-Full-Events
 InstanceOf: Basic
 Usage: #example
@@ -89,3 +90,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

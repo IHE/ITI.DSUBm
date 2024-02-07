@@ -1,3 +1,4 @@
+/*
 // SubscriptionTopic for DocumentReference Patient Dependent with DocumentReference Subscription for Minimal Update Option
 Instance: DSUBm-SubscriptionTopic-DocReference-PatientDependent-MinUpdate
 InstanceOf: Basic
@@ -13,7 +14,7 @@ Note that:
 "
 
 * meta.versionId = "2"
-/*
+
 * extension[0].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url"
 * extension[=].valueUri = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-MinUpdate"
 
@@ -137,7 +138,7 @@ Note that:
 
 * modifierExtension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status"
 * modifierExtension[=].valueCode = #active
-*/
+
 * code =  DSUBmFhirType#SubscriptionTopic
 
 
@@ -267,3 +268,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

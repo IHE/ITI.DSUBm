@@ -1,3 +1,4 @@
+/*
 Instance: DSUBm-SubscriptionTopic-Basic-Folder-Subscription
 InstanceOf: Basic
 Usage: #example
@@ -92,3 +93,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

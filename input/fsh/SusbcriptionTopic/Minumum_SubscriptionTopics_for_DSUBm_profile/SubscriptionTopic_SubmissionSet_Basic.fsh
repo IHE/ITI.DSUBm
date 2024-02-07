@@ -1,3 +1,4 @@
+/*
 // SubscriptionTopic for SubmissionSet type List (minumim requirement for DSUBm)
 Instance: DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent
 InstanceOf: Basic
@@ -161,3 +162,4 @@ Note that:
 * modifierExtension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status"
 * modifierExtension[=].valueCode = #active
 * code =  DSUBmFhirType#SubscriptionTopic
+*/

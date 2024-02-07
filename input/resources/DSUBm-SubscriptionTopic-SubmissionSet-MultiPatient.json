@@ -1,0 +1,48 @@
+{
+  "resourceType": "SubscriptionTopic",
+  "id": "DSUBm-SubscriptionTopic-SubmissionSet-MultiPatient",
+  "meta": {
+    "versionId": "1"
+  },
+  "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-SubmissionSet-MultiPatient",
+  "title": "SubscriptionTopic for SubmissionSet Multi-Patient resource",
+  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic shall be used in all SubmissionSet type List subscriptions that have not a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a SubmissionSet type List resource\n- the canFilterBy.filterParameter does not include the patient and patient.identifier parameters\n- this topic only covers the create event of a SubmissionSet type List resource\n",
+  "status": "active",
+  "resourceTrigger": [
+    {
+      "description": "A SubmissionSet type List resource is created",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "supportedInteraction": [
+        "create"
+      ],
+      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='submissionset' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='submissionset'))"
+    }
+  ],
+  "canFilterBy": [
+    {
+      "description": "Filter based on the code of a SubmissionSet List Resource. (Fixed Value: submissionset)",
+      "resource": "List",
+      "filterParameter": "code"
+    },
+    {
+      "description": "Filter based on the source of a SubmissionSet List Resource. (SubmissionSet.author)",
+      "resource": "List",
+      "filterParameter": "source"
+    },
+    {
+      "description": "Filter based on the sourceId of a SubmissionSet List Resource. (SubmissionSet.sourceId)",
+      "resource": "List",
+      "filterParameter": "sourceId"
+    },
+    {
+      "description": "Filter based on the intendedRecipient of a SubmissionSet List Resource. (SubmissionSet.intendedRecipient)",
+      "resource": "List",
+      "filterParameter": "intendedRecipient"
+    }
+  ],
+  "notificationShape": [
+    {
+      "resource": "List"
+    }
+  ]
+}

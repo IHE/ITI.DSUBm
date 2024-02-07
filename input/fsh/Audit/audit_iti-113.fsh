@@ -1,3 +1,4 @@
+/*
 Profile:        AuditSearchResourceSubscriptionSubscriber
 Parent:         IHE.BasicAudit.Query
 Id:             IHE.DSUBm.ResourceSubscriptionSearch.Audit.Subscriber
@@ -45,4 +46,4 @@ Defines constraints on the AuditEvent Resource to record when a Resource Notific
 * agent[client] ^short = "Subscriber"
 * agent[server] ^short = "Broker"
 * entity[data] ^short = "the reference to the Subscription"
-
+*/

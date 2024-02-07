@@ -1,0 +1,66 @@
+{
+  "resourceType": "SubscriptionTopic",
+  "id": "DSUBm-SubscriptionTopic-Basic-Folder-Subscription",
+  "meta": {
+    "versionId": "1"
+  },
+  "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-Basic-Folder-Subscription",
+  "title": "SubscriptionTopic for Folder Patient-Dependent resource with Basic Folder Subscription Option",
+  "description": "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder type List Resource and the update to insert new documents in the Folder. \nThis topic shall be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a Folder List resource\n- this resource shall be used when the \"Basic Folder Subscription Option\" is supported\n- this topic covers the create and the update to insert new documents in the Folder event \n",
+  "status": "active",
+  "resourceTrigger": [
+    {
+      "description": "A Folder type List resource is created.",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "supportedInteraction": [
+        "create"
+      ],
+      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
+    },
+    {
+      "description": "A Folder type List resource is updated to insert new documents in the Folder.",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "supportedInteraction": [
+        "update"
+      ],
+      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder')) and ((%previous.entry.item).count() < (%current.entry.item).count())"
+    }
+  ],
+  "canFilterBy": [
+    {
+      "description": "Filter based on the code of a Folder List Resource. (Fixed Value: folder)",
+      "resource": "List",
+      "filterParameter": "code"
+    },
+    {
+      "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
+      "resource": "List",
+      "filterParameter": "patient"
+    },
+    {
+      "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
+      "resource": "List",
+      "filterParameter": "patient.identifier"
+    },
+    {
+      "description": "Filter based on the identifier of a Folder List Resource. (Folder.entryUUID and Folder.uniqueId)",
+      "resource": "List",
+      "filterParameter": "identifier"
+    },
+    {
+      "description": "Filter based on the designationType of a Folder List Resource. (Folder.codeList)",
+      "resource": "List",
+      "filterParameter": "designationType"
+    },
+    {
+      "description": "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)",
+      "resource": "List",
+      "filterParameter": "status"
+    }
+  ],
+  "notificationShape": [
+    {
+      "resource": "List"
+    }
+  ]
+}

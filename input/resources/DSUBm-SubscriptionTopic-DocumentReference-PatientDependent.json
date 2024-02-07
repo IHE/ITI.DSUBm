@@ -1,0 +1,87 @@
+{
+  "resourceType": "SubscriptionTopic",
+  "id": "DSUBm-SubscriptionTopic-DocumentReference-PatientDependent",
+  "meta": {
+    "versionId": "1"
+  },
+  "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent",
+  "title": "SubscriptionTopic for DocumentReference Patient-Dependent resource",
+  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element and are just focusing on the create event. \nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a DocumentReference resource\n- this topic only covers the create event of a DocumentReference\n",
+  "status": "active",
+  "resourceTrigger": [
+    {
+      "description": "A DocumentReference resource is created",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "supportedInteraction": [
+        "create"
+      ]
+    }
+  ],
+  "canFilterBy": [
+    {
+      "description": "Filter based on the author of an DocumentReference. (DocumentEntry.author)",
+      "resource": "DocumentReference",
+      "filterParameter": "author.given"
+    },
+    {
+      "description": "Filter based on the author of an DocumentReference. (DocumentEntry.author)",
+      "resource": "DocumentReference",
+      "filterParameter": "author.family"
+    },
+    {
+      "description": "Filter based on the event of a DocumentReference. (DocumentEntry.class)",
+      "resource": "DocumentReference",
+      "filterParameter": "category"
+    },
+    {
+      "description": "Filter based on the status of a DocumentReference. (DocumentEntry.eventCodeList)",
+      "resource": "DocumentReference",
+      "filterParameter": "event"
+    },
+    {
+      "description": "Filter based on the facility in which the DocumentReference has been compiled. (DocumentEntry.healthcareFacilityTypeCode)",
+      "resource": "DocumentReference",
+      "filterParameter": "facility"
+    },
+    {
+      "description": "Filter based on the format of the DocumentReference . (DocumentEntry.formatCode)",
+      "resource": "DocumentReference",
+      "filterParameter": "format"
+    },
+    {
+      "description": "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)",
+      "resource": "DocumentReference",
+      "filterParameter": "patient"
+    },
+    {
+      "description": "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)",
+      "resource": "DocumentReference",
+      "filterParameter": "patient.identifier"
+    },
+    {
+      "description": "Filter based on the security-label of the DocumentReference (DocumentEntry.confidentialityCode)",
+      "resource": "DocumentReference",
+      "filterParameter": "security-label"
+    },
+    {
+      "description": "Filter based on the practice setting of the DocumentReference (practiceSetting)",
+      "resource": "DocumentReference",
+      "filterParameter": "setting"
+    },
+    {
+      "description": "Filter based on the status of the DocumentReference (DocumentEntry.availabilityStatus)",
+      "resource": "DocumentReference",
+      "filterParameter": "status"
+    },
+    {
+      "description": "Filter based on the type of a DocumentReference. (DocumentReference.type)",
+      "resource": "DocumentReference",
+      "filterParameter": "type"
+    }
+  ],
+  "notificationShape": [
+    {
+      "resource": "DocumentReference"
+    }
+  ]
+}

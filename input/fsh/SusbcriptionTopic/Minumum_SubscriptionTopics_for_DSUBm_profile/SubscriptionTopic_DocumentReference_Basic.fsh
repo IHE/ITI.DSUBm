@@ -1,4 +1,4 @@
-// SubscriptionTopic for DocumentReference (minumim requirement for DSUBm)
+/* SubscriptionTopic for DocumentReference (minumim requirement for DSUBm)
 Instance: DSUBm-SubscriptionTopic-DocumentReference-PatientDependent
 InstanceOf: Basic
 Usage: #example
@@ -245,3 +245,4 @@ Note that:
 * modifierExtension[=].valueCode = #active
 
 * code =  DSUBmFhirType#SubscriptionTopic
+*/
