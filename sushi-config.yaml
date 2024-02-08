@@ -80,6 +80,22 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 #    name: my example Subscription
 #    description: aAn example of Subscription
 
+groups:
+  Canonical Topics for Subscription:
+    name: Canonical SubscriptionTopic
+    description: Artifacts related to Basic resource representing the possible topic used in DSUBm 
+    resources:
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-Folder-Subscription-for-Full-Events
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-SubmissionSet-MultiPatient
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-Folder-Subscription-MinUpdateOpt
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-Folder-Subscription-UpdateOpt
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-MinUpdate
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-MultiPatient-MinUpdate
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-MultiPatient-AllEvents
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-Basic-Folder-Subscription
 
 
 pages:

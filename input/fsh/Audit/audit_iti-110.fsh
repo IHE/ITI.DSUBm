@@ -108,7 +108,7 @@ Id:             IHE.DSUBm.UpdateResourceSubscriptionPatient.Audit.Subscriber
 Title:          "Audit Event for a Unsubscribe message in a Resource Subscription transaction with a patient-dependent Subscription made by the Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
-- Build off of the IHE BasicAudit Create event
+- Build off of the IHE BasicAudit Update event
 - add the ITI-110 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -134,7 +134,7 @@ Id:             IHE.DSUBm.UpdateResourceSubscription.Audit.Subscriber
 Title:          "Audit Event for a Unsubscribe message in a Resource Subscription transaction with a multi-patient Subscription made by the Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
-- Build off of the IHE BasicAudit Create event
+- Build off of the IHE BasicAudit Update event
 - add the ITI-110 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -160,7 +160,7 @@ Id:             IHE.DSUBm.UpdateResourceSubscriptionPatient.Audit.Broker
 Title:          "Audit Event for a Unsubscribe message in a Resource Subscription transaction with a patient-dependent Subscription made by the Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
-- Build off of the IHE BasicAudit Create event
+- Build off of the IHE BasicAudit Update event
 - add the ITI-110 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -186,7 +186,7 @@ Id:             IHE.DSUBm.UpdateResourceSubscription.Audit.Broker
 Title:          "Audit Event for a Unsubscribe message in a Resource Subscription transaction with a multi-patient Subscription made by the Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
-- Build off of the IHE BasicAudit Create event
+- Build off of the IHE BasicAudit Update event
 - add the ITI-110 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
