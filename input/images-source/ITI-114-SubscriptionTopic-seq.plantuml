@@ -14,8 +14,8 @@ deactivate Broker
 
 == SubscriptionTopic Read ==
 activate Broker
-Subscriber -> Broker : 1. [[ITI-114.html#2311443-subscriptiontopic-resd-request-message SubscriptionTopic Read Request Message]]
-Broker --> Subscriber : 2. [[ITI-114.html#2311444-subscriptiontopic-resd-response-message SubscriptionTopic Read Response Message]]
+Subscriber -> Broker : 1. [[ITI-114.html#2311443-subscriptiontopic-read-request-message SubscriptionTopic Read Request Message]]
+Broker --> Subscriber : 2. [[ITI-114.html#2311444-subscriptiontopic-read-response-message SubscriptionTopic Read Response Message]]
 
 deactivate Broker
 @enduml
