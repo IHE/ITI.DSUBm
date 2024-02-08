@@ -6,16 +6,15 @@ participant "Resource Notification Broker" as  Broker
 
 
 == SubscriptionTopic Search ==
-activate Broker
 Subscriber -> Broker : 1. [[ITI-114.html#2311441-resource-subscriptiontopic-search-request-message Resource SubscriptionTopic Search Request Message]]
+activate Broker
 Broker --> Subscriber : 2. [[ITI-114.html#2311442-resource-subscriptiontopic-search-response-message Resource SubscriptionTopic Search Response Message]]
-
 deactivate Broker
 
 == SubscriptionTopic Read ==
-activate Broker
-Subscriber -> Broker : 1. [[ITI-114.html#2311443-subscriptiontopic-read-request-message SubscriptionTopic Read Request Message]]
-Broker --> Subscriber : 2. [[ITI-114.html#2311444-subscriptiontopic-read-response-message SubscriptionTopic Read Response Message]]
 
+Subscriber -> Broker : 1. [[ITI-114.html#2311443-subscriptiontopic-read-request-message SubscriptionTopic Read Request Message]]
+activate Broker
+Broker --> Subscriber : 2. [[ITI-114.html#2311444-subscriptiontopic-read-response-message SubscriptionTopic Read Response Message]]
 deactivate Broker
 @enduml
