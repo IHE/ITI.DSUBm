@@ -311,16 +311,16 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
 <tbody>
   <tr>
     <td class="tg-0pky">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
-    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
   </tr>
   <tr>
     <td class="tg-0pky">New document available (i.e. creation of a DocumentReference resource)</td>
-    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -328,7 +328,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Update of the metadata status of a document (i.e. update of the DocumentReference status)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -336,7 +336,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Delete of a document (i.e. delete of a DocumentReference resource)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span style="color:#905">[ITI-62]</span></a></td>
+    <td class="tg-0pky">Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -344,7 +344,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span style="color:#905">[ITI-92]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span>[ITI-92]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
@@ -378,16 +378,16 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
 <tbody>
   <tr>
     <td class="tg-0pky">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
-    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
     <td class="tg-0pky">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
-    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -395,7 +395,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a><br><br>Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span style="color:#905">[ITI-62]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -403,7 +403,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -411,7 +411,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource)</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
