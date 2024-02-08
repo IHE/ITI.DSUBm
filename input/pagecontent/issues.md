@@ -1,7 +1,13 @@
 
 ## Significant Changes
 
-This is the first publication of the DSUBm Profile.
+Significant Changes From Previous Version:
+
+- Passes from R4B to R4 version of FHIR
+- Profiling the SubscriptionTopic as Basic resource
+- Profiling the SubscriptionStatus as Parameter resource
+- Eliminated the duplication of MHD artifacts
+- Profiled AuditEvent for the transactions
 
 ## Issues
 
@@ -15,10 +21,6 @@ It is important to note that as soon as a Change Proposal is approved, it carrie
 
 
 ### Open Issues
-
-- **[DSUBm_001](https://github.com/IHE/ITI.DSUBm/issues/9)**: This profile defines a Subscription framework using R4B version of FHIR, in order to improve the subscription functional from the R4 version. Are there any compelling arguments to use R4 version of FHIR?
-
-- **[DSUBm_002](https://github.com/IHE/ITI.DSUBm/issues/10)**: The AuditEvents for each transaction are not yet profiled because the IG publisher, at the moment, does not allow to further constrain a profile coming from a different FHIR version of the IG.
 
 - **[DSUBm_003](https://github.com/IHE/ITI.DSUBm/issues/11)**: The DUSBm Profile proposed changes to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) Profile in order to extend DSUB with a RESTfull search functionality of the subscriptions. See [here](other.html) for the proposed changes. Is this functionality something useful to extend DSUB or are the proposed changes too challenging?
 
@@ -55,10 +57,17 @@ Profile also include a pull modality for the notification. SHOULD also the DSUBm
 
 
 ### Closed Issues
+- **[DSUBm_001](https://github.com/IHE/ITI.DSUBm/issues/9)**: This profile defines a Subscription framework using R4B version of FHIR, in order to improve the subscription functional from the R4 version. Are there any compelling arguments to use R4 version of FHIR?
+
+DECISION: based on discussions and survey on FHIR version, decided to switch to R4 version.
+
+- **[DSUBm_002](https://github.com/IHE/ITI.DSUBm/issues/10)**: The AuditEvents for each transaction are not yet profiled because the IG publisher, at the moment, does not allow to further constrain a profile coming from a different FHIR version of the IG.
+
+DECISION: switched from R4B to R4 and proceeded to profile AuditEvent.
 
 - **[DSUBm_004](https://github.com/IHE/ITI.DSUBm/issues/12)**: For the [Resource Notify [ITI-112]](ITI-112.html) transaction the DSUBm defines the expected action for the Resource Notification Broker in order to define a common way to manage errors and connection problems that MAY occur for all the different type of notifications. Considering the various infrastructure capabilities with which the subscription framework could be implemented, SHOULD the expected action be revised? Is it appropriate to define the number of attempts after the first error for the [Heartbeat Notification Message](ITI-112.html#231127-heartbeat-notification-request-message) and the [Event Notification Message](ITI-112.html#231129-event-notification-request-message)? Are there other points to focus on?
 
-Discussed on github and during Feb 2024 F2F meeting.
+DECISION: based on discussions and comments on github, decided that it is not necessary to specify further considerations.
 
 - **[DSUBm_006](https://github.com/IHE/ITI.DSUBm/issues/14)**: If the following resource are directly used (with dependency) from MHD profiles: 
 
@@ -78,4 +87,4 @@ Discussed on github and during Feb 2024 F2F meeting.
 
     The TEMPORARY SOLUTION for now is to replicate some MHD content that is used in DSUBm in R4B. (files in folder "DSUBm_DocumentRelatedResources")
 
-Switched from R4B to R4, not needed anymore. MHD used in the dependecies.    
+DECISION: switched from R4B to R4, not needed anymore.    
