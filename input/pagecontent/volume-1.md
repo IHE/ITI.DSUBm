@@ -283,11 +283,144 @@ The Resource Notification Publisher that declares support for this option SHALL 
 
 #### 1:54.2.7 Overview on Events and Options
 
-This section is reported in Table 1:54.2.7: Events and Options overview a practical overview about the events on Documents that are considered in this profile and the Options that consent these events to be notified. 
+In this section is reported a practical overview about the events on patient documents that are considered in this profile and the Options that consent these events to be notified. Plus, it is enlightened the transactions which concur to these events in the principal document sharing environment, [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50) and [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html).
 
-**Table 1:54.2.7: Events and Options overview**
+In Table 1:54.2.7-1 are reported the event related to the DocumentReference and SubmissionSet type List resources. In Table 1:54.2.7-2 are reported the event related to the Folder type List resources. 
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-d02k{background-color:#FFF;border-color:inherit;color:#333;text-align:left;vertical-align:bottom}
+.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-za14">Event</th>
+    <th class="tg-za14">MHDS enviroment transaction</th>
+    <th class="tg-za14">XDS enviroment transaction</th>
+    <th class="tg-za14">Default implementation</th>
+    <th class="tg-0pky"><span style="font-style:normal"> DocumentReference Subscription for Minimal Update option</span></th>
+    <th class="tg-0pky"><span style="font-style:normal">DocumentReference Subscription for Full Events option</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-za14">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
+    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-za14"></td>
+    <td class="tg-za14"></td>
+  </tr>
+  <tr>
+    <td class="tg-za14">New document available (i.e. creation of a DocumentReference resource)</td>
+    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a document (i.e. update of the DocumentReference status)</span></td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Delete of a document (i.e. delete of a DocumentReference resource)</span></td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</span></td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Restricted Update Document Set [ITI-92](https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+</tbody>
+</table>
 
+**Table 1:54.2.7-2: Events and Options overview for Folder type List resource**
+
+<<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-9wq8{border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-d02k{background-color:#FFF;border-color:inherit;color:#333;text-align:left;vertical-align:bottom}
+.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-za14">Event</th>
+    <th class="tg-za14">MHDS enviroment transaction</th>
+    <th class="tg-za14">XDS enviroment transaction</th>
+    <th class="tg-za14">Basic Folder Subscription option</th>
+    <th class="tg-za14">Folder Subscription for Minimal Update option</th>
+    <th class="tg-za14">Folder Subscription for Update option</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-za14">Creation of a new Folder (i.e. the creation of a Folder type List resource</td>
+    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Insert a new document in a Folder (i.e. update a Folder type List resorce with a new DocumentReference link)</td>
+    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k">Removal of a document from a Folder (i.e. update a Folder type List resorce erasing a DocumentReference link)</td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</span></td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+  <tr>
+    <td class="tg-d02k">Update of a Folder (i.e. the update of a Folder type List resource</td>
+    <td class="tg-za14"></td>
+    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-lboi"></td>
+    <td class="tg-9wq8">X</td>
+  </tr>
+</tbody>
+</table>
 
 ## 1:54.3 Required Actor Groupings
 This profile does not mandate grouping with other actors.
@@ -298,10 +431,10 @@ This section shows how the transactions and content modules of the profile are c
 
 ### 1:54.4.1 Concepts
 
-The DSUBm profile enables mobile subscriptions for documents.
-The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented. 
+The DSUBm profile enables mobile subscriptions for patient documents.
+The subscription mechanism is very flexible and can be adapted to many use cases depending on the type of subscription used and the environment in which DSUBm is implemented, especially where that environment works for sharing these documents. Other IHE profiles, chiefly [Cross-Enterprise Document Sharing (XDS.b)](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [Mobile access to Health Documents (MHD)](https://profiles.ihe.net/ITI/MHD), describe sharing of patient document, and many of the sharing documents concepts used in this profile are explained there. Also, for more information on IHE Document Sharing, see [Health Information Exchange: Enabling Document Sharing Using IHE Profiles](https://profiles.ihe.net/ITI/HIE-Whitepaper/index.html) White Paper.
 
-In the following use cases, different subscription types are presented. The different subscriptions presented are focused on [DocumentReferences](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.DocumentReference.html), [SubmissionSet](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.SubmissionSet.html) and [Folders](https://profiles.ihe.net/ITI/MHD/StructureDefinition-IHE.MHD.Minimal.Folder.html). These subscriptions can be explicit for a specific patient (patient-dependent subscription) or can be expressed without a specific patient; hence, covering all patients (in this case they are referred as multi-patient subscriptions). 
+In the following use cases, different subscription types are presented. These subscriptions can be explicit for a specific patient (patient-dependent subscription) or can be expressed without a specific patient; hence, covering all patients (in this case they are referred as multi-patient subscriptions). 
 The use cases cover both a fully mobile environment, for example MHDS implementations (see [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50)) and environments in which the main infrastructure is [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html).
 These use cases present also the possibility in which DSUB and DSUBm coexist and both are available to the users.
 
