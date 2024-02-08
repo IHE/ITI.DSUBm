@@ -5,26 +5,26 @@ participant "Resource Notification Broker" as  Broker
 
 
 == Subscription Search ==
-Subscriber -> Broker :  [[ITI-113.html#2311341-subscription-search-request-message]] 
+Subscriber -> Broker :  [[ITI-113.html#2311341-subscription-search-request-message Subscription Search Request Message]] 
 activate Broker
-Broker --> Subscriber : [[ITI-113.html#2311342-subscription-search-response-message]] 
+Broker --> Subscriber : [[ITI-113.html#2311342-subscription-search-response-message Subscription Search Response Message]] 
 deactivate Broker
 
 == Subscription Status Search ==
-Subscriber -> Broker : [[ITI-113.html#2311343-subscription-status-search-request-message]] 
+Subscriber -> Broker : [[ITI-113.html#2311343-subscription-status-search-request-message Subscription Status Search Request Message]] 
 activate Broker
-Broker --> Subscriber : [[ITI-113.html#2311344-subscription-status-search-response-message]] 
+Broker --> Subscriber : [[ITI-113.html#2311344-subscription-status-search-response-message Subscription Status Search Response Message]] 
 deactivate Broker
 
 == Subscription Events Search ==
-Subscriber -> Broker : [[ITI-113.html#2311345-subscription-events-search-request-message]] 
+Subscriber -> Broker : [[ITI-113.html#2311345-subscription-events-search-request-message Subscription Events Search Request Message]] 
 activate Broker
-Broker --> Subscriber : [[ITI-113.html#2311346-subscription-events-search-response-message]] 
+Broker --> Subscriber : [[ITI-113.html#2311346-subscription-events-search-response-message Subscription Events Search Response Message]] 
 
 == Subscription Read ==
-Subscriber -> Broker : [[ITI-113.html#2311347-subscription-read-request-message]] 
+Subscriber -> Broker : [[ITI-113.html#2311347-subscription-read-request-message Subscription Read Request Message]] 
 activate Broker
-Broker --> Subscriber : [[ITI-113.html#2311348-subscription-read-response-message]] 
+Broker --> Subscriber : [[ITI-113.html#2311348-subscription-read-response-message Subscription Read Response Message]] 
 
 deactivate Broker
 
