@@ -1,5 +1,5 @@
 Profile:        SubscriptionStatus_NotificationEvent
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Event
 Title:          "SubscriptionStatus for the notification event"
 Description:    "Profile on the SubscriptionStatus resource for the event notification"
@@ -12,8 +12,9 @@ Description:    "Profile on the SubscriptionStatus resource for the event notifi
 * parameter[notificationEvent].value[x] 1..1
 
 
+
 Profile:        SubscriptionStatus_Handshake
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Handshake
 Title:          "SubscriptionStatus for the handshake event"
 Description:    "Profile on the SubscriptionStatus resource to be used in the handshake notification"
@@ -21,14 +22,14 @@ Description:    "Profile on the SubscriptionStatus resource to be used in the ha
 * parameter[type].valueCode = #handshake
 
 Profile:        SubscriptionStatus_Heartbeat
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Heartbeat
 Title:          "SubscriptionStatus for the handshake event"
 Description:    "Profile on the SubscriptionStatus resource for the handshake notification"
 * parameter[type].valueCode = #heartbeat
 
 Profile:        SubscriptionStatus_Deactivation
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Deactivation
 Title:          "SubscriptionStatus for the Subscription Deactivation Notification event"
 Description:    "Profile on the SubscriptionStatus resource the Subscription Deactivation Notification"
@@ -37,7 +38,7 @@ Description:    "Profile on the SubscriptionStatus resource the Subscription Dea
 
 
 Profile:        SubscriptionStatus_StatusOperation
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-StatusOperation
 Title:          "SubscriptionStatus for the status operation"
 Description:    "Profile on the SubscriptionStatus resource for the $status operation"
@@ -51,7 +52,7 @@ Description:    "Profile on the SubscriptionStatus resource for the $status oper
 
 
 Profile:        SubscriptionStatus_EventsOperation
-Parent:         backport-subscription-status-r4
+Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-EventsOperation
 Title:          "SubscriptionStatus for the $events operation"
 Description:    "Profile on the SubscriptionStatus resource for the $events operation"

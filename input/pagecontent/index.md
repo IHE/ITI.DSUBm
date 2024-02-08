@@ -18,7 +18,7 @@ This guide is organized into the following sections:
 - Volume 1: Actors, Transactions and use cases
    - [Actors, Transactions, and Content](volume-1.html#1541-dsubm-actors-transactions-and-content-modules)
    - [Actor Options](volume-1.html#1542-actor-options)
-   - [Actor REQUIRED Groupings](volume-1.html#1543-REQUIRED-actor-groupings)
+   - [Actor Required Groupings](volume-1.html#1543-required-actor-groupings)
    - [Overview](volume-1.html#1544-dsubm-overview)
    - [Security Considerations](volume-1.html#1545-security-considerations)
    - [Cross Profile Considerations](volume-1.html#1546-cross-profile-considerations)
@@ -40,10 +40,10 @@ See also the [Table of Contents](toc.html) and the index of [Artifacts](artifact
 
 IHE uses the normative words: “REQUIRED”, “REQUIRED NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “recommended”, “MAY”, and “OPTIONAL” according to [standards conventions](https://profiles.ihe.net/GeneralIntro/ch-E.html).
 
-#### REQUIRED Support
+#### Required Support
 
-The use of ```REQUIREDSupport``` in StructureDefinition profiles equivalent to the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir).
+The use of ```RequiredSupport``` in StructureDefinition profiles equivalent to the IHE use of **R2** as defined in [Appendix Z](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.10-profiling-conventions-for-constraints-on-fhir).
 
-REQUIREDSupport of true - only has a meaning on items that are minimal cardinality of zero (0), and applies only to the source actor populating the data. The source actor SHALL populate the elements marked with REQUIREDSupport, if the concept is supported by the actor, a value exists, and security and consent rules permit. 
+RequiredSupport of true - only has a meaning on items that are minimal cardinality of zero (0), and applies only to the source actor populating the data. The source actor SHALL populate the elements marked with RequiredSupport, if the concept is supported by the actor, a value exists, and security and consent rules permit. 
 The consuming actors SHOULD handle these elements being populated or being absent/empty. 
-Note that sometimes REQUIREDSupport will appear on elements with a minimal cardinality greater than zero (0), this is due to inheritance from a less constrained profile.
+Note that sometimes RequiredSupport will appear on elements with a minimal cardinality greater than zero (0), this is due to inheritance from a less constrained profile.

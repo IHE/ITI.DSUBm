@@ -419,7 +419,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
 </tbody>
 </table>
 
-## 1:54.3 REQUIRED Actor Groupings
+## 1:54.3 Required Actor Groupings
 This profile does not mandate grouping with other actors.
 
 ## 1:54.4 DSUBm Overview
@@ -527,7 +527,7 @@ The availability of a specific document for a Patient shared in an XDS on FHIR i
 
 Mr. Brown went to see his doctor. During the examination, the doctor considered important to check the blood test results before making a medication prescription. Meanwhile, Mr. Brown is sent home because he has already submitted a subscription in order to receive a notification on his mobile app when the prescription will be ready.
 
-When the doctor was notified that the blood test results were ready, he retrieved them and, after checking them, the doctor prescribed the drug to Mr. Brown. Mr. Brown receives a notification on his phone when the prescription is ready (created). From the app, he can now retrieve the prescription REQUIRED to purchase the drug in the local pharmacy.
+When the doctor was notified that the blood test results were ready, he retrieved them and, after checking them, the doctor prescribed the drug to Mr. Brown. Mr. Brown receives a notification on his phone when the prescription is ready (created). From the app, he can now retrieve the prescription required to purchase the drug in the local pharmacy.
 
 ##### 1:54.4.2.3.2 Document Subscription for Mobile Device in XDS on FHIR Environment Process Flow
 
