@@ -6,8 +6,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the client
@@ -31,8 +31,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the client
@@ -58,8 +58,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the server
@@ -84,8 +84,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the server
@@ -110,8 +110,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the client
@@ -136,8 +136,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a Resource Subscription transaction happens, as recorded by the Subscriber.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the client
@@ -162,8 +162,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the server
@@ -188,8 +188,8 @@ Description:    """
 Defines constraints on the AuditEvent Resource to record when a Subscribe in a Resource Subscription transaction happens, as recorded by the Broker.
 - Build off of the IHE BasicAudit Create event
 - add the ITI-110 as a subtype
-- shall have a Resource Notification Subscriber agent
-- shall have a Resource Notification Broker agent
+- SHALL have a Resource Notification Subscriber agent
+- SHALL have a Resource Notification Broker agent
 - entity slices for the Subscription reference
 - entity slice for transaction is available
 - source is the server

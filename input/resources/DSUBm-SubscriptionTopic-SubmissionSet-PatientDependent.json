@@ -6,7 +6,7 @@
   },
   "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent",
   "title": "SubscriptionTopic for SubmissionSet PatientDependent resource",
-  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic shall be used in all SubmissionSet subscriptions that have a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a SubmissionSet type List Resource\n- this topic only covers the create event of a SubmissionSet type List resource\n",
+  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic SHALL be used in all SubmissionSet subscriptions that have a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic SHALL be the resourceTrigger (so the eventTrigger SHALL NOT be used)\n- the resourceTrigger.resource element SHALL be a SubmissionSet type List Resource\n- this topic only covers the create event of a SubmissionSet type List resource\n",
   "status": "active",
   "resourceTrigger": [
     {

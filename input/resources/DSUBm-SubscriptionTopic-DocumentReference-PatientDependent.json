@@ -6,7 +6,7 @@
   },
   "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent",
   "title": "SubscriptionTopic for DocumentReference Patient-Dependent resource",
-  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic shall be used in all DocumentReference subscriptions that have a specific patient in the criteria element and are just focusing on the create event. \nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a DocumentReference resource\n- this topic only covers the create event of a DocumentReference\n",
+  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic SHALL be used in all DocumentReference subscriptions that have a specific patient in the criteria element and are just focusing on the create event. \nNote that:\n- the trigger for this topic SHALL be the resourceTrigger (so the eventTrigger SHALL NOT be used)\n- the resourceTrigger.resource element SHALL be a DocumentReference resource\n- this topic only covers the create event of a DocumentReference\n",
   "status": "active",
   "resourceTrigger": [
     {

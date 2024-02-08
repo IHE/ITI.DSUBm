@@ -37,9 +37,9 @@ This section modifies other IHE profiles or the General Introduction appendices 
 
 ### 26.2.2 Subscription Search Option
 
-The Document Metadata Notification Broker that support this option SHALL support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Notification Broker SHALL be capable of return a list of Subscription Resources that match the search parameter, on the base of the subscription it has received with the Document Metadata Subscribe [ITI-52] transaction and that it has tracked. It should support the %status operation and it may support the $events operation Resource Subscription Search [ITI-113] transaction.
+The Document Metadata Notification Broker that support this option SHALL support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Notification Broker SHALL be capable of return a list of Subscription Resources that match the search parameter, on the base of the subscription it has received with the Document Metadata Subscribe [ITI-52] transaction and that it has tracked. It SHOULD support the %status operation and it MAY support the $events operation Resource Subscription Search [ITI-113] transaction.
 
-The Document Metadata Subscriber that support this option SHALL support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Subscriber can search the subscription towards the Document Metadata Notification Broker. With this option the Document Metadata Subscriber SHALL support the search and/or read of Subscription Resource. It may support the %status operation and it may support the $events operation of the Resource Subscription Search [ITI-113] transaction.
+The Document Metadata Subscriber that support this option SHALL support the Resource Subscription Search [ITI-113] transaction. With this option the Document Metadata Subscriber can search the subscription towards the Document Metadata Notification Broker. With this option the Document Metadata Subscriber SHALL support the search and/or read of Subscription Resource. It MAY support the %status operation and it MAY support the $events operation of the Resource Subscription Search [ITI-113] transaction.
 
 ## IHE Technical Frameworks General Introduction Appendix A: Actors
 
@@ -50,7 +50,7 @@ The Document Metadata Subscriber that support this option SHALL support the Reso
 | Actor                            | Definition                                                                                |
 | -------------------------------- | ------------------------------------------------------------------------------------------|
 | Resource Notification Broker     | The receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation |
-| Resource Notification Publisher  | Sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription may exist |
+| Resource Notification Publisher  | Sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription MAY exist |
 | Resource Notification Recipient  | Receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied |
 | Resource Notification Subscriber | Initiates and terminates subscriptions on behalf of a Resource Notification Recipient |
 {:.grid .table-striped}

@@ -22,7 +22,7 @@ Figure 1:54.1-1 shows the actors directly involved in the DSUBm Profile and the 
 </figure>
 <br clear="all">
 
-Table 1:54.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor SHALL support all required transactions (labeled "R") and may support the optional transactions (labeled "O").
+Table 1:54.1-1 lists the transactions for each actor directly involved in the DSUBm Profile. To claim compliance with this profile, an actor SHALL support all REQUIRED transactions (labeled "R") and MAY support the optional transactions (labeled "O").
 
 **Table 1:54.1-1: DSUBm Profile - Actors and Transactions**
 
@@ -46,7 +46,7 @@ The actors in this profile are described in more detail in the following section
 
 #### 1:54.1.1.1 Resource Notification Broker
 
-The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers when events occur. This actor may optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched. It supports the search and retrieve of Subscription and SubscriptionTopic resource.
+The Resource Notification Broker is the receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation. It keeps track of all subscriptions it receives, including the time limits of subscriptions. Based on the subscription criteria, this actor sends notifications to interested subscribers when events occur. This actor MAY optionally receive Resource Publish transactions representing the stream of events against which the existing subscriptions are matched. It supports the search and retrieve of Subscription and SubscriptionTopic resource.
 
 The following CapabilityStatements define the actor capabilities given the various Options:
 
@@ -86,7 +86,7 @@ The following CapabilityStatements define the actor capabilities given the vario
 
 #### 1:54.1.1.3 Resource Notification Publisher
 
-The Resource Notification Publisher sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription may exist. Note that this profile does not specify how the Resource Notification Publisher becomes aware of those events.
+The Resource Notification Publisher sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription MAY exist. Note that this profile does not specify how the Resource Notification Publisher becomes aware of those events.
 
 The following CapabilityStatements define the actor capabilities given the various Options:
 
@@ -122,7 +122,7 @@ For more details see the detailed [[ITI-110] transaction description](ITI-110.ht
 
 #### 1:54.1.2.2 Resource Publish [ITI-111]
 
-This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that may have a subscription.
+This transaction delivers information from the Resource Notification Publisher to the Resource Notification Broker about an event that MAY have a subscription.
 
 For more details see the detailed [[ITI-111] transaction description](ITI-111.html).
 
@@ -146,7 +146,7 @@ For more details see the detailed [[ITI-114] transaction description](ITI-114.ht
 
 ## 1:54.2 Actor Options
 
-Optional functionality that may be implemented for each actor in this implementation guide are listed in Table 1:54.2-1 below. Dependencies 
+Optional functionality that MAY be implemented for each actor in this implementation guide are listed in Table 1:54.2-1 below. Dependencies 
 between options when applicable are specified in notes.
 
 **Table 1:54.2-1: Actor Options**
@@ -463,7 +463,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
 </tbody>
 </table>
 
-## 1:54.3 Required Actor Groupings
+## 1:54.3 REQUIRED Actor Groupings
 This profile does not mandate grouping with other actors.
 
 ## 1:54.4 DSUBm Overview
@@ -571,7 +571,7 @@ The availability of a specific document for a Patient shared in an XDS on FHIR i
 
 Mr. Brown went to see his doctor. During the examination, the doctor considered important to check the blood test results before making a medication prescription. Meanwhile, Mr. Brown is sent home because he has already submitted a subscription in order to receive a notification on his mobile app when the prescription will be ready.
 
-When the doctor was notified that the blood test results were ready, he retrieved them and, after checking them, the doctor prescribed the drug to Mr. Brown. Mr. Brown receives a notification on his phone when the prescription is ready (created). From the app, he can now retrieve the prescription required to purchase the drug in the local pharmacy.
+When the doctor was notified that the blood test results were ready, he retrieved them and, after checking them, the doctor prescribed the drug to Mr. Brown. Mr. Brown receives a notification on his phone when the prescription is ready (created). From the app, he can now retrieve the prescription REQUIRED to purchase the drug in the local pharmacy.
 
 ##### 1:54.4.2.3.2 Document Subscription for Mobile Device in XDS on FHIR Environment Process Flow
 
@@ -767,16 +767,16 @@ The assumption is that systems share the information in an XDS Environment where
 
 ## 1:54.5 Security Considerations
 
-This profile requires actors to audit the transactions that create subscriptions and send notifications, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application is strongly recommended in order to track the subscriptions and the notification sent.
+This profile requires actors to audit the transactions that create subscriptions and send notifications, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application is strongly RECOMMENDED in order to track the subscriptions and the notification sent.
 For further considerations about Audit record refer to [BALP profile](https://profiles.ihe.net/ITI/BALP/).
 User authentication/authorization represents another important factor to consider in order to avoid malicious creation/updating of subscriptions. Grouping DSUBm actors with actors in the Internet User Authorization (IUA) Profile enables deployments to mitigate these security issues.
 See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
 
-The reader should also consider the information included in [Safety and Security](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/safety_security.html) section of the Subscription Backport IG.
+The reader SHOULD also consider the information included in [Safety and Security](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/safety_security.html) section of the Subscription Backport IG.
 
 ## 1:54.6 Cross-Profile Considerations
 
-The DSUBm actor and transaction model is very flexible. Integration with other IHE profiles is possible and highly recommended in order to utilize the subscription/notification mobile feature in different types of environments. In this section, some information about possible cross-profile interaction is presented. 
+The DSUBm actor and transaction model is very flexible. Integration with other IHE profiles is possible and highly RECOMMENDED in order to utilize the subscription/notification mobile feature in different types of environments. In this section, some information about possible cross-profile interaction is presented. 
 
 ### 1:54.6.1 MHDS - Mobile Health Document Sharing 
 
@@ -834,7 +834,7 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 </figure>
 <br clear="all">
 
-Note that in this scenario, developers should be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
+Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
 
 ### 1:54.6.2.2 XDS.b - Cross-Enterprise Document Sharing Grouping 2
 In the second proposed grouping:
@@ -850,7 +850,7 @@ In the second proposed grouping:
 </figure>
 <br clear="all">
 
-Note that in this scenario, developers should be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
+Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
 
 ### 1:54.6.3 DSUBm as an Interface for DSUB 
 Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
@@ -861,4 +861,4 @@ Document Metadata Subscriber and the Document Metadata Notification Recipient wi
 </figure>
 <br clear="all">
 
-Note that in this scenario, developers should be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.
+Note that in this scenario, developers SHOULD be aware about the usage of `status` parameter in the Subscriptions and about implementation of DSUB supplement Folder Subscription Option and Patient-Independent Subscription Option.

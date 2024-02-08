@@ -6,7 +6,7 @@
   },
   "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-Folder-Subscription-UpdateOpt",
   "title": "SubscriptionTopic for Folder Subscription for Update Option",
-  "description": "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder type List Resource. \nThis topic shall be used in all Folder subscriptions that have a specific patient in the criteria element.\nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a Folder type List resource\n- this resource shall be used when the \"Folder Subscription for Update Option\" is supported\n- the events are creation and update of a Folder type List resource\n",
+  "description": "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation or update of a Folder type List Resource. \nThis topic SHALL be used in all Folder subscriptions that have a specific patient in the criteria element.\nNote that:\n- the trigger for this topic SHALL be the resourceTrigger (so the eventTrigger SHALL NOT be used)\n- the resourceTrigger.resource element SHALL be a Folder type List resource\n- this resource SHALL be used when the \"Folder Subscription for Update Option\" is supported\n- the events are creation and update of a Folder type List resource\n",
   "status": "active",
   "resourceTrigger": [
     {

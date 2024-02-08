@@ -44,7 +44,7 @@ Description:    "Profile on the SubscriptionStatus resource for the $status oper
 * parameter[status] ^short = "Current status of the relevant subscription"
 * parameter[type].valueCode = #query-status
 * parameter[eventsSinceSubscriptionStart] 1..1
-* parameter[eventsSinceSubscriptionStart].value[x] ^short = "This value is required because clients may use it to know if there are missing notifications. Note: this value SHALL NOT be incremented by sending a query-status notification."
+* parameter[eventsSinceSubscriptionStart].value[x] ^short = "This value is REQUIRED because clients MAY use it to know if there are missing notifications. Note: this value SHALL NOT be incremented by sending a query-status notification."
 * parameter[eventsSinceSubscriptionStart].value[x] 0..1
 * parameter[notificationEvent] 0..0
 
@@ -55,11 +55,11 @@ Parent:         backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-EventsOperation
 Title:          "SubscriptionStatus for the $events operation"
 Description:    "Profile on the SubscriptionStatus resource for the $events operation"
-* parameter[status] ^short = "Recommended. Should be valued with the current status of the relevant subscription"
+* parameter[status] ^short = "recommended. SHOULD be valued with the current status of the relevant subscription"
 * parameter[type].valueCode = #query-event
 * parameter[eventsSinceSubscriptionStart] 0..1
-* parameter[eventsSinceSubscriptionStart].value[x] ^short = "Recommended. This value is allows clients to know if they are missing notifications. Note: this value SHALL NOT be incremented by sending a query-event bundle."
+* parameter[eventsSinceSubscriptionStart].value[x] ^short = "recommended. This value is allows clients to know if they are missing notifications. Note: this value SHALL NOT be incremented by sending a query-event bundle."
 * parameter[notificationEvent] 1..*
 * parameter[notificationEvent].part[eventTimestamp].value[x] 0..1 
-//* parameter[notificationEvent].part[eventTimestamp].value[x] ^short = "Recommended so that clients can discover when an event actually occurred, timestamp is recommended."
+//* parameter[notificationEvent].part[eventTimestamp].value[x] ^short = "RECOMMENDED so that clients can discover when an event actually occurred, timestamp is recommended."
 
