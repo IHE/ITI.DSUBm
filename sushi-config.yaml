@@ -96,6 +96,7 @@ groups:
       - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-PatientDependent-AllEvents
       - SubscriptionTopic/DSUBm-SubscriptionTopic-DocReference-MultiPatient-AllEvents
       - SubscriptionTopic/DSUBm-SubscriptionTopic-Basic-Folder-Subscription
+      - SubscriptionTopic/DSUBm-SubscriptionTopic-SubmissionSet-PatientDependent
 
 
 pages:
