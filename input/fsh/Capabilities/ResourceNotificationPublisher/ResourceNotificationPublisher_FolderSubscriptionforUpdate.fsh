@@ -9,7 +9,7 @@ The DSUBm Resource Notification Publisher Actor CapabilityStatement requirements
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-111 transaction for the basic trigger events
-- SHALL be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#23111515-folder-subscription-for-update-option-trigger-events) and to comunicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.5 Folder Subscription for Update option Bundle](ITI-111.html#23111525-folder-subscription-for-update-option-bundle)
+- SHALL be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#23111515-folder-subscription-for-update-option-trigger-events) and to comunicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.5 Folder Subscription for Update option Bundle](ITI-111.html#23111525-folder-subscription-for-update-option-bundle)
 """
 
 * name = "IHE_DSUBm_ResourceNotificationPublisher_Folder_Upd"
