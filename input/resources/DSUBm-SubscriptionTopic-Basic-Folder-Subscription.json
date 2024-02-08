@@ -6,7 +6,7 @@
   },
   "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-Basic-Folder-Subscription",
   "title": "SubscriptionTopic for Folder Patient-Dependent resource with Basic Folder Subscription Option",
-  "description": "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder type List Resource and the update to insert new documents in the Folder. \nThis topic shall be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic shall be the resourceTrigger (so the eventTrigger shall not be used)\n- the resourceTrigger.resource element shall be a Folder List resource\n- this resource shall be used when the \"Basic Folder Subscription Option\" is supported\n- this topic covers the create and the update to insert new documents in the Folder event \n",
+  "description": "Profile for the resource SubscriptionTopic. The resource describe the topic of a creation of a Folder type List Resource and the update to insert new documents in the Folder. \nThis topic SHALL be used in all Folder subscriptions that have a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic SHALL be the resourceTrigger (so the eventTrigger SHALL NOT be used)\n- the resourceTrigger.resource element SHALL be a Folder List resource\n- this resource SHALL be used when the \"Basic Folder Subscription Option\" is supported\n- this topic covers the create and the update to insert new documents in the Folder event \n",
   "status": "active",
   "resourceTrigger": [
     {

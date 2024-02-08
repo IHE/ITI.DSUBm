@@ -4,7 +4,7 @@ Parent: Bundle
 Id:             IHE.DSUBm.ResourceBundle
 Title:          "Resource Publish Bundle"
 Description:    "A profile for the Bundle used in the  ITI-111 Resource Publish transaction. This profile extends the MHD Minimal.ProvideBundle profile.
-The DSUBm Actors should consider the following entry in the Bundle: 
+The DSUBm Actors SHOULD consider the following entry in the Bundle: 
 - SubmissionSet
 - DocumentRefs
 - Folders

@@ -3,12 +3,12 @@ InstanceOf: CapabilityStatement
 Title: "DSUBm Resource Notification Recipient Actor"
 Usage: #definition
 * description = """
-The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements expresses the requirements that shall be provided.
+The DSUBm Resource Notification Recipient Actor CapabilityStatement requirements expresses the requirements that SHALL be provided.
 
 - Using FHIR R4B
-- Shall support both json and xml encoding
-- Should use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
-- Shall support the ITI-112 transaction
+- SHALL support both json and xml encoding
+- SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
+- SHALL support the ITI-112 transaction
 
 """
 

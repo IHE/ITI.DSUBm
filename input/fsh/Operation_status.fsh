@@ -15,7 +15,7 @@ Description: "Profile on the R4B Bundle resource for the response of $status ope
 * entry contains SubscriptionStatus 0..* MS and OperationOutcome 0..* MS
 * entry[SubscriptionStatus].resource only SubscriptionStatus_StatusOperation
 //* entry[SubscriptionStatus].request.method = #GET 
-//* entry[SubscriptionStatus].request.url ^short = "shall be filled out to match a request to the $status operation for the Subscription relates to the notification"
+//* entry[SubscriptionStatus].request.url ^short = "SHALL be filled out to match a request to the $status operation for the Subscription relates to the notification"
 
 
 

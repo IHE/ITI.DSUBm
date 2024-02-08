@@ -5,11 +5,11 @@ Id:             IHE.DSUBm.ResourcePublish.Audit.Broker
 Title:          "Audit Event for Resource Publish Transaction at Broker"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Resource Publish Transaction happens at the Broker.
 - Import event
-- shall have source of itself
-- shall have a publisher agent
-- shall have a broker agent
-- may have user, app, organization agent(s)
-- shall have a patient entity
+- SHALL have source of itself
+- SHALL have a publisher agent
+- SHALL have a broker agent
+- MAY have user, app, organization agent(s)
+- SHALL have a patient entity
 "
 * modifierExtension 0..0
 * subtype 2..
@@ -29,11 +29,11 @@ Id:             IHE.DSUBm.ResourcePublish.Audit.Publisher
 Title:          "Audit Event for Resource Publish Transaction at Publisher"
 Description:    "Defines constraints on the AuditEvent Resource to record when a Resource Publish Transaction happens at the Publisher.
 - Export event
-- shall have source of itself
-- shall have a publisher agent
-- shall have a broker agent
-- may have user, app, organization agent(s)
-- shall have a patient entity
+- SHALL have source of itself
+- SHALL have a publisher agent
+- SHALL have a broker agent
+- MAY have user, app, organization agent(s)
+- SHALL have a patient entity
 "
 * modifierExtension 0..0
 * subtype 2..

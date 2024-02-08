@@ -20,7 +20,7 @@ Description: "Profile on the Bundle resource for the response of $events operati
 
 * entry[SubscriptionStatus].resource only SubscriptionStatus_EventsOperation
 * entry[SubscriptionStatus].request.method = #GET 
-* entry[SubscriptionStatus].request.url ^short = "shall be filled out to match a request to the $status operation for the Subscription relates to the notification"
+* entry[SubscriptionStatus].request.url ^short = "SHALL be filled out to match a request to the $status operation for the Subscription relates to the notification"
 * entry[SubmissionSet].resource only SubmissionSet
 * entry[SubmissionSet] ^short = "the SubmissionSet"
 * entry[SubmissionSet] ^definition = "The SubmissionSet defines who submitted it, why they submitted it, when they submitted, what is in it, and where it is destine."

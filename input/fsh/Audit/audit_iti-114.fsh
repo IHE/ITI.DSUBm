@@ -8,7 +8,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 - add the ITI-114 as a subtype
 - client is Resource Notification Subscriber
 - server is Resource Notification Broker
-- entity slices for query is required
+- entity slices for query is REQUIRED
 - entity slice for transaction is available
 - source is the client
 
@@ -33,7 +33,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 - add the ITI-114 as a subtype
 - client is Resource Notification Subscriber
 - server is Resource Notification Broker
-- entity slices for query is required
+- entity slices for query is REQUIRED
 - entity slice for transaction is available
 - source is the server
 
