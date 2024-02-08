@@ -8,6 +8,7 @@ Significant Changes From Previous Version:
 - Profiling the SubscriptionStatus as Parameter resource
 - Eliminated the duplication of MHD artifacts
 - Profiled AuditEvent for the transactions
+- Closed some Open Issues
 
 ## Issues
 
