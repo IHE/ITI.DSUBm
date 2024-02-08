@@ -180,16 +180,14 @@ between options when applicable are specified in notes.
 This option extends the basic trigger events considered for a DocumentReference Subscription.  
 
 
-This option extends the triggers for the creation of a DocumentReference resource to also include updates of the document “status” and delete events of a DocumentReference Resource. In an XDS environment, this option includes the update and the delete events on DocumentEntry object with the following transactions: 
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)
-- Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
+This option extends the triggers for the creation of a DocumentReference resource to also include updates of the document “status” and delete events of a DocumentReference Resource.
 
 
 This option limited the Update events because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all possible update events.
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option) and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option) and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option).
 
 The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section [2:3.111.5.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#23111511-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#23111521-documentreference-subscription-for-minimal-update-option-bundle).
 
@@ -197,12 +195,9 @@ The Resource Notification Publisher that declares support for this option SHALL 
 
 This option extends the basic trigger events considered for a DocumentReference Subscription.  
 
-This option extends the triggers for the creation of a DocumentReference resource to include all possible update events and delete events of a DocumentReference Resource. In an XDS environment, this option includes the update and the delete events on DocumentEntry object with the following transactions: 
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)
-- Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
-- Restricted Update Document Set [ITI-92](https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html)
+This option extends the triggers for the creation of a DocumentReference resource to include all possible update events and delete events of a DocumentReference Resource.
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#231105212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#231105212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
 The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in Section [2:3.110.5.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#231105212-subscription-with-documentreference-subscription-for-full-events-option).
 
@@ -213,17 +208,14 @@ The Resource Notification Publisher that declares support for this option SHALL 
 This option permits to subscribe for Folder type List Resource and describe the basic trigger events considered for a Folder Subscription.
 
 This option includes triggers about the creation and limited update events on a Folder type List Resource. The limited update event considered is the insertion of a new document in the Folder. 
-In an XDS environment, this option includes the update and the delete events on Folder and association objects with the following transactions: 
-- Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)
 
 This option limits the update events to reduce the effort on the Resource Notification Broker. This limitations has been introduced because the Resource Notification Broker that are not operating as native FHIR servers might not have the ability to notify for all the possible update events.
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.3 Basic Folder Subscription option Trigger Events](ITI-111.html#23111513-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.3 Subscription with Basic Folder Subscription option Bundle](ITI-111.html#23111523-subscription-with-basic-folder-subscription-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.3 Basic Folder Subscription option Trigger Events](ITI-111.html#23111513-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.3 Subscription with Basic Folder Subscription option Bundle](ITI-111.html#23111523-subscription-with-basic-folder-subscription-option-bundle).
 
 #### 1:54.2.4 Folder Subscription for Minimal Update option
 
@@ -234,34 +226,25 @@ This option includes triggers about the creation of a Folder type List Resource 
 - The removal of a document from the Folder 
 - The update of the "status"
 
-In an XDS environment, this option includes the update and the delete events on Folder and association objects with the following transactions: 
-- Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html) 
-- Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
-
 This option limits the triggers related to update events for Folder Subscription in order to reduce the effort on the Resource Notification Brokers considering only the most common update events on Folder objects. This limitation has been introduced because the Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates events.
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.4 Folder Subscription for Minimal Update option Trigger Events](ITI-111.html#23111514-folder-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.4 Folder Subscription for Minimal Update option Bundle](ITI-111.html#23111524-folder-subscription-for-minimal-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.4 Folder Subscription for Minimal Update option Trigger Events](ITI-111.html#23111514-folder-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.4 Folder Subscription for Minimal Update option Bundle](ITI-111.html#23111524-folder-subscription-for-minimal-update-option-bundle).
 
 #### 1:54.2.5 Folder Subscription for Update option
 
 This option permits to subscribe for Folder type List Resource and extends the trigger events considered for a Folder Subscription.  
 
 This option includes the creation of a Folder type List Resource and all possible update events of a Folder type List Resource events. (The delete event of a Folder is not considered.)
-In an XDS environment, this option includes the update and the delete events on Folder and association objects with the following transactions: 
-- Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html) 
-- Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#23111515-folder-subscription-for-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.5 Folder Subscription for Update option Bundle](ITI-111.html#23111525-folder-subscription-for-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#23111515-folder-subscription-for-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.5 Folder Subscription for Update option Bundle](ITI-111.html#23111525-folder-subscription-for-update-option-bundle).
 
 #### 1:54.2.6 Folder Subscription for Full Events option
 
@@ -269,16 +252,12 @@ This option permits to subscribe for Folder type List Resource and extends the t
 
 This option includes as triggers all the possible events on a Folder resource.
 This option includes as triggers: the creation of a Folder type List Resource, all possible update events of a Folder type List Resource events and the delete event of a Folder type List Resource.
-In an XDS environment, this option includes the update and the delete events on Folder and association objects with the following transactions: 
-- Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)
-- Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html) 
-- Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)
 
-The Resource Notification Broker that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.5.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also be able to support in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.6 Folder Subscription for Full Events option Trigger Events](ITI-111.html#23111516-folder-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.6 Folder Subscription for Full Events option Bundle](ITI-111.html#23111526-folder-subscription-for-full-events-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.6 Folder Subscription for Full Events option Trigger Events](ITI-111.html#23111516-folder-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.6 Folder Subscription for Full Events option Bundle](ITI-111.html#23111526-folder-subscription-for-full-events-option-bundle).
 
 
 #### 1:54.2.7 Overview on Events and Options
@@ -312,7 +291,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
@@ -320,7 +299,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">New document available (i.e. creation of a DocumentReference resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -328,7 +307,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Update of the metadata status of a document (i.e. update of the DocumentReference status)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br>Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -343,8 +322,8 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   </tr>
   <tr>
     <td class="tg-0pky">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span>[ITI-92]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span>[ITI-92]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
@@ -379,7 +358,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -387,7 +366,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   <tr>
     <td class="tg-0pky">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -402,16 +381,16 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   </tr>
   <tr>
     <td class="tg-0pky">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource)</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
+    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61](https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html)</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
