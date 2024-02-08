@@ -20,68 +20,68 @@
   "canFilterBy": [
     {
       "description": "Filter based on the author of an DocumentReference. (DocumentEntry.author)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "author.given"
     },
     {
       "description": "Filter based on the author of an DocumentReference. (DocumentEntry.author)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "author.family"
     },
     {
       "description": "Filter based on the event of a DocumentReference. (DocumentEntry.class)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "category"
     },
     {
       "description": "Filter based on the status of a DocumentReference. (DocumentEntry.eventCodeList)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "event"
     },
     {
       "description": "Filter based on the facility in which the DocumentReference has been compiled. (DocumentEntry.healthcareFacilityTypeCode)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "facility"
     },
     {
       "description": "Filter based on the format of the DocumentReference . (DocumentEntry.formatCode)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "format"
     },
     {
       "description": "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "patient"
     },
     {
       "description": "Filter based on the patient associated to the DocumentReference. (DocumentEntry.patientId)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "patient.identifier"
     },
     {
       "description": "Filter based on the security-label of the DocumentReference (DocumentEntry.confidentialityCode)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "security-label"
     },
     {
       "description": "Filter based on the practice setting of the DocumentReference (practiceSetting)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "setting"
     },
     {
       "description": "Filter based on the status of the DocumentReference (DocumentEntry.availabilityStatus)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "status"
     },
     {
       "description": "Filter based on the type of a DocumentReference. (DocumentReference.type)",
-      "resource": "DocumentReference",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "filterParameter": "type"
     }
   ],
   "notificationShape": [
     {
-      "resource": "DocumentReference"
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
     }
   ]
 }

@@ -22,38 +22,38 @@
   "canFilterBy": [
     {
       "description": "Filter based on the code of a Folder List Resource. (Fixed Value: folder)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "code"
     },
     {
       "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "patient"
     },
     {
       "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "patient.identifier"
     },
     {
       "description": "Filter based on the identifier of a Folder List Resource. (Folder.entryUUID and Folder.uniqueId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "identifier"
     },
     {
       "description": "Filter based on the designationType of a Folder List Resource. (Folder.codeList)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "designationType"
     },
     {
       "description": "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "status"
     }
   ],
   "notificationShape": [
     {
-      "resource": "List"
+      "resource": "http://hl7.org/fhir/StructureDefinition/List"
     }
   ]
 }

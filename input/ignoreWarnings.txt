@@ -13,3 +13,4 @@ The modifier extension http://hl7.org/fhir/5.0/StructureDefinition/extension-Sub
 # waiting for the valueset and the codeSystem are inserted in the package R4
 Canonical URL 'http://hl7.org/fhir/ValueSet/subscription-notification-type' does not resolve
 The reference http://hl7.org/fhir/ValueSet/subscription-notification-type could not be resolved
+The link 'subscription-notification-type.html' for "subscription-notification-type" cannot be resolved

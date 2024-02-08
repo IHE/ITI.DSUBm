@@ -21,38 +21,38 @@
   "canFilterBy": [
     {
       "description": "Filter based on the code of a SubmissionSet List Resource. (Fixed Value: submissionset)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "code"
     },
     {
       "description": "Filter based on the patient of a SubmissionSet List Resource. (SubmissionSet.patientId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "patient"
     },
     {
       "description": "Filter based on the patient of a SubmissionSet List Resource. (SubmissionSet.patientId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "patient.identifier"
     },
     {
       "description": "Filter based on the source of a SubmissionSet List Resource. (SubmissionSet.author)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "source"
     },
     {
       "description": "Filter based on the sourceId of a SubmissionSet List Resource. (SubmissionSet.sourceId)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "sourceId"
     },
     {
       "description": "Filter based on the intendedRecipient of a SubmissionSet List Resource. (SubmissionSet.intendedRecipient)",
-      "resource": "List",
+      "resource": "http://hl7.org/fhir/StructureDefinition/List",
       "filterParameter": "intendedRecipient"
     }
   ],
   "notificationShape": [
     {
-      "resource": "List"
+      "resource": "http://hl7.org/fhir/StructureDefinition/List"
     }
   ]
 }
