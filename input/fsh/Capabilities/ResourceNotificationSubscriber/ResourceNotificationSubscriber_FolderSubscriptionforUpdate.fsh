@@ -11,7 +11,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
 - SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic
 - SHOULD implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that SHOULD be supported](ITI-113.html#2311352-message-semantics)
+  - [Search Parameters that SHOULD be supported](ITI-113.html#23113412-message-semantics)
     - _id
     - status
     - url
@@ -20,7 +20,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - SHOULD support the DSUBm $status operation  
   - SHOULD support the DSUBm $events operation  
 - SHOULD implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that SHOULD be supported](ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that SHOULD be supported](ITI-114.html#23114412-message-semantics)
     - _id
     - resource
     - derived-or-self
