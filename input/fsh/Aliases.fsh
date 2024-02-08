@@ -13,6 +13,11 @@ Alias: $base = https://profiles.ihe.net/ITI/DSUBm
 
 Alias: $query-types = http://example.org/query-types
 
+Alias: $resourceTrigger = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger
+Alias: $url = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url
+Alias: $canFilterBy = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy
+Alias: $notificationShape = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape
+Alias: $status = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status
 
 CodeSystem:  DSUBmFhirType
 Title: "DSUBm Fhir Type"
@@ -27,4 +32,5 @@ Title: "DSUBm List Types ValueSet"
 Description: "ValueSet of the DSUBm List Types allowed"
 * ^experimental = false
 * DSUBmFhirType#SubscriptionTopic
+
 
