@@ -293,84 +293,61 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
-.tg .tg-d02k{background-color:#FFF;border-color:inherit;color:#333;text-align:left;vertical-align:bottom}
-.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
-.tg .tg-0thz{border-color:inherit;font-weight:bold;text-align:left;vertical-align:bottom}
-.tg .tg-j6zm{font-weight:bold;text-align:left;vertical-align:bottom}
-.tg .tg-nrix{text-align:center;vertical-align:middle}
-.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-za14">Event</th>
-    <th class="tg-za14">MHDS environment transaction</th>
-    <th class="tg-za14">XDS environment transaction</th>
-    <th class="tg-0thz"><span style="font-weight:bold">Event</span></th>
-    <th class="tg-0thz"><span style="font-weight:bold">MHDS environment transaction</span></th>
-    <th class="tg-0thz"><span style="font-weight:bold">XDS environment transaction</span></th>
-    <th class="tg-j6zm"><span style="font-weight:bold">Default implementation</span></th>
-    <th class="tg-1wig"><span style="font-weight:bold;font-style:normal"> DocumentReference Subscription for Minimal Update option</span></th>
-    <th class="tg-1wig"><span style="font-weight:bold;font-style:normal">DocumentReference Subscription for Full Events option</span></th>
+    <th class="tg-fymr">Event</th>
+    <th class="tg-fymr">MHDS environment transaction</th>
+    <th class="tg-fymr">XDS environment transaction</th>
+    <th class="tg-fymr">Default implementation</th>
+    <th class="tg-fymr"> DocumentReference Subscription for Minimal Update option</th>
+    <th class="tg-fymr">DocumentReference Subscription for Full Events option</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-za14">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
-    <td class="tg-za14">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-7zrl"></td>
-    <td class="tg-7zrl"></td>
+    <td class="tg-0pky">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-za14">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-za14">New document available (i.e. creation of a DocumentReference resource)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">New document available (i.e. creation of a DocumentReference resource)</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a document (i.e. update of the DocumentReference status)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Update of the metadata status of a document (i.e. update of the DocumentReference status)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Delete of a document (i.e. delete of a DocumentReference resource)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Delete of a document (i.e. delete of a DocumentReference resource)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span style="color:#905">[ITI-62]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k">Update of a Folder (i.e. the update of a Folder type List resource)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Restricted Update Document Set [ITI-92](https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span style="color:#905">[ITI-92]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
   </tr>
 </tbody>
 </table>
@@ -383,82 +360,61 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-cly1{text-align:left;vertical-align:middle}
-.tg .tg-d02k{background-color:#FFF;border-color:inherit;color:#333;text-align:left;vertical-align:bottom}
-.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
-.tg .tg-0thz{border-color:inherit;font-weight:bold;text-align:left;vertical-align:bottom}
-.tg .tg-j6zm{font-weight:bold;text-align:left;vertical-align:bottom}
-.tg .tg-nrix{text-align:center;vertical-align:middle}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-za14">Event</th>
-    <th class="tg-za14">MHDS environment transaction</th>
-    <th class="tg-za14">XDS environment transaction</th>
-    <th class="tg-0thz"><span style="font-weight:bold">Event</span></th>
-    <th class="tg-0thz"><span style="font-weight:bold">MHDS environment transaction</span></th>
-    <th class="tg-0thz"><span style="font-weight:bold">XDS environment transaction</span></th>
-    <th class="tg-j6zm"><span style="font-weight:bold">Basic Folder Subscription option</span></th>
-    <th class="tg-j6zm"><span style="font-weight:bold">Folder Subscription for Minimal Update option</span></th>
-    <th class="tg-j6zm"><span style="font-weight:bold">Folder Subscription for Update option</span></th>
+    <th class="tg-fymr">Event</th>
+    <th class="tg-fymr">MHDS environment transaction</th>
+    <th class="tg-fymr">XDS environment transaction</th>
+    <th class="tg-fymr">Basic Folder Subscription option</th>
+    <th class="tg-fymr">Folder Subscription for Minimal Update option</th>
+    <th class="tg-fymr">Folder Subscription for Update option</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-za14">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
-    <td class="tg-za14">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-za14">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-za14">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
-    <td class="tg-za14">Provide Document Bundle [ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Register Document Set-b [ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span style="color:#905">[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span style="color:#905">[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
-    <td class="tg-d02k">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span><br><br><span style="font-weight:normal;color:#333;background-color:#FFF">Remove Metadata [ITI-62](https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a><br><br>Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span style="color:#905">[ITI-62]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</span></td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-d02k">Update of a Folder (i.e. the update of a Folder type List resource)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-d02k">Update of a Folder (i.e. the update of a Folder type List resource)</td>
-    <td class="tg-za14"></td>
-    <td class="tg-d02k"><span style="font-weight:normal;color:#333;background-color:#FFF">Update Document Set [ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-cly1"></td>
-    <td class="tg-nrix">X</td>
+    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span style="color:#905">[ITI-57]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
   </tr>
 </tbody>
 </table>
