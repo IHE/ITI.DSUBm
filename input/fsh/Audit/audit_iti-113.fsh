@@ -51,7 +51,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Notific
 
 
 
-Profile:        AuditSearchSubscriptionSearchSubscriber
+Profile:        AuditSearchSubscriptionReadSubscriber
 Parent:         IHE.BasicAudit.Read
 Id:             IHE.DSUBm.SubscriptionRead.Audit.Subscriber
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction made by the Resource Notification Subscriber"
@@ -73,9 +73,9 @@ Defines constraints on the AuditEvent Resource to record when a Resource Notific
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
-* entity[query] ^short = "Search Parameters"
+* entity[data] ^short = "Read resource"
 
-Profile:        AuditSearchSubscriptionSearchBroker
+Profile:        AuditSearchSubscriptionReadBroker
 Parent:         IHE.BasicAudit.Read
 Id:             IHE.DSUBm.SubscriptionRead.Audit.Broker
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction received by the Resource Notification Broker"
@@ -97,7 +97,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Notific
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
-* entity[query] ^short = "Search Parameters"
+* entity[data] ^short = "Read resource"
 
 /*
 // Subscription Status Search
