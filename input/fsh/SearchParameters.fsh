@@ -13,7 +13,7 @@ Usage: #definition
 * code = #resource
 * base = #Basic
 * type = #uri
-* expression = "extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger').children().where($this.url='resource').value.distinct().ofType(string) | extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy').children().where($this.url='resource').value.distinct().ofType(string) | extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape').children().where($this.url='resource').value.distinct().ofType(string)"
+* expression = "Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger').children().where($this.url='resource').value.distinct().ofType(string) | Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy').children().where($this.url='resource').value.distinct().ofType(string) | Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape').children().where($this.url='resource').value.distinct().ofType(string)"
 
 
 //status
