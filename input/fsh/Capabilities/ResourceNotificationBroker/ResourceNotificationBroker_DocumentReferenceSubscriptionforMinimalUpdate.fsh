@@ -9,7 +9,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
-- SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option), and the related SubscriptionTopic
+- SHALL be able to support the Subscription defined in Section [2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option), and the related SubscriptionTopic
 - MAY support the ITI-111 transaction
 - SHALL support the ITI-112 transaction:
   - SHALL support Handshake Notification
@@ -17,7 +17,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - SHALL support Event Notification
   - SHOULD support Subscription Deactivation Notification
 - SHALL support the ITI-113 transaction: 
-    - SHALL support the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+    - SHALL support the following [Search Parameters](ITI-113.html#23113412-message-semantics)
       - _id
       - status
       - url
@@ -26,7 +26,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     - SHALL support the DSUBm $status operation  
     - SHOULD support the DSUBm $events operation  
 - SHALL support the ITI-114 transaction:
-    - SHALL support the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+    - SHALL support the following [Search Parameters](ITI-114.html#23114412-message-semantics)
       - _id
       - resource
       - derived-or-self
@@ -112,7 +112,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * documentation = """
 Resource SubscriptionTopic Search [ITI-114]:
 The Resource Notification Broker Actor SHALL support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
-See [here](artifacts.html#other)
+See [here](artifacts.html#canonical-subscriptiontopic)
 """
     * interaction[0]
       * code = #read

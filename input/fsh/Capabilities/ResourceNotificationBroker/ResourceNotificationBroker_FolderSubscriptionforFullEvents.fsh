@@ -17,7 +17,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
   - SHALL support Event Notification
   - SHOULD support Subscription Deactivation Notification
 - SHALL support the ITI-113 transaction: 
-    - SHALL support the following [Search Parameters](ITI-113.html#2311352-message-semantics)
+    - SHALL support the following [Search Parameters](ITI-113.html#23113412-message-semantics)
       - _id
       - status
       - url
@@ -26,7 +26,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     - SHALL support the DSUBm $status operation  
     - SHOULD support the DSUBm $events operation  
 - SHALL support the ITI-114 transaction:
-    - SHALL support the following [Search Parameters](ITI-114.html#2311452-message-semantics)
+    - SHALL support the following [Search Parameters](ITI-114.html#23114412-message-semantics)
       - _id
       - resource
       - derived-or-self
@@ -111,7 +111,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * documentation = """
 Resource SubscriptionTopic Search [ITI-114]:
 The Resource Notification Broker Actor SHALL support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
-See [here](artifacts.html#other)
+See [here](artifacts.html#canonical-subscriptiontopic)
 """
     * interaction[0]
       * code = #read

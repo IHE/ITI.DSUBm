@@ -10,7 +10,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
 - SHOULD implement the ITI-113 transaction; if implemented: 
-  - [Search Parameters that SHOULD be supported](ITI-113.html#2311352-message-semantics)
+  - [Search Parameters that SHOULD be supported](ITI-113.html#23113412-message-semantics)
     - _id
     - status
     - url
@@ -19,7 +19,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - SHOULD support the DSUBm $status operation  
   - SHOULD support the DSUBm $events operation  
 - SHOULD implement the ITI-114 transaction; if implemented: 
-  - [Search Parameters that SHOULD be supported](ITI-114.html#2311452-message-semantics)
+  - [Search Parameters that SHOULD be supported](ITI-114.html#23114412-message-semantics)
     - _id
     - resource
     - derived-or-self
