@@ -6,7 +6,7 @@ Usage: #definition
 * extension.valueCode = #trial-use
 * url = "https://profiles.ihe.net/ITI/DSUBm/SearchParameter/SubscriptionTopic-resource"
 * version = "4.0.1"
-* name = "resource"
+* name = "Resource"
 * status = #active
 * experimental = false
 * description = "Allowed resource for this definition"
@@ -24,14 +24,14 @@ Usage: #definition
 * extension.valueCode = #trial-use
 * url = "https://profiles.ihe.net/ITI/DSUBm/SearchParameter/SubscriptionTopic-status"
 * version = "4.0.1"
-* name = "url"
+* name = "Status"
 * status = #active
 * experimental = false
 * description = "A server defined search that matches the url"
 * code = #url
 * base = #Basic
 * type = #uri
-* expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url').value as string)"
+* expression = "(extension('http://hl7.org/fhir/4.3/StructureDefinition/extension-SubscriptionTopic.url').value as string)"
 
 //url
 Instance: SubscriptionTopic-url
@@ -41,7 +41,7 @@ Usage: #definition
 * extension.valueCode = #trial-use
 * url = "https://profiles.ihe.net/ITI/DSUBm/SearchParameter/SubscriptionTopic-url"
 * version = "4.0.1"
-* name = "url"
+* name = "Url"
 * status = #active
 * experimental = false
 * description = "A server defined search that matches the url"
@@ -49,3 +49,5 @@ Usage: #definition
 * base = #Basic
 * type = #uri
 * expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url').value as string)"
+
+
