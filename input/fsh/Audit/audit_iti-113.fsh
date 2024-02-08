@@ -5,7 +5,7 @@ Id:             IHE.DSUBm.SubscriptionSearch.Audit.Subscriber
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction made by the Resource Notification Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource Notification Subscriber in a Subscription Search transaction happens, as recorded by the Subscriber.
-- Build off of the IHE BasicAudit read event
+- Build off of the IHE BasicAudit Query event
 - add the ITI-113 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -29,7 +29,7 @@ Id:             IHE.DSUBm.SubscriptionSearch.Audit.Broker
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction received by the Resource Notification Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource Notification Subscriber in a Subscription Search transaction happens, as recorded by the Broker.
-- Build off of the IHE BasicAudit Create event
+- Build off of the IHE BasicAudit Query event
 - add the ITI-110 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -57,7 +57,7 @@ Id:             IHE.DSUBm.SubscriptionRead.Audit.Subscriber
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction made by the Resource Notification Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource Notification Subscriber in a Subscription Search transaction happens, as recorded by the Subscriber.
-- Build off of the IHE BasicAudit read event
+- Build off of the IHE BasicAudit Read event
 - add the ITI-113 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
@@ -81,8 +81,8 @@ Id:             IHE.DSUBm.SubscriptionRead.Audit.Broker
 Title:          "Audit Event for Subscription Search message in a Subscription Search transaction received by the Resource Notification Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource Notification Subscriber in a Subscription Search transaction happens, as recorded by the Broker.
-- Build off of the IHE BasicAudit Create event
-- add the ITI-110 as a subtype
+- Build off of the IHE BasicAudit Read event
+- add the ITI-113 as a subtype
 - SHALL have a Resource Notification Subscriber agent
 - SHALL have a Resource Notification Broker agent
 - entity slices for query is REQUIRED

@@ -191,7 +191,7 @@ The Resource Notification Broker that declares support for this option SHALL be 
 
 The Resource Notification Subscriber that declares support for this option SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#231105211-subscription-with-documentreference-subscription-for-minimal-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also be able to support the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.5.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#23111511-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#23111521-documentreference-subscription-for-minimal-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section [2:3.111.5.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#23111511-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#23111521-documentreference-subscription-for-minimal-update-option-bundle).
 
 #### 1:54.2.2 DocumentReference Subscription for Full Events option
 
@@ -206,7 +206,7 @@ The Resource Notification Broker that declares support for this option SHALL be 
 
 The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in Section [2:3.110.5.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#231105212-subscription-with-documentreference-subscription-for-full-events-option).
 
-The Resource Notification Publisher that declares support for this option SHALL support the triggers events defined for the Resource Publish [ITI-111] transaction in Section [2:3.111.5.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#23111512-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#23111522-documentreference-subscription-for-full-events-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section in Section [2:3.111.5.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#23111512-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.5.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#23111522-documentreference-subscription-for-full-events-option-bundle).
 
 #### 1:54.2.3 Basic Folder Subscription option
 
@@ -327,8 +327,8 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
   </tr>
   <tr>
     <td class="tg-0pky">Update of the metadata status of a document (i.e. update of the DocumentReference status)</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br>Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>

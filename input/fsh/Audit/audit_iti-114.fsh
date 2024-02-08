@@ -57,7 +57,7 @@ Id:             IHE.DSUBm.SubscritionTopicRead.Audit.Subscriber
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Read Transaction happens, as recorded by the Resource Notification Subscriber.
-- Build off of the IHE BasicAudit Query event
+- Build off of the IHE BasicAudit Read event
 - add the ITI-114 as a subtype
 - client is Resource Notification Subscriber
 - server is Resource Notification Broker
@@ -82,7 +82,7 @@ Id:             IHE.DSUBm.SubscritionTopicread.Audit.Broker
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Read Transaction happens, as recorded by the Resource Notification Broker.
-- Build off of the IHE BasicAudit Query event
+- Build off of the IHE BasicAudit Read event
 - add the ITI-114 as a subtype
 - client is Resource Notification Subscriber
 - server is Resource Notification Broker
