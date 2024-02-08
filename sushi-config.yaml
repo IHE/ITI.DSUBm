@@ -81,7 +81,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
 #    description: aAn example of Subscription
 
 groups:
-  Canonical Topics for Subscription:
+  CanonicalSubscriptionTopic:
     name: Canonical SubscriptionTopic
     description: Artifacts related to Basic resource representing the possible topic used in DSUBm 
     resources:

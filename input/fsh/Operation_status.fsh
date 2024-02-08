@@ -3,8 +3,8 @@
 Profile:     ResourceNotify_Status
 Parent:      Bundle
 Id:          IHE.DSUBm.StatusOperation-Bundle
-Title:       "R4B Bundle response for $status"
-Description: "Profile on the R4B Bundle resource for the response of $status operation."
+Title:       "Bundle response for $status"
+Description: "Profile on the Bundle resource for the response of $status operation."
 * type = #searchset
 * entry 0..*
 * entry ^slicing.discriminator.type = #type
