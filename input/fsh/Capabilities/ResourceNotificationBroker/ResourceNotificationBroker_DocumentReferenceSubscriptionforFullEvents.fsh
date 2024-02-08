@@ -9,7 +9,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
-- SHALL be able to support the Subscription defined in Section [2:3.110.5.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-), and the related SubscriptionTopic
+- SHALL be able to support the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic
 - MAY support the ITI-111 transaction
 - SHALL support the ITI-112 transaction:
   - SHALL support Handshake Notification
@@ -98,7 +98,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * documentation = """
 Resource SubscriptionTopic Search [ITI-114]:
 The Resource Notification Broker Actor SHALL support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
-See [here](artifacts.html#other)
+See [here](artifacts.html#canonical-subscriptiontopic)
 """
     * interaction[0]
       * code = #read
