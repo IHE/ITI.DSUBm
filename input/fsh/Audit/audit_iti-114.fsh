@@ -1,6 +1,6 @@
 Profile:        AuditQueryResourceSubscriptionTopicSearchSubscriber
 Parent:         IHE.BasicAudit.Query
-Id:             IHE.DSUBm.SubscritionTopicSearch.Audit.Subscriber
+Id:             IHE.DSUBm.SubscriptionTopicSearch.Audit.Subscriber
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Search Transaction happens, as recorded by the Resource Notification Subscriber.
@@ -25,7 +25,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 
 Profile:        AuditQueryResourceSubscriptionTopicSearchBroker
 Parent:         IHE.BasicAudit.Query
-Id:             IHE.DSUBm.SubscritionTopicSearch.Audit.Broker
+Id:             IHE.DSUBm.SubscriptionTopicSearch.Audit.Broker
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Search Transaction happens, as recorded by the Resource Notification Broker.
@@ -53,7 +53,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 
 Profile:        AuditQueryResourceSubscriptionTopicReadSubscriber
 Parent:         IHE.BasicAudit.Read
-Id:             IHE.DSUBm.SubscritionTopicRead.Audit.Subscriber
+Id:             IHE.DSUBm.SubscriptionTopicRead.Audit.Subscriber
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Subscriber"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Read Transaction happens, as recorded by the Resource Notification Subscriber.
@@ -78,7 +78,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 
 Profile:        AuditQueryResourceSubscriptionTopicReadBroker
 Parent:         IHE.BasicAudit.Read
-Id:             IHE.DSUBm.SubscritionTopicread.Audit.Broker
+Id:             IHE.DSUBm.SubscriptionTopicread.Audit.Broker
 Title:          "Audit Event for Resource SubscriptionTopic Search Transaction by the Resource Notification Broker"
 Description:    """
 Defines constraints on the AuditEvent Resource to record when a Resource SubscriptionTopic Read Transaction happens, as recorded by the Resource Notification Broker.
