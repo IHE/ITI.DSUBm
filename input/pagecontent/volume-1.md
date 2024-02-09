@@ -197,9 +197,9 @@ This option extends the basic trigger events considered for a DocumentReference 
 
 This option extends the triggers for the creation of a DocumentReference resource to include all possible update events and delete events of a DocumentReference Resource.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-).
+The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option).
 
 The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section in Section [2:3.111.4.1.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#231114112-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#231114122-documentreference-subscription-for-full-events-option-bundle).
 
