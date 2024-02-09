@@ -9,7 +9,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
-- SHALL be able to support the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic
+- SHALL be able to support the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic
 - SHOULD implement the ITI-113 transaction; if implemented: 
   - [Search Parameters that SHOULD be supported](ITI-113.html#23113412-message-semantics)
     - _id

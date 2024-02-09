@@ -189,7 +189,7 @@ The Resource Notification Broker that declares support for this option SHALL imp
 
 The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section [2:3.111.4.1.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#23111511-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#23111521-documentreference-subscription-for-minimal-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section [2:3.111.4.1.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#231114111-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#231114121-documentreference-subscription-for-minimal-update-option-bundle).
 
 #### 1:54.2.2 DocumentReference Subscription for Full Events option
 
@@ -201,7 +201,7 @@ The Resource Notification Broker that declares support for this option SHALL imp
 
 The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in Section [2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-).
 
-The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section in Section [2:3.111.4.1.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#23111512-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#23111522-documentreference-subscription-for-full-events-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implements the Resource Publish [ITI-111] transaction for the triggers events defined in Section in Section [2:3.111.4.1.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#231114112-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#231114122-documentreference-subscription-for-full-events-option-bundle).
 
 #### 1:54.2.3 Basic Folder Subscription option
 
@@ -211,11 +211,11 @@ This option includes triggers about the creation and limited update events on a 
 
 This option limits the update events to reduce the effort on the Resource Notification Broker. This limitations has been introduced because the Resource Notification Broker that are not operating as native FHIR servers might not have the ability to notify for all the possible update events.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#231105213-subscription-with-basic-folder-subscription-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.3 Basic Folder Subscription option Trigger Events](ITI-111.html#23111513-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.3 Subscription with Basic Folder Subscription option Bundle](ITI-111.html#23111523-subscription-with-basic-folder-subscription-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.3 Basic Folder Subscription option Trigger Events](ITI-111.html#231114113-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.3 Subscription with Basic Folder Subscription option Bundle](ITI-111.html#231114123-subscription-with-basic-folder-subscription-option-bundle).
 
 #### 1:54.2.4 Folder Subscription for Minimal Update option
 
@@ -228,9 +228,9 @@ This option includes triggers about the creation of a Folder type List Resource 
 
 This option limits the triggers related to update events for Folder Subscription in order to reduce the effort on the Resource Notification Brokers considering only the most common update events on Folder objects. This limitation has been introduced because the Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Updates events.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#231105214-subscription-with-folder-subscription-for-minimal-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option).
 
 The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.4 Folder Subscription for Minimal Update option Trigger Events](ITI-111.html#23111514-folder-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.4 Folder Subscription for Minimal Update option Bundle](ITI-111.html#23111524-folder-subscription-for-minimal-update-option-bundle).
 
@@ -240,9 +240,9 @@ This option permits to subscribe for Folder type List Resource and extends the t
 
 This option includes the creation of a Folder type List Resource and all possible update events of a Folder type List Resource events. (The delete event of a Folder is not considered.)
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#231105215-subscription-with-folder-subscription-for-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option).
 
 The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#23111515-folder-subscription-for-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.5 Folder Subscription for Update option Bundle](ITI-111.html#23111525-folder-subscription-for-update-option-bundle).
 
@@ -253,9 +253,9 @@ This option permits to subscribe for Folder type List Resource and extends the t
 This option includes as triggers all the possible events on a Folder resource.
 This option includes as triggers: the creation of a Folder type List Resource, all possible update events of a Folder type List Resource events and the delete event of a Folder type List Resource.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting these type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#231105216-subscription-with-folder-subscription-for-full-events-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in Section [2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option).
 
 The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the triggers events defined in Section [2:3.111.4.1.1.6 Folder Subscription for Full Events option Trigger Events](ITI-111.html#23111516-folder-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in Section [2:3.111.4.1.2.6 Folder Subscription for Full Events option Bundle](ITI-111.html#23111526-folder-subscription-for-full-events-option-bundle).
 
