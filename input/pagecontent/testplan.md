@@ -24,13 +24,13 @@ Based on the IHE Integration Statement for the System Under Test (SUT), the foll
 
 
 ##### Resource Notification Broker
-The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is searching the subscription topics available as indicated in[ITI-114](ITI-114.html).
+The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is searching the subscription topics available as indicated in [ITI-114](ITI-114.html).
 
-The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is searching the existing subscriptions  as indicated in[ITI-113](ITI-113.html).
+The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is searching the existing subscriptions  as indicated in [ITI-113](ITI-113.html).
 
-The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is creating or updating subscriptions as indicated in[ITI-110](ITI-110.html).
+The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is creating or updating subscriptions as indicated in [ITI-110](ITI-110.html).
 
-The Resource Notification Broker SHALL be able to show that is able to send the notifications messages to a Resource Notification Recipient as indicated in[ITI-112](ITI-112.html).
+The Resource Notification Broker SHALL be able to show that is able to send the notifications messages to a Resource Notification Recipient as indicated in [ITI-112](ITI-112.html).
 
 The Resource Notification Broker, if support the transaction [ITI-111](ITI-111.html) SHALL be able to show that is able to respond to a Resource Notification Publisher that is communicating a publish event as indicated in [ITI-111](ITI-111.html).
 
@@ -43,20 +43,19 @@ In the second case case it SHALL be able to show that a notification is produced
 
 The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker to creating or update subscriptions as indicated in [ITI-110](ITI-110.html).
 
-The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker for searching the subscription topics available as indicated in[ITI-114](ITI-114.html).
+The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker for searching the subscription topics available as indicated in [ITI-114](ITI-114.html).
 
-The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker for  searching the existing subscriptions  as indicated in[ITI-113](ITI-113.html).
+The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker for  searching the existing subscriptions  as indicated in [ITI-113](ITI-113.html).
 
 When the Resource Notification Subscriber is coupled with a Document Consumer it shall be able to show that it can use the DSUBm transactions to be alerted when a document is available to be consumed. For example see [here](volume-1.html#154421-use-case-1-document-subscription-for-mobile-applications-in-mhds-environment). 
 
 ##### Resource Notification Publisher
-The Resource Notification Publisher SHALL be able to show that is able to communicate to a Resource Notification Broker indicating that an event as occurredas indicated in[ITI-111](ITI-111.html).
+The Resource Notification Publisher SHALL be able to show that is able to communicate to a Resource Notification Broker indicating that an event as occurredas indicated in [ITI-111](ITI-111.html).
 
 When coupled directly with a Document Registry (XDS Document  Registry or MHD DOcument Registry), the Resource Notification Publisher SHALL be able to show that it produces [ITI-111](ITI-111.html) when coupled with a document Registrsy ( XDS Document Registry or MHD DOcument Registry). For example see [here](volume-1.html#154423-use-case-3-document-subscription-for-mobile-device-in-xds-on-fhir-environment) for an XDS example or [here](volume-1.html#154611-mhds---mobile-health-document-sharing-grouping-1) for MHD example.
 
 ##### Resource Notification Recipient
-The Resource Notification Recipient SHALL be able to show that is able to respond to a Resource Notification Broker that is sending notification messagges as indicated in[ITI-112](ITI-112.html).
-
+The Resource Notification Recipient SHALL be able to show that is able to respond to a Resource Notification Broker that is sending notification messagges as indicated in [ITI-112](ITI-112.html).
 
 
 ### Unit Test Procedure
