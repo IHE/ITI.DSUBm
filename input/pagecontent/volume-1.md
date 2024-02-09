@@ -264,7 +264,8 @@ The Resource Notification Publisher that declares support for this option SHALL 
 
 In this section is reported a practical overview about the events on patient documents that are considered in this profile and the Options that consent these events to be notified. Plus, it is enlightened the transactions which concur to these events in the principal document sharing environment, [Mobile Health Document Sharing](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50) and [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html).
 
-In Table 1:54.2.7-1 are reported the event related to the DocumentReference and SubmissionSet type List resources. In Table 1:54.2.7-2 are reported the event related to the Folder type List resources. 
+In Table 1:54.2.7-1 are reported the event related to the DocumentReference and SubmissionSet type List resources. The "Basic implementation" is an implementations with actors that have not declared support for any option. In Table 1:54.2.7-2 are reported the event related to the Folder type List resources.
+
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -282,7 +283,7 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
     <th class="tg-fymr">Event</th>
     <th class="tg-fymr">MHDS environment transaction</th>
     <th class="tg-fymr">XDS environment transaction</th>
-    <th class="tg-fymr">Default implementation</th>
+    <th class="tg-fymr">Basic implementation</th>
     <th class="tg-fymr"> DocumentReference Subscription for Minimal Update option</th>
     <th class="tg-fymr">DocumentReference Subscription for Full Events option</th>
   </tr>
