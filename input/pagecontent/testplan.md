@@ -11,37 +11,17 @@ Overall test plan leverages the Profiles and Examples shown on the [Artifacts Su
 
 The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Other examples that either assist with the structure of the examples (e.g., Patient and Encounter) or are examples that SHOULD be able to handle in various ways. 
 
-
-
-### High-level Test Scope
-
-
-
-
-### Unit Test Procedure
-
-Unit Tests in this context is where a SUT is tested against a simulator or validator.  A simulator is a implementation of an actor that is designed specifically to test the opposite pair actor. The simulator might be a reference implementation or MAY be a specially designed test-bench. Where a reference implementation is used the negative tests are harder to simulate. A validator is a implementation that can check conformance. A validator MAY be a simulator, but MAY also be a standalone tool used to validate only a message encoding. Some reference implementations MAY be able to validate to a StructureDefinition profile, but often these do not include sufficient constraints given the overall actor conformance criteria. 
-
-
-#### DSUBm
-
-##### Resource Notification Broker
-
-##### Resource Notification Subscriber
-
-##### Resource Notification Publisher
-
-##### Resource Notification Recipient
-
-
-### Integration Test Procedure
-
-Integration Tests in this context is where two SUT of paired actors test against each other. In this case the subset of tests that can be tested is the intersection. Testing only this intersection is necessary but not sufficient. The testing required also include the capability of the client to exercise the test scenarios that this SUT can test, to determine that failure-modes are handled properly by both SUT.
-
-#### DSUBm
 Based on the IHE Integration Statement for the System Under Test (SUT), the following integration SHALL be tested: 
 - integration between the DSUBm and Document Sharing infrastructure (XDS or MHD) 
 - integration between the DSUBm and the DSUB 
+
+
+
+### High-level Test Scope
+Based on the IHE Integration Statement for the System Under Test (SUT), the following integration SHALL be tested: 
+- integration between the DSUBm and Document Sharing infrastructure (XDS or MHD) 
+- integration between the DSUBm and the DSUB 
+
 
 ##### Resource Notification Broker
 The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is searching the subscription topics available as indicated in[ITI-114](ITI-114.html).
@@ -50,11 +30,9 @@ The Resource Notification Broker SHALL be able to show that is able to respond t
 
 The Resource Notification Broker SHALL be able to show that is able to respond to a Resource Notification Subscriber that is creating or updating subscriptions as indicated in[ITI-110](ITI-110.html).
 
-The Resource Notification Broker SHALL be able to show that is able to send the notifications messages to a Resource Notification Recipient as indicated in[ITI-111](ITI-112.html).
+The Resource Notification Broker SHALL be able to show that is able to send the notifications messages to a Resource Notification Recipient as indicated in[ITI-112](ITI-112.html).
 
-The Resource Notification Broker SHALL 
-
-The Resource Notification Broker, if support the transaction [ITI-111](ITI-111.html) SHALL be able to show that is able to respond to a Resource Notification Publisher that is communicating a publish event as indicated in[ITI-111](ITI-111.html).
+The Resource Notification Broker, if support the transaction [ITI-111](ITI-111.html) SHALL be able to show that is able to respond to a Resource Notification Publisher that is communicating a publish event as indicated in [ITI-111](ITI-111.html).
 
 When the Resource Notification Broker is coupled directly with a Document Registry (XDS Document Registry or MHD DOcument Registry) as indicated [here](volume-1.html#15463-dsubm-as-an-interface-for-dsub) or s coupled directly with a DSUB/FHIR interface as indicated [here](volume-1.html#15463-dsubm-as-an-interface-for-dsub) it COULD not support the transaction [ITI-111](ITI-111.html). 
 In the first case it SHALL be able to show that it produce notifications when triggered by the Document Registry.
@@ -78,5 +56,16 @@ When coupled directly with a Document Registry (XDS Document  Registry or MHD DO
 
 ##### Resource Notification Recipient
 The Resource Notification Recipient SHALL be able to show that is able to respond to a Resource Notification Broker that is sending notification messagges as indicated in[ITI-112](ITI-112.html).
+
+
+
+### Unit Test Procedure
+
+Unit Tests in this context is where a SUT is tested against a simulator or validator.  A simulator is a implementation of an actor that is designed specifically to test the opposite pair actor. The simulator might be a reference implementation or MAY be a specially designed test-bench. Where a reference implementation is used the negative tests are harder to simulate. A validator is a implementation that can check conformance. A validator MAY be a simulator, but MAY also be a standalone tool used to validate only a message encoding. Some reference implementations MAY be able to validate to a StructureDefinition profile, but often these do not include sufficient constraints given the overall actor conformance criteria. 
+
+
+### Integration Test Procedure
+
+Integration Tests in this context is where two SUT of paired actors test against each other. In this case the subset of tests that can be tested is the intersection. Testing only this intersection is necessary but not sufficient. The testing required also include the capability of the client to exercise the test scenarios that this SUT can test, to determine that failure-modes are handled properly by both SUT.
 
 
