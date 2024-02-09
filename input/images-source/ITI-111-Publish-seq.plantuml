@@ -6,9 +6,9 @@ participant "Resource Notification Broker" as  Broker
 
 
 
-Publisher -> Broker : [[ITI-111.html#231115-resource-publish-request-message Resource Publish Request Message]]
+Publisher -> Broker : [[ITI-111.html#2311141-resource-publish-request-message Resource Publish Request Message]]
 activate Broker
-Broker --> Publisher : [[ITI-111.html#231116-resource-publish-response-message Resource Publish Response Message]]
+Broker --> Publisher : [[ITI-111.html#2311142-resource-publish-response-message Resource Publish Response Message]]
 deactivate Broker
 
 @enduml
