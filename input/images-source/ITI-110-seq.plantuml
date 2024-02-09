@@ -5,27 +5,23 @@ participant "Resource Notification Broker" as  Broker
 
 
 == Subscribe ==
-Subscriber -> Broker : Create Subscription Request 
+Subscriber -> Broker : [[ITI-110.html#2311041-create-subscription-request-message Create Subscription Request Message]]
 activate Broker
-/'
-participant "Resource Notification Recipient" as  Recipient
-opt handskake HTTPS   
-  Broker -> Recipient: Handshake Notification
-  alt Handshake Success
-  Recipient -> Broker: 200 OK 
-  else Handshake Failure
-  Recipient ->Broker: 404 Not Found
-  end
+alt if successfully evaluated
+Broker --> Subscriber : [[ITI-110.html#2311042-create-subscription-response-message Create Subscription Response Message]]
+else if unsuccessfully evaluated
+Broker --> Subscriber : [[ITI-110.html#2311045-subscription-error-response-message Subscription Error Response Message]]
+deactivate Broker
 end
-'/
-Broker --> Subscriber : Create Subscription Response Message 
-deactivate Broker
 
-== Unsubscribe ==
-Subscriber -> Broker: Update Subscription Request 
-
+== Update ==
+Subscriber -> Broker: [[ITI-110.html#2311043-update-subscription-request-message Update Subscription Request Message]]
 activate Broker
-Broker --> Subscriber: Update Subscription Response Message 
+alt if successfully evaluated
+Broker --> Subscriber: [[ITI-110.html#2311044-update-subscription-response-message Update Subscription Response Message]]
+else if unsuccessfully evaluated
+Broker --> Subscriber : [[ITI-110.html#2311045-subscription-error-response-message Subscription Error Response Message]]
 deactivate Broker
+end
 
 @enduml

@@ -9,11 +9,11 @@ Description: "Profile on the Bundle resource to enable R5-style topic-based subs
 * entry.resource only SubscriptionStatus_Handshake
 * obeys backport-notification-bundle-1
 * entry.request.method = #GET 
-* entry.request.url ^short = "shall be filled out to match a request to the $status operation for the Subscription relates to the notification"
+* entry.request.url ^short = "SHALL be filled out to match a request to the $status operation for the Subscription relates to the notification"
 
 
 Invariant:   backport-notification-bundle-1
-Description: "A notification bundle MUST have a SubscriptionStatus as the first entry"
+Description: "A notification bundle REQUIRED have a SubscriptionStatus as the first entry"
 Expression:  "entry.first().resource.is(SubscriptionStatus)"
 Severity:    #error
 XPath:       "f:entry[1]/f:resource/f:SubscriptionStatus"

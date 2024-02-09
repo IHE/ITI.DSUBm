@@ -1,4 +1,3 @@
-
 Instance: DocumentReference-PatientDependent-Subscription 
 InstanceOf: DSUBm_DocumentReference_PatientDependent_Subscription
 Usage: #example
@@ -11,9 +10,9 @@ Description: "R4 Example of a Subscription describing a PatientDependent 'Docume
 // vedi DocumentReference-PatientDependent-SubscriptionTopic
 
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
-* criteria.extension.valueString = "DocumentReference?patient=Patient/12345"
+* criteria.extension.valueString = "DocumentReference?patient=Patient/example"
 * channel.type = #rest-hook
-* channel.endpoint = "https://recipient.example.com/fhir/r4b/DocumentReference"
+* channel.endpoint = "https://subscriptions.argo.run/fhir/r4/$subscription-hook"
 * channel.payload = #application/fhir+json
 * channel.payload.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-payload-content"
 * channel.payload.extension.valueCode = #full-resource

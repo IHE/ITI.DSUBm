@@ -1,0 +1,12 @@
+{
+    "package-id" : "ihe.iti.dsubm",
+    "version" : "1.0.0",
+    "path" : "https://profiles.ihe.net/ITI/DSUBm/1.0.0",
+    "mode" : "milestone",
+    "status" : "trial-use",
+    "sequence" : "Publication",
+    "desc" : "DSUBm Version 1.0.0 for Trial Implementation",
+    "descmd" : "DSUBm Version 1.0.0 for Trial Implementation",
+    "changes" : "issues.html",
+    "first" : false
+}

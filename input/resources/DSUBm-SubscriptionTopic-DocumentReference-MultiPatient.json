@@ -1,0 +1,72 @@
+{
+  "resourceType": "SubscriptionTopic",
+  "id": "DSUBm-SubscriptionTopic-DocumentReference-MultiPatient",
+  "meta": {
+    "versionId": "1"
+  },
+  "url": "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient",
+  "title": "SubscriptionTopic for DocumentReference Multi-Patient resource",
+  "description": "Canonical instance for the resource SubscriptionTopic. It describes the topic for the Subscription. \nThis topic SHALL be used in all DocumentReference subscriptions that have not a specific patient in the criteria element and are just focusing on the create event.\nNote that:\n- the trigger for this topic SHALL be the resourceTrigger (so the eventTrigger SHALL NOT be used)\n- the resourceTrigger.resource element SHALL be a DocumentReference resource\n- the canFilterBy.filterParameter does not include the patient and patient.identifier parameters\n- this topic only covers the create event of a DocumentReference\n",
+  "status": "active",
+  "resourceTrigger": [
+    {
+      "description": "A DocumentReference resource is created",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "supportedInteraction": [
+        "create"
+      ]
+    }
+  ],
+  "canFilterBy": [
+    {
+      "description": "Filter based on the author of an DocumentReference. (DocumentEntry.author)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "author"
+    },
+    {
+      "description": "Filter based on the event of a DocumentReference. (DocumentEntry.class)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "category"
+    },
+    {
+      "description": "Filter based on the status of a DocumentReference. (DocumentEntry.eventCodeList)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "event"
+    },
+    {
+      "description": "Filter based on the facility in which the DocumentReference has been compiled. (DocumentEntry.healthcareFacilityTypeCode)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "facility"
+    },
+    {
+      "description": "Filter based on the format of the DocumentReference . (DocumentEntry.formatCode)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "format"
+    },
+    {
+      "description": "Filter based on the security-label of the DocumentReference (DocumentEntry.confidentialityCode)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "security-label"
+    },
+    {
+      "description": "Filter based on the practice setting of the DocumentReference (practiceSetting)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "setting"
+    },
+    {
+      "description": "Filter based on the status of the DocumentReference (DocumentEntry.availabilityStatus)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "status"
+    },
+    {
+      "description": "Filter based on the type of a DocumentReference. (DocumentReference.type)",
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+      "filterParameter": "type"
+    }
+  ],
+  "notificationShape": [
+    {
+      "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+    }
+  ]
+}

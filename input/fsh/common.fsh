@@ -8,7 +8,7 @@ Description: "Codes to represent the admitted payload MIME type chosen when crea
 
 Invariant: DSUBm-trigger
 Severity: #error
-Description: "SHALL have a resourceTrigger and SHALL not have an eventTrigger"
+Description: "SHALL have a resourceTrigger and SHALL NOT have an eventTrigger"
 Expression: "resourceTrigger.exists() and eventTrigger.exists().not()"
 XPath: "exists(f:resourceTrigger) and exists(f:eventTrigger).not()"
 
@@ -30,30 +30,44 @@ Expression: "value.contains('patient=')"
 
 Invariant: DSUBm-MultiPatientRule-Subscription
 Severity: #error
-Description: "the MultiPatient Subscription shall NOT include the patient in the criteria.extension.valueString element."
+Description: "the MultiPatient Subscription SHALL NOT include the patient in the criteria.extension.valueString element."
 Expression: "value.contains('patient=').not()"
 */
 Invariant: Folder-PatientDependent
 Severity: #error
-Description: "the Subscription for Folder shall include the resource LIST and the patient"
+Description: "the Subscription for Folder SHALL include the resource LIST and the patient"
 Expression: "value.contains('List?') and (value.contains('code=folder') or value.contains('code=https%3A%2F%2Fprofiles.ihe.net%2FITI%2FDSUBm%2FCodeSystem%2FDSUBmlistTypesR4%7Cfolder') ) and value.contains('patient')"
 
 Invariant: SubmissionSet-PatientDependent
 Severity: #error
-Description: "the Subscription for SubmissionSet shall include the resource LIST and the patient"
+Description: "the Subscription for SubmissionSet SHALL include the resource LIST and the patient"
 Expression: "value.contains('List?') and (value.contains('code=submissionset') or value.contains('code=https%3A%2F%2Fprofiles.ihe.net%2FITI%2FDSUBm%2FCodeSystem%2FDSUBmlistTypesR4%7Csubmissionset') ) and value.contains('patient')"
 
 Invariant: SubmissionSet-MultiPatient
 Severity: #error
-Description: "the Subscription for Folder shall include the resource LIST and no reference to the patient"
+Description: "the Subscription for Folder SHALL include the resource LIST and no reference to the patient"
 Expression: "value.contains('List?') and (value.contains('code=submissionset') or value.contains('code=https%3A%2F%2Fprofiles.ihe.net%2FITI%2FDSUBm%2FCodeSystem%2FDSUBmlistTypesR4%7Csubmissionset') ) and value.contains('patient').not()"
 
 Invariant: DocumentReference-PatientDependent
 Severity: #error
-Description: "the Subscription for DocumentReference shall include the resource DocumentReference and the patient parameter"
+Description: "the Subscription for DocumentReference SHALL include the resource DocumentReference and the patient parameter"
 Expression: "value.contains('DocumentReference?') and value.contains('patient')"
 
 Invariant: DocumentReference-MultiPatient
 Severity: #error
-Description: "the Subscription for DocumentReference shall include the resource DocumentReference and no reference to the patient parameter"
+Description: "the Subscription for DocumentReference SHALL include the resource DocumentReference and no reference to the patient parameter"
 Expression: "value.contains('DocumentReference?') and value.contains('patient').not()"
+
+Invariant: val-audit-source
+Description: "The Audit Source is this agent too."
+Expression: "$this.who = %resource.source.observer"
+Severity: #error
+
+
+ValueSet: DSUBmInteractionTrigger
+Title: "Restful-interaction available for resource"
+Description: "A ValueSet of the allowed Restful-interaction used for defining resourceTriggers."
+* ^experimental = false
+* http://hl7.org/fhir/restful-interaction#create
+* http://hl7.org/fhir/restful-interaction#update
+* http://hl7.org/fhir/restful-interaction#delete
