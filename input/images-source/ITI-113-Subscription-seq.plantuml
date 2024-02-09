@@ -20,6 +20,7 @@ deactivate Broker
 Subscriber -> Broker : [[ITI-113.html#2311345-subscription-events-search-request-message Subscription Events Search Request Message]] 
 activate Broker
 Broker --> Subscriber : [[ITI-113.html#2311346-subscription-events-search-response-message Subscription Events Search Response Message]] 
+deactivate Broker
 
 == Subscription Read ==
 Subscriber -> Broker : [[ITI-113.html#2311347-subscription-read-request-message Subscription Read Request Message]] 
