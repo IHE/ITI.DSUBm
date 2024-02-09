@@ -3,26 +3,15 @@
 This Test Plan page is a prototype. We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
 </div>
 
-The Test Plan builds upon quality testing of Document Subscription for Mobile actors functionalities when subscribing for patient document The transaction between actors specify semantics of the data exchanged. The DSUBm test plan focuses on these semantics and on the expected actions on both client-side and server-side actors
+DSUBm specifies actors and transactions to grant functionalities for subscribing for patient document for RESTfull application. The transactions between actors specify semantics of the data exchanged. The DSUBm test plan focuses on these semantics and on the expected actions on both client-side and server-side actors
 
 ## Introduction
+
+The DSUBm implementation could occurs in Document Sharing environment like MHDS and XDS, as far as an interface for DSUB, as shown in Section [1:54.6 Cross-Profile Considerations](volume-1.html#1546-cross-profile-considerations). But DSUBm is not limited against these profiles. Also, the systems implementation of DSUBm actors could be different according with their own implementation scenario.
 
 Overall test plan leverages the Profiles and Examples shown on the [Artifacts Summary](artifacts.html). The [Profiles](artifacts.html#structures-resource-profiles) listed are describing the constraints that would be adhered to by actors claiming conformance to this implementation guide. Thus any applicable Resources that are known to have been published by an app or server REQUIRED be conformant to these profiles as appropriate.
 
 The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Other examples that either assist with the structure of the examples (e.g., Patient and Encounter) or are examples that SHOULD be able to handle in various ways. 
-
-Based on the IHE Integration Statement for the System Under Test (SUT), the following integration SHALL be tested: 
-- integration between the DSUBm and Document Sharing infrastructure (XDS or MHD) 
-- integration between the DSUBm and the DSUB 
-
-In the first case it SHALL be able to show that it produce notifications when triggered by the Document Registry.
-In the second case case it SHALL be able to show that a notification is produced after receiving a DSUB notification and the receiving DSUBm transaction [ITI-110](ITI-110.html) are propagated to the DSUB Document Metadata Notification Broker 
-
-When the Resource Notification Broker is coupled directly with a Document Registry (XDS Document Registry or MHD DOcument Registry) as indicated [here](volume-1.html#15463-dsubm-as-an-interface-for-dsub) or is coupled directly with a DSUB/FHIR interface as indicated [here](volume-1.html#15463-dsubm-as-an-interface-for-dsub) it COULD not support the transaction [ITI-111](ITI-111.html).
-
-When the Resource Notification Subscriber is coupled with a Document Consumer it shall be able to show that it can use the DSUBm transactions to be alerted when a document is available to be consumed. For example see [here](volume-1.html#154421-use-case-1-document-subscription-for-mobile-applications-in-mhds-environment)
-
-When coupled directly with a Document Registry (XDS Document  Registry or MHD DOcument Registry), the Resource Notification Publisher SHALL be able to show that it produces [ITI-111](ITI-111.html) when coupled with a document Registrsy ( XDS Document Registry or MHD DOcument Registry). For example see [here](volume-1.html#154423-use-case-3-document-subscription-for-mobile-device-in-xds-on-fhir-environment) for an XDS example or [here](volume-1.html#154611-mhds---mobile-health-document-sharing-grouping-1) for MHD example.
 
 ### High-level Test Scope
 
