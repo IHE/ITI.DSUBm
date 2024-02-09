@@ -27,6 +27,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     - SHOULD support the DSUBm $events operation  
 - SHALL support the ITI-114 transaction:
     - SHALL support the following [Search Parameters](ITI-114.html#23114412-message-semantics)
+      - code
       - _id
       - resource
       - derived-or-self

@@ -19,6 +19,8 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
   - SHOULD support the DSUBm $status operation  
   - SHOULD support the DSUBm $events operation  
 - SHOULD implement the ITI-114 transaction; if implemented: 
+  - [Search Parameters that SHALL be supported](ITI-114.html#23114412-message-semantics)
+    - code
   - [Search Parameters that SHOULD be supported](ITI-114.html#23114412-message-semantics)
     - _id
     - resource
