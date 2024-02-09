@@ -56,8 +56,7 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-Folder-Subscription-for-Full-Events"
-    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-Subscription-for-Full-Events"    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
@@ -117,6 +116,12 @@ See [here](artifacts.html#canonical-subscriptiontopic)
       * code = #read
     * interaction[1]
       * code = #search-type
+    * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
+      * name = "code"
+      * type = #token
+      * documentation = "Kind of Resource"    
     * searchParam[+]
       * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * extension.valueCode = #SHALL         

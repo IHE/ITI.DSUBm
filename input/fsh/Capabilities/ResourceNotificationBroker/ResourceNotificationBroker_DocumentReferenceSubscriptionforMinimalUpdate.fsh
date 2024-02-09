@@ -56,13 +56,19 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-DocumentReference-PatientDependent-Subscription-MinUpdate"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-DocumentReference-MultiPatient-Subscription-MinUpdate"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription-MinUpdate"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription-MinUpdate"
     * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
     * interaction[+].code = #search-type
+    * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
+      * name = "code"
+      * type = #token
+      * documentation = "Kind of Resource"    
     * searchParam[+]
       * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * extension.valueCode = #SHALL
