@@ -51,7 +51,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
     
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition-DSUBm-Folder-Subscription-UpdateOpt"
+    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-Folder-Subscription-UpdateOpt"
     * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
     * interaction[+].code = #read
     * interaction[+].code = #create
