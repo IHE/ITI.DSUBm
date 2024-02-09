@@ -18,7 +18,7 @@ end
 Subscriber -> Broker: [[ITI-110.html#2311043-update-subscription-request-message Update Subscription Request Message]]
 activate Broker
 alt if successfully evaluated
-Broker --> Subscriber: [[ITI-110.html#231108-update-subscription-response-message Update Subscription Response Message]]
+Broker --> Subscriber: [[ITI-110.html#2311044-update-subscription-response-message Update Subscription Response Message]]
 else if unsuccessfully evaluated
 Broker --> Subscriber : [[ITI-110.html#2311045-subscription-error-response-message Subscription Error Response Message]]
 deactivate Broker
