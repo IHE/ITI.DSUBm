@@ -3,8 +3,7 @@
 This Test Plan page is a prototype. We expect the maturity of the content will improve over time.  For now, we summarize high level testing scope and available tools. Comments are welcome.
 </div>
 
-
-**TODO: fill in the goals of the testing.
+The Test Plan builds upon quality testing of Document Subscription for Mobile actors functionalities when subscribing for patient document The transaction between actors specify semantics of the data exchanged. The DSUBm test plan focuses on these semantics and on the expected actions on both client-side and server-side actors
 
 ## Introduction
 
@@ -12,9 +11,11 @@ Overall test plan leverages the Profiles and Examples shown on the [Artifacts Su
 
 The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Other examples that either assist with the structure of the examples (e.g., Patient and Encounter) or are examples that SHOULD be able to handle in various ways. 
 
-This section will be filled in as the IHE Connectathon need drives the creation of the test plans, test procedures, test tools, and reporting.
 
-**TODO: include actor based tests, include positive and edge cases. **
+
+### High-level Test Scope
+
+
 
 ### Unit Test Procedure
 
