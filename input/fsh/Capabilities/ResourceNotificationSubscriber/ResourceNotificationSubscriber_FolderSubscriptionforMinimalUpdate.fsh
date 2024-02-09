@@ -95,22 +95,38 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
     * interaction[1]
       * code = #search-type
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
+      * name = "code"
+      * type = #token
+      * documentation = "Kind of Resource"    
+    * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "_id"
       * type = #string
       * documentation = "The id of the SubscriptionTopic"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "resource"
       * type = #uri
       * documentation = "Allowed Data type or Resource (reference to definition) for this definition, searches resourceTrigger, eventTrigger, and notificationShape for matches."
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "derived-or-self"
       * type = #uri
       * documentation = "A server defined search that matches either the url or derivedFrom"
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "status"
       * type = #token
       * documentation = "SHOULD be valued with `active`"      
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHOULD
       * name = "url"
       * type = #uri
       * documentation = "Logical canonical URL to reference this SubscriptionTopic (globally unique)"           

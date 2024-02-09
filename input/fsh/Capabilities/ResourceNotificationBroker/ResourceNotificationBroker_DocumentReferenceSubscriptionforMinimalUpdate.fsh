@@ -66,6 +66,12 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * searchParam[+]
       * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * extension.valueCode = #SHALL
+      * name = "code"
+      * type = #token
+      * documentation = "Kind of Resource"    
+    * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "_id"
       * type = #string
       * documentation = "The id of the Subscription"

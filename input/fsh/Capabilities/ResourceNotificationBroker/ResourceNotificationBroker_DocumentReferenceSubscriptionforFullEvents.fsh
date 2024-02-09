@@ -105,6 +105,12 @@ See [here](artifacts.html#canonical-subscriptiontopic)
     * interaction[1]
       * code = #search-type
     * searchParam[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
+      * name = "code"
+      * type = #token
+      * documentation = "Kind of Resource"    
+    * searchParam[+]
       * name = "_id"
       * type = #string
       * documentation = "The id of the SubscriptionTopic"

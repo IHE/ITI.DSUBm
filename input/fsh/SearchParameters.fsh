@@ -13,7 +13,7 @@ Usage: #definition
 * code = #resource
 * base = #Basic
 * type = #uri
-* expression = "Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger').children().where($this.url='resource').value.distinct().ofType(string) | Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy').children().where($this.url='resource').value.distinct().ofType(string) | Basic.extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape').children().where($this.url='resource').value.distinct().ofType(string)"
+* expression = "where(code.coding.exists(code = 'SubscriptionTopic' and system = 'http://hl7.org/fhir/fhir-types' )).select(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.resourceTrigger').extension('resource').value | extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.canFilterBy').extension('resource').value | extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape').extension('resource').value | extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.eventTrigger').extension('resource').value)"
 
 
 //status
@@ -31,7 +31,7 @@ Usage: #definition
 * code = #url
 * base = #Basic
 * type = #uri
-* expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status').value as string)"
+* expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status').value.ofType(string))"
 
 //url
 Instance: SubscriptionTopic-url
@@ -48,7 +48,7 @@ Usage: #definition
 * code = #url
 * base = #Basic
 * type = #uri
-* expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url').value as string)"
+* expression = "(extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.url').value.ofType(uri))"
 
 //derived-or-self
 Instance: SubscriptionTopic-derived-or-self
