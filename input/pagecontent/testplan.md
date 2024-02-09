@@ -9,6 +9,8 @@ DSUBm specifies actors and transactions to grant functionalities for subscribing
 
 The DSUBm implementation could occurs in Document Sharing environment like MHDS and XDS, as far as an interface for DSUB, as shown in Section [1:54.6 Cross-Profile Considerations](volume-1.html#1546-cross-profile-considerations). But DSUBm is not limited against these profiles. Also, the systems implementation of DSUBm actors could be different according with their own implementation scenario.
 
+Some possible scenarios of DSUBm implementation are presented in the [Use Case Section in Volume 1](volume-1.html#1544-dsubm-overview).
+
 Overall test plan leverages the Profiles and Examples shown on the [Artifacts Summary](artifacts.html). The [Profiles](artifacts.html#structures-resource-profiles) listed are describing the constraints that would be adhered to by actors claiming conformance to this implementation guide. Thus any applicable Resources that are known to have been published by an app or server REQUIRED be conformant to these profiles as appropriate.
 
 The Examples listed in [Example Instances](artifacts.html#example-example-instances) are example instances. Some are conformant to the profiles. Other examples that either assist with the structure of the examples (e.g., Patient and Encounter) or are examples that SHOULD be able to handle in various ways. 
