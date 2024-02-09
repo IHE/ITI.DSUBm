@@ -7,25 +7,25 @@ participant "Resource Notification Recipient" as  Recipient
 == Handshake Notification ==
 Broker -> Recipient : [[ITI-112.html#2311241-handshake-notification-request-message Handshake Notification Request Message]]
 activate Recipient
-Recipient --> Broker : [[ITI-112.html#231126-handshake-notification-response-message Handshake Notification Response Message]]
+Recipient --> Broker : [[ITI-112.html#2311242-handshake-notification-response-message Handshake Notification Response Message]]
 deactivate Recipient
 
 == Heartbeat Notification ==
 Broker -> Recipient : [[ITI-112.html#2311243-heartbeat-notification-request-message Heartbeat Notification Request Message]] 
 activate Recipient
-Recipient --> Broker : [[ITI-112.html#231128-heartbeat-notification-response-message Heartbeat Notification Response Message]] 
+Recipient --> Broker : [[ITI-112.html#2311244-heartbeat-notification-response-message Heartbeat Notification Response Message]] 
 deactivate Recipient
 
 == Event Notification ==
 Broker -> Recipient :  [[ITI-112.html#2311245-event-notification-request-message Event Notification Request Message]]
 activate Recipient
-Recipient --> Broker :  [[ITI-112.html#2311210-event-notification-response-message Event Notification Response Message]]
+Recipient --> Broker :  [[ITI-112.html#2311246-event-notification-response-message Event Notification Response Message]]
 deactivate Recipient
 
 == Subscription Deactivation Notification ==
 Broker -> Recipient :  [[ITI-112.html#2311247-subscription-deactivation-notification-request-message Subscription Deactivation Notification Request Message]]
 activate Recipient
-Recipient --> Broker : [[ITI-112.html#2311212-subscription-deactivation-notification-response-message Subscription Deactivation Notification Response Message]]
+Recipient --> Broker : [[ITI-112.html#2311248-subscription-deactivation-notification-response-message Subscription Deactivation Notification Response Message]]
 deactivate Recipient
 
 @enduml

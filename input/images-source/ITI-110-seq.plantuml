@@ -5,7 +5,7 @@ participant "Resource Notification Broker" as  Broker
 
 
 == Subscribe ==
-Subscriber -> Broker : [[ITI-110.html#231105-create-subscription-request-message Create Subscription Request Message]]
+Subscriber -> Broker : [[ITI-110.html#2311041-create-subscription-request-message Create Subscription Request Message]]
 activate Broker
 alt if successfully evaluated
 Broker --> Subscriber : [[ITI-110.html#2311042-create-subscription-response-message Create Subscription Response Message]]
@@ -15,7 +15,7 @@ deactivate Broker
 end
 
 == Update ==
-Subscriber -> Broker: [[ITI-110.html#231107-update-subscription-request-message Update Subscription Request Message]]
+Subscriber -> Broker: [[ITI-110.html#2311043-update-subscription-request-message Update Subscription Request Message]]
 activate Broker
 alt if successfully evaluated
 Broker --> Subscriber: [[ITI-110.html#231108-update-subscription-response-message Update Subscription Response Message]]
