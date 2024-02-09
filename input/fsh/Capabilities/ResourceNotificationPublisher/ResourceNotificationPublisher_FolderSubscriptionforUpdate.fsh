@@ -5,7 +5,7 @@ Usage: #definition
 * description = """
 The DSUBm Resource Notification Publisher Actor CapabilityStatement requirements expresses the requirements that SHALL be provided when implementing Folder Subscription for Update option.
 
-- Using FHIR R4B
+- Using FHIR R4
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-111 transaction for the basic trigger events

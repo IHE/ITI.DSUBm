@@ -388,9 +388,9 @@ In Table 1:54.2.7-1 are reported the event related to the DocumentReference and 
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource</td>
-    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65](https://profiles.ihe.net/ITI/MHD/ITI-65.html)</span></a></td>
-    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42](https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html)</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57](https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html)</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61](https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html)</span></a></td>
+    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource)</td>
+    <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
+    <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>

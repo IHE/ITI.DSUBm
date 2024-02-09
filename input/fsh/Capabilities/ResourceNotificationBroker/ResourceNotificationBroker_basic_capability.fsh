@@ -5,14 +5,14 @@ Usage: #definition
 * description = """
 The DSUBm Resource Notification Broker Actor CapabilityStatement requirements expresses the requirements that SHALL be provided.
 
-- Using FHIR R4B
+- Using FHIR R4
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
 - MAY support the ITI-111 transaction
 - SHALL support the ITI-112 transaction:
   - SHALL support Handshake Notification
-  - SHALL support Heartbeat Notification
+  - SHOULD support Heartbeat Notification
   - SHALL support Event Notification
   - SHOULD support Subscription Deactivation Notification
 - SHALL support the ITI-113 transaction: 
@@ -50,11 +50,13 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
   * resource[0]
     * type = #Subscription
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-PatientDependent-Subscription"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
-    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
+    * supportedProfile[+] = Canonical(DSUBm-DocumentReference-PatientDependent-Subscription)
+    * supportedProfile[+] = Canonical(DSUBm-DocumentReference-MultiPatient-Subscription)
+    * supportedProfile[+] = Canonical(DSUBm-SubmissionSet-PatientDependent-Subscription)
+    * supportedProfile[+] = Canonical(DSUBm-SubmissionSet-MultiPatient-Subscription)
+    * documentation = """
+    Resource Subscription [ITI-110](ITI-110.html) and Resource Subscription Search [ITI-113](ITI-113.html)
+    """
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
@@ -98,13 +100,15 @@ The DSUBm Resource Notification Broker Actor CapabilityStatement requirements ex
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-events"  
       * documentation = """ The Response Bundle SHALL be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-EventsOperation-Bundle """
     * operation[+]
+      * extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+      * extension.valueCode = #SHALL
       * name = "status"
       * definition = "http://hl7.org/fhir/uv/subscriptions-backport/OperationDefinition/backport-subscription-status"
       * documentation = """ The Response Bundle SHALL be conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """    
   * resource[1]
     * type = #Basic
     * documentation = """
-Resource SubscriptionTopic Search [ITI-114]:
+Resource SubscriptionTopic Search [ITI-114](ITI-114.html):
 The Resource Notification Broker Actor SHALL support the canonical instances of SubscriptionTopic presented in the DSUBm profile.
 See [here](artifacts.html#canonical-subscriptiontopic)
 """
@@ -158,8 +162,8 @@ See [here](artifacts.html#canonical-subscriptiontopic)
     * description = "Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)"   
   * resource[+]
     * type = #Bundle
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.EventNotification"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HandshakeNotification"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.HeartbeatNotification"
-    * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/IHE.DSUBm.ResourceNotify.SubscriptionDeactivationNotification"
-    * documentation = "Resource Notify [ITI-112]"
+    * supportedProfile[+] = Canonical(IHE.DSUBm.EventNotification)
+    * supportedProfile[+] = Canonical(IHE.DSUBm.HandshakeNotification)
+    * supportedProfile[+] = Canonical(IHE.DSUBm.HeartbeatNotification)
+    * supportedProfile[+] = Canonical(IHE.DSUBm.SubscriptionDeactivationNotification)
+    * documentation = """[Resource Notify [ITI-112]](ITI-112.html)"""

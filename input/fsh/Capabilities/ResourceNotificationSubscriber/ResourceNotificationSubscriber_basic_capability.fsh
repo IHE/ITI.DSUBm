@@ -5,7 +5,7 @@ Usage: #definition
 * description = """
 The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirements expresses the requirements that SHALL be provided.
 
-- Using FHIR R4B
+- Using FHIR R4
 - SHALL support both json and xml encoding
 - SHOULD use a security framework. Recommend [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html), encouraged [IHE-IUA](https://profiles.ihe.net/ITI/IUA/index.html) or [SMART-app-launch](http://www.hl7.org/fhir/smart-app-launch/)
 - SHALL support the ITI-110 transaction and support the basic type of Subscription and related SubscriptionTopic
@@ -49,7 +49,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-DocumentReference-MultiPatient-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-PatientDependent-Subscription"
     * supportedProfile[+] = "https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-SubmissionSet-MultiPatient-Subscription"
-    * documentation = "Resource Subscription [ITI-110] and Resource Subscription Search [ITI-113]"
+    * documentation = """Resource Subscription [ITI-110](ITI-110.html) and Resource Subscription Search [ITI-113](ITI-113.html)"""
     * interaction[+].code = #read
     * interaction[+].code = #create
     * interaction[+].code = #update
@@ -86,7 +86,7 @@ The DSUBm Resource Notification Subscriber Actor CapabilityStatement requirement
       * documentation = """ This operation is OPTIONAL for the RESOURCE NOTIFICATION SUBSCRIBER; if supported, the Resource Notification Subscriber SHALL support in response a Bundle that is conformed with https://profiles.ihe.net/ITI/DSUBm/StructureDefinition/DSUBm-StatusOperation-Bundle """
   * resource[1]
     * type = #Basic
-    * documentation = "Resource SubscriptionTopic Search [ITI-114]"
+    * documentation = """Resource SubscriptionTopic Search [ITI-114](ITI-114.html)"""
     * interaction[0]
       * code = #read
     * interaction[1]

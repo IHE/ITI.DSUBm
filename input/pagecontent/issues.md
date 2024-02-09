@@ -1,7 +1,7 @@
 
 ## Significant Changes
 
-Significant Changes From Previous Version:
+Significant Changes From Previous Version (First Public Comment):
 
 - Passes from R4B to R4 version of FHIR
 - Profiling the SubscriptionTopic as Basic resource
