@@ -13,6 +13,8 @@
       "description": "A DocumentReference resource is created, updated or deleted (consider all possible events on DocumentReference).",
       "resource": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
       "supportedInteraction": [
+        "create",
+        "update",
         "delete"
       ]
     }

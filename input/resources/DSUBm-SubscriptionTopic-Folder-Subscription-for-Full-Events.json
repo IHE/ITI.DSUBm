@@ -17,7 +17,7 @@
         "update",
         "delete"
       ],
-      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='folder'))"
+      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='folder'))"
     }
   ],
   "canFilterBy": [

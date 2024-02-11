@@ -19,6 +19,7 @@ Alias: $canFilterBy = http://hl7.org/fhir/5.0/StructureDefinition/extension-Subs
 Alias: $notificationShape = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.notificationShape
 Alias: $status = http://hl7.org/fhir/5.0/StructureDefinition/extension-SubscriptionTopic.status
 
+/*
 CodeSystem:  DSUBmFhirType
 Title: "DSUBm Fhir Type"
 Description:  "To use in the Basic.code to indicate that the Basic resources is used as a SubscriptionTopic."
@@ -32,5 +33,5 @@ Title: "DSUBm List Types ValueSet"
 Description: "ValueSet of the DSUBm List Types allowed"
 * ^experimental = false
 * DSUBmFhirType#SubscriptionTopic
-
+*/
 

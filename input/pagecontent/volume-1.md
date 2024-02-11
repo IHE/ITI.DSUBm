@@ -522,7 +522,7 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. After the first login, the mobile app for the prescription performs an automatic patient-dependent DocumentReference Subscription to the Central Infrastructure in order to be informed when a prescription is ready.([ITI-110] Resource Subscription with the following criteria: patient and typeCode) 
+1. After the first login, the mobile app for the prescription performs an automatic patient-dependent DocumentReference Subscription to the Notification Broker in order to be informed when a prescription is ready ([ITI-110] Resource Subscription with the following criteria: patient and typeCode).
 2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
 3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish).
 4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)

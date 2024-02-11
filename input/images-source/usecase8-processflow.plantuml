@@ -62,7 +62,7 @@ deactivate Central
 activate Broker 
 
 
-Broker -> DSUBFHIR: Document Metdata Publish [ITI-53]
+Broker -> DSUBFHIR: Document Metdata Notify [ITI-53]
 deactivate Broker
 activate DSUBFHIR
 

@@ -15,7 +15,7 @@
       "supportedInteraction": [
         "create"
       ],
-      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='submissionset' or %current.code.coding.where(system='https://profiles.ihe.net/ITI/DSUBm/CodeSystem/DSUBmlistTypes').code='submissionset'))"
+      "fhirPathCriteria": "((%current.code.coding.where(system='https://profiles.ihe.net/ITI/MHD/CodeSystem/MHDlistTypes').code='submissionset'))"
     }
   ],
   "canFilterBy": [
