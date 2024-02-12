@@ -18,7 +18,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Subscri
 * subtype 2..
 * subtype contains iti112 1..1
 * subtype[iti112] = urn:ihe:event-type-code#ITI-112 "Resource Notify"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Broker"
 * agent[server] ^short = "Resource Notification Recipient"
@@ -45,7 +45,7 @@ Defines constraints on the AuditEvent Resource to record when a Resource Notify 
 * subtype 2..
 * subtype contains iti112 1..1
 * subtype[iti112] = urn:ihe:event-type-code#ITI-112 "Resource Notify"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Recipient"
 * agent[server] ^short = "Resource Notification Broker"

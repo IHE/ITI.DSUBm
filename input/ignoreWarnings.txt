@@ -1,11 +1,6 @@
 == Suppressed Messages ==
 # instructions for ignoreWarnings.txt https://confluence.hl7.org/pages/viewpage.action?pageId=66938614#ImplementationGuideParameters-ManagingWarningsandHints
 
-# Some profiles,data type or extension do not have examples yet
-The Implementation Guide contains no examples for this profile
-The Implementation Guide contains no examples for this data type profile
-The Implementation Guide contains no examples for this extension
-
 # waiting for the valueset and the codeSystem to be inserted in the package R4
 Canonical URL 'http://hl7.org/fhir/ValueSet/subscription-notification-type' does not resolve
 The reference http://hl7.org/fhir/ValueSet/subscription-notification-type could not be resolved
