@@ -9,7 +9,7 @@ Description:    "Profile on the SubscriptionStatus resource for the event notifi
 * parameter[eventsSinceSubscriptionStart].value[x] 1..1
 * parameter[notificationEvent] 1..1
 * parameter[notificationEvent] ^short = "Servers SHALL include this value when sending event notifications in order to allow clients to detect missing events. This value is inclusive of this notification (e.g., the first event notification sent would include one (1) in this element)."
-* parameter[notificationEvent].value[x] 1..1
+//* parameter[notificationEvent].value[x] 1..1
 
 
 
@@ -46,7 +46,7 @@ Description:    "Profile on the SubscriptionStatus resource for the $status oper
 * parameter[type].valueCode = #query-status
 * parameter[eventsSinceSubscriptionStart] 1..1
 * parameter[eventsSinceSubscriptionStart].value[x] ^short = "This value is REQUIRED because clients MAY use it to know if there are missing notifications. Note: this value SHALL NOT be incremented by sending a query-status notification."
-* parameter[eventsSinceSubscriptionStart].value[x] 0..1
+//* parameter[eventsSinceSubscriptionStart].value[x] 0..1
 * parameter[notificationEvent] 0..0
 
 
