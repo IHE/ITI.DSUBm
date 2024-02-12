@@ -75,9 +75,10 @@ Description: "R4 Example of an Bundle used as response of a $status operation"
 * type = #searchset
 * entry.fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry.resource = ex-SubscriptionStatus-StatusOperation
-* entry.request.url = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent$status" 
-* entry.request.method = #GET
-* entry.response.status = "200"
+* entry.search.mode = #match
+* link.relation = "self"
+* link.url = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
+
 
 Instance:    ex-operationEvents 
 InstanceOf:  ResourceNotify_Events
@@ -95,13 +96,13 @@ Description: "R4 Example of an Bundle used as response of a $events operation"
 * entry[SubmissionSet].resource = ex-minimalSubmissionSet
 * entry[SubmissionSet].request.url = "List" 
 * entry[SubmissionSet].request.method = #POST
-* entry[SubmissionSet].response.status = "201"
+* entry[SubmissionSet].response.status = "200"
 
 * entry[DocumentRefs].fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100002"
 * entry[DocumentRefs].resource = ex-DocumentReferenceMinimal
 * entry[DocumentRefs].request.url = "DocumentReference" 
 * entry[DocumentRefs].request.method = #POST 
-* entry[DocumentRefs].response.status = "201"
+* entry[DocumentRefs].response.status = "200"
 
 * entry[Patient].fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100004"
 * entry[Patient].resource = ex-patient
