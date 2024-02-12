@@ -32,7 +32,7 @@ Usage: #example
 
 Instance: ex-AuditSearchSubscriptionSearchBroker
 InstanceOf: AuditSearchSubscriptionSearchBroker
-Title: "Audit Example of ITI-111 at Broker for Search interaction"
+Title: "Audit Example of ITI-113 at Broker for Search interaction"
 Description: "Audit Example for a Resource Subscription Search Transaction from Broker perspective for Search interaction"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
@@ -89,7 +89,7 @@ Usage: #example
 
 Instance: ex-AuditSearchSubscriptionReadBroker
 InstanceOf: AuditSearchSubscriptionReadBroker
-Title: "Audit Example of ITI-111 at Broker for Read interaction"
+Title: "Audit Example of ITI-113 at Broker for Read interaction"
 Description: "Audit Example for a Resource Subscription Search Transaction from Broker perspective for Read interaction"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
