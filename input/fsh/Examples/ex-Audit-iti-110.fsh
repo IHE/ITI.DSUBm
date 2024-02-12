@@ -12,7 +12,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -28,8 +28,8 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-PatientDependent-Subscription)
 
 //subscriber no patient
 Instance: ex-resorceSubscription-subscriber-create-multiPat
@@ -43,7 +43,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -56,8 +56,8 @@ Usage: #example
 * agent[server].network.address = "http://server.example.com/fhir"
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-MultiPatient-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-MultiPatient-Subscription)
 
 //broker patient
 Instance: ex-resorceSubscription-broker-create-patientDep
@@ -87,8 +87,8 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-PatientDependent-Subscription)
 
 
 //broker NO patient
@@ -116,8 +116,8 @@ Usage: #example
 * agent[server].network.address = "http://server.example.com/fhir"
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-MultiPatient-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-MultiPatient-Subscription)
 
 // update
 //create
@@ -133,7 +133,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -149,8 +149,8 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-PatientDependent-Subscription)
 
 //subscriber no patient
 Instance: ex-resorceSubscription-subscriber-update-multiPat
@@ -164,7 +164,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -177,8 +177,8 @@ Usage: #example
 * agent[server].network.address = "http://server.example.com/fhir"
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-MultiPatient-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-MultiPatient-Subscription)
 
 //broker patient
 Instance: ex-resorceSubscription-broker-update-patientDep
@@ -208,8 +208,8 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-PatientDependent-Subscription)
 
 
 //broker NO patient
@@ -237,6 +237,6 @@ Usage: #example
 * agent[server].network.address = "http://server.example.com/fhir"
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
-* entity[data].what = Reference(DocumentReference/ex-DocumentReference-MultiPatient-Subscription)
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
+* entity[data].what = Reference(Subscription/ex-DocumentReference-MultiPatient-Subscription)
 

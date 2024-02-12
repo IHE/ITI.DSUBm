@@ -1,6 +1,5 @@
 //iti-111
-//create
-//subscriber patient
+
 Instance: ex-AuditResourcePublishPublisher
 InstanceOf: AuditResourcePublishPublisher
 Title: "Audit Example of ITI-111 at Publisher"
@@ -12,7 +11,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -28,12 +27,12 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 //reference da sistemare
-* entity[data].what = Reference(Bundle/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].what = Reference(Bundle/)
 
 
-//broker patient
+
 Instance: ex-AuditResourcePublishBroker
 InstanceOf: AuditResourcePublishBroker
 Title: "Audit Example of ITI-111 at Broker"
@@ -61,6 +60,6 @@ Usage: #example
 * entity[patient].role = http://terminology.hl7.org/CodeSystem/object-role#1 "Patient"
 * entity[patient].what = Reference(Patient/ex-patient)
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Job"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 //reference da sistemare
-* entity[data].what = Reference(Bundle/ex-DocumentReference-PatientDependent-Subscription)
+* entity[data].what = Reference(Bundle/)
