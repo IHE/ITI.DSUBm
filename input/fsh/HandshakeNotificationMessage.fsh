@@ -13,7 +13,7 @@ Description: "Profile on the Bundle resource to enable R5-style topic-based subs
 
 
 Invariant:   backport-notification-bundle-1
-Description: "A notification bundle REQUIRED have a SubscriptionStatus as the first entry"
-Expression:  "entry.first().resource.is(SubscriptionStatus)"
+Description: "A notification bundle REQUIRED have a Parameters as the first entry showing the status of the subscription related to the notification"
+Expression:  "entry.first().resource.is(Parameters)"
 Severity:    #error
-XPath:       "f:entry[1]/f:resource/f:SubscriptionStatus"
+XPath:       "f:entry[1]/f:resource/f:Parameters"

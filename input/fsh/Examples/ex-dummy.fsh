@@ -37,6 +37,7 @@ Description: "Dummy Device example for completeness sake. No actual use of this 
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 
+// instances from MHD used in examples
 Instance:   ex-DocumentReferenceMinimal
 InstanceOf: IHE.MHD.Minimal.DocumentReference
 Title:      "DocumentReference for Minimal metadata"
@@ -51,6 +52,17 @@ Usage: #example
 * status = #current
 * content.attachment.contentType = #text/plain
 * content.attachment.url = "http://example.com/nowhere.txt"
+
+Instance: ex-documentreference
+InstanceOf: DocumentReference
+Title: "Dummy DocumentReference example"
+Description: "Dummy DocumentReference example for completeness sake. No actual use of this resource other than an example target"
+Usage: #example
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
+* status = #current
+* content.attachment.title = "Hello World"
+* content.attachment.contentType = #text/plain
+
 
 Instance:   ex-minimalSubmissionSet
 InstanceOf: IHE.MHD.Minimal.SubmissionSet
@@ -132,7 +144,7 @@ Usage: #inline
 * code = MHDlistTypes#submissionset
 * date = 2004-10-25T23:50:50-05:00
 * subject = Reference(urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100004)
-* entry[+].item = Reference(urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100002)
+* entry[+].item = Reference(aaaaaaaa-bbbb-cccc-dddd-e00111100002)
 * extension[sourceId].valueIdentifier.value = "urn:oid:1.2.3.4"
 * contained[0] = in-practitioner
 * extension[intendedRecipient].valueReference = Reference(in-practitioner)

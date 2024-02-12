@@ -6,7 +6,7 @@ Title:       "Bundle response for $events"
 Description: "Profile on the Bundle resource for the response of $events operation."
 * type = #history
 * entry 0..*
-* entry ^slicing.discriminator.type = #type
+* entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
 * entry ^slicing.ordered = false 
@@ -15,8 +15,7 @@ Description: "Profile on the Bundle resource for the response of $events operati
     SubmissionSet 0..* and
     DocumentRefs 0..* and
     Folders 0..* and
-    Patient 0..1 and
-    Resource 0..* 
+    Patient 0..1 
 
 * entry[SubscriptionStatus].resource only SubscriptionStatus_EventsOperation
 * entry[SubscriptionStatus].request.method = #GET 
