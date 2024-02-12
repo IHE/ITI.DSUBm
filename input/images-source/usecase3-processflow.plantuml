@@ -38,7 +38,7 @@ participant MobileDevice [
     [DSUBm Resource Notification Recipient]
 ] 
 autonumber 1 "<b>"
-MobileDevice -> Central: Resource Subscription [ITI-110]
+MobileDevice -> Broker: Resource Subscription [ITI-110]
 activate Central
 deactivate Central
 

@@ -24,8 +24,8 @@ Description:    "Profile on the SubscriptionStatus resource to be used in the ha
 Profile:        SubscriptionStatus_Heartbeat
 Parent:         http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-subscription-status-r4
 Id:             IHE.DSUBm.SubscriptionStatus-Heartbeat
-Title:          "SubscriptionStatus for the handshake event"
-Description:    "Profile on the SubscriptionStatus resource for the handshake notification"
+Title:          "SubscriptionStatus for the heartbeat event"
+Description:    "Profile on the SubscriptionStatus resource for the heartbeat notification"
 * parameter[type].valueCode = #heartbeat
 
 Profile:        SubscriptionStatus_Deactivation

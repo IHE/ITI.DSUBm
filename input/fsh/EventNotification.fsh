@@ -6,7 +6,7 @@ Description:    "Profile on the Bundle resource for transaction ITI-112 Resource
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle REQUIRED have a SubscriptionStatus as the first entry."
+* entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle MUST have a SubscriptionStatus as the first entry."
 * entry and entry.resource MS
 * entry contains 
     SubscriptionStatus 1..1 and

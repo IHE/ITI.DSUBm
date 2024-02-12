@@ -1,9 +1,9 @@
 
 ## Significant Changes
 
-Significant Changes From Previous Version (First Public Comment):
+Significant Changes From Previous Public Comment Version:
 
-- Passes from R4B to R4 version of FHIR
+- Passed from R4B to R4 version of FHIR
 - Profiling the SubscriptionTopic as Basic resource
 - Profiling the SubscriptionStatus as Parameter resource
 - Eliminated the duplication of MHD artifacts
