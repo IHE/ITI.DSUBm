@@ -77,7 +77,7 @@ Description: "R4 Example of an Bundle used as response of a $status operation"
 * entry.resource = ex-SubscriptionStatus-StatusOperation
 * entry.search.mode = #match
 * link.relation = "self"
-* link.url = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
+* link.url = "https://example.org/fhir/Subscription/$status?status=error"
 
 
 Instance:    ex-operationEvents 
