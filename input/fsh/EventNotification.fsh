@@ -3,18 +3,20 @@ Parent:         Bundle
 Id:             IHE.DSUBm.EventNotification
 Title:          "Event Notification Bundle"
 Description:    "Profile on the Bundle resource for transaction ITI-112 Resource Notify for Event Notification."
-* entry ^slicing.discriminator.type = #type
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator[0].type = #profile
+* entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[1].type = #value
+* entry ^slicing.discriminator[1].path = "request.method"
 * entry ^slicing.rules = #open
 * entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle MUST have a SubscriptionStatus as the first entry."
 * entry and entry.resource MS
+* obeys backport-notification-bundle-1
 * entry contains 
     SubscriptionStatus 1..1 and
     SubmissionSet 0..* and
     DocumentRefs 0..* and
     Folders 0..* and
-    Patient 0..1 and 
-    Resource 0..* 
+    Patient 0..1 
 * entry[SubscriptionStatus].resource only SubscriptionStatus_NotificationEvent
 * entry[SubmissionSet].resource only
     IHE.MHD.Minimal.SubmissionSet

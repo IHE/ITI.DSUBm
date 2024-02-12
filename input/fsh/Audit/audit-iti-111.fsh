@@ -19,7 +19,7 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * agent[client] ^short = "Resource Publisher"
 * agent[server] ^short = "Resource Broker"
 * entity[patient] ^short = "Patient"
-* entity[data] ^short = "Bundle"
+* entity[data] ^short = "Bundle of the Resource Publish transaction"
 * entity[data].what only Reference(Bundle)
 
 
@@ -39,10 +39,10 @@ Description:    "Defines constraints on the AuditEvent Resource to record when a
 * subtype 2..
 * subtype contains iti111 1..1
 * subtype[iti111] = urn:ihe:event-type-code#ITI-111 "Resource Publish"
-* agent[server] obeys val-audit-source
+* agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Publisher"
 * agent[server] ^short = "Resource Broker"
 * entity[patient] ^short = "Patient"
-* entity[data] ^short = "Bundle"
+* entity[data] ^short = "Bundle of the Resource Publish transaction"
 * entity[data].what only Reference(Bundle)
 

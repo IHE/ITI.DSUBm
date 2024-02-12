@@ -17,7 +17,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -43,7 +43,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -70,7 +70,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -95,7 +95,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -122,7 +122,7 @@ Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -148,7 +148,7 @@ Defines constraints on the AuditEvent Resource to record when a Unsubscribe in a
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[client] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -174,7 +174,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
@@ -198,7 +198,7 @@ Defines constraints on the AuditEvent Resource to record when a Subscribe in a R
 * subtype 2..
 * subtype contains iti110 1..1
 * subtype[iti110] = urn:ihe:event-type-code#ITI-110 "Resource Subscription"
-* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#3 "Report"
+* entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 * agent[server] obeys val-audit-source
 * agent[client] ^short = "Resource Notification Subscriber"
 * agent[server] ^short = "Resource Notification Broker"
