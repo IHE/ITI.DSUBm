@@ -14,6 +14,7 @@ Description: "R4 Example of a Parameter resource representing the status of an a
 * parameter[notificationEvent].part[eventTimestamp].valueInstant = "2023-01-01T12:00:00.1882432-05:00"
 //* parameter[notificationEvent].valueInteger = 1 
 * parameter[status].valueCode = #active
+* parameter[type].valueCode = #event-notification 
 
 Instance: ex-SubscriptionStatus-Handshake
 InstanceOf: SubscriptionStatus_Handshake
@@ -21,13 +22,14 @@ Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a Handshake Event"
 Description: "R4 Example of a Parameter resource representing the status of a Subscription that has been requested."
 * parameter[subscription].name = "subscription"
-* parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/DocumentReference-PatientDependent-Subscription"
+* parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
 * parameter[eventsSinceSubscriptionStart].name = "events-since-subscription-start"
 * parameter[eventsSinceSubscriptionStart].valueString = "0" 
 * parameter[notificationEvent].part[eventNumber].name = "event-number"
 * parameter[notificationEvent].part[eventNumber].valueString = "0" 
 * parameter[status].valueCode = #requested
+* parameter[type].valueCode = #handshake
 
 Instance: ex-SubscriptionStatus-Heartbeat
 InstanceOf: SubscriptionStatus_Heartbeat
@@ -42,6 +44,8 @@ Description: "R4 Example of a Parameter resource representing the status of an a
 * parameter[notificationEvent].part[eventNumber].name = "event-number"
 * parameter[notificationEvent].part[eventNumber].valueString = "0" 
 * parameter[status].valueCode = #active
+* parameter[type].valueCode = #heartbeat
+
 
 Instance: ex-SubscriptionStatus-Deactivation
 InstanceOf: SubscriptionStatus_Deactivation
@@ -56,6 +60,8 @@ Description: "R4 Example of a Parameter resource representing the status of an d
 * parameter[notificationEvent].part[eventNumber].name = "event-number"
 * parameter[notificationEvent].part[eventNumber].valueString = "3" 
 * parameter[status].valueCode = #off
+* parameter[type].valueCode = #event-notification
+
 
 Instance: ex-SubscriptionStatus-StatusOperation
 InstanceOf: SubscriptionStatus_StatusOperation
@@ -68,6 +74,8 @@ Description: "R4 Example of a Parameter resource representing a Subscription ret
 * parameter[eventsSinceSubscriptionStart].name = "events-since-subscription-start"
 * parameter[eventsSinceSubscriptionStart].valueString = "3" 
 * parameter[status].valueCode = #error
+* parameter[type].valueCode = #query-status
+
 
 Instance: ex-SubscriptionStatus-EventsOperation
 InstanceOf: SubscriptionStatus_EventsOperation
