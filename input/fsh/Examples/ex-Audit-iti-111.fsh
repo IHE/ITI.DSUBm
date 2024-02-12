@@ -29,7 +29,7 @@ Usage: #example
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 //reference da sistemare
-* entity[data].what = Reference(Bundle/)
+* entity[data].what = Reference(Bundle/ex-ResourcePublish)
 
 
 
@@ -62,4 +62,4 @@ Usage: #example
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
 //reference da sistemare
-* entity[data].what = Reference(Bundle/)
+* entity[data].what = Reference(Bundle/ex-ResourcePublish)
