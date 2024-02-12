@@ -11,7 +11,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer.display = "myMachine.example.org"
+* source.observer = Reference(Device/ex-device)
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
@@ -44,7 +44,7 @@ Usage: #example
 * recorded = 2024-04-29T09:49:00.000Z
 * outcome = http://terminology.hl7.org/CodeSystem/audit-event-outcome#0 "Success"
 * source.site = "server.example.com"
-* source.observer = Reference(Device/ex-device)
+* source.observer.display = "myMachine.example.org"
 * source.type = http://terminology.hl7.org/CodeSystem/security-source-type#4 "Application Server"
 * agent[client].type = DCM#110153 "Source Role ID"
 * agent[client].requestor = false
