@@ -11,7 +11,7 @@
   "resourceTrigger": [
     {
       "description": "A Folder type List resource is created, updated or deleted",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "supportedInteraction": [
         "create",
         "update",
@@ -23,38 +23,39 @@
   "canFilterBy": [
     {
       "description": "Filter based on the code of a Folder List Resource. (Fixed Value: folder)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "code"
     },
     {
       "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "patient"
     },
     {
       "description": "Filter based on the patient of a Folder List Resource. (Folder.patientId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "patient.identifier"
     },
     {
       "description": "Filter based on the identifier of a Folder List Resource. (Folder.entryUUID and Folder.uniqueId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "identifier"
     },
     {
       "description": "Filter based on the designationType of a Folder List Resource. (Folder.codeList)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "designationType"
     },
     {
       "description": "Filter based on the status of a Folder List Resource. (Folder.availabilityStatus)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
       "filterParameter": "status"
     }
   ],
   "notificationShape": [
     {
-      "resource": "http://hl7.org/fhir/StructureDefinition/List"
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.Folder",
+      "include": ["List:subject"]
     }
   ]
 }

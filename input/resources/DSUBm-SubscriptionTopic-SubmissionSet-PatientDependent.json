@@ -11,7 +11,7 @@
   "resourceTrigger": [
     {
       "description": "A SubmissionSet type List resource is created",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "supportedInteraction": [
         "create"
       ],
@@ -21,38 +21,39 @@
   "canFilterBy": [
     {
       "description": "Filter based on the code of a SubmissionSet List Resource. (Fixed Value: submissionset)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "code"
     },
     {
       "description": "Filter based on the patient of a SubmissionSet List Resource. (SubmissionSet.patientId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "patient"
     },
     {
       "description": "Filter based on the patient of a SubmissionSet List Resource. (SubmissionSet.patientId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "patient.identifier"
     },
     {
       "description": "Filter based on the source of a SubmissionSet List Resource. (SubmissionSet.author)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "source"
     },
     {
       "description": "Filter based on the sourceId of a SubmissionSet List Resource. (SubmissionSet.sourceId)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "sourceId"
     },
     {
       "description": "Filter based on the intendedRecipient of a SubmissionSet List Resource. (SubmissionSet.intendedRecipient)",
-      "resource": "http://hl7.org/fhir/StructureDefinition/List",
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
       "filterParameter": "intendedRecipient"
     }
   ],
   "notificationShape": [
     {
-      "resource": "http://hl7.org/fhir/StructureDefinition/List"
+      "resource": "https://profiles.ihe.net/ITI/MHD/StructureDefinition/IHE.MHD.Minimal.SubmissionSet",
+      "include": ["List:subject"]
     }
   ]
 }

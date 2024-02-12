@@ -6,13 +6,14 @@ Description:    "Profile on the Bundle resource for transaction ITI-112 Resource
 * entry ^slicing.discriminator.type = #type
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
-* entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle REQUIRED have a SubscriptionStatus as the first entry."
+* entry ^slicing.description = "Slicing based on the profile conformance of the entry. All notification bundle MUST have a SubscriptionStatus as the first entry."
 * entry and entry.resource MS
 * entry contains 
     SubscriptionStatus 1..1 and
     SubmissionSet 0..* and
     DocumentRefs 0..* and
     Folders 0..* and
+    Patient 0..1 and 
     Resource 0..* 
 * entry[SubscriptionStatus].resource only SubscriptionStatus_NotificationEvent
 * entry[SubmissionSet].resource only
@@ -34,12 +35,9 @@ Description:    "Profile on the Bundle resource for transaction ITI-112 Resource
 * entry[Folders].resource 1..1
 * entry[Folders].request 1..1
 * entry[Folders].request.method from DSUBmPublishBundleActions
-
-* entry[Folders].resource 
-* entry[Resource] ^short = "Folders"
-* entry[Folders] ^definition = "any Folders being created or updated"
-* entry[Folders].resource 1..1
-* entry[Folders].request 1..1
-* entry[Folders].request.method from DSUBmPublishBundleActions
-
-* entry[Resource].resource ^short = "Any other Resource in the Bundle"
+* entry[Patient].resource ^type.code = "Patient"
+* entry[Patient].resource ^type.profile = Canonical(Patient)
+* entry[Patient] ^short = "the Patient"
+* entry[Patient] ^definition = "the Patient"
+* entry[Patient].resource 1..1
+* entry[Patient].request.method from MHDprovidePatientActions
