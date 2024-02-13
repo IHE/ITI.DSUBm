@@ -18,7 +18,7 @@ Description: "R4 Example of a requested Subscription for PatientDependent 'Docum
 Instance: ex-DocumentReference-MultiPatient-Subscription 
 InstanceOf: DSUBm_DocumentReference_MultiPatient_Subscription
 Usage: #example
-Title:       "DocumentReference MultiDependent Subscription"
+Title:       "DocumentReference MultiPatient Subscription"
 Description: "R4 Example of a Subscription for Multi-Patient 'DocumentReference' resource in active status"
 * status = #active
 * reason = "DocumentReference Subscription for all typeCode=57832-8"
@@ -64,7 +64,7 @@ Instance: ex-DocumentReference-PatientDependent-Subscription-MinUpdt
 InstanceOf: DSUBm_DocumentReference_PatientDependent_Subscription_MinUpdate
 Usage: #example
 Title:       "DocumentReference PatientDependent Subscription for Minimal Update Opt"
-Description: "R4 Example of a requested Subscription for PatientDependent 'DocumentReference' resource for Minimal Updat Opt in status error after connection issue"
+Description: "R4 Example of a requested Subscription for PatientDependent 'DocumentReference' resource for Minimal Update Opt in status error after connection issue"
 * status = #error
 * reason = "DocumentReference Subscription for Patient/12345 and typeCode=57832-8"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
@@ -78,7 +78,7 @@ Description: "R4 Example of a requested Subscription for PatientDependent 'Docum
 Instance: ex-DocumentReference-MultiPatient-Subscription-MinUpdt
 InstanceOf: DSUBm_DocumentReference_MultiPatient_Subscription_MinUpdate
 Usage: #example
-Title:       "DocumentReference MultiDependent Subscription for Minimal Update Opt"
+Title:       "DocumentReference MultiPatient Subscription for Minimal Update Opt"
 Description: "R4 Example of a Subscription for Multi-Patient 'DocumentReference' resource in active status for Minimal Update Opt"
 * status = #active
 * reason = "DocumentReference Subscription for all typeCode=43232-8"
@@ -95,8 +95,8 @@ Description: "R4 Example of a Subscription for Multi-Patient 'DocumentReference'
 Instance: ex-DocumentReference-PatientDependent-Subscription-AllEvents
 InstanceOf: DSUBm_DocumentReference_PatientDependent_Subscription_AllEvents
 Usage: #example
-Title:       "DocumentReference PatientDependent Subscription for All Events"
-Description: "R4 Example of a requested Subscription for PatientDependent 'DocumentReference' resource for All Events"
+Title:       "DocumentReference PatientDependent Subscription for All Events Opt"
+Description: "R4 Example of a requested Subscription for PatientDependent 'DocumentReference' resource for All Events Opt"
 * status = #requested
 * reason = "DocumentReference Subscription for Patient=76543 and typeCode=57832-8"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
@@ -110,8 +110,8 @@ Description: "R4 Example of a requested Subscription for PatientDependent 'Docum
 Instance: ex-DocumentReference-MultiPatient-Subscription-AllEvents
 InstanceOf: DSUBm_DocumentReference_MultiPatient_Subscription_AllEvents
 Usage: #example
-Title:       "DocumentReference MultiDependent Subscription for All Events"
-Description: "R4 Example of a Subscription for Multi-Patient 'DocumentReference' resource in active status for All Events"
+Title:       "DocumentReference MultiPatient Subscription for All Events Opt"
+Description: "R4 Example of a Subscription for Multi-Patient 'DocumentReference' resource in active status for All Events Opt"
 * status = #active
 * reason = "DocumentReference Subscription for all documents in a specific facility"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
@@ -142,8 +142,8 @@ Description: "R4 Example of a Subscription 'Foder' resource for basc events"
 Instance: ex-Folder-MinUpdtOpt-Subscrption
 InstanceOf: DSUBm_Folder_Subscription_MinUpdateOpt
 Usage: #example
-Title:       "Folder Subscription for Minimal Update Option events"
-Description: "R4 Example of a Subscription 'Foder' resource for basic events"
+Title:       "Folder Subscription for Minimal Update Option"
+Description: "R4 Example of a Subscription 'Foder' resource for Minimal Update Opt"
 * status = #requested
 * reason = "Folder Subscription for Patient=765543"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
@@ -158,8 +158,8 @@ Description: "R4 Example of a Subscription 'Foder' resource for basic events"
 Instance: ex-Folder-UpdtOpt-Subscrption
 InstanceOf: DSUBm_Folder_Subscription_UpdateOpt
 Usage: #example
-Title:       "Folder Subscription for Update Option events"
-Description: "R4 Example of a Subscription 'Foder' resource for update events in status off after deactivation"
+Title:       "Folder Subscription for Update Option"
+Description: "R4 Example of a Subscription 'Foder' resource for Update Opt in status off after deactivation"
 * status = #off
 * reason = "Folder Subscription for Patient=765543"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
@@ -174,8 +174,8 @@ Description: "R4 Example of a Subscription 'Foder' resource for update events in
 Instance: ex-Folder-FullUpdtOpt-Subscrption
 InstanceOf: DSUBm-Folder-Subscription-for-Full-Events
 Usage: #example
-Title:       "Folder Subscription for Full Update Option events"
-Description: "R4 Example of a Subscription 'Foder' resource for full update events in status error after connection problem"
+Title:       "Folder Subscription for Full Update Option"
+Description: "R4 Example of a Subscription 'Foder' resource for Full Update Opt in status error after connection problem"
 * status = #error
 * reason = "Folder Subscription for Patient=765543"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
