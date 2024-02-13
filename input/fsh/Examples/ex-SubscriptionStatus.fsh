@@ -51,7 +51,7 @@ Instance: ex-SubscriptionStatus-Deactivation
 InstanceOf: SubscriptionStatus_Deactivation
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a Deactivation Event"
-Description: "Example of a Parameter resource representing the status of an deactivated Subscription."
+Description: "Example of a Parameter resource representing the status of a deactivated Subscription."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
