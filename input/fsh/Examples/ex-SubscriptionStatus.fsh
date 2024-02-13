@@ -2,7 +2,7 @@ Instance: ex-SubscriptionStatus-NotificationEvent
 InstanceOf: SubscriptionStatus_NotificationEvent
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a NotificationEvent"
-Description: "R4 Example of a Parameter resource representing the status of an active Subscription that has produced 1 event."
+Description: "Example of a Parameter resource representing the status of an active Subscription that has produced 1 event."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
@@ -20,7 +20,7 @@ Instance: ex-SubscriptionStatus-Handshake
 InstanceOf: SubscriptionStatus_Handshake
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a Handshake Event"
-Description: "R4 Example of a Parameter resource representing the status of a Subscription that has been requested."
+Description: "Example of a Parameter resource representing the status of a Subscription that has been requested."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
@@ -35,7 +35,7 @@ Instance: ex-SubscriptionStatus-Heartbeat
 InstanceOf: SubscriptionStatus_Heartbeat
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a Heartbeat Event"
-Description: "R4 Example of a Parameter resource representing the status of an active Subscription that using the heartbeat to check the endpoint"
+Description: "Example of a Parameter resource representing the status of an active Subscription that using the heartbeat to check the endpoint"
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
@@ -51,7 +51,7 @@ Instance: ex-SubscriptionStatus-Deactivation
 InstanceOf: SubscriptionStatus_Deactivation
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a Deactivation Event"
-Description: "R4 Example of a Parameter resource representing the status of an deactivated Subscription."
+Description: "Example of a Parameter resource representing the status of an deactivated Subscription."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
@@ -67,7 +67,7 @@ Instance: ex-SubscriptionStatus-StatusOperation
 InstanceOf: SubscriptionStatus_StatusOperation
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a $status response"
-Description: "R4 Example of a Parameter resource representing a Subscription returned with a status operation. The Subscription is in error."
+Description: "Example of a Parameter resource representing a Subscription returned with a status operation. The Subscription is in error."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
@@ -81,7 +81,7 @@ Instance: ex-SubscriptionStatus-EventsOperation
 InstanceOf: SubscriptionStatus_EventsOperation
 Usage: #example
 Title:       "Example of SubscriptionStatus to be used in a $events response"
-Description: "R4 Example of a Parameter resource representing a Subscription returned with a events operation. The Subscription has produced 3 events before going in error."
+Description: "Example of a Parameter resource representing a Subscription returned with a events operation. The Subscription has produced 3 events before going in error."
 * parameter[subscription].name = "subscription"
 * parameter[subscription].valueReference.reference = "https://example.org/fhir/Subscription/ex-Subscription-DocumentReference-PatientDependent"
 * parameter[topic].valueCanonical = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-PatientDependent"
