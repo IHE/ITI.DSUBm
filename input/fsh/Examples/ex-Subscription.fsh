@@ -34,7 +34,7 @@ Instance: ex-SubmissionSet-PatientDependent-Subscription
 InstanceOf: DSUBm_SubmissionSet_PatientDependent_Subscription
 Usage: #example
 Title:       "SubmissionSet PatientDependent Subscription"
-Description: "Example of a Subscription for PatientDepent 'SubmissionSet' resource in active status"
+Description: "Example of a Subscription for PatientDependent 'SubmissionSet' resource in active status"
 * status = #active
 * reason = "SubmissionSet Subscription for Patient=12345"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
