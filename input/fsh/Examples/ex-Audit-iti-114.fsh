@@ -89,7 +89,7 @@ Usage: #example
 
 Instance: ex-AuditQueryResourceSubscriptionTopicReadBroker
 InstanceOf: AuditQueryResourceSubscriptionTopicReadBroker
-Title: "Audit Example of ITI-111 at Broker for Read interaction"
+Title: "Audit Example of ITI-114 at Broker for Read interaction"
 Description: "Audit Example for a Resource SubscriptionTopic Search Transaction from Broker perspective for Read interaction"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
