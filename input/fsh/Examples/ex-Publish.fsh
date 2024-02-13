@@ -2,7 +2,7 @@ Instance:    ex-ResourcePublish
 InstanceOf:  ResourcePublishBundle
 Usage:       #example
 Title:       "Resource Publish Bundle"
-Description: "R4 Example of an Bundle used for a publish event genreated from the update of a DocumenReference"
+Description: "Example of an Bundle used for a publish event genreated from the update of a DocumenReference"
 * type = #transaction
 
 * entry[SubmissionSet].fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100001"
