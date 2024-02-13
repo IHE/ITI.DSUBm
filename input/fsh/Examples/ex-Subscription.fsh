@@ -127,7 +127,7 @@ Instance: ex-Folder-Basic-Subscrption
 InstanceOf: DSUBm_Basic_Folder_Subscription
 Usage: #example
 Title:       "Folder Subscription for basic events"
-Description: "Example of a Subscription 'Foder' resource for basc events"
+Description: "Example of a Subscription 'Foder' resource for basic events"
 * status = #active
 * reason = "Folder Subscription for Patient=765543"
 * criteria.extension.url = "http://hl7.org/fhir/uv/subscriptions-backport/StructureDefinition/backport-filter-criteria"
