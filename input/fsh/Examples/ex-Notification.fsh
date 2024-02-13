@@ -2,7 +2,7 @@ Instance:    ex-EventNotification
 InstanceOf:  ResourceNotify_EventNotification
 Usage:       #example
 Title:       "Event Notification Bundle"
-Description: "R4 Example of an Bundle used to notify a notification event genreated from the creation of a DocumenReference"
+Description: "Example of a Bundle used to notify a notification event genreated from the creation of a DocumenReference"
 * type = #history
 * entry[SubscriptionStatus].fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry[SubscriptionStatus].resource = ex-SubscriptionStatus-NotificationEvent 
@@ -33,7 +33,7 @@ Instance:    ex-HandshakeNotification
 InstanceOf:  HandshakeNotification
 Usage:       #example
 Title:       "Event HandshakeNotification Bundle"
-Description: "R4 Example of an Bundle used to perform the handshake verification"
+Description: "Example of a Bundle used to perform the handshake verification"
 * type = #history
 * entry.fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry.resource = ex-SubscriptionStatus-Handshake
@@ -45,7 +45,7 @@ Instance:    ex-HeartbeatNotification
 InstanceOf:  HeartbeatNotification
 Usage:       #example
 Title:       "Event HeartbeatNotification Bundle"
-Description: "R4 Example of an Bundle used to perform the HeartbeatNotification"
+Description: "Example of a Bundle used to perform the HeartbeatNotification"
 * type = #history
 * entry.fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry.resource = ex-SubscriptionStatus-Heartbeat
@@ -57,7 +57,7 @@ Instance:    ex-Deactivation
 InstanceOf:  SubscriptionDeactivationNotification
 Usage:       #example
 Title:       "Deactivation Event Bundle"
-Description: "R4 Example of an Bundle used to perform the Subscription Deactivation Notification"
+Description: "Example of a Bundle used to perform the Subscription Deactivation Notification"
 * type = #history
 * entry.fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry.resource = ex-SubscriptionStatus-Deactivation
@@ -71,7 +71,7 @@ Instance:    ex-operationStatus
 InstanceOf:  ResourceNotify_Status
 Usage:       #example
 Title:       "Status Event Bundle"
-Description: "R4 Example of an Bundle used as response of a $status operation"
+Description: "Example of a Bundle used as response of a $status operation"
 * type = #searchset
 * entry.fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry.resource = ex-SubscriptionStatus-StatusOperation
@@ -84,7 +84,7 @@ Instance:    ex-operationEvents
 InstanceOf:  ResourceNotify_Events
 Usage:       #example
 Title:       "Events Bundle"
-Description: "R4 Example of an Bundle used as response of a $events operation"
+Description: "Example of a Bundle used as response of a $events operation"
 * type = #history
 * entry[SubscriptionStatus].fullUrl = "urn:uuid:aaaaaaaa-bbbb-cccc-dddd-e00111100007"
 * entry[SubscriptionStatus].resource = ex-SubscriptionStatus-EventsOperation 
