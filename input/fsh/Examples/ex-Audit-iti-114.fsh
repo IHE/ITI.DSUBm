@@ -3,7 +3,7 @@
 Instance: ex-AuditQueryResourceSubscriptionTopicSearchSubscriber
 InstanceOf: AuditQueryResourceSubscriptionTopicSearchSubscriber
 Title: "Audit Example of ITI-114 at Subscriber for Search interaction"
-Description: "Audit Example for a Resource Resource SubscriptionTopic Search from Subscriber perspective for Search interaction"
+Description: "Audit Example for a Resource SubscriptionTopic Search from Subscriber perspective for Search interaction"
 Usage: #example
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * subtype[anySearch] = http://hl7.org/fhir/restful-interaction#search "search"
