@@ -39,7 +39,7 @@ dependencies:
   ihe.iti.balp:
     id: iheitibasicaudit
     uri: https://profiles.ihe.net/ITI/BALP/ImplementationGuide/ihe.iti.balp
-    version: 1.1.2
+    version: 1.1.x
   # hl7.terminology.r5: 5.3.0
   # hl7.fhir.uv.extensions: current
 
