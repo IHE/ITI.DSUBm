@@ -49,7 +49,7 @@ The Document Metadata Subscriber that support this option SHALL support the Reso
 
 | Actor                            | Definition                                                                                |
 | -------------------------------- | ------------------------------------------------------------------------------------------|
-| Resource Notification Broker     | The receiver of the Resource Subscription transaction containing a subscription request or a subscription cancellation |
+| Resource Notification Broker     | Receives the Resource Subscription transaction containing a subscription request or a subscription cancellation |
 | Resource Notification Publisher  | Sends a Resource Publish transaction to the Resource Notification Broker when an event occurs for which a subscription MAY exist |
 | Resource Notification Recipient  | Receives the notification about an event when the subscription filters specified for this Document Resource Notification Recipient are satisfied |
 | Resource Notification Subscriber | Initiates and terminates subscriptions on behalf of a Resource Notification Recipient |
