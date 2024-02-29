@@ -22,14 +22,14 @@ The Examples listed in [Example Instances](artifacts.html#example-example-instan
 ###### Resource Notification Subscriber
 
 The Resource Notification Subscriber SHALL be able to show that is able to communicate to a Resource Notification Broker to create or update subscriptions as indicated in [ITI-110](ITI-110.html), for all the subscription topic defined in the basic implementation (i.e., no option supported).
-The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-110.html#231104-interactions):
+The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-110.html#231104-messages):
 - Subscribe
 - Update  
 
 ###### Resource Notification Broker
 
 The Resource Notification Broker SHALL be able to show that it is able to respond to a Resource Notification Subscriber that is creating or updating subscriptions as indicated in [ITI-110](ITI-110.html), for all the subscription topics defined in the basic implementation (i.e., no option supported).
-The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-110.html#231104-interactions):
+The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-110.html#231104-messages):
 - Subscribe
 - Update  
 
@@ -38,19 +38,19 @@ The Resource Notification Broker SHALL process the request message received, fol
 ###### Resource Notification Publisher
 
 The Resource Notification Publisher SHALL be able to show that it is able to communicate to a Resource Notification Broker indicating that an event as occurred, as indicated in [ITI-111](ITI-111.html).
-The Resource Notification Publisher SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the [interaction](ITI-111.html#231114-interactions).
+The Resource Notification Publisher SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the [interaction](ITI-111.html#231114-messages).
 
 ###### Resource Notification Broker
 
 The Resource Notification Broker, if supporting transaction [ITI-111](ITI-111.html), SHALL be able to show that is able to respond to a Resource Notification Publisher that is communicating a publish event as indicated in [ITI-111](ITI-111.html).
-The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the [interaction](ITI-111.html#231114-interactions).
+The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the [interaction](ITI-111.html#231114-messages).
 
 ##### Resource Notify [ITI-112](ITI-112.html) Transaction
 
 ###### Resource Notification Broker
 
 The Resource Notification Broker SHALL be able to show that it is able to send the notifications messages to a Resource Notification Recipient as indicated in [ITI-112](ITI-112.html).
-The Resource Notification Broker SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-112.html#231124-interactions):
+The Resource Notification Broker SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-112.html#231124-messages):
 - Event Notification  
 - Handshake Notification
 and if supported:
@@ -61,7 +61,7 @@ The Resource Notification Broker SHOULD demonstrate to follow what is indicated 
 
 ###### Resource Notification Recipient
 The Resource Notification Recipient SHALL be able to show that it is able to respond to a Resource Notification Broker that is sending notification messages as indicated in [ITI-112](ITI-112.html).
-The Resource Notification Recipient SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-112.html#231124-interactions):
+The Resource Notification Recipient SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-112.html#231124-messages):
 - Event Notification  
 - Handshake Notification
 - Heartbeat Notification
@@ -72,7 +72,7 @@ The Resource Notification Recipient SHALL process the request message received, 
 ###### Resource Notification Subscriber
 
 The Resource Notification Subscriber SHALL be able to show that it is able to communicate to a Resource Notification Broker for searching the existing subscriptions as indicated in [ITI-113](ITI-113.html).
-The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-113.html#231134-interactions):
+The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-113.html#231134-messages):
 - Subscription Search
 - Subscription Read
 and if supported:
@@ -82,7 +82,7 @@ and if supported:
 ###### Resource Notification Broker
 
 The Resource Notification Broker SHALL be able to show that it is able to respond to a Resource Notification Subscriber that is searching the existing subscriptions as indicated in [ITI-113](ITI-113.html).
-The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-113.html#231134-interactions):
+The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-113.html#231134-messages):
 - Subscription Search
 - Subscription Read
 - Subscription Status Search
@@ -94,14 +94,14 @@ and if supported:
 ###### Resource Notification Subscriber
 
 The Resource Notification Subscriber SHALL be able to show that it is able to communicate to a Resource Notification Broker for searching the subscription topics available as indicated in [ITI-114](ITI-114.html).
-The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-114.html#231144-interactions):
+The Resource Notification Subscriber SHALL send a message defined in accordance to the message semantics, process the response message and follow the expected actions defined for the messages in the following [interactions](ITI-114.html#231144-messages):
 - SubscriptionTopic Search
 - SubscriptionTopic Read
 
 ###### Resource Notification Broker
 
 The Resource Notification Broker SHALL be able to show that it is able to respond to a Resource Notification Subscriber that is searching the subscription topics available as indicated in [ITI-114](ITI-114.html).
-The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-114.html#231144-interactions):
+The Resource Notification Broker SHALL process the request message received, follow the expected actions defined and produce a related response message in accordance to the message semantics for the messages in the following [interactions](ITI-114.html#231144-messages):
 - SubscriptionTopic Search
 - SubscriptionTopic Read
 

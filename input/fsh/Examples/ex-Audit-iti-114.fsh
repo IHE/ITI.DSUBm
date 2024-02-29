@@ -83,7 +83,7 @@ Usage: #example
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
-* entity[data].what.reference = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient"
+* entity[data].what = Reference(SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient)
 
 
 
@@ -110,5 +110,5 @@ Usage: #example
 * agent[server].network.type = http://hl7.org/fhir/network-type#5 "URI"
 * entity[data].type = http://terminology.hl7.org/CodeSystem/audit-entity-type#2 "System Object"
 * entity[data].role = http://terminology.hl7.org/CodeSystem/object-role#20 "Job"
-* entity[data].what.reference = "https://profiles.ihe.net/ITI/DSUBm/SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient"
+* entity[data].what = Reference(SubscriptionTopic/DSUBm-SubscriptionTopic-DocumentReference-MultiPatient)
 
