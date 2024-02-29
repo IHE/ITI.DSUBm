@@ -1,4 +1,4 @@
-The Document Subscription for Mobile (DSUBm) profile describes the use of document subscription and notification mechanisms for RESTful applications. In a similar way to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) profile, a subscription is made in order to receive a notification when a document publication event matches the criteria expressed in the subscription. 
+The Document Subscription for Mobile (DSUBm) Profile describes the use of document subscription and notification mechanisms for RESTful applications. In a similar way to the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) Profile, a subscription is made in order to receive a notification when a document publication event matches the criteria expressed in the subscription. 
 
 This profile can be applied in a RESTful-only environment as [MHDS](https://profiles.ihe.net/ITI/TF/Volume1/ch-50.html#50) but it can also be used with different non-mobile profiles such as [XDS.b](https://profiles.ihe.net/ITI/TF/Volume1/ch-10.html) and [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html). This profile intends to grant the same functionality as the [DSUB](https://profiles.ihe.net/ITI/TF/Volume1/ch-26.html) Profile and its supplements regarding Document subscription but also adding some other functionalities (e.g., Subscription Search).
 
@@ -15,7 +15,7 @@ This profile intends to be compliant with [Subscriptions R5 Backport](http://hl7
 ### Organization of This Guide
 This guide is organized into the following sections:
 
-- Volume 1: Actors, Transactions and use cases
+- Volume 1: Actors, Transactions and Use Cases
    - [Actors, Transactions, and Content](volume-1.html#1541-dsubm-actors-transactions-and-content-modules)
    - [Actor Options](volume-1.html#1542-actor-options)
    - [Actor Required Groupings](volume-1.html#1543-required-actor-groupings)

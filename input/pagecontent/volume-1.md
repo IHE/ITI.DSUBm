@@ -52,17 +52,17 @@ The following CapabilityStatements define the actor capabilities given the vario
 
 - FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.html)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update Option](volume-1.html#15421-documentreference-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events Option](volume-1.html#15422-documentreference-subscription-for-full-events-option)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Basic.html) that supports the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Basic.html) that supports the [Basic Folder Subscription Option](#15423-basic-folder-subscription-option)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update Option](#15424-folder-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Upd.html) that supports the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.Upd.html) that supports the [Folder Subscription for Update Option](#15425-folder-subscription-for-update-option)
 
-- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Broker](CapabilityStatement-IHE.DSUBm.ResourceNotificationBroker.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events Option](#15426-folder-subscription-for-full-events-option)
 
 #### 1:54.1.1.2 Resource Notification Subscriber
 
@@ -72,17 +72,17 @@ The following CapabilityStatements define the actor capabilities given the vario
 
 - FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.html)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update Option](volume-1.html#15421-documentreference-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events Option](volume-1.html#15422-documentreference-subscription-for-full-events-option)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Basic.html) that supports the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Basic.html) that supports the [Basic Folder Subscription Option](#15423-basic-folder-subscription-option)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update Option](#15424-folder-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Upd.html) that supports the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.Upd.html) that supports the [Folder Subscription for Update Option](#15425-folder-subscription-for-update-option)
 
-- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Subscriber](CapabilityStatement-IHE.DSUBm.ResourceNotificationSubscriber.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events Option](#15426-folder-subscription-for-full-events-option)
 
 #### 1:54.1.1.3 Resource Notification Publisher
 
@@ -92,17 +92,17 @@ The following CapabilityStatements define the actor capabilities given the vario
 
 - FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.html)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update](volume-1.html#15421-documentreference-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.MinUpd.html) that supports the [DocumentReference Subscription for Minimal Update Option](volume-1.html#15421-documentreference-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events](volume-1.html#15422-documentreference-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.DocRef.FullEvents.html) that supports the [DocumentReference Subscription for Full Events Option](volume-1.html#15422-documentreference-subscription-for-full-events-option)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Basic.html) that supports the [Basic Folder Subscription](#15423-basic-folder-subscription-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Basic.html) that supports the [Basic Folder Subscription Option](#15423-basic-folder-subscription-option)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.MinUpd.html) that supports the [Folder Subscription for Minimal Update Option](#15424-folder-subscription-for-minimal-update-option)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Upd.html) that supports the [Folder Subscription for Update option](#15425-folder-subscription-for-update-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.Upd.html) that supports the [Folder Subscription for Update Option](#15425-folder-subscription-for-update-option)
 
-- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events option](#15426-folder-subscription-for-full-events-option) option
+- FHIR Capability Statement for [Resource Notification Publisher](CapabilityStatement-IHE.DSUBm.ResourceNotificationPublisher.Folder.FullEvents.html) that supports the [Folder Subscription for Full Events Option](#15426-folder-subscription-for-full-events-option)
 
 #### 1:54.1.1.4 Resource Notification Recipient
 
@@ -175,7 +175,7 @@ between options when applicable are specified in notes.
 {: .grid}
 
 
-#### 1:54.2.1 DocumentReference Subscription for Minimal Update option
+#### 1:54.2.1 DocumentReference Subscription for Minimal Update Option
 
 This option extends the basic trigger events considered for a DocumentReference Subscription.  
 
@@ -185,25 +185,25 @@ This option extends the triggers for the creation of a DocumentReference resourc
 
 This option limited the Update events because Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all possible update events.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option) and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update Option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option) and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.1 Subscription with DocumentReference Subscription for Minimal Update Option](ITI-110.html#2311041211-subscription-with-documentreference-subscription-for-minimal-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL implement the Resource Publish [ITI-111] transaction for the trigger events defined in [Section 2:3.111.4.1.1.1 DocumentReference Subscription for Minimal Update option Trigger Events](ITI-111.html#231114111-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.1 DocumentReference Subscription for Minimal Update option Bundle](ITI-111.html#231114121-documentreference-subscription-for-minimal-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implement the Resource Publish [ITI-111] transaction for the trigger events defined in [Section 2:3.111.4.1.1.1 DocumentReference Subscription for Minimal Update Option Trigger Events](ITI-111.html#231114111-documentreference-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.1 DocumentReference Subscription for Minimal Update Option Bundle](ITI-111.html#231114121-documentreference-subscription-for-minimal-update-option-bundle).
 
-#### 1:54.2.2 DocumentReference Subscription for Full Events option
+#### 1:54.2.2 DocumentReference Subscription for Full Events Option
 
 This option extends the basic trigger events considered for a DocumentReference Subscription.  
 
 This option extends the triggers for the creation of a DocumentReference resource to include all possible update events and delete events of a DocumentReference Resource.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events Option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in [Section 2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option).
+The Resource Notification Subscriber that declares support for this option SHALL support the Subscription defined in [Section 2:3.110.4.1.2.1.2 Subscription with DocumentReference Subscription for Full Events Option](ITI-110.html#2311041212-subscription-with-documentreference-subscription-for-full-events-option).
 
-The Resource Notification Publisher that declares support for this option SHALL implement the Resource Publish [ITI-111] transaction for the trigger events defined in Section in [Section 2:3.111.4.1.1.2 DocumentReference Subscription for Full Events option Trigger Events](ITI-111.html#231114112-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.2 DocumentReference Subscription for Full Events option Bundle](ITI-111.html#231114122-documentreference-subscription-for-full-events-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL implement the Resource Publish [ITI-111] transaction for the trigger events defined in Section in [Section 2:3.111.4.1.1.2 DocumentReference Subscription for Full Events Option Trigger Events](ITI-111.html#231114112-documentreference-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.2 DocumentReference Subscription for Full Events Option Bundle](ITI-111.html#231114122-documentreference-subscription-for-full-events-option-bundle).
 
-#### 1:54.2.3 Basic Folder Subscription option
+#### 1:54.2.3 Basic Folder Subscription Option
 
 This option allows subscriptions to Folder type List resources and describes the basic trigger events considered for a Folder Subscription.
 
@@ -211,13 +211,13 @@ This option includes triggers about the creation and limited update events on a 
 
 This option limits the update events to reduce the effort on the Resource Notification Broker. This limitation has been introduced because the Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all the possible update events.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription Option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.3 Subscription with Basic Folder Subscription Option](ITI-110.html#2311041213-subscription-with-basic-folder-subscription-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.3 Basic Folder Subscription option Trigger Events](ITI-111.html#231114113-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.3 Subscription with Basic Folder Subscription option Bundle](ITI-111.html#231114123-subscription-with-basic-folder-subscription-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.3 Basic Folder Subscription Option Trigger Events](ITI-111.html#231114113-basic-folder-subscription-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.3 Subscription with Basic Folder Subscription Option Bundle](ITI-111.html#231114123-subscription-with-basic-folder-subscription-option-bundle).
 
-#### 1:54.2.4 Folder Subscription for Minimal Update option
+#### 1:54.2.4 Folder Subscription for Minimal Update Option
 
 This option allows subscriptions to Folder type List resources and extends the basic trigger events considered for a Folder Subscription.  
 
@@ -228,36 +228,36 @@ This option includes triggers about the creation of a Folder type List resource 
 
 This option limits the triggers related to update events for Folder Subscription in order to reduce the effort on the Resource Notification Brokers considering only the most common update events on Folder objects. This limitation has been introduced because the Resource Notification Brokers that are not operating as native FHIR servers might not have the ability to notify for all Update events.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update Option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.4 Subscription with Folder Subscription for Minimal Update Option](ITI-110.html#2311041214-subscription-with-folder-subscription-for-minimal-update-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.4 Folder Subscription for Minimal Update option Trigger Events](ITI-111.html#231114114-folder-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.4 Folder Subscription for Minimal Update option Bundle](ITI-111.html#231114124-folder-subscription-for-minimal-update-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.4 Folder Subscription for Minimal Update Option Trigger Events](ITI-111.html#231114114-folder-subscription-for-minimal-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.4 Folder Subscription for Minimal Update Option Bundle](ITI-111.html#231114124-folder-subscription-for-minimal-update-option-bundle).
 
-#### 1:54.2.5 Folder Subscription for Update option
+#### 1:54.2.5 Folder Subscription for Update Option
 
 This option allows subscriptions to Folder type List resources and extends the trigger events considered for a Folder Subscription.  
 
 This option includes the creation of a Folder type List Resource and all possible update events of a Folder type List Resource events. (The delete event of a Folder is not included.)
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update Option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.5 Subscription with Folder Subscription for Update Option](ITI-110.html#2311041215-subscription-with-folder-subscription-for-update-option).
 
 The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.5 Folder Subscription for Update option Trigger Events](ITI-111.html#231114115-folder-subscription-for-update-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.5 Folder Subscription for Update option Bundle](ITI-111.html#231114125-folder-subscription-for-update-option-bundle).
 
-#### 1:54.2.6 Folder Subscription for Full Events option
+#### 1:54.2.6 Folder Subscription for Full Events Option
 
 This option allows subscriptions to Folder type List resources and extends the trigger events considered for a Folder Subscription.  
 
 This option includes as triggers all the possible events on a Folder resource.
 This option includes as triggers: the creation of a Folder type List Resource, all possible update events of a Folder type List resource and the delete event of a Folder type List resource.
 
-The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
+The Resource Notification Broker that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events Option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option), and the related SubscriptionTopic, accepting this type of Subscription sent from a Resource Notification Subscriber.
 
-The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option).
+The Resource Notification Subscriber that declares support for this option SHALL implement the Subscription defined in [Section 2:3.110.4.1.2.1.6 Subscription with Folder Subscription for Full Events Option](ITI-110.html#2311041216-subscription-with-folder-subscription-for-full-events-option).
 
-The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.6 Folder Subscription for Full Events option Trigger Events](ITI-111.html#231114116-folder-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.6 Folder Subscription for Full Events option Bundle](ITI-111.html#231114126-folder-subscription-for-full-events-option-bundle).
+The Resource Notification Publisher that declares support for this option SHALL also implement in the Resource Publish [ITI-111] transaction the trigger events defined in [Section 2:3.111.4.1.1.6 Folder Subscription for Full Events Option Trigger Events](ITI-111.html#231114116-folder-subscription-for-full-events-option-trigger-events) and to communicate the stream of events to the Resource Notification Broker as defined in [Section 2:3.111.4.1.2.6 Folder Subscription for Full Events Option Bundle](ITI-111.html#231114126-folder-subscription-for-full-events-option-bundle).
 
 
 #### 1:54.2.7 Overview on Events and Options
@@ -266,6 +266,7 @@ This section covers a practical overview of the events on patient documents that
 
 Table 1:54.2.7-1 shows the events related to the DocumentReference and SubmissionSet type List resources. The "Basic implementation" is an implementations with actors that have not declared support for any option. Table 1:54.2.7-2 shows the events related to the Folder type List resources.
 
+**Table 1:54.2.7-1: Events and Options Overview for DocumentReference and SubmissionSet type List resources**
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -284,13 +285,13 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <th class="tg-fymr">MHDS environment transaction</th>
     <th class="tg-fymr">XDS environment transaction</th>
     <th class="tg-fymr">Basic implementation</th>
-    <th class="tg-fymr"> DocumentReference Subscription for Minimal Update option</th>
-    <th class="tg-fymr">DocumentReference Subscription for Full Events option</th>
+    <th class="tg-fymr"> DocumentReference Subscription for Minimal Update Option</th>
+    <th class="tg-fymr">DocumentReference Subscription for Full Events Option</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">Creation of a new SubmissionSet (i.e. the creation of a SubmissionSet type List resource)</td>
+    <td class="tg-0pky">Creation of a new SubmissionSet (i.e., the creation of a SubmissionSet type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
@@ -298,7 +299,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-0pky"></td>
   </tr>
   <tr>
-    <td class="tg-0pky">New document available (i.e. creation of a DocumentReference resource)</td>
+    <td class="tg-0pky">New document available (i.e., creation of a DocumentReference resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
@@ -306,7 +307,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of the metadata status of a document (i.e. update of the DocumentReference status)</td>
+    <td class="tg-0pky">Update of the metadata status of a document (i.e., update of the DocumentReference status)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
@@ -314,7 +315,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Delete of a document (i.e. delete of a DocumentReference resource)</td>
+    <td class="tg-0pky">Delete of a document (i.e., delete of a DocumentReference resource)</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
     <td class="tg-0pky"></td>
@@ -322,7 +323,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of all the metadata of a document (i.e. update of the DocumentReference resource)</td>
+    <td class="tg-0pky">Update of all the metadata of a document (i.e., update of the DocumentReference resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Restricted Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-92.html"><span>[ITI-92]</span></a></td>
     <td class="tg-0pky"></td>
@@ -332,7 +333,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
 </tbody>
 </table>
 
-**Table 1:54.2.7-2: Events and Options overview for Folder type List resource**
+**Table 1:54.2.7-2: Events and Options Overview for Folder type List resource**
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -350,14 +351,14 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <th class="tg-fymr">Event</th>
     <th class="tg-fymr">MHDS environment transaction</th>
     <th class="tg-fymr">XDS environment transaction</th>
-    <th class="tg-fymr">Basic Folder Subscription option</th>
-    <th class="tg-fymr">Folder Subscription for Minimal Update option</th>
-    <th class="tg-fymr">Folder Subscription for Update option</th>
+    <th class="tg-fymr">Basic Folder Subscription Option</th>
+    <th class="tg-fymr">Folder Subscription for Minimal Update Option</th>
+    <th class="tg-fymr">Folder Subscription for Update Option</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">Creation of a new Folder (i.e. the creation of a Folder type List resource)</td>
+    <td class="tg-0pky">Creation of a new Folder (i.e., the creation of a Folder type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
@@ -365,7 +366,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Insert a new document in a Folder (i.e. update a Folder type List resource with a new DocumentReference link)</td>
+    <td class="tg-0pky">Insert a new document in a Folder (i.e., update a Folder type List resource with a new DocumentReference link)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-c3ow">X</td>
@@ -373,7 +374,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Removal of a document from a Folder (i.e. update a Folder type List resource erasing a DocumentReference link)</td>
+    <td class="tg-0pky">Removal of a document from a Folder (i.e., update a Folder type List resource erasing a DocumentReference link)</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
     <td class="tg-0pky"></td>
@@ -381,7 +382,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of the metadata status of a Folder (i.e. update of the Folder type List status)</td>
+    <td class="tg-0pky">Update of the metadata status of a Folder (i.e., update of the Folder type List status)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a></td>
     <td class="tg-0pky"></td>
@@ -389,7 +390,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
   </tr>
   <tr>
-    <td class="tg-0pky">Update of a Folder (i.e. the update of a Folder type List resource)</td>
+    <td class="tg-0pky">Update of a Folder (i.e., the update of a Folder type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-0pky"></td>
@@ -438,7 +439,7 @@ At the end of Mr. Smith's hospitalization, Dr. Roose's software automatically un
 
 <figure>
 {%include usecase1-processflow.svg%}
-<figcaption><b>1:54.4.2.1.2-1: Document Subscription for mobile applications in MHDS Environment in DSUBm</b></figcaption>
+<figcaption><b>1:54.4.2.1.2-1: Document Subscription for Mobile Applications in MHDS Environment in DSUBm</b></figcaption>
 </figure>
 <br clear="all">
 
@@ -448,22 +449,22 @@ The assumption is that systems share the information in an MHDS Environment. A C
 
 **Main Flow**:
 
-1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the documents that involve the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient DocumentReference Subscription.)
-2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode in the criteria.)
-3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65]).
-4. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR, the  Central Infrastructure will send a notification to the Hospital EHR. ([ITI-112] Resource Notify)
-5. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient (Retrieve Document [ITI-68]).
-6. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen medication. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65]).
-7. Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet, the Central Infrastructure will send a notification to the Nurse Tablet. ([ITI-112] Resource Notify)
-8. The Nurse upon, seeing the notification on his tablet, can retrieve the document in order to know which medication to prepare for administration. (Retrieve Document [ITI-68]).
-9. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated un-subscription. (Resource Subscription [ITI-110]).
+1. The nurse tablet has already performed a subscription for documents produced in the cardiology field in order to be updated with all the documents that involve the cardiology ward operability. (Resource Subscription [ITI-110], multi-patient DocumentReference Subscription)
+2. After requiring the blood tests to the Laboratory System the Hospital EHR performs a subscription to the Central Infrastructure in order to inform Dr. Roose when the results will be available. (Resource Subscription [ITI-110], indicating the patient and the typeCode in the criteria)
+3. When the Laboratory System has completed the analysis, the results are sent to the Central Infrastructure. (Provide Document Bundle [ITI-65])
+4. Since the publication event of the medical report meets the subscription criteria performed by Hospital EHR, the Central Infrastructure will send a notification to the Hospital EHR. (Resource Notify [ITI-112])
+5. After receiving the notification on the Hospital EHR, Dr. Roose can retrieve and consult the analysis results on the Hospital EHR in order to decide which medicine is suitable for the patient. (Retrieve Document [ITI-68])
+6. Dr. Roose from the Hospital EHR makes an ePrescription for the chosen medication. A document is submitted to the Central Infrastructure. (Provide  Document Bundle [ITI-65])
+7. Since the publication event of the ePrescription meets the subscription criteria performed by Nurse Tablet, the Central Infrastructure will send a notification to the Nurse Tablet. (Resource Notify [ITI-112])
+8. The Nurse upon, seeing the notification on his tablet, can retrieve the document in order to know which medication to prepare for administration. (Retrieve Document [ITI-68])
+9. At the end of the clinical event when the patient is discharged, the Hospital EHR performs an automated un-subscription. (Resource Subscription [ITI-110])
 
 
 #### 1:54.4.2.2 Use Case \#2: Document Subscription for mobile application in MHDS Environment using Folder Subscription
 
 The update of a collection of documents (Folder), using a patient national Electronic Healthcare Record (EHR), notifies a mobile Diabetological Healthcare Record (DHR).
 
-##### 1:54.4.2.2.1 Document Subscription for mobile application in MHDS Environment using Folder Subscription Use Case Description
+##### 1:54.4.2.2.1 Document Subscription for Mobile Application in MHDS Environment using Folder Subscription Use Case Description
 
 Dr. Rooney is taking care of Ms. Williams, a newly discovered type 2 diabetic patient. In order to start and adjust over time the therapy the doctor and the patient will perform a visit every month for the next 2 years. 
 During the first visit, Dr. Rooney uses the mobile DHR application to create a Folder for the patient and makes a subscription to it on the National Electronic Healthcare Record (EHR) in order to be notified of any updates regarding Ms. Williams's clinical data. After the visit, the patient is sent home with the standard therapy.
@@ -473,31 +474,31 @@ During the second visit, Dr. Rooney uses the latest clinical information and adj
 A few days after the second visit Ms. Williams is admitted again into the emergency room. Other tests are performed and the medical report is updated in the EHR. A new notification is sent to the mobile DHR used by Dr. Rooney and the new update is retrieved.
 During the third visit, Ms. Williams decides that a different physician will take charge of her therapy. Therefore, Dr. Rooney closes the episode of care for Ms. Williams on his mobile DHR and the subscription to the EHR is deleted.
 
-##### 1:54.4.2.2.2 Document Subscription for mobile application in MHDS Environment using Folder Subscription Process Flow
+##### 1:54.4.2.2.2 Document Subscription for Mobile Application in MHDS Environment using Folder Subscription Process Flow
 
 <figure>
 {%include usecase2-processflow.svg%}
-<figcaption><b>1:54.4.2.2.2-2: Document Subscription for mobile application in MHDS Environment using Folder Subscription in DSUBm</b></figcaption>
+<figcaption><b>1:54.4.2.2.2-2: Document Subscription for Mobile Application in MHDS Environment using Folder Subscription in DSUBm</b></figcaption>
 </figure>
 <br clear="all">
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the Resource Subscription Search [ITI-113] transaction. The Resource Notification Subscriber and the Resource Notification Broker support the [Folder Subscription for Minimal Update option](#15424-folder-subscription-for-minimal-update-option).
+The assumption is that systems share the information in an MHDS Environment. The national EHR of a patient has been maintained thanks to the implementation of an MHDS Registry and it is grouped by the DSUBm Resource Notification Broker. The systems share and retrieve the documents by implementing MHD Document Source and/or MHD Document Consumer. The Resource Notification Subscriber has implemented the Resource Subscription Search [ITI-113] transaction. The Resource Notification Subscriber and the Resource Notification Broker support the [Folder Subscription for Minimal Update Option](#15424-folder-subscription-for-minimal-update-option).
 
 **Main Flow**:
 
-1. During the first visit a document subscription is needed. The mobile DHR application searches the Resource Notification Broker for the supported SubscriptionTopic resource.([ITI-114] Resource SubscriptionTopic Search). 
-2. At the end of the first visit, the mobile DHR application performs a Folder Subscription to the EHR, and therapy A is prescribed to Ms. Williams. ([ITI-110] Resource Subscription). 
-3. After some days during an emergency a blood test analysis is performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+1. During the first visit a document subscription is needed. The mobile DHR application searches the Resource Notification Broker for the supported SubscriptionTopic resource.(Resource SubscriptionTopic Search [ITI-114]) 
+2. At the end of the first visit, the mobile DHR application performs a Folder Subscription to the EHR, and therapy A is prescribed to Ms. Williams. (Resource Subscription [ITI-110]) 
+3. After some days during an emergency a blood test analysis is performed on Ms. Williams and the medical record is produced on the national EHR. (Provide Document Bundle [ITI-65])
+4. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. (Resource Notify [ITI-112])
 5. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the Electronic HealthCare Record. The clinical data in the DHR is updated. 
 6. After some days during the second visit, Dr. Rooney uses the updated clinical data to adjust the therapy from A to B.
-7. After some days during an emergency event other analyses are performed on Ms. Williams and the medical record is produced on the national EHR. ([ITI-65] Provide Document Bundle).
-8. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. ([ITI-112] Resource Notify)
+7. After some days during an emergency event other analyses are performed on Ms. Williams and the medical record is produced on the national EHR. (Provide Document Bundle [ITI-65])
+8. A notification is sent to the DHR since the publication of the medical record generated an updated version of the folder in the EHR. (Resource Notify [ITI-112])
 9. When the DHR receives the notification, the mobile application retrieves the resource by sending a Retrieve Document [ITI-68] to the Electronic HealthCare Record. The clinical data in the DHR is updated. 
-10. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. ([ITI-113] Resource Subscription Search)
-11. The mobile DHR unsubscribes from the folder subscription. ([ITI-110] Resource Subscription.)
+10. During the third visit, the mobile DHR searches for the subscription performed on the folder present on the EHR. (Resource Subscription Search [ITI-113])
+11. The mobile DHR unsubscribes from the folder subscription. (Resource Subscription [ITI-110])
 
 #### 1:54.4.2.3 Use Case \#3: Document Subscription for Mobile Device in XDS on FHIR Environment
 
@@ -523,14 +524,14 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 **Main Flow**:
 
 1. After the first login, the mobile app for the prescription performs an automatic patient-dependent DocumentReference Subscription on the Notification Broker in order to be informed when a prescription is ready ([ITI-110] Resource Subscription with the following criteria: patient and typeCode).
-2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure ([ITI-42] Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish).
-4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
+2. When the doctor makes the ePrescription a document is produced on the Repository and the metadata are sent to the Central Infrastructure. (Register Document Set-b [ITI-42])
+3. The Central Infrastructure, having stored the metadata of the prescription, generates a message to inform the broker about the publication event. (Resource Publish [ITI-111])
+4. Since the publication event of the prescription meets the subscription criteria the Central Infrastructure will send a notification to the mobile app. (Resource Notify [ITI-112])
 5. When the user sees the notification on his app it is possible to retrieve the document. The app retrieves the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface. 
-6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface retrieves the document from the XDS Repository. Retrieve Document Set [ITI-43].
+6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface retrieves the document from the XDS Repository. (Retrieve Document Set [ITI-43])
 7. With the downloaded ePrescription the patient can now go to the local pharmacy to acquire the prescribed medication showing his mobile device.
 
-#### 1:54.4.2.4 Use Case \#4: Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm
+#### 1:54.4.2.4 Use Case \#4: Document Subscription for Mobile Device in XDS on FHIR Environment Extending DSUB with DSUBm
 
 The availability of documents for a Patient is sent to a mobile device.
 
@@ -540,7 +541,7 @@ Mr. Wayne has a prescription for a radiographic exam and he needs to book a Radi
 Since Mr. Wayne is a user of the booking mobile app, a subscription has been already made to the Central Infrastructure in order to receive a notification when the booking reservation is produced.
 When the notification arrives on Mr. Wayne's mobile device, he can consult the information regarding his appointment. 
 
-##### 1:54.4.2.4.2 Document Subscription for Mobile Device in XDS on FHIR Environment extending DSUB with DSUBm Process Flow
+##### 1:54.4.2.4.2 Document Subscription for Mobile Device in XDS on FHIR Environment Extending DSUB with DSUBm Process Flow
 
 <figure>
 {%include usecase4-processflow.svg%}
@@ -554,13 +555,13 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent DocumentReference subscription specific for a subset of documents that includes the booking reservation documents. ([ITI-110] Resource Subscription).
+1. The mobile app performs a patient-dependent DocumentReference subscription specific for a subset of documents that includes the booking reservation documents. (Resource Subscription [ITI-110])
 2. The DSUB interface translates the mobile subscription to a Document Metadata Subscribe [ITI-52] for the booking reservation that will be produced for the patient. 
-3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. ([ITI-42] Register Document Set-b).
-4. Since the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. ([ITI-53] Document Metadata Notify)
-5. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. ([ITI-112] Resource Notify)
-6. The Mobile Device will try to retrieve the booking reservation in order to display the appointment information. A Retrieve Document [ITI-68] is sent to the DSUB FHIR Interface
-7. Upon receiving the Retrieve Document [ITI-68] the  DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Resource Device information.
+3. After some time a document for the booking reservation is produced and the metadata are stored in the Central Infrastructure. (Register Document Set-b [ITI-42])
+4. Since the publication event meets the subscription criteria the Central Infrastructure will send a notification to the DSUB interface. (Document Metadata Notify [ITI-53])
+5. The DSUB interface translates the notification received in a mobile notification in order to reach the mobile device. (Resource Notify [ITI-112])
+6. The Mobile Device will try to retrieve the booking reservation in order to display the appointment information. A Retrieve Document [ITI-68] is sent to the DSUB FHIR Interface.
+7. Upon receiving the Retrieve Document [ITI-68] the DSUB FHIR Interface will try to recover the document Retrieve Document Set [ITI-43] and will return it to the Resource Device information.
 8. The Mobile Device can now use the appointment information.
 
 #### 1:54.4.2.5 Use Case \#5: Document Subscription for Mobile Alert System
@@ -575,7 +576,7 @@ Dr. Gordon is a new medic hired by the geriatric ward of the Goodcare General Ho
 
 <figure>
 {%include usecase5-processflow.svg%}
-<figcaption><b>Figure 1:54.4.2.5-1: Document Subscription for Mobile Alert System in DSUBm</b></figcaption>
+<figcaption><b>Figure 1:54.4.2.5.2-1: Document Subscription for Mobile Alert System in DSUBm</b></figcaption>
 </figure>
 <br clear="all">
 
@@ -585,16 +586,16 @@ The assumption is that systems share the information in an XDS on FHIR Environme
 
 **Main Flow**:
 
-1. The Mobile Alert System performs a multi-patient DocumentReference subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. ([ITI-110] Resource Subscription, using a multi-patient Subscription with the indication of the related eventCodeList to the disease of interest).
-2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. ([ITI-42] Register Document Set-b)
-3. The Central Infrastructure produces for every document a publication event that is transmitted to the Notification Manager. ([ITI-54] Document Metadata Publish)
-4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1 a notification is sent to the Mobile Alert System. ([ITI-112] Resource Notify)
+1. The Mobile Alert System performs a multi-patient DocumentReference subscription to the Notification Manager in order to be informed when a specific medical report is produced and a highly contagious disease is reported inside the geriatric ward. (Resource Subscription [ITI-110], using a multi-patient Subscription with the indication of the related eventCodeList to the disease of interest).
+2. When an analysis is conducted and a highly contagious disease is reported a specific document is published inside the Central infrastructure. (Register Document Set-b [ITI-42])
+3. The Central Infrastructure produces for every document a publication event that is transmitted to the Notification Manager. (Document Metadata Publish [ITI-54])
+4. The Notification Manager uses internal mapping to translate the publication event into a mobile event. If this publication event satisfies the subscription parameters explained in Step 1 a notification is sent to the Mobile Alert System. (Resource Notify [ITI-112])
 5. The Mobile Alert System will try to retrieve the document in order to inform the user of the specific information regarding the exposure and quarantine protocol to be followed. The Mobile Alert System sends a Retrieve Document [ITI-68] to the Central Infrastructure. 
 6. Upon receiving the Retrieve Document [ITI-68] the Central Infrastructure will try to recover the document Retrieve Document Set [ITI-43] and will return to the Mobile Alert System the mobile version of the document.
 7. The Mobile Alert System uses the information retrieved in order to send a Mobile Report Alert [ITI-84] to the Mobile device.
 8. The Mobile Alert System is updated in order to respond to a new disease that is not included in the current subscription. The system is updated by: 
-  - deactivating the existing subscription ([ITI-110] Resource Subscription - Update Subscription).
-  - a new subscription is sent to  the Notification Manager in order to be informed of all the diseases including the new one recently discovered. ([ITI-110] Resource Subscription, multi-patient expressed with the updated eventCodeList for two diseases of interest).
+  - deactivating the existing subscription (Resource Subscription [ITI-110] - Update Subscription)
+  - a new subscription is sent to the Notification Manager in order to be informed of all the diseases including the new one recently discovered (Resource Subscription [ITI-110], multi-patient expressed with the updated eventCodeList for two diseases of interest)
 
 #### 1:54.4.2.6 Use Case \#6: Document Subscription for Mobile Device in XDS on FHIR Environment with availabilityStatus update 
 
@@ -615,20 +616,21 @@ After one radiographic exam a report has been produced. Due to a human error, th
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped with the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing an MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see the XDS on FHIR Option of the MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Minimal Update option](#15421-documentreference-subscription-for-minimal-update-option).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped with the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing an MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see the XDS on FHIR Option of the MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Minimal Update Option](#15421-documentreference-subscription-for-minimal-update-option).
 
 **Main Flow**:
 
-1. The app performs a patient-dependent DocumentReference subscription specific for reports by specifying a list of possible classCodes and considering creation and update of documents.([ITI-110] Resource Subscription).
-2. The Radiographic System produces a report containing an error. ([ITI-41] Provide and Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish)
-4. The publication event matches the subscription criteria of the subscription created at step 1. The first notification is sent. ([ITI-112] Resource Notify) 
+1. The app performs a patient-dependent DocumentReference subscription specific for reports by specifying a list of possible classCodes and considering creation and update of documents.(Resource Subscription
+[ITI-110])
+2. The Radiographic System produces a report containing an error. (Provide and Register Document Set-b [ITI-41])
+3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. (Resource Publish [ITI-111])
+4. The publication event matches the subscription criteria of the subscription created at step 1. The first notification is sent. (Resource Notify [ITI-112]) 
 5. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface.
-6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
+6. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. (Retrieve Document Set [ITI-43])
 7. Mr. Adam notices that the report contains an error.
-8. After a couple of seconds, the Radiographic System changes the availabilityStatus of the document. ([ITI-57] Update Document Set-b).
-9. The Central Infrastructure, having stored the metadata of the report, generates a message and inform the broker about the second publication event. ([ITI-111] Resource Publish)
-10. The second publication event is an update of the document metadata and it matches the subscription criteria reqeusted at step 1. The second notification is sent to Mr.Adam that now has the confirmation that the first notification was wrong. ([ITI-112] Resource Notify). 
+8. After a couple of seconds, the Radiographic System changes the availabilityStatus of the document. (Update Document Set-b [ITI-57])
+9. The Central Infrastructure, having stored the metadata of the report, generates a message and inform the broker about the second publication event. (Resource Publish [ITI-111])
+10. The second publication event is an update of the document metadata and it matches the subscription criteria requested at step 1. The second notification is sent to Mr.Adam that now has the confirmation that the first notification was wrong. (Resource Notify [ITI-112]) 
 
 #### 1:54.4.2.7 Use Case \#7: Document Subscription for Mobile Device in XDS on FHIR Environment with document metadata update
 
@@ -651,18 +653,18 @@ Thus, Ms. Fox receives the notification on her app and consults the reports.
 
 **Pre-conditions**:
 
-The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped with the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see the XDS on FHIR Option of the MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Full Events option](#15422-documentreference-subscription-for-full-events-option).
+The assumption is that systems share the information in an XDS on FHIR Environment. In the central infrastructure, the XDS Registry is grouped with the Resource Notification Publisher/Resource Notification Broker. The system shares and retrieves the documents by implementing MHD Document Source and/or MHD Document Consumer thanks to an MHD interface on XDS (see the XDS on FHIR Option of the MHD Profile). The Resource Notification Broker, Resource Notification Publisher and Resource Notification Subscriber are supporting the [DocumentReference Subscription for Full Events Option](#15422-documentreference-subscription-for-full-events-option).
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent DocumentReference subscription specific for reports by specifying a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([ITI-110] Resource Subscription).
-2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N" ([ITI-42] Register Document Set-b).
-3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event. ([ITI-111] Resource Publish), but since the publication event doesn't match any active subscription criteria, any notification is sent.
-4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure ([ITI-57] Update Document Set)
-5. The Central Infrastructure, having updated the metadata of the document, generates a message to inform the broker about the update event. ([ITI-111] Resource Publish).
-6. Since the metadata update event meets the subscription criteria, the Central Infrastructure will send a notification to the mobile app. ([ITI-112] Resource Notify)
+1. The mobile app performs a patient-dependent DocumentReference subscription specific for reports by specifying a list of possible confidentiality codes, based on the community accordance, in this case, equal to "N". ([Resource Subscription ITI-110])
+2. When the doctor makes the report, not visible to the patient, a document is produced on the Repository and the metadata are sent to the Central Infrastructure, in this case with a confidentiality code different from "N". (Register Document Set-b [ITI-42])
+3. The Central Infrastructure, having stored the metadata of the report, generates a message to inform the broker about the publication event (Resource Publish [ITI-111] ), but since the publication event doesn't match any active subscription criteria, any notification is sent.
+4. After the consultation, the confidentiality code metadata of the report is updated "N" to the Central Infrastructure. (Update Document Set [ITI-57])
+5. The Central Infrastructure, having updated the metadata of the document, generates a message to inform the broker about the update event. (Resource Publish [ITI-111])
+6. Since the metadata update event meets the subscription criteria, the Central Infrastructure will send a notification to the mobile app. (Resource Notify [ITI-112])
 7. When the user sees the notification on his app it is possible to retrieve the document. The app will try to retrieve the resource by sending a Retrieve Document [ITI-68] to the XDS FHIR interface.
-8. Upon receiving the Retrieve Document [ITI-68] the XDS FHIR interface tries to retrieve the document from the XDS Repository. Retrieve Document Set [ITI-43].
+8. Upon receiving the Retrieve Document [ITI-68], the XDS FHIR interface tries to retrieve the document from the XDS Repository. (Retrieve Document Set [ITI-43])
 9. Downloaded the document, Ms. Fox can view the report.
 
 #### 1:54.4.2.8 Use Case \#8: SubmissionSet Subscription in a XDS Environment where DSUBm is Grouped with DSUB
@@ -681,7 +683,7 @@ Dr. Brown, after seeing the notification on his app, can access the EMR system, 
 
 <figure>
 {%include usecase8-processflow.svg%}
-<figcaption><b>1:54.4.2.8.2-1: Patient-dependent SubmissionSet Subscription in a infrastructure where DSUBm is grouped with DSUB</b></figcaption>
+<figcaption><b>1:54.4.2.8.2-1: Patient-dependent SubmissionSet Subscription in an Infrastructure where DSUBm is grouped with DSUB</b></figcaption>
 </figure>
 <br clear="all">
 
@@ -691,20 +693,20 @@ The assumption is that systems share the information in an XDS Environment where
 
 **Main Flow**:
 
-1. The mobile app performs a patient-dependent SubmissionSet subscription specific to documents produced for Mr. White that have Dr. Brown as the intended Recipient. ([ITI-110] Resource Subscription)  
-2. When the DSUB/FHIR interface receives the Subscription, it creates a DSUB subscription with equivalent filter criteria. ([ITI-52] Document Metadata Subscribe)
-3. The Laboratory Information System produces the report for Mr. White's exams  ([ITI-41] Provide and Register Document Set-b )
-4. The Central Infrastructure propagates to the DSUB Broker a Publication Event.  ([ITI-54] Document Metdata Publish)
-5. The DSUB Broker matches the publication with all the available subscriptions and a notification is triggered for the subscription created at step 2 ([ITI-53] Document Metdata Notify).
-6. The DSUB/FHIR interface receives the notification and the subscription created at step 1 is triggered since the document had Dr. Brown as the intended recipient. ([ITI-112] Resource Notify)  
-7. When Dr. Brown receives the notification he access to his system in order to consult the new document produced. 
-8. From his system Dr. Brown searches for the document that has been submitted with the submissionSet that he has been notified. ([ITI-18] Registry Stored Query) 
-9. The doctor can now retrieve the document and consult it. ([ITI-43] Retrieve Document Set-b) 
+1. The mobile app performs a patient-dependent SubmissionSet subscription specific to documents produced for Mr. White that have Dr. Brown as the intended Recipient. (Resource Subscription [ITI-110])  
+2. When the DSUB/FHIR interface receives the Subscription, it creates a DSUB subscription with equivalent filter criteria. (Document Metadata Subscribe [ITI-52])
+3. The Laboratory Information System produces the report for Mr. White's exams. (Provide and Register Document Set-b [ITI-41])
+4. The Central Infrastructure propagates to the DSUB Broker a Publication Event. (Document Metadata Publish [ITI-54])
+5. The DSUB Broker matches the publication with all the available subscriptions and a notification is triggered for the subscription created at step 2. (Document Metadata Notify [ITI-53])
+6. The DSUB/FHIR interface receives the notification and the subscription created at step 1 is triggered since the document had Dr. Brown as the intended recipient. (Resource Notify [ITI-112])  
+7. When Dr. Brown receives the notification, he accesses his system in order to consult the new document produced. 
+8. From his system, Dr. Brown searches for the document that was submitted with the submissionSet that he received. (Registry Stored Query [ITI-18]) 
+9. The doctor can now retrieve the document and consult it. (Retrieve Document Set-b [ITI-43]) 
 
 ## 1:54.5 Security Considerations
 
 This profile requires actors to audit the transactions that create subscriptions and send notifications, grouping with an [ATNA](https://profiles.ihe.net/ITI/TF/Volume1/ch-9.html) Secure Node or Secure Application is strongly RECOMMENDED in order to track the subscriptions and the notification sent.
-For further considerations about Audit record refer to [BALP profile](https://profiles.ihe.net/ITI/BALP/).
+For further considerations about Audit record refer to [BALP Profile](https://profiles.ihe.net/ITI/BALP/).
 User authentication/authorization represents another important factor to consider in order to avoid malicious creation/updating of subscriptions. Grouping DSUBm actors with actors in the Internet User Authorization (IUA) Profile enables deployments to mitigate these security issues.
 See ITI TF-2x: [Appendix Z.8 “Mobile Security Considerations”](https://profiles.ihe.net/ITI/TF/Volume2/ch-Z.html#z.8-mobile-security-considerations). 
 
@@ -727,7 +729,7 @@ In the first proposed grouping:
 <a name="fig_MHDS"> </a>
 <figure>
 {%include model_MHDS.svg%}
-<figcaption><b>Figure 1:54.6.1.1-1: DSUBm actors grouped with MHDS actors showing the first of the two possible groupings. 
+<figcaption><b>Figure 1:54.6.1.1-1: DSUBm Actors Grouped with MHDS Actors Showing the First of the Two Possible Groupings. 
 </b></figcaption>
 </figure>
 <br clear="all">
@@ -765,12 +767,12 @@ If in the infrastructure is also implemented the "XDS on FHIR Option" of MHD for
 <a name="fig_MHD"> </a>
 <figure>
 {%include model_MHD.svg%}
-<figcaption><b>Figure 1:54.6.2.1-1: DSUBm actors grouped with XDS actors and MHD actors
+<figcaption><b>Figure 1:54.6.2.1-1: DSUBm Actors Grouped with XDS Actors and MHD Actors
 </b></figcaption>
 </figure>
 <br clear="all">
 
-Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
+Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" Option.
 
 ### 1:54.6.2.2 XDS.b - Cross-Enterprise Document Sharing Grouping 2
 In the second proposed grouping:
@@ -781,18 +783,18 @@ In the second proposed grouping:
 <a name="fig_MHD2"> </a>
 <figure>
 {%include model_MHD2.svg%}
-<figcaption><b>Figure 1:54.6.2.2-1: DSUBm actors grouped with XDS actors 
+<figcaption><b>Figure 1:54.6.2.2-1: DSUBm Actors Grouped with XDS Actors 
 </b></figcaption>
 </figure>
 <br clear="all">
 
-Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" option.
+Note that in this scenario, developers SHOULD be aware about what events on DocumentEntry, Folder, Association, and SubmissionSet Objects could determine events on DocumentReference, Folder type List, and SubmissionSet type List resources and the supporting of "Updates to document sharing resources" Option.
 
 ### 1:54.6.3 DSUBm as an Interface for DSUB 
-Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm profile and therefore can maintain its already implemented logic.  
+Document Metadata Subscriber and the Document Metadata Notification Recipient will most likely be grouped with a Resource Notification Broker creating the mobile DSUB interface that translates Resource Subscription [ITI-110] into Document Metadata Subscribe [ITI-52] and Document Metadata Notify [ITI-53] into Resource Notify [ITI-112]. The existing DSUB Document Metadata Notification Broker is unaware of the presence of the functionality introduced by the DSUBm Profile and therefore can maintain its already implemented logic.  
 <figure>
 {%include model_DSUBonFHIR.svg%}
-<figcaption><b>Figure 1:54.6.3-1: DSUBm actors grouped with DSUB:  DSUBm as an interface for DSUB 
+<figcaption><b>Figure 1:54.6.3-1: DSUBm Actors Grouped with DSUB:  DSUBm as an Interface for DSUB 
 </b></figcaption>
 </figure>
 <br clear="all">
