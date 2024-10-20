@@ -354,6 +354,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <th class="tg-fymr">Basic Folder Subscription Option</th>
     <th class="tg-fymr">Folder Subscription for Minimal Update Option</th>
     <th class="tg-fymr">Folder Subscription for Update Option</th>
+    <th class="tg-fymr">Folder Subscription for Full Events option</th>
   </tr>
 </thead>
 <tbody>
@@ -361,6 +362,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-0pky">Creation of a new Folder (i.e., the creation of a Folder type List resource)</td>
     <td class="tg-0pky">Provide Document Bundle <a href="https://profiles.ihe.net/ITI/MHD/ITI-65.html"><span>[ITI-65]</span></a></td>
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
+    <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
@@ -372,12 +374,14 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
     <td class="tg-0pky">Removal of a document from a Folder (i.e., update a Folder type List resource erasing a DocumentReference link)</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
     <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
   </tr>
@@ -388,6 +392,7 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-0pky"></td>
     <td class="tg-c3ow">X</td>
     <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
   </tr>
   <tr>
     <td class="tg-0pky">Update of a Folder (i.e., the update of a Folder type List resource)</td>
@@ -395,6 +400,16 @@ Table 1:54.2.7-1 shows the events related to the DocumentReference and Submissio
     <td class="tg-0pky">Register Document Set-b <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-42.html"><span>[ITI-42]</span></a><br><br>Update Document Set <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-57.html"><span>[ITI-57]</span></a><br><br>Register On-Demand Document Entry <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-61.html"><span>[ITI-61]</span></a></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
+    <td class="tg-c3ow">X</td>
+    <td class="tg-c3ow">X</td>
+  </tr>
+    <tr>
+    <td class="tg-0pky">Delete of a Folder (i.e. the Delete of a Folder type List resource)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Remove Metadata <a href="https://profiles.ihe.net/ITI/TF/Volume2/ITI-62.html"><span>[ITI-62]</span></a></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-c3ow"></td>
     <td class="tg-c3ow">X</td>
   </tr>
 </tbody>
